@@ -28,8 +28,12 @@ const OCR_NUMERIC_PAIR_BOOST = 30;
 const STABLE_MATCH_FRAMES = 2;
 const MISS_FRAMES_TO_RESET = 4;
 const SUCCESS_FEEDBACK_COOLDOWN_MS = 4000;
-const MAX_CANDIDATE_SUGGESTIONS = 8;
-const MIN_CANDIDATE_NAME_SCORE = 38;
+const MAX_CANDIDATE_SUGGESTIONS = 16;
+const MIN_CANDIDATE_NAME_SCORE = 20;
+const MIN_CANDIDATE_RANK_SCORE = 18;
+const CANDIDATE_MEMORY_WINDOW_FRAMES = 8;
+const CANDIDATE_REPEAT_BOOST = 9;
+const CANDIDATE_MEMORY_SCAN_LIMIT = 32;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
 const BIRD_BG_VOLUME = 0.24;
 
@@ -66,6 +70,8 @@ let candidateCardId = "";
 let candidateFrameCount = 0;
 let lastSuccessFeedbackCardId = "";
 let lastSuccessFeedbackAt = 0;
+let candidateMemory = new Map();
+let candidateSuggestionFrame = 0;
 
 const speechElement = new Audio();
 speechElement.preload = "auto";
@@ -708,11 +714,47 @@ function isUsefulCandidate(candidate) {
   if (candidate.nameScore >= MIN_CANDIDATE_NAME_SCORE) {
     return true;
   }
-  return (candidate.numericMatches?.length ?? 0) >= 1 && candidate.nameScore >= 25;
+  if ((candidate.numericMatches?.length ?? 0) >= 1) {
+    return true;
+  }
+  return (candidate.rankScore ?? candidate.score ?? 0) >= MIN_CANDIDATE_RANK_SCORE;
+}
+
+function rememberCandidateSignals(candidates) {
+  candidateSuggestionFrame += 1;
+  const seenIds = new Set();
+  for (const candidate of candidates.slice(0, CANDIDATE_MEMORY_SCAN_LIMIT)) {
+    if (!isUsefulCandidate(candidate) || seenIds.has(candidate.id)) {
+      continue;
+    }
+    seenIds.add(candidate.id);
+    const previous = candidateMemory.get(candidate.id) ?? { count: 0, frame: 0 };
+    candidateMemory.set(candidate.id, {
+      count: Math.min(8, previous.count + 1),
+      frame: candidateSuggestionFrame,
+    });
+  }
+
+  for (const [cardId, memory] of candidateMemory.entries()) {
+    if (candidateSuggestionFrame - memory.frame > CANDIDATE_MEMORY_WINDOW_FRAMES) {
+      candidateMemory.delete(cardId);
+    }
+  }
+}
+
+function candidateRepeatCount(candidate) {
+  return candidateMemory.get(candidate.id)?.count ?? 0;
+}
+
+function candidateSuggestionScore(candidate) {
+  const repeatBoost = candidateRepeatCount(candidate) * CANDIDATE_REPEAT_BOOST;
+  const pairBoost = candidate.numericPairMatched ? 24 : 0;
+  return (candidate.rankScore ?? candidate.score ?? 0) + repeatBoost + pairBoost;
 }
 
 function candidateMetaText(candidate) {
   const parts = [];
+  const repeatCount = candidateRepeatCount(candidate);
   if (candidate.nameScore > 0) {
     parts.push(`이름 ${candidate.nameScore}%`);
   }
@@ -721,6 +763,9 @@ function candidateMetaText(candidate) {
   }
   if (candidate.abilityScore > 0) {
     parts.push("능력");
+  }
+  if (repeatCount >= 2) {
+    parts.push(`반복 ${repeatCount}`);
   }
   return parts.join(" · ") || "유사 후보";
 }
@@ -771,7 +816,17 @@ function updateCandidateSuggestions(candidates, leadingCardId = "") {
   if (!elements.candidatePanel || !elements.candidateList) {
     return;
   }
-  const suggestions = candidates.filter(isUsefulCandidate).slice(0, MAX_CANDIDATE_SUGGESTIONS);
+  rememberCandidateSignals(candidates);
+  const suggestions = candidates
+    .filter(isUsefulCandidate)
+    .sort(
+      (a, b) =>
+        candidateSuggestionScore(b) - candidateSuggestionScore(a) ||
+        candidateRepeatCount(b) - candidateRepeatCount(a) ||
+        (b.rankScore ?? b.score ?? 0) - (a.rankScore ?? a.score ?? 0) ||
+        a.cardNo.localeCompare(b.cardNo),
+    )
+    .slice(0, MAX_CANDIDATE_SUGGESTIONS);
   if (!suggestions.length) {
     hideCandidateSuggestions();
     return;

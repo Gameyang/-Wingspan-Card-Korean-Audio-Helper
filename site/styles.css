@@ -252,16 +252,15 @@ h1 {
 
 .candidate-list {
   display: grid;
-  gap: 6px;
-  max-height: 248px;
-  padding: 7px;
+  gap: 4px;
+  max-height: min(58vh, 420px);
+  padding: 0;
   overflow-y: auto;
   overscroll-behavior: contain;
-  border: 1px solid rgb(255 255 255 / 20%);
-  border-radius: 12px;
-  background: rgb(13 17 18 / 68%);
-  box-shadow: 0 16px 42px rgb(0 0 0 / 38%);
-  backdrop-filter: blur(15px);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   scrollbar-width: thin;
   scrollbar-color: rgb(107 214 154 / 60%) transparent;
 }
@@ -272,20 +271,24 @@ h1 {
   align-items: center;
   gap: 9px;
   width: 100%;
-  min-height: 54px;
-  padding: 8px 10px;
-  border: 1px solid rgb(255 255 255 / 16%);
+  min-height: 46px;
+  padding: 6px 8px;
+  border: 1px solid transparent;
   border-radius: 8px;
-  background: rgb(255 255 255 / 9%);
+  background: transparent;
   color: var(--ink);
   font: inherit;
   text-align: left;
+  text-shadow:
+    0 2px 3px rgb(0 0 0 / 95%),
+    0 0 9px rgb(0 0 0 / 92%);
   cursor: pointer;
 }
 
 .candidate-button.is-leading {
-  border-color: rgb(107 214 154 / 74%);
-  background: rgb(107 214 154 / 15%);
+  border-color: rgb(107 214 154 / 84%);
+  background: transparent;
+  color: #f6fff9;
 }
 
 .candidate-button:active {
@@ -298,10 +301,13 @@ h1 {
   width: 26px;
   height: 26px;
   border-radius: 999px;
-  background: rgb(0 0 0 / 34%);
+  background: transparent;
   color: var(--green);
   font-size: 0.75rem;
   font-weight: 900;
+  text-shadow:
+    0 2px 3px rgb(0 0 0 / 100%),
+    0 0 10px rgb(0 0 0 / 95%);
 }
 
 .candidate-text {
@@ -320,10 +326,13 @@ h1 {
 .candidate-name {
   font-size: 0.88rem;
   font-weight: 900;
+  text-shadow:
+    0 2px 3px rgb(0 0 0 / 100%),
+    0 0 12px rgb(0 0 0 / 95%);
 }
 
 .candidate-meta {
-  color: var(--muted);
+  color: rgb(238 244 240 / 92%);
   font-size: 0.72rem;
   font-weight: 800;
 }
@@ -334,6 +343,9 @@ h1 {
   font-size: 0.82rem;
   font-weight: 900;
   text-align: right;
+  text-shadow:
+    0 2px 3px rgb(0 0 0 / 100%),
+    0 0 10px rgb(0 0 0 / 95%);
 }
 
 @keyframes success-glow {
