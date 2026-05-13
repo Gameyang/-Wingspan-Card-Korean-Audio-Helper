@@ -133,7 +133,7 @@ def normalize_for_dedupe(value: str) -> str:
 def clean_ability_text(value: str) -> str:
     text = normalize_spaces(value)
     text = re.sub(r"\[[^\]]+\]", " ", text)
-    text = re.sub(r"[{}<>|*_#~`^]", " ", text)
+    text = re.sub(r"[\[\]{}<>|*_#~`^]", " ", text)
     text = re.sub(r"[A-Za-z]+", " ", text)
     text = text.replace("•", " ")
     text = text.replace("卜", " ")

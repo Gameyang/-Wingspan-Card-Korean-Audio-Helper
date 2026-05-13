@@ -1,6 +1,211 @@
-card_no,card_id,bird_name,bird_name_ko,atlas,row,col,ability_ocr_text,ability_text_ko,ability_tts_text,ability_id,ocr_engine,ocr_confidence,review_status
-53,atlas01_r01_c01,Pied Billed Grebe,얼룩부리논병아리,1,1,1,"카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.","카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.","카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다",ability_6312f682d460,reviewed_seed,,draft
-54,atlas01_r01_c02,Pileated Woodpecker,도가머리딱따구리,1,1,2,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다,ability_c315fb1c7bfa,reviewed_seed,,draft
-55,atlas01_r01_c03,Western Meadowlark,서부종다리,1,1,3,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다,ability_8cf45975375d,reviewed_seed,,draft
-56,atlas01_r01_c04,Grasshopper Sparrow,메뚜기참새,1,1,4,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다,ability_bf7a70efb2e5,reviewed_seed,,draft
-57,atlas01_r01_c05,Chipping Sparrow,칩핑참새,1,1,5,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다,ability_bf7a70efb2e5,reviewed_seed,,draft
+﻿card_no,card_id,bird_name,bird_name_ko,atlas,row,col,ability_ocr_text,ability_text_ko,ability_tts_text,ability_id,ocr_engine,ocr_confidence,review_status
+53,atlas01_r01_c01,Pied Billed Grebe,얼룩부리논병아리,1,1,1,"鬱卜(경i卜 패: E.〕zq,능皀 니류습너v卜. ' 팀!7吉i","(경 패: .〕 ,능皀 니류습너 . ' 팀!7吉","(경 패: .〕 ,능皀 니류습너 . ' 팀!7吉",ability_628e59d4af96,windows,0.000,ocr_draft
+54,atlas01_r01_c02,Pileated Woodpecker,도가머리딱따구리,1,1,2,표서:딤김賓능i 나를습너v卜. ',표서:딤김賓능 나를습너 . ',표서:딤김賓능 나를습너 . ',ability_cb31198d8211,windows,0.000,ocr_draft
+55,atlas01_r01_c03,Western Meadowlark,서부종다리,1,1,3,"짜서: 니를습너v卜. ℃대 후 }(q,능皀 |H낍너v卜.","짜서: 니를습너 . ℃대 후 ( ,능皀 낍너","짜서: 니를습너 . ℃대 후 ( ,능皀 낍너",ability_35e91b0b5918,windows,0.000,ocr_draft
+56,atlas01_r01_c04,Grasshopper Sparrow,메뚜기참새,1,1,4,,,,,windows,0.000,ocr_draft
+57,atlas01_r01_c05,Chipping Sparrow,칩핑참새,1,1,5,,,,,windows,0.000,ocr_draft
+58,atlas01_r01_c06,Cassins Sparrow,캐신참새,1,1,6,회卜(경i卜 耳서: /`卜鬱『됨 /`터 t견|기녜4께 |7吉次4 니를습니vh.,회 (경 耳서: / 『됨 / 터 견 기녜4께 7吉次4 니를습니,회 (경 耳서: / 『됨 / 터 견 기녜4께 7吉次4 니를습니,ability_9a070012d07d,windows,0.000,ocr_draft
+59,atlas01_r01_c07,Bairds Sparrow,베어드참새,1,1,7,『l드「 /`卜鬱『딈 /`터 7卜9 t:에|기녜4서 [417吉增니 니류습너v卜.,『 드「 / 『딈 / 터 7 9 :에 기녜4서 [417吉增니 니류습너,『 드「 / 『딈 / 터 7 9 :에 기녜4서 [417吉增니 니류습너,ability_3782433fce30,windows,0.000,ocr_draft
+60,atlas01_r01_c08,California Quail,캘리포니아메추라기,1,1,8,鬱卜(경i卜 耳서: 『쏘듬 4卜鬱韆& /`터 t기|기녜4계 [317吉增니 니류수ä너v卜.,(경 耳서: 『쏘듬 4 韆& / 터 기 기녜4계 [317吉增니 니류수ä너,(경 耳서: 『쏘듬 4 韆& / 터 기 기녜4계 [317吉增니 니류수ä너,ability_7f372e16d22b,windows,0.000,ocr_draft
+61,atlas01_r01_c09,Northern Bobwhite,북부보브화이트새,1,1,9,鬱卜(경i卜 짜서: 띤듬 4卜鬱『딈 /`터 c••lwt네4께 {1] (q吉次4 니류수ä너v卜.,(경 짜서: 띤듬 4 『딈 / 터 네4께 1] ( 吉次4 니류수ä너,(경 짜서: 띤듬 4 『딈 / 터 네4께 1] ( 吉次4 니류수ä너,ability_0d67db980196,windows,0.000,ocr_draft
+62,atlas01_r01_c10,Mourning Dove,애도비둘기,1,1,10,/`네1卜 1卜7`능 1쭥& 4卜鬱『딈,/ 네1 1 7 능 1쭥& 4 『딈,/ 네1 1 7 능 1쭥& 4 『딈,ability_3686dd6f65eb,windows,0.000,ocr_draft
+63,atlas01_r02_c01,Baltimore Oriole,볼티모어꾀꼬리,1,2,1,/`네1卜 1卜7`능 /`卜鬱『됨 니류싑너v}-.,/ 네1 1 7 능 / 『됨 니류싑너 -,/ 네1 1 7 능 / 『됨 니류싑너 -,ability_8187d5847c44,windows,0.000,ocr_draft
+64,atlas01_r02_c02,Red Crossbill,붉은솔잣새새,1,2,2,뗘: 4卜鬱『 수위 멸å꺼돌습너v卜. 417께1十卜증15일* (IH/KI 1卜7`커가퉁너v卜,뗘: 4 『 수위 멸å꺼돌습너 . 417께1十 증15일 ( / 1 7 커가퉁너,뗘: 4 『 수위 멸å꺼돌습너 . 417께1十 증15일 ( / 1 7 커가퉁너,ability_96c31613e340,windows,0.000,ocr_draft
+65,atlas01_r02_c03,Lazuli Bunting,라줄리멧새,1,2,3,大F鬱기l /`卜ø|네 (40: v卜늰 4卜鬱『Ö|: 그`테E /i녜4께 띨일L 놓습니v卜.,大 기 / ø 네 (40: 늰 4 『Ö : 그 테 / 녜4께 띨일 놓습니,大 기 / ø 네 (40: 늰 4 『Ö : 그 테 / 녜4께 띨일 놓습니,ability_3591ee1a5498,windows,0.000,ocr_draft
+66,atlas01_r02_c04,American Crow,아메리카까마귀,1,2,4,t•1|4께D賓능i 띨일* (IHE 너-æ너v卜,1 4께 賓능 띨일 ( 너-æ너,1 4께 賓능 띨일 ( 너-æ너,ability_c7b5be11f7e3,windows,0.000,ocr_draft
+67,atlas01_r02_c05,Fish Crow,물고기까마귀,1,2,5,卜(경i卜 패: 소••1144曅1능i 띨일* 0 뇨넣-수ä너*• 刁k%네 (1H,(경 패: 소 1144曅1능 띨일 0 뇨넣-수ä너 刁 %네 (1,(경 패: 소 1144曅1능 띨일 0 뇨넣-수ä너 刁 %네 (1,ability_a9447aab2a98,windows,0.000,ocr_draft
+68,atlas01_r02_c06,Black Crowned Night Heron,검은관밤왜가리,1,2,6,소수•114께화賓능i 刁卜9 띨일L 0 뇨넣-수과*• 째 (1H,소수 114께화賓능 刁 9 띨일 0 뇨넣-수과 째 (1,소수 114께화賓능 刁 9 띨일 0 뇨넣-수과 째 (1,ability_e39c9ee16c6c,windows,0.000,ocr_draft
+69,atlas01_r02_c07,Chihuahuan Raven,치와와큰까마귀,1,2,7,패: t녜44화賓능i 띨일* 刁k%네 (IHE 너-B너v卜,패: 녜44화賓능 띨일 刁 %네 ( 너- 너,패: 녜44화賓능 띨일 刁 %네 ( 너- 너,ability_9858900f814d,windows,0.000,ocr_draft
+70,atlas01_r02_c08,Common Raven,큰까마귀,1,2,8,"卜,q경i卜 애: 소녜44[가賓능i 띨일* 刁kz녜 (IHE",경 애: 소녜44[가賓능 띨일 刁 녜 (,경 애: 소녜44[가賓능 띨일 刁 녜 (,ability_f1e0128f8e35,windows,0.000,ocr_draft
+71,atlas01_r02_c09,Northern Cardinal,북부홍관조,1,2,9,회卜(경i卜 패: t『1|4께[가賓능i 째 띨일* 0 늰넣-습너*• 刁kz녜 (1H,회 (경 패: 『1 4께[가賓능 째 띨일 0 늰넣-습너 刁 녜 (1,회 (경 패: 『1 4께[가賓능 째 띨일 0 늰넣-습너 刁 녜 (1,ability_65a1ee3f180e,windows,0.000,ocr_draft
+72,atlas01_r02_c10,Yellow Bellied Sapsucker,노란배딱따구리,1,2,10,"쇰” 회卜(경i卜 패: • /`터 띨일* 돌일에, 나를습니v卜.","쇰” 회 (경 패: / 터 띨일 돌일에, 나를습니","쇰” 회 (경 패: / 터 띨일 돌일에, 나를습니",ability_482621dcff15,windows,0.000,ocr_draft
+73,atlas01_r03_c01,Indigo Bunting,남색멧새,1,3,1,"쇰” 卜(경i卜 짜서: • /`터 돌일에, 나를습너v卜.","쇰” (경 짜서: / 터 돌일에, 나를습너","쇰” (경 짜서: / 터 돌일에, 나를습너",ability_368b0b880768,windows,0.000,ocr_draft
+74,atlas01_r03_c02,Western Tanager,서부풍금조,1,3,2,"쇰” 회卜(경i卜 패: • /`테 띨일L 수-예, 니류습너v卜.","쇰” 회 (경 패: / 테 띨일 수-예, 니류습너","쇰” 회 (경 패: / 테 띨일 수-예, 니류습너",ability_e3878459cebf,windows,0.000,ocr_draft
+75,atlas01_r03_c03,Spotted Towhee,점박이토히,1,3,3,"쇰” 卜(경i卜 애: • /`터 수-예, 니류습너v卜.","쇰” (경 애: / 터 수-예, 니류습너","쇰” (경 애: / 터 수-예, 니류습너",ability_354119297ada,windows,0.000,ocr_draft
+76,atlas01_r03_c04,Rose Breasted Grosbeak,장밋빛가슴콩새,1,3,4,"卜(경i卜 패: • /`터 수-예, 나를수ä너vt-.","(경 패: / 터 수-예, 나를수ä너 -","(경 패: / 터 수-예, 나를수ä너 -",ability_c22a04e1fac7,windows,0.000,ocr_draft
+77,atlas01_r03_c05,Green Heron,초록왜가리,1,3,5,"/`테 띨일* 논에, 니류습너v卜.","/ 테 띨일 논에, 니류습너","/ 테 띨일 논에, 니류습너",ability_46a507c802d8,windows,0.000,ocr_draft
+78,atlas01_r03_c06,Gray Catbird,회색크아트브어드새,1,3,6,"회卜(경i卜 • |7吉i /`테 돌일에, %|7吉i 나를습너v卜.","회 (경 7吉 / 테 돌일에, % 7吉 나를습너","회 (경 7吉 / 테 돌일에, % 7吉 나를습너",ability_fd06e0ba2cc0,windows,0.000,ocr_draft
+79,atlas01_r03_c07,Northern Mockingbird,북부흉내지빠귀,1,3,7,"卜(경i卜 애: {괴7吉i /`터 띨일틽 돌일에, 니류수ä너v卜.","(경 애: 괴7吉 / 터 띨일틽 돌일에, 니류수ä너","(경 애: 괴7吉 / 터 띨일틽 돌일에, 니류수ä너",ability_945ec2a944a5,windows,0.000,ocr_draft
+80,atlas01_r03_c08,Hooded Merganser,두건비오리,1,3,8,"*경하 /`테 띨일* 논에, 目|7吉i 나를습너v卜.","경하 / 테 띨일 논에, 目 7吉 나를습너","경하 / 테 띨일 논에, 目 7吉 나를습너",ability_89b089f87cde,windows,0.000,ocr_draft
+81,atlas01_r03_c09,Bewicks Wren,뷰익굴뚝새,1,3,9,뾤” 卜(경i卜 패: • /`터 돌일 (IHE 『1스너v}-.,뾤” (경 패: / 터 돌일 ( 『1스너 -,뾤” (경 패: / 터 돌일 ( 『1스너 -,ability_f8617c66eeab,windows,0.000,ocr_draft
+82,atlas01_r03_c10,Yellow Breasted Chat,노란가슴챗,1,3,10,"뾤” 鬱卜(경i卜 패: {괴7吉i /`터 띨일L 수-예, %6 +1늰 모스니v卜.","뾤” (경 패: 괴7吉 / 터 띨일 수-예, %6 +1늰 모스니","뾤” (경 패: 괴7吉 / 터 띨일 수-예, %6 +1늰 모스니",ability_db412a4c3f6a,windows,0.000,ocr_draft
+83,atlas01_r04_c01,Common Nighthawk,일반쏙독새,1,4,1,"패: 째 /`터 띨일L 돌일에, 모스니v卜.","패: 째 / 터 띨일 돌일에, 모스니","패: 째 / 터 띨일 돌일에, 모스니",ability_d070570ad3d6,windows,0.000,ocr_draft
+84,atlas01_r04_c02,Song Sparrow,노래참새,1,4,2,"패: 째 /`터 띨일* 논에, 冒또는특龜H뇨 颱너v卜.","패: 째 / 터 띨일 논에, 冒또는특龜 뇨 颱너","패: 째 / 터 띨일 논에, 冒또는특龜 뇨 颱너",ability_a9b992e52ee8,windows,0.000,ocr_draft
+85,atlas01_r04_c03,White Crowned Sparrow,흰관참새,1,4,3,회卜(경i卜 `.. 『1|4서 目김기능皀 1卜7`커多F /`터 띨녜 놓습니v卜.,회 (경 .. 『1 4서 目김기능皀 1 7 커多 / 터 띨녜 놓습니,회 (경 .. 『1 4서 目김기능皀 1 7 커多 / 터 띨녜 놓습니,ability_7e2402b5f76d,windows,0.000,ocr_draft
+86,atlas01_r04_c04,Chimney Swift,굴뚝칼새,1,4,4,2鬱卜(경叴 패: 口김7吉皀 1卜7e기외H /`터 띨녜 놓습니v卜.,2 (경叴 패: 口김7吉皀 1 7 기외 / 터 띨녜 놓습니,2 (경叴 패: 口김7吉皀 1 7 기외 / 터 띨녜 놓습니,ability_d42b23cbbefb,windows,0.000,ocr_draft
+87,atlas01_r04_c05,Blue Grosbeak,푸른콩새,1,4,5,鬱卜(경i卜 패: (IHE 1卜7`커多F /`터 띨녜 놓습니v卜.,(경 패: ( 1 7 커多 / 터 띨녜 놓습니,(경 패: ( 1 7 커多 / 터 띨녜 놓습니,ability_4cca3dfcc5d6,windows,0.000,ocr_draft
+88,atlas01_r04_c06,Lincolns Sparrow,링컨참새,1,4,6,鬱卜(경i卜 패: 1卜7`커외F 째 /`테 띨『1| 놓습니vh.,(경 패: 1 7 커외 째 / 테 띨『1 놓습니,(경 패: 1 7 커외 째 / 테 띨『1 놓습니,ability_1377467cf11e,windows,0.000,ocr_draft
+89,atlas01_r04_c07,Greater Roadrunner,큰로드러너,1,4,7,鬱卜(경뉴 짜서: (IHE &례|기 『1|4께 1卜7`커多t- /`터 띨녜 놓습니v卜.,(경뉴 짜서: ( &례 기 『1 4께 1 7 커多 - / 터 띨녜 놓습니,(경뉴 짜서: ( &례 기 『1 4께 1 7 커多 - / 터 띨녜 놓습니,ability_b61376d4f23f,windows,0.000,ocr_draft
+90,atlas01_r04_c08,Red Tailed Hawk,붉은꼬리매,1,4,8,/`터 鬱에|기녜44팀|賓능i 11과 <7눗cm鬱卜에 /`터 띨『1| 놓습니v}-.,/ 터 에 기녜44팀 賓능 11과 7눗 에 / 터 띨『1 놓습니 -,/ 터 에 기녜44팀 賓능 11과 7눗 에 / 터 띨『1 놓습니 -,ability_48d01aa06353,windows,0.000,ocr_draft
+91,atlas01_r04_c09,Northern Harrier,북부개구리매,1,4,9,鬱卜(경i卜 패: 4+4 t기|기녜4께 <7눗cvn鬱卜에 /`터 띨네 놓습니v卜.,(경 패: 4+4 기 기녜4께 7눗 에 / 터 띨네 놓습니,(경 패: 4+4 기 기녜4께 7눗 에 / 터 띨네 놓습니,ability_dd5ac40875cb,windows,0.000,ocr_draft
+92,atlas01_r04_c10,Coopers Hawk,쿠퍼매,1,4,10,짜서: /`터 刁卜9 鬱에渺|녜44다1능i 11교 /`터 띨『1| 놓습니v卜.,짜서: / 터 刁 9 에渺 녜44다1능 11교 / 터 띨『1 놓습니,짜서: / 터 刁 9 에渺 녜44다1능 11교 / 터 띨『1 놓습니,ability_2cd1abf27df7,windows,0.000,ocr_draft
+93,atlas01_r05_c01,Red Shouldered Hawk,붉은시아우르드어에드매,1,5,1,鬱卜(경i卜 패: /`터 鬱에慘|녜4께口|1능皀 <(oocww卜t4 /`터 띨녜,(경 패: / 터 에慘 녜4께口 1능皀 ( 4 / 터 띨녜,(경 패: / 터 에慘 녜4께口 1능皀 ( 4 / 터 띨녜,ability_ad2ab39f7514,windows,0.000,ocr_draft
+94,atlas01_r05_c02,Barred Owl,줄무늬올빼미,1,5,2,하서: /`터 鬱에|기녜44[1矉능i 11고 〈눗ocm鬱卜에 /`터 띨네 놓습니v卜.,하서: / 터 에 기녜44[1矉능 11고 〈눗 에 / 터 띨네 놓습니,하서: / 터 에 기녜44[1矉능 11고 〈눗 에 / 터 띨네 놓습니,ability_ca597c0c7b4a,windows,0.000,ocr_draft
+95,atlas01_r05_c03,Swainsons Hawk,스웨인슨매,1,5,3,鬱卜<경i卜 짜서: /`네 t기|기녜44냐1능i 11과 <7눗cm鬱卜에 째 /`터 띨녜 놓습니v卜.,경 짜서: / 네 기 기녜44냐1능 11과 7눗 에 째 / 터 띨녜 놓습니,경 짜서: / 네 기 기녜44냐1능 11과 7눗 에 째 / 터 띨녜 놓습니,ability_aa5379b67b7d,windows,0.000,ocr_draft
+96,atlas01_r05_c04,Peregrine Falcon,송골매,1,5,4,鬱卜(경i卜 패: /`터 刁卜9 鬱에渺t녜44[}仔능i 11과 /`터 띨『1| 놓습니v卜.,(경 패: / 터 刁 9 에渺 녜44[ 仔능 11과 / 터 띨『1 놓습니,(경 패: / 터 刁 9 에渺 녜44[ 仔능 11과 / 터 띨『1 놓습니,ability_77b9d4bdf60c,windows,0.000,ocr_draft
+97,atlas01_r05_c05,Golden Eagle,검독수리,1,5,5,/`터 鬱에*녜44뎜|賓능틽 11과 〈7눗cm鬱卜에 /`터 띨녜 놓습니v卜.,/ 터 에 녜44뎜 賓능틽 11과 〈7눗 에 / 터 띨녜 놓습니,/ 터 에 녜44뎜 賓능틽 11과 〈7눗 에 / 터 띨녜 놓습니,ability_23ad9040e11a,windows,0.000,ocr_draft
+98,atlas01_r05_c06,Great Horned Owl,아메리카수리부엉이,1,5,6,"패: /`터 t기|기녜4서 <7눗cm鬱卜에 /`터 ,혈『1| 놓습니v卜.","패: / 터 기 기녜4서 7눗 에 / 터 ,혈『1 놓습니","패: / 터 기 기녜4서 7눗 에 / 터 ,혈『1 놓습니",ability_18f84ac6dc64,windows,0.000,ocr_draft
+99,atlas01_r05_c07,Common Merganser,일반비오리,1,5,7,鬱卜/x경i卜 애: /`터 t기|기네4서 <7눗cvn鬱卜에 /`터 띨『1| 놓습니v卜.,/ 경 애: / 터 기 기네4서 7눗 에 / 터 띨『1 놓습니,/ 경 애: / 터 기 기네4서 7눗 에 / 터 띨『1 놓습니,ability_6387928fbefa,windows,0.000,ocr_draft
+100,atlas01_r05_c08,Willet,윌렛,1,5,8,"회卜(경i卜 패: 띤Ö|도 |é吉녜 수4卜을l늰 컬줨거4께 多수 갱卜v匕鬱卜도 >㉦1卜 *월에, 1卜7`커외H 7`dq능치『너v卜.","회 (경 패: 띤Ö 도 é吉녜 수4 을 늰 컬줨거4께 多수 갱 匕 도 ㉦1 월에, 1 7 커외 7 능치『너","회 (경 패: 띤Ö 도 é吉녜 수4 을 늰 컬줨거4께 多수 갱 匕 도 ㉦1 월에, 1 7 커외 7 능치『너",ability_55d0b83e6850,windows,0.000,ocr_draft
+101,atlas01_r05_c09,Anhinga,아닝가새,1,5,9,"회卜(경i卜 |d,吉네 수忒는 수4卜을|뇨 컬隧4께 多수 갱卜v匕첝卜도 ~)1卜 9匕&鬱민, 1卜7`”기외F 刁kz녜 7`ft기능히『너vH.","회 (경 ,吉네 수忒는 수4 을 뇨 컬隧4께 多수 갱 匕첝 도 )1 9匕& 민, 1 7 ”기외 刁 녜 7 기능히『너","회 (경 ,吉네 수忒는 수4 을 뇨 컬隧4께 多수 갱 匕첝 도 )1 9匕& 민, 1 7 ”기외 刁 녜 7 기능히『너",ability_2cc0447aeb42,windows,0.000,ocr_draft
+102,atlas01_r05_c10,Snowy Egret,눈백로,1,5,10,"패: 『LÖI± |d,吉녜 수4는 수4卜을|뇨 컬휞거4서 多수 갱卜v匕鬱卜도 ㉧1卜 9匕&에, 1卜7`커외h 째 刁kz네 7`fiq,능히『너v卜.","패: 『 Ö ± ,吉녜 수4는 수4 을 뇨 컬휞거4서 多수 갱 匕 도 ㉧1 9匕&에, 1 7 커외 째 刁 네 7 ,능히『너","패: 『 Ö ± ,吉녜 수4는 수4 을 뇨 컬휞거4서 多수 갱 匕 도 ㉧1 9匕&에, 1 7 커외 째 刁 네 7 ,능히『너",ability_270a9f2d6202,windows,0.000,ocr_draft
+103,atlas01_r06_c01,White Faced Ibis,흰프아크에드따오기,1,6,1,"한|: 띤Ö|도 |é吉녜 일k는 수4卜을|뇨 컬隧44 多수 갱卜v匕鬱卜도 ` 희卜 *월에, 1卜7`”기외F 선7,능히『너v卜.","한 : 띤Ö 도 é吉녜 일 는 수4 을 뇨 컬隧44 多수 갱 匕 도 희 월에, 1 7 ”기외 선7,능히『너","한 : 띤Ö 도 é吉녜 일 는 수4 을 뇨 컬隧44 多수 갱 匕 도 희 월에, 1 7 ”기외 선7,능히『너",ability_8df20dbe2a03,windows,0.000,ocr_draft
+104,atlas01_r06_c02,Black Skimmer,검은가위부리,1,6,2,"회卜(경i卜 짜서: |d,吉녜 일.k는 수/`卜뮈뇨 컬줨거4께 多수 갱卜9匕첝卜도 ... 01卜 9匕&t2,코, 1卜7턴외F 刁kz네 7x서q능히『너v卜.","회 (경 짜서: ,吉녜 일. 는 수/ 뮈뇨 컬줨거4께 多수 갱 9匕첝 도 ... 01 9匕& 2,코, 1 7턴외 刁 네 7 서 능히『너","회 (경 짜서: ,吉녜 일. 는 수/ 뮈뇨 컬줨거4께 多수 갱 9匕첝 도 ... 01 9匕& 2,코, 1 7턴외 刁 네 7 서 능히『너",ability_e77884a0d3c8,windows,0.000,ocr_draft
+105,atlas01_r06_c03,Eastern Screech Owl,동부스크이치올빼미,1,6,3,"鬱卜(경i卜 패: 띤Ö|도 |d,吉네 수4는 수/`卜을|늰 컬줨거4께 多수 갱卜v匕鬱卜도戶 •01卜 9匕&t$민, 1卜7`”기외H 7卜9네 7`서7,능히『너rv卜.","(경 패: 띤Ö 도 ,吉네 수4는 수/ 을 늰 컬줨거4께 多수 갱 匕 도戶 01 9匕& $민, 1 7 ”기외 7 9네 7 서7,능히『너","(경 패: 띤Ö 도 ,吉네 수4는 수/ 을 늰 컬줨거4께 多수 갱 匕 도戶 01 9匕& $민, 1 7 ”기외 7 9네 7 서7,능히『너",ability_ed14a2abdc18,windows,0.000,ocr_draft
+106,atlas01_r06_c04,Mississippi Kite,미시시피솔개,1,6,4,"회卜(경i卜 띤Ö|도 |é吉『1| 낓는 수/`卜을l늰 푫거4서 多수 갱卜9匕鬱卜도 <矛1卜 *월에, 1卜7`”기多F 째 7`ftq,능히『너v卜.","회 (경 띤Ö 도 é吉『1 낓는 수/ 을 늰 푫거4서 多수 갱 9匕 도 矛1 월에, 1 7 ”기多 째 7 ,능히『너","회 (경 띤Ö 도 é吉『1 낓는 수/ 을 늰 푫거4서 多수 갱 9匕 도 矛1 월에, 1 7 ”기多 째 7 ,능히『너",ability_6811cf1e54e4,windows,0.000,ocr_draft
+107,atlas01_r06_c05,Ferruginous Hawk,프어르우그이느아우스매,1,6,5,"鬱卜<경i卜 패: 띤ø|도 |d.吉녜 수4는 수4卜을|늰 푫거4께 일수 갱卜v~卜도 속하1卜 *월에, 1卜7`”거외F 刁kZ네 션7`ki,『너v卜.","경 패: 띤ø 도 .吉녜 수4는 수4 을 늰 푫거4께 일수 갱 도 속하1 월에, 1 7 ”거외 刁 네 션7 ,『너","경 패: 띤ø 도 .吉녜 수4는 수4 을 늰 푫거4께 일수 갱 도 속하1 월에, 1 7 ”거외 刁 네 션7 ,『너",ability_0539a63169be,windows,0.000,ocr_draft
+108,atlas01_r06_c06,American Kestrel,아메리카황조롱이,1,6,6,"鬱卜(경i卜 패: |d,吉녜 일k는 수4卜을|켴i 푫거4께 多수 갱卜v~卜도 4하1卜 *월에, 4하늰 1卜7`커외H 刁kz네 7`세능히『너v卜.","(경 패: ,吉녜 일 는 수4 을 켴 푫거4께 多수 갱 도 4하1 월에, 4하늰 1 7 커외 刁 네 7 세능히『너","(경 패: ,吉녜 일 는 수4 을 켴 푫거4께 多수 갱 도 4하1 월에, 4하늰 1 7 커외 刁 네 7 세능히『너",ability_26fdeaca8026,windows,0.000,ocr_draft
+109,atlas01_r06_c07,Barn Owl,가면올빼미,1,6,7,"鬱卜,x경i卜 |é吉네 일k는 수4卜을I늰 푫거4계 多수 갱卜v匕鬱卜도 의卜 *월에, 4하늰 1卜7`커외F 째 刁kz녜 7`서7,능히『너rv卜.","경 é吉네 일 는 수4 을 늰 푫거4계 多수 갱 匕 도 의 월에, 4하늰 1 7 커외 째 刁 녜 7 서7,능히『너","경 é吉네 일 는 수4 을 늰 푫거4계 多수 갱 匕 도 의 월에, 4하늰 1 7 커외 째 刁 녜 7 서7,능히『너",ability_45378077758d,windows,0.000,ocr_draft
+110,atlas01_r06_c08,Burrowing Owl,굴파는올빼미,1,6,8,"鬱卜(경i卜 뗘: 띤Ö|도 |d,吉네 일k는 수4卜을|뇨 푫거44 多수 갱卜v匕鬱卜도 쉬卜 *월에, 1卜7`”기외H 7x서7`능히『너rv卜.","(경 뗘: 띤Ö 도 ,吉네 일 는 수4 을 뇨 푫거44 多수 갱 匕 도 쉬 월에, 1 7 ”기외 7 서7 능히『너","(경 뗘: 띤Ö 도 ,吉네 일 는 수4 을 뇨 푫거44 多수 갱 匕 도 쉬 월에, 1 7 ”기외 7 서7 능히『너",ability_d683ebb4926b,windows,0.000,ocr_draft
+111,atlas01_r06_c09,Sandhill Crane,캐나다두루미,1,6,9,"鬱卜,x경i卜 하서: |é吉네 일k는 수4卜을I늰 푫거4께 多수 갱卜v匕鬱卜도 <才1卜 *월에, 1卜7`커외F 째 7`서q능히『너v卜.","경 하서: é吉네 일 는 수4 을 늰 푫거4께 多수 갱 匕 도 才1 월에, 1 7 커외 째 7 서 능히『너","경 하서: é吉네 일 는 수4 을 늰 푫거4께 多수 갱 匕 도 才1 월에, 1 7 커외 째 7 서 능히『너",ability_6ecd04ca425c,windows,0.000,ocr_draft
+112,atlas01_r06_c10,Canada Goose,캐나다기러기,1,6,10,"회卜(경i卜 패: 『?占6투 째 /`테卜 4서4|7`t네4께 1卜7,능 월늰7속••1| *님 444|7`tL 해뒵치『너v卜.","회 (경 패: 『?占6투 째 / 테 4서4 7 네4께 1 7,능 월늰7속 1 님 444 7 해뒵치『너","회 (경 패: 『?占6투 째 / 테 4서4 7 네4께 1 7,능 월늰7속 1 님 444 7 해뒵치『너",ability_9130ed2209c6,windows,0.000,ocr_draft
+113,atlas01_r07_c01,Black Bellied Whistling Duck,검은배휘파람오리,1,7,1,"패: 『&l占6투 째 /`테卜 44447`f녜4께 1卜7,능 월부속『1| 일kv卜에 *및 444t7`* 해우(『너v卜.","패: 『& 占6투 째 / 테 44447 녜4께 1 7,능 월부속『1 일 에 및 444 7 해우(『너","패: 『& 占6투 째 / 테 44447 녜4께 1 7,능 월부속『1 일 에 및 444 7 해우(『너",ability_43feaa007029,windows,0.000,ocr_draft
+114,atlas01_r07_c02,Double Crested Cormorant,두겹볏가마우지,1,7,2,"鬱卜(경i卜 표서: 移占6투 /`테1卜 44447`t녜4께 1卜7,능 월늰7속『1| *님 4세7`IL 해뒵치『너vH.","(경 표서: 移占6투 / 테1 44447 녜4께 1 7,능 월늰7속『1 님 4세7 해뒵치『너","(경 표서: 移占6투 / 테1 44447 녜4께 1 7,능 월늰7속『1 님 4세7 해뒵치『너",ability_b2bf884c1a52,windows,0.000,ocr_draft
+115,atlas01_r07_c03,American White Pelican,아메리카흰펠리컨,1,7,3,"패: 『鬱占6투 /`테卜 4께/냬7`(네/년 1卜7,능 월부수『1| *님 444 해1치『너v卜.","패: 『 占6투 / 테 4께/냬7 (네/년 1 7,능 월부수『1 님 444 해1치『너","패: 『 占6투 / 테 4께/냬7 (네/년 1 7,능 월부수『1 님 444 해1치『너",ability_8e2371dbf65d,windows,0.000,ocr_draft
+116,atlas01_r07_c04,Red Winged Blackbird,붉은날개검은새,1,7,4,"회卜(경i卜 짜서: 『&,占6투 /`테卜 44447`t네4께 1卜7,능 월늰7속네 *님 444 ø|1히『니v卜.","회 (경 짜서: 『&,占6투 / 테 44447 네4께 1 7,능 월늰7속네 님 444 ø 1히『니","회 (경 짜서: 『&,占6투 / 테 44447 네4께 1 7,능 월늰7속네 님 444 ø 1히『니",ability_d5afc81b3a79,windows,0.000,ocr_draft
+117,atlas01_r07_c05,Common Grackle,일반검정새,1,7,5,회卜(경i卜 패: 『&i占6투 째 /`테卜 444t7`f네4께 1卜1능 월늰7속『1| *님 444 해뒵히『니vh.,회 (경 패: 『& 占6투 째 / 테 444 7 네4께 1 1능 월늰7속『1 님 444 해뒵히『니,회 (경 패: 『& 占6투 째 / 테 444 7 네4께 1 1능 월늰7속『1 님 444 해뒵히『니,ability_58f048b55cdd,windows,0.000,ocr_draft
+118,atlas01_r07_c06,Brewers Blackbird,브루어검은새,1,7,6,"회卜<경i卜 패: 『&i占6투 /`테卜 44447`t네4서 1卜7,능 &늰7속『1| *님 444 해뒵히『너vh.","회 경 패: 『& 占6투 / 테 44447 네4서 1 7,능 &늰7속『1 님 444 해뒵히『너","회 경 패: 『& 占6투 / 테 44447 네4서 1 7,능 &늰7속『1 님 444 해뒵히『너",ability_9750ee423031,windows,0.000,ocr_draft
+119,atlas01_r07_c07,Yellow Headed Blackbird,노란머리검은새,1,7,7,"패: 『æ占4투 /`테卜 44447`t녜4께 1卜7,능 월부속『1| *님 444|7`tL 해뒵히『너vH.","패: 『æ占4투 / 테 44447 녜4께 1 7,능 월부속『1 님 444 7 해뒵히『너","패: 『æ占4투 / 테 44447 녜4께 1 7,능 월부속『1 님 444 7 해뒵히『너",ability_f581e6dff28c,windows,0.000,ocr_draft
+120,atlas01_r07_c08,Bushtit,부시팃새,1,7,8,鬱卜(경i卜 44447`t녜 낓는 *및 /`테 갱卜9匕일l IB넥능쪠 勢(경촤치『너vh.,(경 44447 녜 낓는 및 / 테 갱 9匕일 넥능쪠 勢(경촤치『너,(경 44447 녜 낓는 및 / 테 갱 9匕일 넥능쪠 勢(경촤치『너,ability_64363c1c7bf6,windows,0.000,ocr_draft
+121,atlas01_r07_c09,Dickcissel,딕시슬새,1,7,9,鬱卜<경i卜 한|: 44447`t녜 쉬는 /`터 갱卜vt-의 劈(경i卜히『너vh.,경 한 : 44447 녜 쉬는 / 터 갱 -의 劈(경 히『너,경 한 : 44447 녜 쉬는 / 터 갱 -의 劈(경 히『너,ability_5bc92533cd56,windows,0.000,ocr_draft
+122,atlas01_r07_c10,Ring Billed Gull,고리부리갈매기,1,7,10,,,,,windows,0.000,ocr_draft
+123,atlas02_r01_c01,American Coot,아메리카물닭,2,1,1,회卜<경i卜 패: 띤。|±네4께4~뇨 모습너v卜.,회 경 패: 띤。 ±네4께4 뇨 모습너,회 경 패: 띤。 ±네4께4 뇨 모습너,ability_9525351e246c,windows,0.000,ocr_draft
+124,atlas02_r01_c02,Yellow Rumped Warbler,노란르우므프에드워블러,2,1,2,*쇰卜 모습너v卜.,쇰 모습너,쇰 모습너,ability_6aaaf40ea2fe,windows,0.000,ocr_draft
+125,atlas02_r01_c03,American Robin,아메리카로빈,2,1,3,띤ø|도•1144회또 %6 느 『•1스너v卜.,띤ø 도 1144회또 %6 느 『 1스너,띤ø 도 1144회또 %6 느 『 1스너,ability_8dc9bb34776f,windows,0.000,ocr_draft
+126,atlas02_r01_c04,House Finch,집되새,2,1,4,*뉴 ℃말l: 띤。툐네4께 또는•주늰 모습너vh.,뉴 ℃말 : 띤。툐네4께 또는 주늰 모습너,뉴 ℃말 : 띤。툐네4께 또는 주늰 모습너,ability_3f10aa2737ad,windows,0.000,ocr_draft
+127,atlas02_r01_c05,Barn Swallow,브아르느제비,2,1,5,넣일 표서: 띤。匠네 낓는 모습너vh.,넣일 표서: 띤。匠네 낓는 모습너,넣일 표서: 띤。匠네 낓는 모습너,ability_b6603529171e,windows,0.000,ocr_draft
+128,atlas02_r01_c06,Tree Swallow,트르이제비,2,1,6,누일 띰•툐••1| 수忒는 띰%닣\로수iq*•,누일 띰 툐 1 수忒는 띰%닣\로수,누일 띰 툐 1 수忒는 띰%닣\로수,ability_747a9ff1dc96,windows,0.000,ocr_draft
+129,atlas02_r01_c07,Purple Martin,보라제비,2,1,7,"패: v,夕410| 우d갱卜는 /`卜鬱부4턴 4|7吉칌H 7수 /`卜鬱t%& 띤Ö|도네4께 - “十 (IH/KI 모는v卜.","패: ,夕410 우 갱 는 / 부4턴 4 7吉칌 7수 / %& 띤Ö 도네4께 - “十 ( / 모는","패: ,夕410 우 갱 는 / 부4턴 4 7吉칌 7수 / %& 띤Ö 도네4께 - “十 ( / 모는",ability_39ba699a7f21,windows,0.000,ocr_draft
+130,atlas02_r01_c08,Violet Green Swallow,보라초록제비,2,1,8,"v,。h41해 우•d갱卜는 4卜鬱부4턴 /`|7`수뉴t 7수 /`卜鬱『됨 띤Ö|도네4께 -) (IH&%I 모는v卜.",。 41해 우 갱 는 4 부4턴 / 7 수뉴 7수 / 『됨 띤Ö 도네4께 -) ( &% 모는,。 41해 우 갱 는 4 부4턴 / 7 수뉴 7수 / 『됨 띤Ö 도네4께 -) ( &% 모는,ability_fd8eac43abbd,windows,0.000,ocr_draft
+131,atlas02_r01_c09,Cedar Waxwing,크에드아르여새,2,1,9,"수/`테卜 1卜7,능 1쭥& /`卜鬱5&&","수/ 테 1 7,능 1쭥& / 5&&","수/ 테 1 7,능 1쭥& / 5&&",ability_b08d7beb2bbb,windows,0.000,ocr_draft
+132,atlas02_r01_c10,Pygmy Nuthatch,꼬마동고비,2,1,10,『길터 /`卜Ö|네 남1: *님 /`卜鬱『Ö| 亂녜 표거 띤Ö|±녜4께 \ |IH뇨 모습너v卜.,『길터 / Ö 네 남1: 님 / 『Ö 亂녜 표거 띤Ö ±녜4께 \ 뇨 모습너,『길터 / Ö 네 남1: 님 / 『Ö 亂녜 표거 띤Ö ±녜4께 \ 뇨 모습너,ability_638ea22ed254,windows,0.000,ocr_draft
+133,atlas02_r02_c01,Pine Siskin,소나무스이스크이느새,2,2,1,",1+1 4卜ø|네 남1: v卜늰 /`卜鬱『ø| 띤ø匠녜4께 \ 모습너v卜.",1+1 4 ø 네 남1: 늰 / 『ø 띤ø匠녜4께 \ 모습너,1+1 4 ø 네 남1: 늰 / 『ø 띤ø匠녜4께 \ 모습너,ability_166a7722511d,windows,0.000,ocr_draft
+134,atlas02_r02_c02,Dark Eyed Junco,검은에이에드정코새,2,2,2,"大R&게 4卜Ö|녜 남1: *님 /`卜鬱『Ö| 『1| 애, 띤。匠네4께 \ -새 모수ä너v卜.","大 &게 4 Ö 녜 남1: 님 / 『Ö 『1 애, 띤。匠네4께 \ -새 모수ä너","大 &게 4 Ö 녜 남1: 님 / 『Ö 『1 애, 띤。匠네4께 \ -새 모수ä너",ability_857c3caa3e74,windows,0.000,ocr_draft
+135,atlas02_r02_c03,American Oystercatcher,아메리카검은머리물떼새,2,2,3,애: 고*츊i계녜4께뇨뇨 모습너vh.,애: 고 츊 계녜4께뇨뇨 모습너,애: 고 츊 계녜4께뇨뇨 모습너,ability_57270aa2017c,windows,0.000,ocr_draft
+136,atlas02_r02_c04,Carolina Wren,캐롤라이나굴뚝새,2,2,4,광귀44녜4께%6 『1스너v卜.,광귀44녜4께%6 『1스너,광귀44녜4께%6 『1스너,ability_7bc5de5d855b,windows,0.000,ocr_draft
+137,atlas02_r02_c05,Black Necked Stilt,검은느에크에드장다리물떼새,2,2,5,鬱卜(경i卜 애•• 광츊å계녜44덥 『1스너vH.,(경 애 광츊å계녜44덥 『1스너,(경 애 광츊å계녜44덥 『1스너,ability_20dd07f16de6,windows,0.000,ocr_draft
+138,atlas02_r02_c06,Inca Dove,잉카비둘기,2,2,6,패: 과츊숴녜4께뇨켴h 모습너v卜.,패: 과츊숴녜4께뇨켴 모습너,패: 과츊숴녜4께뇨켴 모습너,ability_1c8c6b324abe,windows,0.000,ocr_draft
+139,atlas02_r02_c07,Says Phoebe,스에이스피비새,2,2,7,% 31H켴i 모수ävlv卜.,% 31 켴 모수ä,% 31 켴 모수ä,ability_55b1d59efce9,windows,0.000,ocr_draft
+140,atlas02_r02_c08,Ash Throated Flycatcher,아시목딱새,2,2,8,패: ~ 31H뇨 모습너v卜.,패: 31 뇨 모습너,패: 31 뇨 모습너,ability_5690284bf439,windows,0.000,ocr_draft
+141,atlas02_r02_c09,Bobolink,보보링크새,2,2,9,회卜(경i卜 패: 4卜鬱『i& 4•晷켴* 모수전vh.,회 (경 패: 4 『 & 4 晷켴 모수전,회 (경 패: 4 『 & 4 晷켴 모수전,ability_0fc1437d233a,windows,0.000,ocr_draft
+142,atlas02_r02_c10,Brown Pelican,갈색펠리컨,2,2,10,4卜鬱『i& 모수전vh.,4 『 & 모수전,4 『 & 모수전,ability_e2d65121a23b,windows,0.000,ocr_draft
+143,atlas02_r03_c01,American Goldfinch,아메리카그오르드프이느치새,2,3,1,회卜(경i卜 띤듬 4卜鬱『%& 『1스너v卜. Ctd,회 (경 띤듬 4 『%& 『1스너,회 (경 띤듬 4 『%& 『1스너,ability_1c6f38de70e5,windows,0.000,ocr_draft
+144,atlas02_r03_c02,Northern Flicker,북부딱따구리,2,3,2,애: 4卜鬱『i•& 수주 모습너vH.,애: 4 『 & 수주 모습너,애: 4 『 & 수주 모습너,ability_00f3e65101ca,windows,0.000,ocr_draft
+145,atlas02_r03_c03,Bald Eagle,흰머리수리,2,3,3,패: 4卜鬱『i&i탄툐,패: 4 『 & 탄툐,패: 4 『 & 탄툐,ability_62413ab90388,windows,0.000,ocr_draft
+146,atlas02_r03_c04,Wood Stork,숲황새,2,3,4,鬱卜(경i卜 고『츊å계녜4께 우4갱卜는,(경 고『츊å계녜4께 우4갱 는,(경 고『츊å계녜4께 우4갱 는,ability_86b1fe18abf7,windows,0.000,ocr_draft
+147,atlas02_r03_c05,Roseate Spoonbill,르오스이트에저어새,2,3,5,耳서: /`터 刁kz녜 돌@10 (IHE (Ht7 (IHE 『1스너v卜.,耳서: / 터 刁 녜 돌@10 ( ( 7 ( 『1스너,耳서: / 터 刁 녜 돌@10 ( ( 7 ( 『1스너,ability_cecd78aac715,windows,0.000,ocr_draft
+148,atlas02_r03_c06,Cerulean Warbler,하늘빛워블러,2,3,6,i-卜/`경i卜 耳서: /`터 돌@10 (IH— (IHE 『1스너v卜.,- / 경 耳서: / 터 돌@10 ( — ( 『1스너,- / 경 耳서: / 터 돌@10 ( — ( 『1스너,ability_ed4a752b4a98,windows,0.000,ocr_draft
+149,atlas02_r03_c07,Chestnut Collared Longspur,밤색크오르르아르에드긴발톱멧새,2,3,7,耳서: /`테 돌이0 (IHE |H휞거 2-1HE 『1스너v}-. 爹 Ctd,耳서: / 테 돌이0 ( 휞거 2-1 『1스너 -. 爹,耳서: / 테 돌이0 ( 휞거 2-1 『1스너 -. 爹,ability_8000d6bdb2cb,windows,0.000,ocr_draft
+150,atlas02_r03_c08,King Rail,크이느그뜸부기,2,3,8,耳서: /`터 刁kz네 돌이0 (IH— |H줨:•1 『1스니v卜.,耳서: / 터 刁 네 돌이0 ( — 줨: 1 『1스니,耳서: / 터 刁 네 돌이0 ( — 줨: 1 『1스니,ability_26a5d9f5c860,windows,0.000,ocr_draft
+151,atlas02_r03_c09,Red Cockaded Woodpecker,붉은크오크아드에드딱따구리,2,3,9,耳서: /`터 刁kz네 놓이이1H뇨 1十喞多1 (IHE 『1스너v卜.,耳서: / 터 刁 네 놓이이1 뇨 1十喞多1 ( 『1스너,耳서: / 터 刁 네 놓이이1 뇨 1十喞多1 ( 『1스너,ability_039ecd201228,windows,0.000,ocr_draft
+152,atlas02_r03_c10,Whooping Crane,아메리카흰두루미,2,3,10,"WH 大y鬱기1 4卜ø|녜 (주: v卜늰 4卜鬱『Ö|수녜 패, |IH뇨 모습너v卜.","大 기1 4 ø 녜 (주: 늰 4 『Ö 수녜 패, 뇨 모습너","大 기1 4 ø 녜 (주: 늰 4 『Ö 수녜 패, 뇨 모습너",ability_58979600d7a8,windows,0.000,ocr_draft
+153,atlas02_r04_c01,Spotted Owl,점박이올빼미,2,4,1,"大F鬱기l /`卜ø|네 남1: *님 /`卜鬱『Ö|수네 (HE 패, 닣 (IHE 모스니v卜.","大 기 / ø 네 남1: 님 / 『Ö 수네 ( 패, 닣 ( 모스니","大 기 / ø 네 남1: 님 / 『Ö 수네 ( 패, 닣 ( 모스니",ability_73abedaa9687,windows,0.000,ocr_draft
+154,atlas02_r04_c02,Cassins Finch,캐신되새,2,4,2,"鬱卜<경i卜 광츊;t계••1|44 (IHE 1卜人커외F 刁kz녜 선1능팅,tv}-.","경 광츊; 계 1 44 ( 1 人커외 刁 녜 선1능팅, -","경 광츊; 계 1 44 ( 1 人커외 刁 녜 선1능팅, -",ability_0d65bd034107,windows,0.000,ocr_draft
+155,atlas02_r04_c03,Bells Vireo,벨비레오,2,4,3,짜서: 광츊;t계녜4께 (IHE 1卜人커多F,짜서: 광츊; 계녜4께 ( 1 人커多,짜서: 광츊; 계녜4께 ( 1 人커多,ability_975e917f56eb,windows,0.000,ocr_draft
+156,atlas02_r04_c04,Painted Bunting,채색멧새,2,4,4,"광츊;t계녜4께 (IHE 1卜人커외F 刁kz녜 선1능팅,tv卜.",광츊; 계녜4께 ( 1 人커외 刁 녜 선1능팅,광츊; 계녜4께 ( 1 人커외 刁 녜 선1능팅,ability_3bbc886aecc5,windows,0.000,ocr_draft
+157,atlas02_r04_c05,Greater Prairie Chicken,큰프르에이르이치이크에느새,2,4,5,패: 광귀숴녜4께넟기IH닃 1卜人커외F 션q능팅Ltv卜.,패: 광귀숴녜4께넟기 닃 1 人커외 션 능팅,패: 광귀숴녜4께넟기 닃 1 人커외 션 능팅,ability_e527afa2311e,windows,0.000,ocr_draft
+158,atlas02_r04_c06,Atlantic Puffin,대서양퍼핀,2,4,6,패: 광츊;t계••1|4께 (IHE 1卜人커외F,패: 광츊; 계 1 4께 ( 1 人커외,패: 광츊; 계 1 4께 ( 1 人커외,ability_ff6780f3b4a1,windows,0.000,ocr_draft
+159,atlas02_r04_c07,Spragues Pipit,스프르아그우에스밭종다리,2,4,7,패: 띰•|도녜44첳깐1H뇨 모수äviv卜. 씨 刁kz네 수 일k습너v卜.,패: 띰 도녜44첳깐1 뇨 모수ä . 씨 刁 네 수 일 습너,패: 띰 도녜44첳깐1 뇨 모수ä . 씨 刁 네 수 일 습너,ability_9cfdd20443b4,windows,0.000,ocr_draft
+160,atlas02_r04_c08,California Condor,캘리포니아콘도르,2,4,8,"애: 띤4|도녜4께넙|IHE 모습너v卜. 7x서7,능성乞 수","애: 띤4 도녜4께넙 모습너 . 7 서7,능성乞 수","애: 띤4 도녜4께넙 모습너 . 7 서7,능성乞 수",ability_25192e9f790e,windows,0.000,ocr_draft
+161,atlas02_r04_c09,Downy Woodpecker,솜털딱따구리,2,4,9,WH: 띤ø|도네4계 모습너v卜. 刁kz••1| 수 9k6vivh,띤ø 도네4계 모습너 . 刁 1 수 9 6,띤ø 도네4계 모습너 . 刁 1 수 9 6,ability_8625899eb1e3,windows,0.000,ocr_draft
+162,atlas02_r04_c10,Tufted Titmouse,볏박새,2,4,10,鬱卜(경i卜 패: 띤ø|±녜4서 \하(1+1늰 모습너v卜. 刁kz네 수 일k습너v卜.,(경 패: 띤ø ±녜4서 \하(1+1늰 모습너 . 刁 네 수 일 습너,(경 패: 띤ø ±녜4서 \하(1+1늰 모습너 . 刁 네 수 일 습너,ability_75dd1e080b64,windows,0.000,ocr_draft
+163,atlas02_r05_c01,Ruby Crowned Kinglet,루비관크이느그르에트새,2,5,1,鬱卜(경i卜 띤Ö|도녜4계 별스fiH뇨 모습너v卜. 수 일k습너v卜.,(경 띤Ö 도녜4계 별스 뇨 모습너 . 수 일 습너,(경 띤Ö 도녜4계 별스 뇨 모습너 . 수 일 습너,ability_2a1c5603fec6,windows,0.000,ocr_draft
+164,atlas02_r05_c02,Red Eyed Vireo,붉은에이에드비레오,2,5,2,鬱卜/x경i卜 쾨: 띤Ö|도네4께 모수ä너v卜. 째 수 일k수ä너v卜.,/ 경 쾨: 띤Ö 도네4께 모수ä너 . 째 수 일 수ä너,/ 경 쾨: 띤Ö 도네4께 모수ä너 . 째 수 일 수ä너,ability_886015c105e5,windows,0.000,ocr_draft
+165,atlas02_r05_c03,House Wren,집굴뚝새,2,5,3,"大F鬱기1 4卜Ö|네 남1: v卜늰 4卜鬱『Ö| 력Ö|뫼|'』 1 띤는v卜에 1卜7`커외F 7P9네 선7,目『너v卜.","大 기1 4 Ö 네 남1: 늰 4 『Ö 력Ö 뫼 '』 1 띤는 에 1 7 커외 7 9네 선7,目『너","大 기1 4 Ö 네 남1: 늰 4 『Ö 력Ö 뫼 '』 1 띤는 에 1 7 커외 7 9네 선7,目『너",ability_26a306e7cd04,windows,0.000,ocr_draft
+166,atlas02_r05_c04,Savannah Sparrow,사바나참새,2,5,4,",1+1 大F鬱기1 4卜해녜 남1: /`卜鬱『Ö| ""f 녖게"" /`테는0들7`t의 *님 /`터 刁kz녜","1+1 大 기1 4 해녜 남1: / 『Ö "" 녖게"" / 테는0들7 의 님 / 터 刁 녜","1+1 大 기1 4 해녜 남1: / 『Ö "" 녖게"" / 테는0들7 의 님 / 터 刁 녜",ability_4e4d3c69832a,windows,0.000,ocr_draft
+167,atlas02_r05_c05,Eastern Bluebird,동부파랑새,2,5,5,",*1 大卜鬱게 4卜Ö|녜 남1: 4卜鬱『Ö| 녖-다|') /`테는4흐)들7`t%( /`터 刁kz녜",1 大 게 4 Ö 녜 남1: 4 『Ö 녖-다 ') / 테는4흐)들7 %( / 터 刁 녜,1 大 게 4 Ö 녜 남1: 4 『Ö 녖-다 ') / 테는4흐)들7 %( / 터 刁 녜,ability_88f509fe814f,windows,0.000,ocr_draft
+168,atlas02_r05_c06,Mountain Bluebird,산파랑새,2,5,6,",1+1 大F쵶기l /`卜Ö|네 (4: /`卜鬱『Ö| *교' 0 통-는”.",1+1 大 쵶기 / Ö 네 (4: / 『Ö 교' 0 통-는”,1+1 大 쵶기 / Ö 네 (4: / 『Ö 교' 0 통-는”,ability_4985c7cd0bec,windows,0.000,ocr_draft
+169,atlas02_r05_c07,Great Blue Heron,큰푸른왜가리,2,5,7,大F鬱기l /`卜Ö|녜 남1: 4卜鬱『ø| *교' 팀'•堯i /`터는0들7`t의 *님 /`터 刁kz네,大 기 / Ö 녜 남1: 4 『ø 교' 팀' 堯 / 터는0들7 의 님 / 터 刁 네,大 기 / Ö 녜 남1: 4 『ø 교' 팀' 堯 / 터는0들7 의 님 / 터 刁 네,ability_5b3b51903f8d,windows,0.000,ocr_draft
+170,atlas02_r05_c08,Great Egret,대백로,2,5,8,"t길터 大卜쵶기1 4卜Ö|네 (4• 4卜鬱『Ö| 넛-가|"" 7'•堯i 훼|1 /`터는0들7`t의 *님 /`터 刁kz네","길터 大 쵶기1 4 Ö 네 (4 4 『Ö 넛-가 "" 7' 堯 훼 1 / 터는0들7 의 님 / 터 刁 네","길터 大 쵶기1 4 Ö 네 (4 4 『Ö 넛-가 "" 7' 堯 훼 1 / 터는0들7 의 님 / 터 刁 네",ability_4fedb6a4210a,windows,0.000,ocr_draft
+171,atlas02_r05_c09,Broad Winged Hawk,넓은날개매,2,5,9,짜서: (과들7`tgl /`터軫卜v卜 0퓝 통수니”.,짜서: (과들7 / 터軫 0퓝 통수니”,짜서: (과들7 / 터軫 0퓝 통수니”,ability_e4240d18a1ad,windows,0.000,ocr_draft
+172,atlas02_r05_c10,American Redstart,아메리카딱새,2,5,10,0들7`t%l 통수니”.,0들7 % 통수니”,0들7 % 통수니”,ability_348383ff94c1,windows,0.000,ocr_draft
+173,atlas02_r06_c01,Canvasback,캔버스백새,2,6,1,% /`HW卜v卜이 통수니”.,% / 이 통수니”,% / 이 통수니”,ability_abb706d95b02,windows,0.000,ocr_draft
+174,atlas02_r06_c02,Vauxs Swift,브오크스스칼새,2,6,2,"% 0들7`L( /`HW卜,V卜이 (1""/凶4 통-수서v卜.","% 0들7 ( / , 이 (1""/凶4 통-수서","% 0들7 ( / , 이 (1""/凶4 통-수서",ability_6508be22698c,windows,0.000,ocr_draft
+175,atlas02_r06_c03,Brant,브란트새,2,6,3,"패: 띤된4卜鬱『*& )에/`테 •3P9 |1능녜 통수니”. v,夕41& 누卜*(!:J)/`테 |7吉수•1| &해 수 수忒霦v卜.","패: 띤된4 『 & )에/ 테 3 9 1능녜 통수니”. ,夕41& 누 (!: )/ 테 7吉수 1 &해 수 수忒霦","패: 띤된4 『 & )에/ 테 3 9 1능녜 통수니”. ,夕41& 누 (!: )/ 테 7吉수 1 &해 수 수忒霦",ability_8309d9a3913b,windows,0.000,ocr_draft
+176,atlas02_r06_c04,White Throated Swift,흰목칼새,2,6,4,뗘: 띤듬4卜鬱『i& /`터 |7吉네 통수니”. 9夕41& 쒸卜* /`테 7吉••1| 鬱에 수 수것쳔v卜.,뗘: 띤듬4 『 & / 터 7吉네 통수니”. 9夕41& 쒸 / 테 7吉 1 에 수 수것쳔,뗘: 띤듬4 『 & / 터 7吉네 통수니”. 9夕41& 쒸 / 테 7吉 1 에 수 수것쳔,ability_2d7254f3d133,windows,0.000,ocr_draft
+177,atlas02_r06_c05,Scaled Quail,스크아르에드메추라기,2,6,5,"띤들4卜鬱『*딈e)/런 7,능네 통-수전”. VI夕41& 7吉••1| (IHE 넛-일 •|스너v卜. 鬱 -r 八닙","띤들4 『 딈 )/런 7,능네 통-수전”. 夕41& 7吉 1 ( 넛-일 스너 . - 八닙","띤들4 『 딈 )/런 7,능네 통-수전”. 夕41& 7吉 1 ( 넛-일 스너 . - 八닙",ability_00f37077b6ee,windows,0.000,ocr_draft
+178,atlas02_r06_c06,Black Chinned Hummingbird,검은치이느느에드벌새,2,6,6,,,,,windows,0.000,ocr_draft
+179,atlas02_r06_c07,Red Breasted Merganser,붉은가슴비오리,2,6,7,*卜K}十LF 애: /`터 캅9네이1H늼 4-수ävlv卜.,十 애: / 터 캅9네이1 늼 4-수ä,十 애: / 터 캅9네이1 늼 4-수ä,ability_3a751e39212d,windows,0.000,ocr_draft
+180,atlas02_r06_c08,Painted Whitestart,채색우이트에스트아르트새,2,6,8,회卜(경i卜 耳서: /`터 刁卜9네이1H 너-B너v卜.,회 (경 耳서: / 터 刁 9네이1 너- 너,회 (경 耳서: / 터 刁 9네이1 너- 너,ability_cd9891d410d5,windows,0.000,ocr_draft
+181,atlas02_r06_c09,Eurasian Magpie,유라시아까치,2,6,9,b卜(}十LF 패: /`테 넣-수ä너v卜.,( 十 패: / 테 넣-수ä너,( 十 패: / 테 넣-수ä너,ability_d9ab5ddf974d,windows,0.000,ocr_draft
+182,atlas02_r06_c10,Carrion Crow,크아르르이오느까마귀,2,6,10,애: /`터 刁卜9혜C)(IH'% 통-수ä너v卜.,애: / 터 刁 9혜 )( '% 통-수ä너,애: / 터 刁 9혜 )( '% 통-수ä너,ability_e8647739e539,windows,0.000,ocr_draft
+183,atlas02_r07_c01,Griffon Vulture,그르이프프오느독수리,2,7,1,패: /`례네이1H뇨 좋습니v卜.,패: / 례네이1 뇨 좋습니,패: / 례네이1 뇨 좋습니,ability_3c02280d96bf,windows,0.000,ocr_draft
+184,atlas02_r07_c02,Coal Tit,크오아르트이트새,2,7,2,회卜(경i卜 /`터네이1H,회 (경 / 터네이1,회 (경 / 터네이1,ability_8551469d19a2,windows,0.000,ocr_draft
+185,atlas02_r07_c03,Eurasian Nuthatch,유라시아동고비,2,7,3,회卜(경i卜 한|: 니류습너vh.,회 (경 한 : 니류습너,회 (경 한 : 니류습너,ability_63331c4f913b,windows,0.000,ocr_draft
+186,atlas02_r07_c04,Eurasian Nutcracker,유라시아잣까마귀,2,7,4,,,,,windows,0.000,ocr_draft
+187,atlas02_r07_c05,Red Backed Shrike,붉은브아크에드때까치,2,7,5,% 니를습너v卜.,% 니를습너,% 니를습너,ability_5eb0d60c4db7,windows,0.000,ocr_draft
+188,atlas02_r07_c06,Common Kingfisher,물총새,2,7,6,"애: {417吉i 니름습니vh. 夥卜å ' 짜서 /&네4께 目|7,능i","애: 417吉 니름습니 . 夥 å ' 짜서 /&네4께 目 7,능","애: 417吉 니름습니 . 夥 å ' 짜서 /&네4께 目 7,능",ability_ce7e66c97599,windows,0.000,ocr_draft
+189,atlas02_r07_c07,Little Owl,금눈쇠올빼미,2,7,7,회卜<경i卜 류H:巳(q吉i 니류습너v卜. 軫卜å ' /z녜44[〕|賓능i |H낍너v卜.,회 경 류 :巳( 吉 니류습너 . 軫 å ' / 녜44[〕 賓능 낍너,회 경 류 :巳( 吉 니류습너 . 軫 å ' / 녜44[〕 賓능 낍너,ability_ac5f27f4b84b,windows,0.000,ocr_draft
+190,atlas02_r07_c08,Eurasian Jay,어치,2,7,8,鬱卜(경i卜 패:원賓능i 니를습너v}-. ' /i녜44표佩능i |H낍니v卜.,(경 패:원賓능 니를습너 -. ' / 녜44표佩능 낍니,(경 패:원賓능 니를습너 -. ' / 녜44표佩능 낍니,ability_6a4200c8c76d,windows,0.000,ocr_draft
+191,atlas02_r07_c09,White Stork,황새,2,7,9,"鬱卜<경i卜 패: 나주!希너v卜. 夥卜å ' /""b녜4계 |H낍너v卜.","경 패: 나주!希너 . 夥 å ' /"" 녜4계 낍너","경 패: 나주!希너 . 夥 å ' /"" 녜4계 낍너",ability_5434ccd91647,windows,0.000,ocr_draft
+192,atlas02_r07_c10,White Throated Dipper,흰목물까마귀,2,7,10,,,,,windows,0.000,ocr_draft
+193,atlas03_r01_c01,Black Throated Diver,검은목드이브어새,3,1,1,"44447`to••l| 수4는 馝능쪄 갱卜v별 iLt 남1 鬱하 활,x경i卜히『너vh.","44447 수4는 馝능쪄 갱 별 남1 하 활, 경 히『너","44447 수4는 馝능쪄 갱 별 남1 하 활, 경 히『너",ability_56b62f0428b1,windows,0.000,ocr_draft
+194,atlas03_r01_c02,Wilsons Storm Petrel,윌슨스트오르므페트럴새,3,1,2,'1일 휴서: 김7`능i 니를•Y 多수 |1능i 1卜7`檼너v卜.,'1일 휴서: 김7 능 니를 多수 1능 1 7 檼너,'1일 휴서: 김7 능 니를 多수 1능 1 7 檼너,ability_701c1f8b7141,windows,0.000,ocr_draft
+195,atlas03_r01_c03,Great Crested Grebe,뿔논병아리,3,1,3,'로 짜서: *서실 쬐수 1卜자}너v卜.,'로 짜서: 서실 쬐수 1 자 너,'로 짜서: 서실 쬐수 1 자 너,ability_fe0ad5c96560,windows,0.000,ocr_draft
+196,atlas03_r01_c04,Common Little Bittern,일반작은해오라기,3,1,4,\일 표서: 11녀실 김1능i 多수 1卜자}너vb-.,\일 표서: 11녀실 김1능 多수 1 자 너 -,\일 표서: 11녀실 김1능 多수 1 자 너 -,ability_682ed166af82,windows,0.000,ocr_draft
+197,atlas03_r01_c05,Squacco Heron,스쿠아크크오왜가리,3,1,5,"'로 패: *화실 刁卜9 김7,능i 나를* 多수 1卜7`移너v卜.","'로 패: 화실 刁 9 김7,능 나를 多수 1 7 移너","'로 패: 화실 刁 9 김7,능 나를 多수 1 7 移너",ability_b46ddae3e998,windows,0.000,ocr_draft
+198,atlas03_r01_c06,Savis Warbler,스아브이스워블러,3,1,6,패: 11녀실 김7`능i 니를•는 多수 |1능i 1 卜7`檼너v卜.,패: 11녀실 김7 능 니를 는 多수 1능 1 7 檼너,패: 11녀실 김7 능 니를 는 多수 1능 1 7 檼너,ability_06d4eb05ab91,windows,0.000,ocr_draft
+199,atlas03_r01_c07,Mute Swan,므우트에고니,3,1,7,넣일 패: 11녀실 김7吉i 多수 |1능Z 1卜7`급너v卜.,넣일 패: 11녀실 김7吉 多수 1능 1 7 급너,넣일 패: 11녀실 김7吉 多수 1능 1 7 급너,ability_33f1ade96779,windows,0.000,ocr_draft
+200,atlas03_r01_c08,Grey Heron,왜가리,3,1,8,넣일 애: 11녀실 多수 |7吉Z 1卜7`檼너v}-.,넣일 애: 11녀실 多수 7吉 1 7 檼너 -,넣일 애: 11녀실 多수 7吉 1 7 檼너 -,ability_fc8dd7ec2c6f,windows,0.000,ocr_draft
+201,atlas03_r01_c09,Common Cuckoo,일반뻐꾸기,3,1,9,1卜7`(5너vt-.,1 7 (5너 -,1 7 (5너 -,ability_aa9f4d297e6a,windows,0.000,ocr_draft
+202,atlas03_r01_c10,Dunnock,드우느느오크새,3,1,10,패: 11녀실 김갑i 1卜7`移너v卜.,패: 11녀실 김갑 1 7 移너,패: 11녀실 김갑 1 7 移너,ability_3d6a6104aea5,windows,0.000,ocr_draft
+203,atlas03_r02_c01,Black Redstart,검은딱새,3,2,1,\일 짜서: 11녀실 多수 |7`능i 1卜7`檼너v卜.,\일 짜서: 11녀실 多수 7 능 1 7 檼너,\일 짜서: 11녀실 多수 7 능 1 7 檼너,ability_3d865bcdf900,windows,0.000,ocr_draft
+204,atlas03_r02_c02,Lesser Whitethroat,작은우이트에스러오아트새,3,2,2,'1일 패: 多수 |1능i 1卜7`(}너v卜.,'1일 패: 多수 1능 1 7 ( 너,'1일 패: 多수 1능 1 7 ( 너,ability_a5b392f06214,windows,0.000,ocr_draft
+205,atlas03_r02_c03,Common Goldeneye,일반흰죽지오리,3,2,3,0놓i 패: 보” 김갑i 나를* |1능i 1卜7`移너v卜.,0놓 패: 보” 김갑 나를 1능 1 7 移너,0놓 패: 보” 김갑 나를 1능 1 7 移너,ability_a8e7c07f0c29,windows,0.000,ocr_draft
+206,atlas03_r02_c04,Red Legged Partridge,붉은르에그그에드프아르트르이드그에새,3,2,4,"自놓i |했너실 |7,능i 1卜7`移너v卜.","自놓 했너실 7,능 1 7 移너","自놓 했너실 7,능 1 7 移너",ability_460c9714d210,windows,0.000,ocr_draft
+207,atlas03_r02_c05,Theklas Lark,스에크르아스종다리,3,2,5,\일 패: 11녀실 17吉i 多수 1卜7`移너v卜.,\일 패: 11녀실 17吉 多수 1 7 移너,\일 패: 11녀실 17吉 多수 1 7 移너,ability_9f65f475aa48,windows,0.000,ocr_draft
+208,atlas03_r02_c06,European Roller,에어오프이느르오르르어새,3,2,6,“ '로 김7`능i 나를* 多수 1卜7`移너v}-.,“ '로 김7 능 나를 多수 1 7 移너 -,“ '로 김7 능 나를 多수 1 7 移너 -,ability_3e944bea7e43,windows,0.000,ocr_draft
+209,atlas03_r02_c07,Eurasian Golden Oriole,유라시아금빛꾀꼬리,3,2,7,표서:수녜 /XHE 軫卜爹| 焉1卜* 넣습니v卜. /`터의 니|匠& 7`l\(『너v卜.,표서:수녜 / 軫 爹 焉1 넣습니 . / 터의 니 匠& 7 \(『너,표서:수녜 / 軫 爹 焉1 넣습니 . / 터의 니 匠& 7 \(『너,ability_7bac8cc6c934,windows,0.000,ocr_draft
+210,atlas03_r02_c08,Eurasian Tree Sparrow,유라시아트르이참새,3,2,8,"애: ㉦네 /XHE 軫卜위슈1卜* 넣습니v卜. /`터일 ü步건수_鬱e•1} 7`t띰팅,누너","애: ㉦네 / 軫 위슈1 넣습니 . / 터일 ü步건수 1 7 띰팅,누너","애: ㉦네 / 軫 위슈1 넣습니 . / 터일 ü步건수 1 7 띰팅,누너",ability_09d22232d6cb,windows,0.000,ocr_draft
+211,atlas03_r02_c09,European Honey Buzzard,에어오프이느흐오느에이브우즈즈아르드새,3,2,9,% 짜H:수••앦 /`테뇨 누卜* /`테일(,% 짜 :수 앦 / 테뇨 누 / 테일(,% 짜 :수 앦 / 테뇨 누 / 테일(,ability_c51ff8710bd0,windows,0.000,ocr_draft
+212,atlas03_r02_c10,Great Tit,큰트이트새,3,2,10,% /`테뇨 캁 *일| 누卜* 놓습니v卜 /`터일,% / 테뇨 캁 일 누 놓습니 / 터일,% / 테뇨 캁 일 누 놓습니 / 터일,ability_edb88191d843,windows,0.000,ocr_draft
+213,atlas03_r03_c01,Hawfinch,흐오프이느치새,3,3,1,% 짜H및)또는수/`뼐 다일| #1卜?& 놓습니v卜. /`터일l 니|匠& 7`t뷮히『너v卜.,% 짜 및)또는수/ 뼐 다일 1 ?& 놓습니 . / 터일 니 匠& 7 뷮히『너,% 짜 및)또는수/ 뼐 다일 1 ?& 놓습니 . / 터일 니 匠& 7 뷮히『너,ability_d6c13e1feb5f,windows,0.000,ocr_draft
+214,atlas03_r03_c02,Bullfinch,브우르르프이느치새,3,3,2,@네 /XHE 軫卜bl 焉1卜* 넣수너v卜. /`터의 7`t뷮히『너v卜.,@네 / 軫 焉1 넣수너 . / 터의 7 뷮히『너,@네 / 軫 焉1 넣수너 . / 터의 7 뷮히『너,ability_93a9e703602a,windows,0.000,ocr_draft
+215,atlas03_r03_c03,Bluethroat,브르우에스러오아트새,3,3,3,수네 軫卜bl #1卜?z- 넣습니v卜 /`테9 니|匠& 7`t\(『너v卜.,수네 軫 1 ? - 넣습니 / 테9 니 匠& 7 \(『너,수네 軫 1 ? - 넣습니 / 테9 니 匠& 7 \(『너,ability_fa1c5ba77b25,windows,0.000,ocr_draft
+216,atlas03_r03_c04,Common Nightingale,일반느이그흐트이느그아르에새,3,3,4,/xHE 팅卜 軫卜bl 출1卜?z_ 노스너v卜 /`터일| 슈 니|匠& 7`t뷮히『너v卜.,/ 팅 軫 출1 ? 노스너 / 터일 슈 니 匠& 7 뷮히『너,/ 팅 軫 출1 ? 노스너 / 터일 슈 니 匠& 7 뷮히『너,ability_0231e4646e34,windows,0.000,ocr_draft
+217,atlas03_r03_c05,European Robin,에어오프이느로빈,3,3,5,애: ㉦”1| 軫卜bl 焉1卜* \수너v卜. /`터9 니|匠& 7`t뷮히『너v卜.,애: ㉦”1 軫 焉1 \수너 . / 터9 니 匠& 7 뷮히『너,애: ㉦”1 軫 焉1 \수너 . / 터9 니 匠& 7 뷮히『너,ability_b22377555a49,windows,0.000,ocr_draft
+218,atlas03_r03_c06,White Backed Woodpecker,흰브아크에드딱따구리,3,3,6,패• 수네 哆卜bl #1卜?z- 넣습니v卜. /`터일 니|숗& 7`t\(『너v卜.,패 수네 哆 1 ? - 넣습니 . / 터일 니 숗& 7 \(『너,패 수네 哆 1 ? - 넣습니 . / 터일 니 숗& 7 \(『너,ability_7091e25c921e,windows,0.000,ocr_draft
+219,atlas03_r03_c07,Black Woodpecker,검은딱따구리,3,3,7,,,,,windows,0.000,ocr_draft
+220,atlas03_r03_c08,Parrot Crossbill,앵무,3,3,8,20cM,20,20,ability_91032ad7bbcb,windows,0.000,ocr_draft
+221,atlas03_r03_c09,European Bee Eater,에어오프이느브이이트어새,3,3,9,46cM,46,46,ability_fe2ef495a115,windows,0.000,ocr_draft
+222,atlas03_r03_c10,Black Headed Gull,검은머리갈매기,3,3,10,18cM,18,18,ability_9e6a55b6b456,windows,0.000,ocr_draft
+223,atlas03_r04_c01,Long Tailed Tit,르오느그꼬리트이트새,3,4,1,23cM,23,23,ability_d435a6cdd786,windows,0.000,ocr_draft
+224,atlas03_r04_c02,Common Blackbird,일반검은새,3,4,2,203CM,203,203,ability_a165fbd61c27,windows,0.000,ocr_draft
+225,atlas03_r04_c03,Snowy Owl,흰올빼미,3,4,3,,,,,windows,0.000,ocr_draft
+226,atlas03_r04_c04,Red Knot,붉은크느오트새,3,4,4,,,,,windows,0.000,ocr_draft
+227,atlas03_r04_c05,Black Tailed Godwit,검은꼬리갓윗새,3,4,5,,,,,windows,0.000,ocr_draft
+228,atlas03_r04_c06,Corsican Nuthatch,크오르스이크아느동고비,3,4,6,,,,,windows,0.000,ocr_draft
+229,atlas03_r04_c07,European Turtle Dove,에어오프이느트어트르에비둘기,3,4,7,,,,,windows,0.000,ocr_draft
+230,atlas03_r04_c08,Little Bustard,작은브우스트아르드새,3,4,8,,,,,windows,0.000,ocr_draft
+231,atlas03_r04_c09,Yellowhammer,이에르르오흐아므므어새,3,4,9,,,,,windows,0.000,ocr_draft
+232,atlas03_r04_c10,White Wagtail,흰우아그트에이르새,3,4,10,,,,,windows,0.000,ocr_draft
+233,atlas03_r05_c01,Moltonis Warbler,므오르트오느이스워블러,3,5,1,,,,,windows,0.000,ocr_draft
+234,atlas03_r05_c02,Goldcrest,그오르드크르에스트새,3,5,2,,,,,windows,0.000,ocr_draft
+235,atlas03_r05_c03,Common Moorhen,일반므우르흐에느크스크새,3,5,3,,,,,windows,0.000,ocr_draft
+236,atlas03_r05_c04,Short Toed Treecreeper,시오르트트오에드트르이크르이프어새,3,5,4,,,,,windows,0.000,ocr_draft
+237,atlas03_r05_c05,Eleonoras Falcon,에르에오느오르아스매,3,5,5,,,,,windows,0.000,ocr_draft
+238,atlas03_r05_c06,Northern Gannet,북부그아느느에트새,3,5,6,,,,,windows,0.000,ocr_draft
+239,atlas03_r05_c07,Eurasian Sparrowhawk,유라시아스프아르르오흐오크새,3,5,7,,,,,windows,0.000,ocr_draft
+240,atlas03_r05_c08,Northern Goshawk,북부그오시오크새,3,5,8,,,,,windows,0.000,ocr_draft
+241,atlas03_r05_c09,Eastern Imperial Eagle,동부이므프어이아르수리,3,5,9,,,,,windows,0.000,ocr_draft
+242,atlas03_r05_c10,Bonellis Eagle,브오느에르르이스수리,3,5,10,,,,,windows,0.000,ocr_draft
+243,atlas03_r06_c01,Montagus Harrier,므오느트아그우스개구리매,3,6,1,,,,,windows,0.000,ocr_draft
+244,atlas03_r06_c02,Common Buzzard,일반브우즈즈아르드크스크새,3,6,2,,,,,windows,0.000,ocr_draft
+245,atlas03_r06_c03,Red Kite,붉은솔개,3,6,3,,,,,windows,0.000,ocr_draft
+246,atlas03_r06_c04,Eurasian Hobby,유라시아흐오브브이새,3,6,4,,,,,windows,0.000,ocr_draft
+247,atlas03_r06_c05,European Goldfinch,에어오프이느그오르드프이느치새,3,6,5,,,,,windows,0.000,ocr_draft
+248,atlas03_r06_c06,Snow Bunting,스느오멧새,3,6,6,,,,,windows,0.000,ocr_draft
+249,atlas03_r06_c07,Hooded Crow,두건까마귀,3,6,7,,,,,windows,0.000,ocr_draft
+250,atlas03_r06_c08,Eurasian Collared Dove,유라시아크오르르아르에드비둘기,3,6,8,,,,,windows,0.000,ocr_draft
+251,atlas03_r06_c09,Common Starling,일반찌르레기,3,6,9,,,,,windows,0.000,ocr_draft
+252,atlas03_r06_c10,Common Swift,일반칼새,3,6,10,,,,,windows,0.000,ocr_draft
+253,atlas03_r07_c01,House Sparrow,집참새,3,7,1,,,,,windows,0.000,ocr_draft
+254,atlas03_r07_c02,Ruff,르우프프새,3,7,2,,,,,windows,0.000,ocr_draft
+255,atlas03_r07_c03,Greater Flamingo,큰프르아므이느그오새,3,7,3,,,,,windows,0.000,ocr_draft
+256,atlas03_r07_c04,Audouins Gull,오드아우이느스갈매기,3,7,4,,,,,windows,0.000,ocr_draft
+257,atlas03_r07_c05,Common Chaffinch,일반치아프프이느치새,3,7,5,,,,,windows,0.000,ocr_draft
+258,atlas03_r07_c06,Common Chiffchaff,일반치이프프치아프프새,3,7,6,,,,,windows,0.000,ocr_draft
+259,atlas03_r07_c07,Greylag Goose,그르에이르아그기러기,3,7,7,,,,,windows,0.000,ocr_draft
+260,atlas03_r07_c08,Cettis Warbler,크에트트이스워블러,3,7,8,,,,,windows,0.000,ocr_draft
+261,atlas03_r07_c09,Eurasian Green Woodpecker,유라시아초록딱따구리,3,7,9,,,,,windows,0.000,ocr_draft
+262,atlas03_r07_c10,Abbotts Booby,아브브오트트스부비,3,7,10,,,,,windows,0.000,ocr_draft
