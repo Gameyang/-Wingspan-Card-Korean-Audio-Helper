@@ -2,15 +2,15 @@ const CARD_WIDTH = 630;
 const CARD_HEIGHT = 970;
 const NAME_REGION = {
   x: 105,
-  y: 12,
+  y: 45,
   width: 510,
-  height: 100,
+  height: 60,
 };
 const OCR_SCALE = 4;
 const TARGET_CARDS = [
   {
     nameKo: "알락귀뿔논병아리",
-    latin: "Podilymbus podiceps",
+    matchName: "Podilymbus podiceps",
   },
 ];
 
@@ -38,17 +38,6 @@ function setStatus(message, type = "") {
   elements.status.className = `status ${type}`.trim();
 }
 
-function normalizeText(value) {
-  return value
-    .toLowerCase()
-    .replace(/\s+/g, "")
-    .replace(/[^0-9a-z가-힣]/g, "");
-}
-
-function normalizeKorean(value) {
-  return value.replace(/[^가-힣]/g, "");
-}
-
 function normalizeLatin(value) {
   return value.toLowerCase().replace(/[^a-z]/g, "");
 }
@@ -74,30 +63,18 @@ function levenshtein(a, b) {
 }
 
 function scoreCandidate(ocrText, candidate) {
-  const query = normalizeText(ocrText);
-  const koreanQuery = normalizeKorean(ocrText);
-  const latinQuery = normalizeLatin(ocrText);
-  const korean = normalizeText(candidate.nameKo);
-  const latin = normalizeText(candidate.latin);
-  const queryVariants = [query, koreanQuery, latinQuery].filter(Boolean);
+  const query = normalizeLatin(ocrText);
+  const target = normalizeLatin(candidate.matchName);
 
   if (!query) {
     return 0;
   }
-  if (query.includes(korean) || query.includes(latin)) {
+  if (query.includes(target) || target.includes(query)) {
     return 100;
   }
 
-  return Math.max(
-    0,
-    ...queryVariants.map((variant) => {
-      const koreanDistance = levenshtein(variant, korean);
-      const latinDistance = levenshtein(variant, latin);
-      const koreanScore = 100 * (1 - koreanDistance / Math.max(variant.length, korean.length));
-      const latinScore = 100 * (1 - latinDistance / Math.max(variant.length, latin.length));
-      return Math.max(koreanScore, latinScore);
-    }),
-  );
+  const distance = levenshtein(query, target);
+  return Math.max(0, 100 * (1 - distance / Math.max(query.length, target.length)));
 }
 
 function rankCandidates(ocrText) {
@@ -193,7 +170,7 @@ async function getWorker() {
   }
 
   if (!workerPromise) {
-    workerPromise = window.Tesseract.createWorker(["kor", "eng"], 1, {
+    workerPromise = window.Tesseract.createWorker(["eng"], 1, {
       logger: (message) => {
         if (message.status === "recognizing text") {
           setStatus(`${Math.round(message.progress * 100)}%`, "ready");
@@ -203,6 +180,7 @@ async function getWorker() {
       const psm = window.Tesseract.PSM?.SINGLE_BLOCK ?? "6";
       await worker.setParameters({
         tessedit_pageseg_mode: psm,
+        tessedit_char_whitelist: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .-",
         preserve_interword_spaces: "1",
       });
       return worker;
@@ -227,10 +205,10 @@ async function identify(drawSource) {
     drawNamePreview();
     const text = await recognizeCurrentPreview();
     const [best] = rankCandidates(text);
-    const matched = best && best.score >= 55;
+    const matched = best && best.score >= 70;
 
     elements.ocrText.textContent = text || "인식된 텍스트 없음";
-    elements.matchName.textContent = matched ? best.nameKo : "확인 필요";
+    elements.matchName.textContent = matched ? `${best.nameKo} (${best.matchName})` : "확인 필요";
     elements.matchScore.textContent = best ? `${Math.round(best.score)}점` : "-";
     setStatus(matched ? "식별 완료" : "확인 필요", matched ? "ready" : "error");
   } catch (error) {
