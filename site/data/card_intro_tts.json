@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "source": "src/Data/card_intro_tts_ko.csv",
+  "audioRoot": "tts/card_intro",
+  "atlasSequenceStartCardNo": 53,
+  "byCardNo": {
+    "53": {
+      "cardNo": "53",
+      "birdName": "Pied Billed Grebe",
+      "src": "tts/card_intro/53_pied_billed_grebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft"
+    }
+  },
+  "byCardId": {
+    "atlas01_r01_c01": {
+      "cardNo": "53",
+      "birdName": "Pied Billed Grebe",
+      "src": "tts/card_intro/53_pied_billed_grebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "mappingSource": "atlasSequence"
+    }
+  }
+}

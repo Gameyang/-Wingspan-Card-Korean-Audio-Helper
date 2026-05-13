@@ -46,3 +46,16 @@ def test_site_audio_manifest_maps_last_card_to_audio_files() -> None:
     assert all(" " not in clip["src"] for clip in clips)
     for clip in clips:
         assert (REPO_ROOT / "site" / clip["src"]).is_file()
+
+
+def test_card_intro_tts_manifest_maps_generated_sample() -> None:
+    data_path = REPO_ROOT / "site" / "data" / "card_intro_tts.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+
+    intro = data["byCardId"]["atlas01_r01_c01"]
+
+    assert data["atlasSequenceStartCardNo"] == 53
+    assert intro["cardNo"] == "53"
+    assert intro["birdName"] == "Pied Billed Grebe"
+    assert intro["src"] == "tts/card_intro/53_pied_billed_grebe.m4a"
+    assert (REPO_ROOT / "site" / intro["src"]).is_file()

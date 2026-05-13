@@ -203,13 +203,13 @@ function ttsIntroForCard(cardId) {
 }
 
 function displayNameForCard(card) {
-  const clips = audioClipsForCard(card.id);
-  if (clips.length && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
-    return clips[0].birdName;
-  }
   const intro = ttsIntroForCard(card.id);
   if (intro && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
     return intro.birdName;
+  }
+  const clips = audioClipsForCard(card.id);
+  if (clips.length && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
+    return clips[0].birdName;
   }
   return card.displayName;
 }
