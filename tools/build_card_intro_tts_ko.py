@@ -210,14 +210,18 @@ WORD_KO = {
     "bald": "흰머리",
     "barrow": "배로",
     "barrows": "배로",
+    "baltimore": "볼티모어",
     "bearded": "수염",
     "bell": "벨",
     "bells": "벨",
+    "bellied": "배",
     "belted": "띠",
     "bewick": "뷰익",
     "bewicks": "뷰익",
+    "billed": "부리",
     "black": "검은",
     "blue": "푸른",
+    "bobwhite": "보브화이트",
     "breasted": "가슴",
     "brewer": "브루어",
     "brewers": "브루어",
@@ -233,6 +237,7 @@ WORD_KO = {
     "cerulean": "하늘빛",
     "chestnut": "밤색",
     "chihuahuan": "치와와",
+    "chimney": "굴뚝",
     "chipping": "칩핑",
     "clark": "클라크",
     "clarks": "클라크",
@@ -240,6 +245,8 @@ WORD_KO = {
     "cooper": "쿠퍼",
     "coopers": "쿠퍼",
     "crested": "볏",
+    "crossbill": "솔잣새",
+    "crowned": "관",
     "dark": "검은",
     "desert": "사막",
     "double": "두겹",
@@ -247,6 +254,7 @@ WORD_KO = {
     "eastern": "동부",
     "eurasian": "유라시아",
     "fire": "불꽃",
+    "fish": "물고기",
     "forster": "포스터",
     "forsters": "포스터",
     "franklin": "프랭클린",
@@ -274,10 +282,13 @@ WORD_KO = {
     "loggerhead": "큰머리",
     "mountain": "산",
     "mourning": "애도",
+    "mississippi": "미시시피",
+    "night": "밤",
     "northern": "북부",
     "orange": "주황",
     "painted": "채색",
     "philippine": "필리핀",
+    "peregrine": "송골",
     "pileated": "도가머리",
     "pine": "소나무",
     "prothonotary": "프로토노터리",
@@ -303,6 +314,8 @@ WORD_KO = {
     "stellers": "스텔러",
     "swainson": "스웨인슨",
     "swainsons": "스웨인슨",
+    "tailed": "꼬리",
+    "throated": "목",
     "tufted": "볏",
     "violet": "보라",
     "western": "서부",
@@ -311,6 +324,7 @@ WORD_KO = {
     "wilson": "윌슨",
     "wilsons": "윌슨",
     "winged": "날개",
+    "wood": "숲",
     "yellow": "노란",
 }
 
@@ -471,6 +485,96 @@ PHONETIC_WORDS = {
     "twite": "트와이트",
 }
 
+ROMAN_CHUNKS = [
+    ("tion", "션"),
+    ("sion", "션"),
+    ("ough", "오"),
+    ("eigh", "에이"),
+    ("augh", "오"),
+    ("sch", "스쿠"),
+    ("scr", "스크"),
+    ("shr", "슈러"),
+    ("thr", "스러"),
+    ("ch", "치"),
+    ("sh", "시"),
+    ("ph", "프"),
+    ("th", "스"),
+    ("ck", "크"),
+    ("qu", "쿠"),
+    ("wh", "우"),
+    ("ee", "이"),
+    ("ea", "이"),
+    ("ai", "에이"),
+    ("ay", "에이"),
+    ("ei", "에이"),
+    ("ie", "이"),
+    ("oo", "우"),
+    ("ou", "아우"),
+    ("ow", "오"),
+    ("au", "오"),
+    ("aw", "오"),
+    ("oi", "오이"),
+    ("oy", "오이"),
+    ("ar", "아르"),
+    ("er", "어"),
+    ("ir", "어"),
+    ("or", "오르"),
+    ("ur", "어"),
+]
+
+ROMAN_LETTERS = {
+    "a": "아",
+    "b": "브",
+    "c": "크",
+    "d": "드",
+    "e": "에",
+    "f": "프",
+    "g": "그",
+    "h": "흐",
+    "i": "이",
+    "j": "지",
+    "k": "크",
+    "l": "르",
+    "m": "므",
+    "n": "느",
+    "o": "오",
+    "p": "프",
+    "q": "쿠",
+    "r": "르",
+    "s": "스",
+    "t": "트",
+    "u": "우",
+    "v": "브",
+    "w": "우",
+    "x": "크스",
+    "y": "이",
+    "z": "즈",
+}
+
+
+def roman_to_hangul(token: str) -> str:
+    token = re.sub(r"[^a-z0-9]+", "", token.casefold())
+    if not token:
+        return ""
+    if token.isdigit():
+        return token
+
+    out: list[str] = []
+    index = 0
+    while index < len(token):
+        matched = False
+        for roman, hangul in ROMAN_CHUNKS:
+            if token.startswith(roman, index):
+                out.append(hangul)
+                index += len(roman)
+                matched = True
+                break
+        if matched:
+            continue
+        out.append(ROMAN_LETTERS.get(token[index], ""))
+        index += 1
+    return "".join(out)
+
 
 def korean_bird_name(english_name: str) -> str:
     english_name = NAME_FIXES.get(english_name, english_name)
@@ -498,6 +602,9 @@ def korean_bird_name(english_name: str) -> str:
         modifiers = tokens
         group = "새"
 
+    if group_index < 0:
+        group = "새"
+
     parts: list[str] = []
     for raw_token in modifiers:
         token = raw_token.replace("_", " ")
@@ -508,7 +615,7 @@ def korean_bird_name(english_name: str) -> str:
         elif token in PHONETIC_WORDS:
             parts.append(PHONETIC_WORDS[token])
         else:
-            parts.append(token)
+            parts.append(roman_to_hangul(token))
 
     if parts:
         return "".join(parts) + group

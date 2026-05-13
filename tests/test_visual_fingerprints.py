@@ -56,6 +56,7 @@ def test_card_intro_tts_manifest_maps_generated_sample() -> None:
 
     assert data["atlasSequenceStartCardNo"] == 53
     assert intro["cardNo"] == "53"
-    assert intro["birdName"] == "Pied Billed Grebe"
+    assert intro["birdName"] == "얼룩부리논병아리"
+    assert intro["birdNameEn"] == "Pied Billed Grebe"
     assert intro["src"] == "tts/card_intro/53_pied_billed_grebe.m4a"
     assert (REPO_ROOT / "site" / intro["src"]).is_file()
