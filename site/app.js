@@ -150,7 +150,7 @@ async function fetchJson(path, fallback) {
 }
 
 async function loadData() {
-  setStatus("Loading", "ready");
+  setStatus("불러오는 중", "ready");
   [ocrDb, audioManifest, introTtsManifest, abilityTtsManifest] = await Promise.all([
     fetchJson("./data/card_ocr_aliases.json", { cards: [], byCardId: {} }),
     fetchJson("./data/audio_clips.json", { byCardId: {} }),
@@ -158,7 +158,7 @@ async function loadData() {
     fetchJson("./data/card_ability_tts.json", { byCardId: {}, byCardNo: {} }),
   ]);
   if (!ocrDb.cards.length) {
-    throw new Error("OCR data unavailable.");
+    throw new Error("OCR 데이터를 불러오지 못했습니다.");
   }
 }
 
@@ -167,9 +167,9 @@ async function initOcrWorker() {
     return;
   }
   if (!window.Tesseract?.createWorker) {
-    throw new Error("OCR engine unavailable.");
+    throw new Error("OCR 엔진을 사용할 수 없습니다.");
   }
-  setStatus("OCR", "ready");
+  setStatus("문자 인식", "ready");
   tesseractWorker = await window.Tesseract.createWorker("kor+eng");
   await tesseractWorker.setParameters({
     preserve_interword_spaces: "1",
@@ -248,7 +248,7 @@ function preprocessOcrCanvas() {
 
 function drawCardSignalsForOcr() {
   if (!elements.video.videoWidth || !elements.video.videoHeight) {
-    throw new Error("Camera is not ready.");
+    throw new Error("카메라가 아직 준비되지 않았습니다.");
   }
 
   const layouts = OCR_SIGNAL_REGIONS.map((region) => {
@@ -479,10 +479,10 @@ function exactNumericMatches(signals, card) {
   const wingspanCm = String(numericSignals.wingspanCm ?? "");
 
   if (pointValue && signals.scoreNumbers.includes(pointValue)) {
-    matches.push("score");
+    matches.push("점수");
   }
   if (wingspanCm && signals.wingNumbers.includes(wingspanCm)) {
-    matches.push("cm");
+    matches.push("날개길이");
   }
   return matches;
 }
@@ -539,12 +539,12 @@ function rankOcrCandidates(signals) {
 
 function matchConfidence(best, second) {
   if (!best) {
-    return { ok: false, gap: 0, reason: "no candidate" };
+    return { ok: false, gap: 0, reason: "후보 없음" };
   }
   const gap = best.score - (second?.score ?? 0);
   const exactCount = best.numericMatches?.length ?? 0;
   if (best.nameScore < OCR_MIN_NAME_SCORE) {
-    return { ok: false, gap, reason: `name ${best.nameScore}% < ${OCR_MIN_NAME_SCORE}%` };
+    return { ok: false, gap, reason: `이름 ${best.nameScore}% < ${OCR_MIN_NAME_SCORE}%` };
   }
 
   const strongName = best.nameScore >= OCR_STRONG_NAME_SCORE;
@@ -554,11 +554,11 @@ function matchConfidence(best, second) {
     return {
       ok: false,
       gap,
-      reason: exactCount ? `need more signal ${exactCount}/2` : `name ${best.nameScore}%`,
+      reason: exactCount ? `추가 신호 필요 ${exactCount}/2` : `이름 ${best.nameScore}%`,
     };
   }
   if (gap < OCR_MIN_GAP) {
-    return { ok: false, gap, reason: `close next ${gap}%` };
+    return { ok: false, gap, reason: `다음 후보와 차이 ${gap}%` };
   }
   return { ok: true, gap, reason: "" };
 }
@@ -637,7 +637,7 @@ function waitForAudioEnd(audio) {
     };
     const handleError = () => {
       cleanup();
-      reject(new Error("audio playback failed"));
+      reject(new Error("오디오 재생에 실패했습니다."));
     };
     audio.addEventListener("ended", handleEnded, { once: true });
     audio.addEventListener("error", handleError, { once: true });
@@ -670,7 +670,7 @@ async function playSpeechQueue(queue, token, card) {
   } catch (error) {
     if (token === playbackToken) {
       pendingAudioCard = card;
-      lastAudioMessage = "tap screen for sound";
+      lastAudioMessage = "소리 재생은 화면을 탭";
       birdBgElement.pause();
     }
   }
@@ -686,7 +686,7 @@ function playAudioForCard(card, force = false) {
   const queue = speechQueueForCard(card);
   if (!clip && !queue.length) {
     stopAudioPlayback();
-    lastAudioMessage = "no audio";
+    lastAudioMessage = "오디오 없음";
     return lastAudioMessage;
   }
 
@@ -704,12 +704,12 @@ function playAudioForCard(card, force = false) {
   if (queue.length) {
     pendingAudioCard = null;
     playSpeechQueue(queue, token, card);
-    lastAudioMessage = includeAbilityTts() && abilityTtsForCard(card) ? "intro + ability" : "intro";
+    lastAudioMessage = includeAbilityTts() && abilityTtsForCard(card) ? "소개 + 능력" : "소개";
     return lastAudioMessage;
   }
 
   pendingAudioCard = null;
-  lastAudioMessage = `audio ${clip.clipType ?? "clip"}`;
+  lastAudioMessage = "새소리";
   return lastAudioMessage;
 }
 
@@ -727,14 +727,14 @@ function formatMeta(best, second, signals, audioMessage, confidence) {
   const parts = [];
   const readText = signals.titleText || signals.allText;
   if (readText) {
-    parts.push(`read "${readText.replace(/\s+/g, " ").slice(0, 44)}"`);
+    parts.push(`읽음 "${readText.replace(/\s+/g, " ").slice(0, 44)}"`);
   }
   if (best) {
-    const exact = best.numericMatches?.length ? ` exact ${best.numericMatches.join("+")}` : "";
-    parts.push(`${best.cardNo} ${best.matchedAlias || best.birdName} name ${best.nameScore}%${exact}`);
+    const exact = best.numericMatches?.length ? ` 숫자 일치 ${best.numericMatches.join("+")}` : "";
+    parts.push(`${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%${exact}`);
   }
   if (second) {
-    parts.push(`next ${second.cardNo} ${second.score}%`);
+    parts.push(`다음 ${second.cardNo} ${second.score}%`);
   }
   if (confidence?.reason) {
     parts.push(confidence.reason);
@@ -767,18 +767,18 @@ async function identifyCurrentFrame() {
       audioMessage = await playAudioForCard(best);
     } else {
       resetAudioAfterMiss();
-      audioMessage = confidence.ok ? `hold ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
+      audioMessage = confidence.ok ? `유지 ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
     }
 
-    elements.matchName.textContent = confidence.ok || matched ? displayNameForCard(best) : "Scanning";
-    elements.matchScore.textContent = best ? `${best.score}% / gap ${confidence.gap}` : "-";
+    elements.matchName.textContent = confidence.ok || matched ? displayNameForCard(best) : "스캔 중";
+    elements.matchScore.textContent = best ? `${best.score}% / 차이 ${confidence.gap}` : "-";
     elements.matchMeta.textContent = formatMeta(best, second, signals, audioMessage, confidence);
-    setStatus(matched ? "Matched" : confidence.ok ? "Hold" : "Reading", matched ? "ready" : "");
+    setStatus(matched ? "일치" : confidence.ok ? "유지" : "읽는 중", matched ? "ready" : "");
   } catch (error) {
-    elements.matchName.textContent = "Error";
+    elements.matchName.textContent = "오류";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
-    setStatus("Error", "error");
+    setStatus("오류", "error");
   } finally {
     isScanning = false;
   }
@@ -792,13 +792,13 @@ function startScanLoop() {
 
 async function startCamera() {
   if (!window.isSecureContext) {
-    throw new Error("HTTPS is required.");
+    throw new Error("HTTPS 환경이 필요합니다.");
   }
   if (!navigator.mediaDevices?.getUserMedia) {
-    throw new Error("Camera API is not supported.");
+    throw new Error("카메라 API를 지원하지 않는 브라우저입니다.");
   }
 
-  setStatus("Permission", "ready");
+  setStatus("권한 요청", "ready");
   if (stream) {
     stream.getTracks().forEach((track) => track.stop());
   }
@@ -812,7 +812,7 @@ async function startCamera() {
   });
   elements.video.srcObject = stream;
   await elements.video.play();
-  setStatus("Scanning", "ready");
+  setStatus("스캔 중", "ready");
   startScanLoop();
 }
 
@@ -863,10 +863,10 @@ async function boot() {
     await initOcrWorker();
     await startCamera();
   } catch (error) {
-    elements.matchName.textContent = "Camera";
+    elements.matchName.textContent = "카메라";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
-    setStatus("Tap screen", "error");
+    setStatus("화면 탭", "error");
   }
 }
 

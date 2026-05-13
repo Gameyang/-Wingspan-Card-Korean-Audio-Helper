@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Wingspan Scanner</title>
+    <title>윙스팬 카드 스캐너</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js" defer></script>
@@ -13,7 +13,7 @@
     <main class="scanner">
       <video id="camera" autoplay muted playsinline></video>
 
-      <div class="scan-overlay" id="cameraBox" aria-label="Camera scanner">
+      <div class="scan-overlay" id="cameraBox" aria-label="카메라 스캐너">
         <div class="scan-frame" id="cardGuide" aria-hidden="true">
           <div class="ocr-guide title-guide"></div>
           <div class="ocr-guide score-guide"></div>
@@ -28,13 +28,13 @@
 
       <header class="scanner-top">
         <div>
-          <p class="eyebrow">Korean OCR</p>
-          <h1>Wingspan Scanner</h1>
+          <p class="eyebrow">한글 OCR</p>
+          <h1>윙스팬 카드 스캐너</h1>
         </div>
-        <div class="status" id="status" role="status">Idle</div>
+        <div class="status" id="status" role="status">대기</div>
       </header>
 
-      <section class="bottom-sheet is-collapsed" id="debugSheet" aria-label="Scanner result">
+      <section class="bottom-sheet is-collapsed" id="debugSheet" aria-label="스캔 결과">
         <button
           class="sheet-toggle"
           id="debugToggle"
@@ -54,15 +54,15 @@
           </div>
           <div class="result-row">
             <div class="result-card main-result">
-              <dt>Match</dt>
+              <dt>일치 카드</dt>
               <dd id="matchName">-</dd>
             </div>
             <div class="result-card score-result">
-              <dt>Score</dt>
+              <dt>신뢰도</dt>
               <dd id="matchScore">-</dd>
             </div>
             <div class="result-card detail-result">
-              <dt>Details</dt>
+              <dt>상세 정보</dt>
               <dd id="matchMeta">-</dd>
             </div>
           </div>
