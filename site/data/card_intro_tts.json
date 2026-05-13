@@ -10,7 +10,8 @@
       "birdNameEn": "Pied Billed Grebe",
       "src": "tts/card_intro/53_pied_billed_grebe.m4a",
       "mimeType": "audio/mp4",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "voiceTag": "Lynette"
     },
     "54": {
       "cardNo": "54",
@@ -18,7 +19,8 @@
       "birdNameEn": "Pileated Woodpecker",
       "src": "tts/card_intro/54_pileated_woodpecker.m4a",
       "mimeType": "audio/mp4",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "voiceTag": "Rowan"
     },
     "55": {
       "cardNo": "55",
@@ -26,7 +28,8 @@
       "birdNameEn": "Western Meadowlark",
       "src": "tts/card_intro/55_western_meadowlark.m4a",
       "mimeType": "audio/mp4",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "voiceTag": "Tokuda"
     },
     "56": {
       "cardNo": "56",
@@ -34,7 +37,8 @@
       "birdNameEn": "Grasshopper Sparrow",
       "src": "tts/card_intro/56_grasshopper_sparrow.m4a",
       "mimeType": "audio/mp4",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "voiceTag": "Bognor"
     },
     "57": {
       "cardNo": "57",
@@ -42,7 +46,1835 @@
       "birdNameEn": "Chipping Sparrow",
       "src": "tts/card_intro/57_chipping_sparrow.m4a",
       "mimeType": "audio/mp4",
-      "reviewStatus": "draft"
+      "reviewStatus": "draft",
+      "voiceTag": "Miwa"
+    },
+    "58": {
+      "cardNo": "58",
+      "birdName": "캐신참새",
+      "birdNameEn": "Cassins Sparrow",
+      "src": "tts/card_intro/58_cassins_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Solitary_Confinement"
+    },
+    "59": {
+      "cardNo": "59",
+      "birdName": "베어드참새",
+      "birdNameEn": "Bairds Sparrow",
+      "src": "tts/card_intro/59_bairds_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Amauta"
+    },
+    "60": {
+      "cardNo": "60",
+      "birdName": "캘리포니아메추라기",
+      "birdNameEn": "California Quail",
+      "src": "tts/card_intro/60_california_quail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Utayba"
+    },
+    "61": {
+      "cardNo": "61",
+      "birdName": "북부보브화이트새",
+      "birdNameEn": "Northern Bobwhite",
+      "src": "tts/card_intro/61_northern_bobwhite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Domenico"
+    },
+    "62": {
+      "cardNo": "62",
+      "birdName": "애도비둘기",
+      "birdNameEn": "Mourning Dove",
+      "src": "tts/card_intro/62_mourning_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Baishi"
+    },
+    "63": {
+      "cardNo": "63",
+      "birdName": "볼티모어꾀꼬리",
+      "birdNameEn": "Baltimore Oriole",
+      "src": "tts/card_intro/63_baltimore_oriole.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jaiques"
+    },
+    "64": {
+      "cardNo": "64",
+      "birdName": "붉은솔잣새새",
+      "birdNameEn": "Red Crossbill",
+      "src": "tts/card_intro/64_red_crossbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Information_About_the_Missing_Ladys_Identity"
+    },
+    "65": {
+      "cardNo": "65",
+      "birdName": "라줄리멧새",
+      "birdNameEn": "Lazuli Bunting",
+      "src": "tts/card_intro/65_lazuli_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rekhar"
+    },
+    "66": {
+      "cardNo": "66",
+      "birdName": "아메리카까마귀",
+      "birdNameEn": "American Crow",
+      "src": "tts/card_intro/66_american_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica"
+    },
+    "67": {
+      "cardNo": "67",
+      "birdName": "물고기까마귀",
+      "birdNameEn": "Fish Crow",
+      "src": "tts/card_intro/67_fish_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tubby"
+    },
+    "68": {
+      "cardNo": "68",
+      "birdName": "검은관밤왜가리",
+      "birdNameEn": "Black Crowned Night Heron",
+      "src": "tts/card_intro/68_black_crowned_night_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi"
+    },
+    "69": {
+      "cardNo": "69",
+      "birdName": "치와와큰까마귀",
+      "birdNameEn": "Chihuahuan Raven",
+      "src": "tts/card_intro/69_chihuahuan_raven.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aqaba"
+    },
+    "70": {
+      "cardNo": "70",
+      "birdName": "큰까마귀",
+      "birdNameEn": "Common Raven",
+      "src": "tts/card_intro/70_common_raven.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Antibes"
+    },
+    "71": {
+      "cardNo": "71",
+      "birdName": "북부홍관조",
+      "birdNameEn": "Northern Cardinal",
+      "src": "tts/card_intro/71_northern_cardinal.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aqaba"
+    },
+    "72": {
+      "cardNo": "72",
+      "birdName": "노란배딱따구리",
+      "birdNameEn": "Yellow Bellied Sapsucker",
+      "src": "tts/card_intro/72_yellow_bellied_sapsucker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shuyun"
+    },
+    "73": {
+      "cardNo": "73",
+      "birdName": "남색멧새",
+      "birdNameEn": "Indigo Bunting",
+      "src": "tts/card_intro/73_indigo_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rowan"
+    },
+    "74": {
+      "cardNo": "74",
+      "birdName": "서부풍금조",
+      "birdNameEn": "Western Tanager",
+      "src": "tts/card_intro/74_western_tanager.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiangling"
+    },
+    "75": {
+      "cardNo": "75",
+      "birdName": "점박이토히",
+      "birdNameEn": "Spotted Towhee",
+      "src": "tts/card_intro/75_spotted_towhee.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nuu"
+    },
+    "76": {
+      "cardNo": "76",
+      "birdName": "장밋빛가슴콩새",
+      "birdNameEn": "Rose Breasted Grosbeak",
+      "src": "tts/card_intro/76_rose_breasted_grosbeak.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kachina"
+    },
+    "77": {
+      "cardNo": "77",
+      "birdName": "초록왜가리",
+      "birdNameEn": "Green Heron",
+      "src": "tts/card_intro/77_green_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sorush"
+    },
+    "78": {
+      "cardNo": "78",
+      "birdName": "회색크아트브어드새",
+      "birdNameEn": "Gray Catbird",
+      "src": "tts/card_intro/78_gray_catbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Farrah"
+    },
+    "79": {
+      "cardNo": "79",
+      "birdName": "북부흉내지빠귀",
+      "birdNameEn": "Northern Mockingbird",
+      "src": "tts/card_intro/79_northern_mockingbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Melus"
+    },
+    "80": {
+      "cardNo": "80",
+      "birdName": "두건비오리",
+      "birdNameEn": "Hooded Merganser",
+      "src": "tts/card_intro/80_hooded_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi"
+    },
+    "81": {
+      "cardNo": "81",
+      "birdName": "뷰익굴뚝새",
+      "birdNameEn": "Bewicks Wren",
+      "src": "tts/card_intro/81_bewicks_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Huffman"
+    },
+    "82": {
+      "cardNo": "82",
+      "birdName": "노란가슴챗",
+      "birdNameEn": "Yellow Breasted Chat",
+      "src": "tts/card_intro/82_yellow_breasted_chat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Oceanid"
+    },
+    "83": {
+      "cardNo": "83",
+      "birdName": "일반쏙독새",
+      "birdNameEn": "Common Nighthawk",
+      "src": "tts/card_intro/83_common_nighthawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Baltasar"
+    },
+    "84": {
+      "cardNo": "84",
+      "birdName": "노래참새",
+      "birdNameEn": "Song Sparrow",
+      "src": "tts/card_intro/84_song_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Herbalist_Gui"
+    },
+    "85": {
+      "cardNo": "85",
+      "birdName": "흰관참새",
+      "birdNameEn": "White Crowned Sparrow",
+      "src": "tts/card_intro/85_white_crowned_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shiyun"
+    },
+    "86": {
+      "cardNo": "86",
+      "birdName": "굴뚝칼새",
+      "birdNameEn": "Chimney Swift",
+      "src": "tts/card_intro/86_chimney_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Trudaine"
+    },
+    "87": {
+      "cardNo": "87",
+      "birdName": "푸른콩새",
+      "birdNameEn": "Blue Grosbeak",
+      "src": "tts/card_intro/87_blue_grosbeak.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Neuvillette"
+    },
+    "88": {
+      "cardNo": "88",
+      "birdName": "링컨참새",
+      "birdNameEn": "Lincolns Sparrow",
+      "src": "tts/card_intro/88_lincolns_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque"
+    },
+    "89": {
+      "cardNo": "89",
+      "birdName": "큰로드러너",
+      "birdNameEn": "Greater Roadrunner",
+      "src": "tts/card_intro/89_greater_roadrunner.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment"
+    },
+    "90": {
+      "cardNo": "90",
+      "birdName": "붉은꼬리매",
+      "birdNameEn": "Red Tailed Hawk",
+      "src": "tts/card_intro/90_red_tailed_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kamal"
+    },
+    "91": {
+      "cardNo": "91",
+      "birdName": "북부개구리매",
+      "birdNameEn": "Northern Harrier Tj",
+      "src": "tts/card_intro/91_northern_harrier_tj.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Latifah"
+    },
+    "92": {
+      "cardNo": "92",
+      "birdName": "쿠퍼매",
+      "birdNameEn": "Coopers Hawk",
+      "src": "tts/card_intro/92_coopers_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chaner"
+    },
+    "93": {
+      "cardNo": "93",
+      "birdName": "붉은시아우르드어에드매",
+      "birdNameEn": "Red Shouldered Hawk",
+      "src": "tts/card_intro/93_red_shouldered_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yumemizuki_Mizuki"
+    },
+    "94": {
+      "cardNo": "94",
+      "birdName": "줄무늬올빼미",
+      "birdNameEn": "Barred Owl",
+      "src": "tts/card_intro/94_barred_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jemma"
+    },
+    "95": {
+      "cardNo": "95",
+      "birdName": "스웨인슨매",
+      "birdNameEn": "Swainsons Hawk",
+      "src": "tts/card_intro/95_swainsons_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Idrisi"
+    },
+    "96": {
+      "cardNo": "96",
+      "birdName": "송골매",
+      "birdNameEn": "Peregrine Falcon",
+      "src": "tts/card_intro/96_peregrine_falcon.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Donna"
+    },
+    "97": {
+      "cardNo": "97",
+      "birdName": "검독수리",
+      "birdNameEn": "Golden Eagle",
+      "src": "tts/card_intro/97_golden_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pauleau"
+    },
+    "98": {
+      "cardNo": "98",
+      "birdName": "아메리카수리부엉이",
+      "birdNameEn": "Great Horned Owl",
+      "src": "tts/card_intro/98_great_horned_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Faruzan"
+    },
+    "99": {
+      "cardNo": "99",
+      "birdName": "일반비오리",
+      "birdNameEn": "Common Merganser",
+      "src": "tts/card_intro/99_common_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Faruzan"
+    },
+    "100": {
+      "cardNo": "100",
+      "birdName": "윌렛",
+      "birdNameEn": "Willet",
+      "src": "tts/card_intro/100_willet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Keqing"
+    },
+    "101": {
+      "cardNo": "101",
+      "birdName": "아닝가새",
+      "birdNameEn": "Anhinga",
+      "src": "tts/card_intro/101_anhinga.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Panah"
+    },
+    "102": {
+      "cardNo": "102",
+      "birdName": "눈백로",
+      "birdNameEn": "Snowy Egret",
+      "src": "tts/card_intro/102_snowy_egret.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nuu"
+    },
+    "103": {
+      "cardNo": "103",
+      "birdName": "흰프아크에드따오기",
+      "birdNameEn": "White Faced Ibis",
+      "src": "tts/card_intro/103_white_faced_ibis.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment"
+    },
+    "104": {
+      "cardNo": "104",
+      "birdName": "검은가위부리",
+      "birdNameEn": "Black Skimmer",
+      "src": "tts/card_intro/104_black_skimmer.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Norika"
+    },
+    "105": {
+      "cardNo": "105",
+      "birdName": "동부스크이치올빼미",
+      "birdNameEn": "Eastern Screech Owl",
+      "src": "tts/card_intro/105_eastern_screech_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shiyun"
+    },
+    "106": {
+      "cardNo": "106",
+      "birdName": "미시시피솔개",
+      "birdNameEn": "Mississippi Kite",
+      "src": "tts/card_intro/106_mississippi_kite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kathya"
+    },
+    "107": {
+      "cardNo": "107",
+      "birdName": "프어르우그이느아우스매",
+      "birdNameEn": "Ferruginous Hawk",
+      "src": "tts/card_intro/107_ferruginous_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yasutake"
+    },
+    "108": {
+      "cardNo": "108",
+      "birdName": "아메리카황조롱이",
+      "birdNameEn": "American Kestrel",
+      "src": "tts/card_intro/108_american_kestrel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Coralie"
+    },
+    "109": {
+      "cardNo": "109",
+      "birdName": "가면올빼미",
+      "birdNameEn": "Barn Owl",
+      "src": "tts/card_intro/109_barn_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque"
+    },
+    "110": {
+      "cardNo": "110",
+      "birdName": "굴파는올빼미",
+      "birdNameEn": "Burrowing Owl",
+      "src": "tts/card_intro/110_burrowing_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Phaki"
+    },
+    "111": {
+      "cardNo": "111",
+      "birdName": "캐나다두루미",
+      "birdNameEn": "Sandhill Crane",
+      "src": "tts/card_intro/111_sandhill_crane.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ashk"
+    },
+    "112": {
+      "cardNo": "112",
+      "birdName": "캐나다기러기",
+      "birdNameEn": "Canada Goose",
+      "src": "tts/card_intro/112_canada_goose.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Paimon"
+    },
+    "113": {
+      "cardNo": "113",
+      "birdName": "검은배휘파람오리",
+      "birdNameEn": "Black Bellied Whistling Duck",
+      "src": "tts/card_intro/113_black_bellied_whistling_duck.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sayu"
+    },
+    "114": {
+      "cardNo": "114",
+      "birdName": "두겹볏가마우지",
+      "birdNameEn": "Double Crested Cormorant",
+      "src": "tts/card_intro/114_double_crested_cormorant.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhuhan"
+    },
+    "115": {
+      "cardNo": "115",
+      "birdName": "아메리카흰펠리컨",
+      "birdNameEn": "American White Pelican",
+      "src": "tts/card_intro/115_american_white_pelican.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rohawi"
+    },
+    "116": {
+      "cardNo": "116",
+      "birdName": "붉은날개검은새",
+      "birdNameEn": "Red Winged Blackbird",
+      "src": "tts/card_intro/116_red_winged_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mishal"
+    },
+    "117": {
+      "cardNo": "117",
+      "birdName": "일반검정새",
+      "birdNameEn": "Common Grackle",
+      "src": "tts/card_intro/117_common_grackle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Dugu_Shuo"
+    },
+    "118": {
+      "cardNo": "118",
+      "birdName": "브루어검은새",
+      "birdNameEn": "Brewers Blackbird",
+      "src": "tts/card_intro/118_brewers_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Captain_Wu"
+    },
+    "119": {
+      "cardNo": "119",
+      "birdName": "노란머리검은새",
+      "birdNameEn": "Yellow Headed Blackbird",
+      "src": "tts/card_intro/119_yellow_headed_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xin_Cheng"
+    },
+    "120": {
+      "cardNo": "120",
+      "birdName": "부시팃새",
+      "birdNameEn": "Bushtit",
+      "src": "tts/card_intro/120_bushtit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shanghua"
+    },
+    "121": {
+      "cardNo": "121",
+      "birdName": "딕시슬새",
+      "birdNameEn": "Dickcissel",
+      "src": "tts/card_intro/121_dickcissel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yun_Jin"
+    },
+    "122": {
+      "cardNo": "122",
+      "birdName": "고리부리갈매기",
+      "birdNameEn": "Ring Billed Gull",
+      "src": "tts/card_intro/122_ring_billed_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shayin"
+    },
+    "123": {
+      "cardNo": "123",
+      "birdName": "아메리카물닭",
+      "birdNameEn": "American Coot",
+      "src": "tts/card_intro/123_american_coot.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment"
+    },
+    "124": {
+      "cardNo": "124",
+      "birdName": "노란르우므프에드워블러",
+      "birdNameEn": "Yellow Rumped Warbler",
+      "src": "tts/card_intro/124_yellow_rumped_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sara"
+    },
+    "125": {
+      "cardNo": "125",
+      "birdName": "아메리카로빈",
+      "birdNameEn": "American Robin",
+      "src": "tts/card_intro/125_american_robin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza"
+    },
+    "126": {
+      "cardNo": "126",
+      "birdName": "집되새",
+      "birdNameEn": "House Finch",
+      "src": "tts/card_intro/126_house_finch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Razor"
+    },
+    "127": {
+      "cardNo": "127",
+      "birdName": "브아르느제비",
+      "birdNameEn": "Barn Swallow",
+      "src": "tts/card_intro/127_barn_swallow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza"
+    },
+    "129": {
+      "cardNo": "129",
+      "birdName": "보라제비",
+      "birdNameEn": "Purple Martin",
+      "src": "tts/card_intro/129_purple_martin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mualani"
+    },
+    "130": {
+      "cardNo": "130",
+      "birdName": "보라초록제비",
+      "birdNameEn": "Violet Green Swallow",
+      "src": "tts/card_intro/130_violet_green_swallow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Information_About_the_Missing_Ladys_Identity"
+    },
+    "131": {
+      "cardNo": "131",
+      "birdName": "크에드아르여새",
+      "birdNameEn": "Cedar Waxwing",
+      "src": "tts/card_intro/131_cedar_waxwing.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias"
+    },
+    "132": {
+      "cardNo": "132",
+      "birdName": "꼬마동고비",
+      "birdNameEn": "Pygmy Nuthatch",
+      "src": "tts/card_intro/132_pygmy_nuthatch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tepal"
+    },
+    "133": {
+      "cardNo": "133",
+      "birdName": "소나무스이스크이느새",
+      "birdNameEn": "Pine Siskin",
+      "src": "tts/card_intro/133_pine_siskin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xinyan"
+    },
+    "134": {
+      "cardNo": "134",
+      "birdName": "검은에이에드정코새",
+      "birdNameEn": "Dark Eyed Junco",
+      "src": "tts/card_intro/134_dark_eyed_junco.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wanderer"
+    },
+    "135": {
+      "cardNo": "135",
+      "birdName": "아메리카검은머리물떼새",
+      "birdNameEn": "American Oystercatcher",
+      "src": "tts/card_intro/135_american_oystercatcher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shuyun"
+    },
+    "136": {
+      "cardNo": "136",
+      "birdName": "캐롤라이나굴뚝새",
+      "birdNameEn": "Carolina Wren",
+      "src": "tts/card_intro/136_carolina_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lucien"
+    },
+    "137": {
+      "cardNo": "137",
+      "birdName": "검은느에크에드장다리물떼새",
+      "birdNameEn": "Black Necked Stilt",
+      "src": "tts/card_intro/137_black_necked_stilt.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Miyuki"
+    },
+    "138": {
+      "cardNo": "138",
+      "birdName": "잉카비둘기",
+      "birdNameEn": "Inca Dove",
+      "src": "tts/card_intro/138_inca_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chevreuse"
+    },
+    "139": {
+      "cardNo": "139",
+      "birdName": "스에이스피비새",
+      "birdNameEn": "Says Phoebe",
+      "src": "tts/card_intro/139_says_phoebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tokuda"
+    },
+    "140": {
+      "cardNo": "140",
+      "birdName": "아시목딱새",
+      "birdNameEn": "Ash Throated Flycatcher",
+      "src": "tts/card_intro/140_ash_throated_flycatcher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiao"
+    },
+    "141": {
+      "cardNo": "141",
+      "birdName": "보보링크새",
+      "birdNameEn": "Bobolink",
+      "src": "tts/card_intro/141_bobolink.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Bernette"
+    },
+    "142": {
+      "cardNo": "142",
+      "birdName": "갈색펠리컨",
+      "birdNameEn": "Brown Pelican",
+      "src": "tts/card_intro/142_brown_pelican.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tubby"
+    },
+    "143": {
+      "cardNo": "143",
+      "birdName": "아메리카그오르드프이느치새",
+      "birdNameEn": "American Goldfinch",
+      "src": "tts/card_intro/143_american_goldfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne"
+    },
+    "144": {
+      "cardNo": "144",
+      "birdName": "북부딱따구리",
+      "birdNameEn": "Northern Flicker",
+      "src": "tts/card_intro/144_northern_flicker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque"
+    },
+    "145": {
+      "cardNo": "145",
+      "birdName": "흰머리수리",
+      "birdNameEn": "Bald Eagle",
+      "src": "tts/card_intro/145_bald_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Neuvillette"
+    },
+    "146": {
+      "cardNo": "146",
+      "birdName": "숲황새",
+      "birdNameEn": "Wood Stork",
+      "src": "tts/card_intro/146_wood_stork.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Isak"
+    },
+    "147": {
+      "cardNo": "147",
+      "birdName": "르오스이트에저어새",
+      "birdNameEn": "Roseate Spoonbill",
+      "src": "tts/card_intro/147_roseate_spoonbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Vichama"
+    },
+    "148": {
+      "cardNo": "148",
+      "birdName": "하늘빛워블러",
+      "birdNameEn": "Cerulean Warbler",
+      "src": "tts/card_intro/148_cerulean_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chef_Mao"
+    },
+    "149": {
+      "cardNo": "149",
+      "birdName": "밤색크오르르아르에드긴발톱멧새",
+      "birdNameEn": "Chestnut Collared Longspur",
+      "src": "tts/card_intro/149_chestnut_collared_longspur.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Noelle"
+    },
+    "150": {
+      "cardNo": "150",
+      "birdName": "크이느그뜸부기",
+      "birdNameEn": "King Rail",
+      "src": "tts/card_intro/150_king_rail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nanteuil"
+    },
+    "151": {
+      "cardNo": "151",
+      "birdName": "붉은크오크아드에드딱따구리",
+      "birdNameEn": "Red Cockaded Woodpecker",
+      "src": "tts/card_intro/151_red_cockaded_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Guthred"
+    },
+    "152": {
+      "cardNo": "152",
+      "birdName": "아메리카흰두루미",
+      "birdNameEn": "Whooping Crane",
+      "src": "tts/card_intro/152_whooping_crane.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Inou"
+    },
+    "153": {
+      "cardNo": "153",
+      "birdName": "점박이올빼미",
+      "birdNameEn": "Spotted Owl",
+      "src": "tts/card_intro/153_spotted_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Vilmant"
+    },
+    "154": {
+      "cardNo": "154",
+      "birdName": "캐신되새",
+      "birdNameEn": "Cassins Finch",
+      "src": "tts/card_intro/154_cassins_finch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Maloney"
+    },
+    "155": {
+      "cardNo": "155",
+      "birdName": "벨비레오",
+      "birdNameEn": "Bells Vireo",
+      "src": "tts/card_intro/155_bells_vireo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Albert"
+    },
+    "156": {
+      "cardNo": "156",
+      "birdName": "채색멧새",
+      "birdNameEn": "Painted Bunting",
+      "src": "tts/card_intro/156_painted_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi"
+    },
+    "157": {
+      "cardNo": "157",
+      "birdName": "큰프르에이르이치이크에느새",
+      "birdNameEn": "Greater Prairie Chicken",
+      "src": "tts/card_intro/157_greater_prairie_chicken.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Paimon"
+    },
+    "158": {
+      "cardNo": "158",
+      "birdName": "대서양퍼핀",
+      "birdNameEn": "Atlantic Puffin",
+      "src": "tts/card_intro/158_atlantic_puffin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Amal"
+    },
+    "159": {
+      "cardNo": "159",
+      "birdName": "스프르아그우에스밭종다리",
+      "birdNameEn": "Spragues Pipit",
+      "src": "tts/card_intro/159_spragues_pipit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Taj_Radkani"
+    },
+    "160": {
+      "cardNo": "160",
+      "birdName": "캘리포니아콘도르",
+      "birdNameEn": "California Condor",
+      "src": "tts/card_intro/160_california_condor.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Focalors"
+    },
+    "161": {
+      "cardNo": "161",
+      "birdName": "솜털딱따구리",
+      "birdNameEn": "Downy Woodpecker",
+      "src": "tts/card_intro/161_downy_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Naganohara_Ryuunosuke"
+    },
+    "162": {
+      "cardNo": "162",
+      "birdName": "볏박새",
+      "birdNameEn": "Tufted Titmouse",
+      "src": "tts/card_intro/162_tufted_titmouse.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Hu_Tao"
+    },
+    "163": {
+      "cardNo": "163",
+      "birdName": "루비관크이느그르에트새",
+      "birdNameEn": "Ruby Crowned Kinglet",
+      "src": "tts/card_intro/163_ruby_crowned_kinglet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mishal"
+    },
+    "164": {
+      "cardNo": "164",
+      "birdName": "붉은에이에드비레오",
+      "birdNameEn": "Red Eyed Vireo",
+      "src": "tts/card_intro/164_red_eyed_vireo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Werner"
+    },
+    "165": {
+      "cardNo": "165",
+      "birdName": "집굴뚝새",
+      "birdNameEn": "House Wren",
+      "src": "tts/card_intro/165_house_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kujou_Sara"
+    },
+    "166": {
+      "cardNo": "166",
+      "birdName": "사바나참새",
+      "birdNameEn": "Savannah Sparrow",
+      "src": "tts/card_intro/166_savannah_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tokuda"
+    },
+    "167": {
+      "cardNo": "167",
+      "birdName": "동부파랑새",
+      "birdNameEn": "Eastern Bluebird",
+      "src": "tts/card_intro/167_eastern_bluebird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica"
+    },
+    "168": {
+      "cardNo": "168",
+      "birdName": "산파랑새",
+      "birdNameEn": "Mountain Bluebird",
+      "src": "tts/card_intro/168_mountain_bluebird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Gundafar"
+    },
+    "169": {
+      "cardNo": "169",
+      "birdName": "큰푸른왜가리",
+      "birdNameEn": "Great Blue Heron",
+      "src": "tts/card_intro/169_great_blue_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Beidou"
+    },
+    "170": {
+      "cardNo": "170",
+      "birdName": "대백로",
+      "birdNameEn": "Great Egret",
+      "src": "tts/card_intro/170_great_egret.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aarav"
+    },
+    "171": {
+      "cardNo": "171",
+      "birdName": "넓은날개매",
+      "birdNameEn": "Broad Winged Hawk",
+      "src": "tts/card_intro/171_broad_winged_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Derafsh"
+    },
+    "172": {
+      "cardNo": "172",
+      "birdName": "아메리카딱새",
+      "birdNameEn": "American Redstart",
+      "src": "tts/card_intro/172_american_redstart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xu"
+    },
+    "173": {
+      "cardNo": "173",
+      "birdName": "캔버스백새",
+      "birdNameEn": "Canvasback",
+      "src": "tts/card_intro/173_canvasback.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica"
+    },
+    "174": {
+      "cardNo": "174",
+      "birdName": "브오크스스칼새",
+      "birdNameEn": "Vauxs Swift",
+      "src": "tts/card_intro/174_vauxs_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nechca"
+    },
+    "175": {
+      "cardNo": "175",
+      "birdName": "브란트새",
+      "birdNameEn": "Brant",
+      "src": "tts/card_intro/175_brant.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Norika"
+    },
+    "176": {
+      "cardNo": "176",
+      "birdName": "흰목칼새",
+      "birdNameEn": "White Throated Swift",
+      "src": "tts/card_intro/176_white_throated_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wriothesley"
+    },
+    "177": {
+      "cardNo": "177",
+      "birdName": "스크아르에드메추라기",
+      "birdNameEn": "Scaled Quail",
+      "src": "tts/card_intro/177_scaled_quail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhiyi"
+    },
+    "178": {
+      "cardNo": "178",
+      "birdName": "검은치이느느에드벌새",
+      "birdNameEn": "Black Chinned Hummingbird",
+      "src": "tts/card_intro/178_black_chinned_hummingbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xilonen"
+    },
+    "179": {
+      "cardNo": "179",
+      "birdName": "붉은가슴비오리",
+      "birdNameEn": "Red Breasted Merganser",
+      "src": "tts/card_intro/179_red_breasted_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chubby"
+    },
+    "180": {
+      "cardNo": "180",
+      "birdName": "채색우이트에스트아르트새",
+      "birdNameEn": "Painted Whitestart",
+      "src": "tts/card_intro/180_painted_whitestart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rowan"
+    },
+    "181": {
+      "cardNo": "181",
+      "birdName": "유라시아까치",
+      "birdNameEn": "Eurasian Magpie",
+      "src": "tts/card_intro/181_eurasian_magpie.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sethos"
+    },
+    "182": {
+      "cardNo": "182",
+      "birdName": "크아르르이오느까마귀",
+      "birdNameEn": "Carrion Crow",
+      "src": "tts/card_intro/182_carrion_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Dugu_Shuo"
+    },
+    "183": {
+      "cardNo": "183",
+      "birdName": "그르이프프오느독수리",
+      "birdNameEn": "Griffon Vulture",
+      "src": "tts/card_intro/183_griffon_vulture.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yae_Miko"
+    },
+    "184": {
+      "cardNo": "184",
+      "birdName": "크오아르트이트새",
+      "birdNameEn": "Coal Tit",
+      "src": "tts/card_intro/184_coal_tit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Schubert"
+    },
+    "185": {
+      "cardNo": "185",
+      "birdName": "유라시아동고비",
+      "birdNameEn": "Eurasian Nuthatch",
+      "src": "tts/card_intro/185_eurasian_nuthatch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zaha_Hadi"
+    },
+    "186": {
+      "cardNo": "186",
+      "birdName": "유라시아잣까마귀",
+      "birdNameEn": "Eurasian Nutcracker",
+      "src": "tts/card_intro/186_eurasian_nutcracker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Schubert"
+    },
+    "187": {
+      "cardNo": "187",
+      "birdName": "붉은브아크에드때까치",
+      "birdNameEn": "Red Backed Shrike",
+      "src": "tts/card_intro/187_red_backed_shrike.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jifang"
+    },
+    "188": {
+      "cardNo": "188",
+      "birdName": "물총새",
+      "birdNameEn": "Common Kingfisher",
+      "src": "tts/card_intro/188_common_kingfisher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Charles"
+    },
+    "189": {
+      "cardNo": "189",
+      "birdName": "금눈쇠올빼미",
+      "birdNameEn": "Little Owl",
+      "src": "tts/card_intro/189_little_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Male_Believer"
+    },
+    "190": {
+      "cardNo": "190",
+      "birdName": "어치",
+      "birdNameEn": "Eurasian Jay",
+      "src": "tts/card_intro/190_eurasian_jay.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Atoco"
+    },
+    "191": {
+      "cardNo": "191",
+      "birdName": "황새",
+      "birdNameEn": "White Stork",
+      "src": "tts/card_intro/191_white_stork.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Asfand"
+    },
+    "192": {
+      "cardNo": "192",
+      "birdName": "흰목물까마귀",
+      "birdNameEn": "White Throated Dipper",
+      "src": "tts/card_intro/192_white_throated_dipper.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ashk"
+    },
+    "193": {
+      "cardNo": "193",
+      "birdName": "검은목드이브어새",
+      "birdNameEn": "Black Throated Diver",
+      "src": "tts/card_intro/193_black_throated_diver.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Arisawa"
+    },
+    "194": {
+      "cardNo": "194",
+      "birdName": "윌슨스트오르므페트럴새",
+      "birdNameEn": "Wilsons Storm Petrel",
+      "src": "tts/card_intro/194_wilsons_storm_petrel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sango"
+    },
+    "195": {
+      "cardNo": "195",
+      "birdName": "뿔논병아리",
+      "birdNameEn": "Great Crested Grebe",
+      "src": "tts/card_intro/195_great_crested_grebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yanfei"
+    },
+    "196": {
+      "cardNo": "196",
+      "birdName": "일반작은해오라기",
+      "birdNameEn": "Common Little Bittern",
+      "src": "tts/card_intro/196_common_little_bittern.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kagotsurube_Isshin"
+    },
+    "197": {
+      "cardNo": "197",
+      "birdName": "스쿠아크크오왜가리",
+      "birdNameEn": "Squacco Heron",
+      "src": "tts/card_intro/197_squacco_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Azar"
+    },
+    "198": {
+      "cardNo": "198",
+      "birdName": "스아브이스워블러",
+      "birdNameEn": "Savis Warbler",
+      "src": "tts/card_intro/198_savis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Meng"
+    },
+    "199": {
+      "cardNo": "199",
+      "birdName": "므우트에고니",
+      "birdNameEn": "Mute Swan",
+      "src": "tts/card_intro/199_mute_swan.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yumemizuki_Mizuki"
+    },
+    "200": {
+      "cardNo": "200",
+      "birdName": "왜가리",
+      "birdNameEn": "Grey Heron",
+      "src": "tts/card_intro/200_grey_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nanteuil"
+    },
+    "201": {
+      "cardNo": "201",
+      "birdName": "일반뻐꾸기",
+      "birdNameEn": "Common Cuckoo 281235Xc",
+      "src": "tts/card_intro/201_common_cuckoo_281235xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yuusaku"
+    },
+    "202": {
+      "cardNo": "202",
+      "birdName": "드우느느오크새",
+      "birdNameEn": "Dunnock",
+      "src": "tts/card_intro/202_dunnock.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Cyril"
+    },
+    "203": {
+      "cardNo": "203",
+      "birdName": "검은딱새",
+      "birdNameEn": "Black Redstart",
+      "src": "tts/card_intro/203_black_redstart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Blanche"
+    },
+    "204": {
+      "cardNo": "204",
+      "birdName": "작은우이트에스러오아트새",
+      "birdNameEn": "Lesser Whitethroat",
+      "src": "tts/card_intro/204_lesser_whitethroat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mualani"
+    },
+    "205": {
+      "cardNo": "205",
+      "birdName": "일반흰죽지오리",
+      "birdNameEn": "Common Goldeneye",
+      "src": "tts/card_intro/205_common_goldeneye.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Avin"
+    },
+    "206": {
+      "cardNo": "206",
+      "birdName": "붉은르에그그에드프아르트르이드그에새",
+      "birdNameEn": "Red Legged Partridge",
+      "src": "tts/card_intro/206_red_legged_partridge.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mika"
+    },
+    "207": {
+      "cardNo": "207",
+      "birdName": "스에크르아스종다리",
+      "birdNameEn": "Theklas Lark",
+      "src": "tts/card_intro/207_theklas_lark.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Hisahiko"
+    },
+    "208": {
+      "cardNo": "208",
+      "birdName": "에어오프이느르오르르어새",
+      "birdNameEn": "European Roller",
+      "src": "tts/card_intro/208_european_roller.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias"
+    },
+    "209": {
+      "cardNo": "209",
+      "birdName": "유라시아금빛꾀꼬리",
+      "birdNameEn": "Eurasian Golden Oriole",
+      "src": "tts/card_intro/209_eurasian_golden_oriole.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pauleau"
+    },
+    "210": {
+      "cardNo": "210",
+      "birdName": "유라시아트르이참새",
+      "birdNameEn": "Eurasian Tree Sparrow",
+      "src": "tts/card_intro/210_eurasian_tree_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhiyi"
+    },
+    "211": {
+      "cardNo": "211",
+      "birdName": "에어오프이느흐오느에이브우즈즈아르드새",
+      "birdNameEn": "European Honey Buzzard",
+      "src": "tts/card_intro/211_european_honey_buzzard.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rudaba"
+    },
+    "212": {
+      "cardNo": "212",
+      "birdName": "큰트이트새",
+      "birdNameEn": "Great Tit",
+      "src": "tts/card_intro/212_great_tit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wanyan"
+    },
+    "213": {
+      "cardNo": "213",
+      "birdName": "흐오프이느치새",
+      "birdNameEn": "Hawfinch",
+      "src": "tts/card_intro/213_hawfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Roussimoff"
+    },
+    "214": {
+      "cardNo": "214",
+      "birdName": "브우르르프이느치새",
+      "birdNameEn": "Bullfinch",
+      "src": "tts/card_intro/214_bullfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kichiboushi"
+    },
+    "215": {
+      "cardNo": "215",
+      "birdName": "브르우에스러오아트새",
+      "birdNameEn": "Bluethroat",
+      "src": "tts/card_intro/215_bluethroat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Bashar"
+    },
+    "216": {
+      "cardNo": "216",
+      "birdName": "일반느이그흐트이느그아르에새",
+      "birdNameEn": "Common Nightingale",
+      "src": "tts/card_intro/216_common_nightingale.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Avin"
+    },
+    "217": {
+      "cardNo": "217",
+      "birdName": "에어오프이느로빈",
+      "birdNameEn": "European Robin",
+      "src": "tts/card_intro/217_european_robin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jasar"
+    },
+    "218": {
+      "cardNo": "218",
+      "birdName": "흰브아크에드딱따구리",
+      "birdNameEn": "White Backed Woodpecker",
+      "src": "tts/card_intro/218_white_backed_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Barbara"
+    },
+    "219": {
+      "cardNo": "219",
+      "birdName": "검은딱따구리",
+      "birdNameEn": "Black Woodpecker 286205Xc",
+      "src": "tts/card_intro/219_black_woodpecker_286205xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Domenico"
+    },
+    "220": {
+      "cardNo": "220",
+      "birdName": "앵무",
+      "birdNameEn": "Parrot Crossbill",
+      "src": "tts/card_intro/220_parrot_crossbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kagotsurube_Isshin"
+    },
+    "221": {
+      "cardNo": "221",
+      "birdName": "에어오프이느브이이트어새",
+      "birdNameEn": "European Bee Eater",
+      "src": "tts/card_intro/221_european_bee_eater.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sanhaj"
+    },
+    "222": {
+      "cardNo": "222",
+      "birdName": "검은머리갈매기",
+      "birdNameEn": "Black Headed Gull",
+      "src": "tts/card_intro/222_black_headed_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Katou_Youhei"
+    },
+    "224": {
+      "cardNo": "224",
+      "birdName": "일반검은새",
+      "birdNameEn": "Common Blackbird",
+      "src": "tts/card_intro/224_common_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yun_Jin"
+    },
+    "225": {
+      "cardNo": "225",
+      "birdName": "흰올빼미",
+      "birdNameEn": "Snowy Owl",
+      "src": "tts/card_intro/225_snowy_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Eymen"
+    },
+    "226": {
+      "cardNo": "226",
+      "birdName": "붉은크느오트새",
+      "birdNameEn": "Red Knot",
+      "src": "tts/card_intro/226_red_knot.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiao"
+    },
+    "227": {
+      "cardNo": "227",
+      "birdName": "검은꼬리갓윗새",
+      "birdNameEn": "Black Tailed Godwit",
+      "src": "tts/card_intro/227_black_tailed_godwit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Miyuki"
+    },
+    "228": {
+      "cardNo": "228",
+      "birdName": "크오르스이크아느동고비",
+      "birdNameEn": "Corsican Nuthatch Xv",
+      "src": "tts/card_intro/228_corsican_nuthatch_xv.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Coralie"
+    },
+    "229": {
+      "cardNo": "229",
+      "birdName": "에어오프이느트어트르에비둘기",
+      "birdNameEn": "European Turtle Dove",
+      "src": "tts/card_intro/229_european_turtle_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badr"
+    },
+    "230": {
+      "cardNo": "230",
+      "birdName": "작은브우스트아르드새",
+      "birdNameEn": "Little Bustard",
+      "src": "tts/card_intro/230_little_bustard.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kozue"
+    },
+    "231": {
+      "cardNo": "231",
+      "birdName": "이에르르오흐아므므어새",
+      "birdNameEn": "Yellowhammer",
+      "src": "tts/card_intro/231_yellowhammer.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Royce"
+    },
+    "232": {
+      "cardNo": "232",
+      "birdName": "흰우아그트에이르새",
+      "birdNameEn": "White Wagtail",
+      "src": "tts/card_intro/232_white_wagtail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Investigate"
+    },
+    "233": {
+      "cardNo": "233",
+      "birdName": "므오르트오느이스워블러",
+      "birdNameEn": "Moltonis Warbler",
+      "src": "tts/card_intro/233_moltonis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Allier"
+    },
+    "234": {
+      "cardNo": "234",
+      "birdName": "그오르드크르에스트새",
+      "birdNameEn": "Goldcrest",
+      "src": "tts/card_intro/234_goldcrest.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Koolau"
+    },
+    "235": {
+      "cardNo": "235",
+      "birdName": "일반므우르흐에느크스크새",
+      "birdNameEn": "Common Moorhen 281025Xc",
+      "src": "tts/card_intro/235_common_moorhen_281025xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias"
+    },
+    "236": {
+      "cardNo": "236",
+      "birdName": "시오르트트오에드트르이크르이프어새",
+      "birdNameEn": "Short Toed Treecreeper",
+      "src": "tts/card_intro/236_short_toed_treecreeper.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Asfand"
+    },
+    "237": {
+      "cardNo": "237",
+      "birdName": "에르에오느오르아스매",
+      "birdNameEn": "Eleonoras Falcon",
+      "src": "tts/card_intro/237_eleonoras_falcon.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Elemental_Being_Grounded_Geoshroom"
+    },
+    "238": {
+      "cardNo": "238",
+      "birdName": "북부그아느느에트새",
+      "birdNameEn": "Northern Gannet",
+      "src": "tts/card_intro/238_northern_gannet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mavuika"
+    },
+    "239": {
+      "cardNo": "239",
+      "birdName": "유라시아스프아르르오흐오크새",
+      "birdNameEn": "Eurasian Sparrowhawk",
+      "src": "tts/card_intro/239_eurasian_sparrowhawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kurisu"
+    },
+    "240": {
+      "cardNo": "240",
+      "birdName": "북부그오시오크새",
+      "birdNameEn": "Northern Goshawk",
+      "src": "tts/card_intro/240_northern_goshawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Goli"
+    },
+    "241": {
+      "cardNo": "241",
+      "birdName": "동부이므프어이아르수리",
+      "birdNameEn": "Eastern Imperial Eagle",
+      "src": "tts/card_intro/241_eastern_imperial_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chef_Mao"
+    },
+    "242": {
+      "cardNo": "242",
+      "birdName": "브오느에르르이스수리",
+      "birdNameEn": "Bonellis Eagle",
+      "src": "tts/card_intro/242_bonellis_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Arlecchino"
+    },
+    "243": {
+      "cardNo": "243",
+      "birdName": "므오느트아그우스개구리매",
+      "birdNameEn": "Montagus Harrier",
+      "src": "tts/card_intro/243_montagus_harrier.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Koolau"
+    },
+    "244": {
+      "cardNo": "244",
+      "birdName": "일반브우즈즈아르드크스크새",
+      "birdNameEn": "Common Buzzard 619710Xc",
+      "src": "tts/card_intro/244_common_buzzard_619710xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Goli"
+    },
+    "245": {
+      "cardNo": "245",
+      "birdName": "붉은솔개",
+      "birdNameEn": "Red Kite",
+      "src": "tts/card_intro/245_red_kite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza"
+    },
+    "246": {
+      "cardNo": "246",
+      "birdName": "유라시아흐오브브이새",
+      "birdNameEn": "Eurasian Hobby",
+      "src": "tts/card_intro/246_eurasian_hobby.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Eula"
+    },
+    "247": {
+      "cardNo": "247",
+      "birdName": "에어오프이느그오르드프이느치새",
+      "birdNameEn": "European Goldfinch",
+      "src": "tts/card_intro/247_european_goldfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jiichirou"
+    },
+    "248": {
+      "cardNo": "248",
+      "birdName": "스느오멧새",
+      "birdNameEn": "Snow Bunting",
+      "src": "tts/card_intro/248_snow_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ajaw"
+    },
+    "249": {
+      "cardNo": "249",
+      "birdName": "두건까마귀",
+      "birdNameEn": "Hooded Crow",
+      "src": "tts/card_intro/249_hooded_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Beidou"
+    },
+    "250": {
+      "cardNo": "250",
+      "birdName": "유라시아크오르르아르에드비둘기",
+      "birdNameEn": "Eurasian Collared Dove",
+      "src": "tts/card_intro/250_eurasian_collared_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aratani"
+    },
+    "251": {
+      "cardNo": "251",
+      "birdName": "일반찌르레기",
+      "birdNameEn": "Common Starling",
+      "src": "tts/card_intro/251_common_starling.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rohawi"
+    },
+    "252": {
+      "cardNo": "252",
+      "birdName": "일반칼새",
+      "birdNameEn": "Common Swift 491117Xc",
+      "src": "tts/card_intro/252_common_swift_491117xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kouzen"
+    },
+    "253": {
+      "cardNo": "253",
+      "birdName": "집참새",
+      "birdNameEn": "House Sparrow",
+      "src": "tts/card_intro/253_house_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chiori"
+    },
+    "254": {
+      "cardNo": "254",
+      "birdName": "르우프프새",
+      "birdNameEn": "Ruff",
+      "src": "tts/card_intro/254_ruff.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Biram"
+    },
+    "255": {
+      "cardNo": "255",
+      "birdName": "큰프르아므이느그오새",
+      "birdNameEn": "Greater Flamingo",
+      "src": "tts/card_intro/255_greater_flamingo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lauwick"
+    },
+    "256": {
+      "cardNo": "256",
+      "birdName": "오드아우이느스갈매기",
+      "birdNameEn": "Audouins Gull",
+      "src": "tts/card_intro/256_audouins_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Scar_Liu"
+    },
+    "257": {
+      "cardNo": "257",
+      "birdName": "일반치아프프이느치새",
+      "birdNameEn": "Common Chaffinch",
+      "src": "tts/card_intro/257_common_chaffinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yoimiya"
+    },
+    "258": {
+      "cardNo": "258",
+      "birdName": "일반치이프프치아프프새",
+      "birdNameEn": "Common Chiffchaff",
+      "src": "tts/card_intro/258_common_chiffchaff.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Collei"
+    },
+    "259": {
+      "cardNo": "259",
+      "birdName": "그르에이르아그기러기",
+      "birdNameEn": "Greylag Goose",
+      "src": "tts/card_intro/259_greylag_goose.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yae_Miko"
+    },
+    "260": {
+      "cardNo": "260",
+      "birdName": "크에트트이스워블러",
+      "birdNameEn": "Cettis Warbler",
+      "src": "tts/card_intro/260_cettis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Corneille"
+    },
+    "261": {
+      "cardNo": "261",
+      "birdName": "유라시아초록딱따구리",
+      "birdNameEn": "Eurasian Green Woodpecker",
+      "src": "tts/card_intro/261_eurasian_green_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Fischl"
+    },
+    "262": {
+      "cardNo": "262",
+      "birdName": "아브브오트트스부비",
+      "birdNameEn": "Abbotts Booby",
+      "src": "tts/card_intro/262_abbotts_booby.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lan_Yan"
     }
   },
   "byCardId": {
@@ -53,6 +1885,7 @@
       "src": "tts/card_intro/53_pied_billed_grebe.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
+      "voiceTag": "Lynette",
       "mappingSource": "atlasSequence"
     },
     "atlas01_r01_c02": {
@@ -62,6 +1895,7 @@
       "src": "tts/card_intro/54_pileated_woodpecker.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
+      "voiceTag": "Rowan",
       "mappingSource": "atlasSequence"
     },
     "atlas01_r01_c03": {
@@ -71,6 +1905,7 @@
       "src": "tts/card_intro/55_western_meadowlark.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
+      "voiceTag": "Tokuda",
       "mappingSource": "atlasSequence"
     },
     "atlas01_r01_c04": {
@@ -80,6 +1915,7 @@
       "src": "tts/card_intro/56_grasshopper_sparrow.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
+      "voiceTag": "Bognor",
       "mappingSource": "atlasSequence"
     },
     "atlas01_r01_c05": {
@@ -89,6 +1925,2037 @@
       "src": "tts/card_intro/57_chipping_sparrow.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
+      "voiceTag": "Miwa",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c06": {
+      "cardNo": "58",
+      "birdName": "캐신참새",
+      "birdNameEn": "Cassins Sparrow",
+      "src": "tts/card_intro/58_cassins_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Solitary_Confinement",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c07": {
+      "cardNo": "59",
+      "birdName": "베어드참새",
+      "birdNameEn": "Bairds Sparrow",
+      "src": "tts/card_intro/59_bairds_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Amauta",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c08": {
+      "cardNo": "60",
+      "birdName": "캘리포니아메추라기",
+      "birdNameEn": "California Quail",
+      "src": "tts/card_intro/60_california_quail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Utayba",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c09": {
+      "cardNo": "61",
+      "birdName": "북부보브화이트새",
+      "birdNameEn": "Northern Bobwhite",
+      "src": "tts/card_intro/61_northern_bobwhite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Domenico",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c10": {
+      "cardNo": "62",
+      "birdName": "애도비둘기",
+      "birdNameEn": "Mourning Dove",
+      "src": "tts/card_intro/62_mourning_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Baishi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c01": {
+      "cardNo": "63",
+      "birdName": "볼티모어꾀꼬리",
+      "birdNameEn": "Baltimore Oriole",
+      "src": "tts/card_intro/63_baltimore_oriole.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jaiques",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c02": {
+      "cardNo": "64",
+      "birdName": "붉은솔잣새새",
+      "birdNameEn": "Red Crossbill",
+      "src": "tts/card_intro/64_red_crossbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Information_About_the_Missing_Ladys_Identity",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c03": {
+      "cardNo": "65",
+      "birdName": "라줄리멧새",
+      "birdNameEn": "Lazuli Bunting",
+      "src": "tts/card_intro/65_lazuli_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rekhar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c04": {
+      "cardNo": "66",
+      "birdName": "아메리카까마귀",
+      "birdNameEn": "American Crow",
+      "src": "tts/card_intro/66_american_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c05": {
+      "cardNo": "67",
+      "birdName": "물고기까마귀",
+      "birdNameEn": "Fish Crow",
+      "src": "tts/card_intro/67_fish_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tubby",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c06": {
+      "cardNo": "68",
+      "birdName": "검은관밤왜가리",
+      "birdNameEn": "Black Crowned Night Heron",
+      "src": "tts/card_intro/68_black_crowned_night_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c07": {
+      "cardNo": "69",
+      "birdName": "치와와큰까마귀",
+      "birdNameEn": "Chihuahuan Raven",
+      "src": "tts/card_intro/69_chihuahuan_raven.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aqaba",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c08": {
+      "cardNo": "70",
+      "birdName": "큰까마귀",
+      "birdNameEn": "Common Raven",
+      "src": "tts/card_intro/70_common_raven.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Antibes",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c09": {
+      "cardNo": "71",
+      "birdName": "북부홍관조",
+      "birdNameEn": "Northern Cardinal",
+      "src": "tts/card_intro/71_northern_cardinal.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aqaba",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r02_c10": {
+      "cardNo": "72",
+      "birdName": "노란배딱따구리",
+      "birdNameEn": "Yellow Bellied Sapsucker",
+      "src": "tts/card_intro/72_yellow_bellied_sapsucker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shuyun",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c01": {
+      "cardNo": "73",
+      "birdName": "남색멧새",
+      "birdNameEn": "Indigo Bunting",
+      "src": "tts/card_intro/73_indigo_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rowan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c02": {
+      "cardNo": "74",
+      "birdName": "서부풍금조",
+      "birdNameEn": "Western Tanager",
+      "src": "tts/card_intro/74_western_tanager.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiangling",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c03": {
+      "cardNo": "75",
+      "birdName": "점박이토히",
+      "birdNameEn": "Spotted Towhee",
+      "src": "tts/card_intro/75_spotted_towhee.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nuu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c04": {
+      "cardNo": "76",
+      "birdName": "장밋빛가슴콩새",
+      "birdNameEn": "Rose Breasted Grosbeak",
+      "src": "tts/card_intro/76_rose_breasted_grosbeak.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kachina",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c05": {
+      "cardNo": "77",
+      "birdName": "초록왜가리",
+      "birdNameEn": "Green Heron",
+      "src": "tts/card_intro/77_green_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sorush",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c06": {
+      "cardNo": "78",
+      "birdName": "회색크아트브어드새",
+      "birdNameEn": "Gray Catbird",
+      "src": "tts/card_intro/78_gray_catbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Farrah",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c07": {
+      "cardNo": "79",
+      "birdName": "북부흉내지빠귀",
+      "birdNameEn": "Northern Mockingbird",
+      "src": "tts/card_intro/79_northern_mockingbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Melus",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c08": {
+      "cardNo": "80",
+      "birdName": "두건비오리",
+      "birdNameEn": "Hooded Merganser",
+      "src": "tts/card_intro/80_hooded_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c09": {
+      "cardNo": "81",
+      "birdName": "뷰익굴뚝새",
+      "birdNameEn": "Bewicks Wren",
+      "src": "tts/card_intro/81_bewicks_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Huffman",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r03_c10": {
+      "cardNo": "82",
+      "birdName": "노란가슴챗",
+      "birdNameEn": "Yellow Breasted Chat",
+      "src": "tts/card_intro/82_yellow_breasted_chat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Oceanid",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c01": {
+      "cardNo": "83",
+      "birdName": "일반쏙독새",
+      "birdNameEn": "Common Nighthawk",
+      "src": "tts/card_intro/83_common_nighthawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Baltasar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c02": {
+      "cardNo": "84",
+      "birdName": "노래참새",
+      "birdNameEn": "Song Sparrow",
+      "src": "tts/card_intro/84_song_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Herbalist_Gui",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c03": {
+      "cardNo": "85",
+      "birdName": "흰관참새",
+      "birdNameEn": "White Crowned Sparrow",
+      "src": "tts/card_intro/85_white_crowned_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shiyun",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c04": {
+      "cardNo": "86",
+      "birdName": "굴뚝칼새",
+      "birdNameEn": "Chimney Swift",
+      "src": "tts/card_intro/86_chimney_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Trudaine",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c05": {
+      "cardNo": "87",
+      "birdName": "푸른콩새",
+      "birdNameEn": "Blue Grosbeak",
+      "src": "tts/card_intro/87_blue_grosbeak.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Neuvillette",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c06": {
+      "cardNo": "88",
+      "birdName": "링컨참새",
+      "birdNameEn": "Lincolns Sparrow",
+      "src": "tts/card_intro/88_lincolns_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c07": {
+      "cardNo": "89",
+      "birdName": "큰로드러너",
+      "birdNameEn": "Greater Roadrunner",
+      "src": "tts/card_intro/89_greater_roadrunner.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c08": {
+      "cardNo": "90",
+      "birdName": "붉은꼬리매",
+      "birdNameEn": "Red Tailed Hawk",
+      "src": "tts/card_intro/90_red_tailed_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kamal",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c09": {
+      "cardNo": "91",
+      "birdName": "북부개구리매",
+      "birdNameEn": "Northern Harrier Tj",
+      "src": "tts/card_intro/91_northern_harrier_tj.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Latifah",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r04_c10": {
+      "cardNo": "92",
+      "birdName": "쿠퍼매",
+      "birdNameEn": "Coopers Hawk",
+      "src": "tts/card_intro/92_coopers_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chaner",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c01": {
+      "cardNo": "93",
+      "birdName": "붉은시아우르드어에드매",
+      "birdNameEn": "Red Shouldered Hawk",
+      "src": "tts/card_intro/93_red_shouldered_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yumemizuki_Mizuki",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c02": {
+      "cardNo": "94",
+      "birdName": "줄무늬올빼미",
+      "birdNameEn": "Barred Owl",
+      "src": "tts/card_intro/94_barred_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jemma",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c03": {
+      "cardNo": "95",
+      "birdName": "스웨인슨매",
+      "birdNameEn": "Swainsons Hawk",
+      "src": "tts/card_intro/95_swainsons_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Idrisi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c04": {
+      "cardNo": "96",
+      "birdName": "송골매",
+      "birdNameEn": "Peregrine Falcon",
+      "src": "tts/card_intro/96_peregrine_falcon.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Donna",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c05": {
+      "cardNo": "97",
+      "birdName": "검독수리",
+      "birdNameEn": "Golden Eagle",
+      "src": "tts/card_intro/97_golden_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pauleau",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c06": {
+      "cardNo": "98",
+      "birdName": "아메리카수리부엉이",
+      "birdNameEn": "Great Horned Owl",
+      "src": "tts/card_intro/98_great_horned_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Faruzan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c07": {
+      "cardNo": "99",
+      "birdName": "일반비오리",
+      "birdNameEn": "Common Merganser",
+      "src": "tts/card_intro/99_common_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Faruzan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c08": {
+      "cardNo": "100",
+      "birdName": "윌렛",
+      "birdNameEn": "Willet",
+      "src": "tts/card_intro/100_willet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Keqing",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c09": {
+      "cardNo": "101",
+      "birdName": "아닝가새",
+      "birdNameEn": "Anhinga",
+      "src": "tts/card_intro/101_anhinga.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Panah",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r05_c10": {
+      "cardNo": "102",
+      "birdName": "눈백로",
+      "birdNameEn": "Snowy Egret",
+      "src": "tts/card_intro/102_snowy_egret.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nuu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c01": {
+      "cardNo": "103",
+      "birdName": "흰프아크에드따오기",
+      "birdNameEn": "White Faced Ibis",
+      "src": "tts/card_intro/103_white_faced_ibis.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c02": {
+      "cardNo": "104",
+      "birdName": "검은가위부리",
+      "birdNameEn": "Black Skimmer",
+      "src": "tts/card_intro/104_black_skimmer.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Norika",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c03": {
+      "cardNo": "105",
+      "birdName": "동부스크이치올빼미",
+      "birdNameEn": "Eastern Screech Owl",
+      "src": "tts/card_intro/105_eastern_screech_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shiyun",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c04": {
+      "cardNo": "106",
+      "birdName": "미시시피솔개",
+      "birdNameEn": "Mississippi Kite",
+      "src": "tts/card_intro/106_mississippi_kite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kathya",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c05": {
+      "cardNo": "107",
+      "birdName": "프어르우그이느아우스매",
+      "birdNameEn": "Ferruginous Hawk",
+      "src": "tts/card_intro/107_ferruginous_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yasutake",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c06": {
+      "cardNo": "108",
+      "birdName": "아메리카황조롱이",
+      "birdNameEn": "American Kestrel",
+      "src": "tts/card_intro/108_american_kestrel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Coralie",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c07": {
+      "cardNo": "109",
+      "birdName": "가면올빼미",
+      "birdNameEn": "Barn Owl",
+      "src": "tts/card_intro/109_barn_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c08": {
+      "cardNo": "110",
+      "birdName": "굴파는올빼미",
+      "birdNameEn": "Burrowing Owl",
+      "src": "tts/card_intro/110_burrowing_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Phaki",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c09": {
+      "cardNo": "111",
+      "birdName": "캐나다두루미",
+      "birdNameEn": "Sandhill Crane",
+      "src": "tts/card_intro/111_sandhill_crane.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ashk",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r06_c10": {
+      "cardNo": "112",
+      "birdName": "캐나다기러기",
+      "birdNameEn": "Canada Goose",
+      "src": "tts/card_intro/112_canada_goose.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Paimon",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c01": {
+      "cardNo": "113",
+      "birdName": "검은배휘파람오리",
+      "birdNameEn": "Black Bellied Whistling Duck",
+      "src": "tts/card_intro/113_black_bellied_whistling_duck.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sayu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c02": {
+      "cardNo": "114",
+      "birdName": "두겹볏가마우지",
+      "birdNameEn": "Double Crested Cormorant",
+      "src": "tts/card_intro/114_double_crested_cormorant.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhuhan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c03": {
+      "cardNo": "115",
+      "birdName": "아메리카흰펠리컨",
+      "birdNameEn": "American White Pelican",
+      "src": "tts/card_intro/115_american_white_pelican.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rohawi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c04": {
+      "cardNo": "116",
+      "birdName": "붉은날개검은새",
+      "birdNameEn": "Red Winged Blackbird",
+      "src": "tts/card_intro/116_red_winged_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mishal",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c05": {
+      "cardNo": "117",
+      "birdName": "일반검정새",
+      "birdNameEn": "Common Grackle",
+      "src": "tts/card_intro/117_common_grackle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Dugu_Shuo",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c06": {
+      "cardNo": "118",
+      "birdName": "브루어검은새",
+      "birdNameEn": "Brewers Blackbird",
+      "src": "tts/card_intro/118_brewers_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Captain_Wu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c07": {
+      "cardNo": "119",
+      "birdName": "노란머리검은새",
+      "birdNameEn": "Yellow Headed Blackbird",
+      "src": "tts/card_intro/119_yellow_headed_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xin_Cheng",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c08": {
+      "cardNo": "120",
+      "birdName": "부시팃새",
+      "birdNameEn": "Bushtit",
+      "src": "tts/card_intro/120_bushtit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shanghua",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c09": {
+      "cardNo": "121",
+      "birdName": "딕시슬새",
+      "birdNameEn": "Dickcissel",
+      "src": "tts/card_intro/121_dickcissel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yun_Jin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r07_c10": {
+      "cardNo": "122",
+      "birdName": "고리부리갈매기",
+      "birdNameEn": "Ring Billed Gull",
+      "src": "tts/card_intro/122_ring_billed_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shayin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c01": {
+      "cardNo": "123",
+      "birdName": "아메리카물닭",
+      "birdNameEn": "American Coot",
+      "src": "tts/card_intro/123_american_coot.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kliment",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c02": {
+      "cardNo": "124",
+      "birdName": "노란르우므프에드워블러",
+      "birdNameEn": "Yellow Rumped Warbler",
+      "src": "tts/card_intro/124_yellow_rumped_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sara",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c03": {
+      "cardNo": "125",
+      "birdName": "아메리카로빈",
+      "birdNameEn": "American Robin",
+      "src": "tts/card_intro/125_american_robin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c04": {
+      "cardNo": "126",
+      "birdName": "집되새",
+      "birdNameEn": "House Finch",
+      "src": "tts/card_intro/126_house_finch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Razor",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c05": {
+      "cardNo": "127",
+      "birdName": "브아르느제비",
+      "birdNameEn": "Barn Swallow",
+      "src": "tts/card_intro/127_barn_swallow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c07": {
+      "cardNo": "129",
+      "birdName": "보라제비",
+      "birdNameEn": "Purple Martin",
+      "src": "tts/card_intro/129_purple_martin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mualani",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c08": {
+      "cardNo": "130",
+      "birdName": "보라초록제비",
+      "birdNameEn": "Violet Green Swallow",
+      "src": "tts/card_intro/130_violet_green_swallow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Information_About_the_Missing_Ladys_Identity",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c09": {
+      "cardNo": "131",
+      "birdName": "크에드아르여새",
+      "birdNameEn": "Cedar Waxwing",
+      "src": "tts/card_intro/131_cedar_waxwing.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r01_c10": {
+      "cardNo": "132",
+      "birdName": "꼬마동고비",
+      "birdNameEn": "Pygmy Nuthatch",
+      "src": "tts/card_intro/132_pygmy_nuthatch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tepal",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c01": {
+      "cardNo": "133",
+      "birdName": "소나무스이스크이느새",
+      "birdNameEn": "Pine Siskin",
+      "src": "tts/card_intro/133_pine_siskin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xinyan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c02": {
+      "cardNo": "134",
+      "birdName": "검은에이에드정코새",
+      "birdNameEn": "Dark Eyed Junco",
+      "src": "tts/card_intro/134_dark_eyed_junco.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wanderer",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c03": {
+      "cardNo": "135",
+      "birdName": "아메리카검은머리물떼새",
+      "birdNameEn": "American Oystercatcher",
+      "src": "tts/card_intro/135_american_oystercatcher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Shuyun",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c04": {
+      "cardNo": "136",
+      "birdName": "캐롤라이나굴뚝새",
+      "birdNameEn": "Carolina Wren",
+      "src": "tts/card_intro/136_carolina_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lucien",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c05": {
+      "cardNo": "137",
+      "birdName": "검은느에크에드장다리물떼새",
+      "birdNameEn": "Black Necked Stilt",
+      "src": "tts/card_intro/137_black_necked_stilt.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Miyuki",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c06": {
+      "cardNo": "138",
+      "birdName": "잉카비둘기",
+      "birdNameEn": "Inca Dove",
+      "src": "tts/card_intro/138_inca_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chevreuse",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c07": {
+      "cardNo": "139",
+      "birdName": "스에이스피비새",
+      "birdNameEn": "Says Phoebe",
+      "src": "tts/card_intro/139_says_phoebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tokuda",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c08": {
+      "cardNo": "140",
+      "birdName": "아시목딱새",
+      "birdNameEn": "Ash Throated Flycatcher",
+      "src": "tts/card_intro/140_ash_throated_flycatcher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiao",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c09": {
+      "cardNo": "141",
+      "birdName": "보보링크새",
+      "birdNameEn": "Bobolink",
+      "src": "tts/card_intro/141_bobolink.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Bernette",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r02_c10": {
+      "cardNo": "142",
+      "birdName": "갈색펠리컨",
+      "birdNameEn": "Brown Pelican",
+      "src": "tts/card_intro/142_brown_pelican.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tubby",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c01": {
+      "cardNo": "143",
+      "birdName": "아메리카그오르드프이느치새",
+      "birdNameEn": "American Goldfinch",
+      "src": "tts/card_intro/143_american_goldfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c02": {
+      "cardNo": "144",
+      "birdName": "북부딱따구리",
+      "birdNameEn": "Northern Flicker",
+      "src": "tts/card_intro/144_northern_flicker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xbalanque",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c03": {
+      "cardNo": "145",
+      "birdName": "흰머리수리",
+      "birdNameEn": "Bald Eagle",
+      "src": "tts/card_intro/145_bald_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Neuvillette",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c04": {
+      "cardNo": "146",
+      "birdName": "숲황새",
+      "birdNameEn": "Wood Stork",
+      "src": "tts/card_intro/146_wood_stork.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Isak",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c05": {
+      "cardNo": "147",
+      "birdName": "르오스이트에저어새",
+      "birdNameEn": "Roseate Spoonbill",
+      "src": "tts/card_intro/147_roseate_spoonbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Vichama",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c06": {
+      "cardNo": "148",
+      "birdName": "하늘빛워블러",
+      "birdNameEn": "Cerulean Warbler",
+      "src": "tts/card_intro/148_cerulean_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chef_Mao",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c07": {
+      "cardNo": "149",
+      "birdName": "밤색크오르르아르에드긴발톱멧새",
+      "birdNameEn": "Chestnut Collared Longspur",
+      "src": "tts/card_intro/149_chestnut_collared_longspur.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Noelle",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c08": {
+      "cardNo": "150",
+      "birdName": "크이느그뜸부기",
+      "birdNameEn": "King Rail",
+      "src": "tts/card_intro/150_king_rail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nanteuil",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c09": {
+      "cardNo": "151",
+      "birdName": "붉은크오크아드에드딱따구리",
+      "birdNameEn": "Red Cockaded Woodpecker",
+      "src": "tts/card_intro/151_red_cockaded_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Guthred",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r03_c10": {
+      "cardNo": "152",
+      "birdName": "아메리카흰두루미",
+      "birdNameEn": "Whooping Crane",
+      "src": "tts/card_intro/152_whooping_crane.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Inou",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c01": {
+      "cardNo": "153",
+      "birdName": "점박이올빼미",
+      "birdNameEn": "Spotted Owl",
+      "src": "tts/card_intro/153_spotted_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Vilmant",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c02": {
+      "cardNo": "154",
+      "birdName": "캐신되새",
+      "birdNameEn": "Cassins Finch",
+      "src": "tts/card_intro/154_cassins_finch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Maloney",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c03": {
+      "cardNo": "155",
+      "birdName": "벨비레오",
+      "birdNameEn": "Bells Vireo",
+      "src": "tts/card_intro/155_bells_vireo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Albert",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c04": {
+      "cardNo": "156",
+      "birdName": "채색멧새",
+      "birdNameEn": "Painted Bunting",
+      "src": "tts/card_intro/156_painted_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badawi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c05": {
+      "cardNo": "157",
+      "birdName": "큰프르에이르이치이크에느새",
+      "birdNameEn": "Greater Prairie Chicken",
+      "src": "tts/card_intro/157_greater_prairie_chicken.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Paimon",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c06": {
+      "cardNo": "158",
+      "birdName": "대서양퍼핀",
+      "birdNameEn": "Atlantic Puffin",
+      "src": "tts/card_intro/158_atlantic_puffin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Amal",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c07": {
+      "cardNo": "159",
+      "birdName": "스프르아그우에스밭종다리",
+      "birdNameEn": "Spragues Pipit",
+      "src": "tts/card_intro/159_spragues_pipit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Taj_Radkani",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c08": {
+      "cardNo": "160",
+      "birdName": "캘리포니아콘도르",
+      "birdNameEn": "California Condor",
+      "src": "tts/card_intro/160_california_condor.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Focalors",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c09": {
+      "cardNo": "161",
+      "birdName": "솜털딱따구리",
+      "birdNameEn": "Downy Woodpecker",
+      "src": "tts/card_intro/161_downy_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Naganohara_Ryuunosuke",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r04_c10": {
+      "cardNo": "162",
+      "birdName": "볏박새",
+      "birdNameEn": "Tufted Titmouse",
+      "src": "tts/card_intro/162_tufted_titmouse.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Hu_Tao",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c01": {
+      "cardNo": "163",
+      "birdName": "루비관크이느그르에트새",
+      "birdNameEn": "Ruby Crowned Kinglet",
+      "src": "tts/card_intro/163_ruby_crowned_kinglet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mishal",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c02": {
+      "cardNo": "164",
+      "birdName": "붉은에이에드비레오",
+      "birdNameEn": "Red Eyed Vireo",
+      "src": "tts/card_intro/164_red_eyed_vireo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Werner",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c03": {
+      "cardNo": "165",
+      "birdName": "집굴뚝새",
+      "birdNameEn": "House Wren",
+      "src": "tts/card_intro/165_house_wren.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kujou_Sara",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c04": {
+      "cardNo": "166",
+      "birdName": "사바나참새",
+      "birdNameEn": "Savannah Sparrow",
+      "src": "tts/card_intro/166_savannah_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Tokuda",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c05": {
+      "cardNo": "167",
+      "birdName": "동부파랑새",
+      "birdNameEn": "Eastern Bluebird",
+      "src": "tts/card_intro/167_eastern_bluebird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c06": {
+      "cardNo": "168",
+      "birdName": "산파랑새",
+      "birdNameEn": "Mountain Bluebird",
+      "src": "tts/card_intro/168_mountain_bluebird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Gundafar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c07": {
+      "cardNo": "169",
+      "birdName": "큰푸른왜가리",
+      "birdNameEn": "Great Blue Heron",
+      "src": "tts/card_intro/169_great_blue_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Beidou",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c08": {
+      "cardNo": "170",
+      "birdName": "대백로",
+      "birdNameEn": "Great Egret",
+      "src": "tts/card_intro/170_great_egret.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aarav",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c09": {
+      "cardNo": "171",
+      "birdName": "넓은날개매",
+      "birdNameEn": "Broad Winged Hawk",
+      "src": "tts/card_intro/171_broad_winged_hawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Derafsh",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r05_c10": {
+      "cardNo": "172",
+      "birdName": "아메리카딱새",
+      "birdNameEn": "American Redstart",
+      "src": "tts/card_intro/172_american_redstart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c01": {
+      "cardNo": "173",
+      "birdName": "캔버스백새",
+      "birdNameEn": "Canvasback",
+      "src": "tts/card_intro/173_canvasback.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pixica",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c02": {
+      "cardNo": "174",
+      "birdName": "브오크스스칼새",
+      "birdNameEn": "Vauxs Swift",
+      "src": "tts/card_intro/174_vauxs_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nechca",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c03": {
+      "cardNo": "175",
+      "birdName": "브란트새",
+      "birdNameEn": "Brant",
+      "src": "tts/card_intro/175_brant.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Norika",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c04": {
+      "cardNo": "176",
+      "birdName": "흰목칼새",
+      "birdNameEn": "White Throated Swift",
+      "src": "tts/card_intro/176_white_throated_swift.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wriothesley",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c05": {
+      "cardNo": "177",
+      "birdName": "스크아르에드메추라기",
+      "birdNameEn": "Scaled Quail",
+      "src": "tts/card_intro/177_scaled_quail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhiyi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c06": {
+      "cardNo": "178",
+      "birdName": "검은치이느느에드벌새",
+      "birdNameEn": "Black Chinned Hummingbird",
+      "src": "tts/card_intro/178_black_chinned_hummingbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xilonen",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c07": {
+      "cardNo": "179",
+      "birdName": "붉은가슴비오리",
+      "birdNameEn": "Red Breasted Merganser",
+      "src": "tts/card_intro/179_red_breasted_merganser.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chubby",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c08": {
+      "cardNo": "180",
+      "birdName": "채색우이트에스트아르트새",
+      "birdNameEn": "Painted Whitestart",
+      "src": "tts/card_intro/180_painted_whitestart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rowan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c09": {
+      "cardNo": "181",
+      "birdName": "유라시아까치",
+      "birdNameEn": "Eurasian Magpie",
+      "src": "tts/card_intro/181_eurasian_magpie.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sethos",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r06_c10": {
+      "cardNo": "182",
+      "birdName": "크아르르이오느까마귀",
+      "birdNameEn": "Carrion Crow",
+      "src": "tts/card_intro/182_carrion_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Dugu_Shuo",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c01": {
+      "cardNo": "183",
+      "birdName": "그르이프프오느독수리",
+      "birdNameEn": "Griffon Vulture",
+      "src": "tts/card_intro/183_griffon_vulture.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yae_Miko",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c02": {
+      "cardNo": "184",
+      "birdName": "크오아르트이트새",
+      "birdNameEn": "Coal Tit",
+      "src": "tts/card_intro/184_coal_tit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Schubert",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c03": {
+      "cardNo": "185",
+      "birdName": "유라시아동고비",
+      "birdNameEn": "Eurasian Nuthatch",
+      "src": "tts/card_intro/185_eurasian_nuthatch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zaha_Hadi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c04": {
+      "cardNo": "186",
+      "birdName": "유라시아잣까마귀",
+      "birdNameEn": "Eurasian Nutcracker",
+      "src": "tts/card_intro/186_eurasian_nutcracker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Schubert",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c05": {
+      "cardNo": "187",
+      "birdName": "붉은브아크에드때까치",
+      "birdNameEn": "Red Backed Shrike",
+      "src": "tts/card_intro/187_red_backed_shrike.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jifang",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c06": {
+      "cardNo": "188",
+      "birdName": "물총새",
+      "birdNameEn": "Common Kingfisher",
+      "src": "tts/card_intro/188_common_kingfisher.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Charles",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c07": {
+      "cardNo": "189",
+      "birdName": "금눈쇠올빼미",
+      "birdNameEn": "Little Owl",
+      "src": "tts/card_intro/189_little_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Male_Believer",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c08": {
+      "cardNo": "190",
+      "birdName": "어치",
+      "birdNameEn": "Eurasian Jay",
+      "src": "tts/card_intro/190_eurasian_jay.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Atoco",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c09": {
+      "cardNo": "191",
+      "birdName": "황새",
+      "birdNameEn": "White Stork",
+      "src": "tts/card_intro/191_white_stork.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Asfand",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas02_r07_c10": {
+      "cardNo": "192",
+      "birdName": "흰목물까마귀",
+      "birdNameEn": "White Throated Dipper",
+      "src": "tts/card_intro/192_white_throated_dipper.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ashk",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c01": {
+      "cardNo": "193",
+      "birdName": "검은목드이브어새",
+      "birdNameEn": "Black Throated Diver",
+      "src": "tts/card_intro/193_black_throated_diver.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Arisawa",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c02": {
+      "cardNo": "194",
+      "birdName": "윌슨스트오르므페트럴새",
+      "birdNameEn": "Wilsons Storm Petrel",
+      "src": "tts/card_intro/194_wilsons_storm_petrel.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sango",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c03": {
+      "cardNo": "195",
+      "birdName": "뿔논병아리",
+      "birdNameEn": "Great Crested Grebe",
+      "src": "tts/card_intro/195_great_crested_grebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yanfei",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c04": {
+      "cardNo": "196",
+      "birdName": "일반작은해오라기",
+      "birdNameEn": "Common Little Bittern",
+      "src": "tts/card_intro/196_common_little_bittern.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kagotsurube_Isshin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c05": {
+      "cardNo": "197",
+      "birdName": "스쿠아크크오왜가리",
+      "birdNameEn": "Squacco Heron",
+      "src": "tts/card_intro/197_squacco_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Azar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c06": {
+      "cardNo": "198",
+      "birdName": "스아브이스워블러",
+      "birdNameEn": "Savis Warbler",
+      "src": "tts/card_intro/198_savis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Meng",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c07": {
+      "cardNo": "199",
+      "birdName": "므우트에고니",
+      "birdNameEn": "Mute Swan",
+      "src": "tts/card_intro/199_mute_swan.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yumemizuki_Mizuki",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c08": {
+      "cardNo": "200",
+      "birdName": "왜가리",
+      "birdNameEn": "Grey Heron",
+      "src": "tts/card_intro/200_grey_heron.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Nanteuil",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c09": {
+      "cardNo": "201",
+      "birdName": "일반뻐꾸기",
+      "birdNameEn": "Common Cuckoo 281235Xc",
+      "src": "tts/card_intro/201_common_cuckoo_281235xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yuusaku",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r01_c10": {
+      "cardNo": "202",
+      "birdName": "드우느느오크새",
+      "birdNameEn": "Dunnock",
+      "src": "tts/card_intro/202_dunnock.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Cyril",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c01": {
+      "cardNo": "203",
+      "birdName": "검은딱새",
+      "birdNameEn": "Black Redstart",
+      "src": "tts/card_intro/203_black_redstart.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Blanche",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c02": {
+      "cardNo": "204",
+      "birdName": "작은우이트에스러오아트새",
+      "birdNameEn": "Lesser Whitethroat",
+      "src": "tts/card_intro/204_lesser_whitethroat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mualani",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c03": {
+      "cardNo": "205",
+      "birdName": "일반흰죽지오리",
+      "birdNameEn": "Common Goldeneye",
+      "src": "tts/card_intro/205_common_goldeneye.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Avin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c04": {
+      "cardNo": "206",
+      "birdName": "붉은르에그그에드프아르트르이드그에새",
+      "birdNameEn": "Red Legged Partridge",
+      "src": "tts/card_intro/206_red_legged_partridge.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mika",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c05": {
+      "cardNo": "207",
+      "birdName": "스에크르아스종다리",
+      "birdNameEn": "Theklas Lark",
+      "src": "tts/card_intro/207_theklas_lark.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Hisahiko",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c06": {
+      "cardNo": "208",
+      "birdName": "에어오프이느르오르르어새",
+      "birdNameEn": "European Roller",
+      "src": "tts/card_intro/208_european_roller.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c07": {
+      "cardNo": "209",
+      "birdName": "유라시아금빛꾀꼬리",
+      "birdNameEn": "Eurasian Golden Oriole",
+      "src": "tts/card_intro/209_eurasian_golden_oriole.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Pauleau",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c08": {
+      "cardNo": "210",
+      "birdName": "유라시아트르이참새",
+      "birdNameEn": "Eurasian Tree Sparrow",
+      "src": "tts/card_intro/210_eurasian_tree_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Zhiyi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c09": {
+      "cardNo": "211",
+      "birdName": "에어오프이느흐오느에이브우즈즈아르드새",
+      "birdNameEn": "European Honey Buzzard",
+      "src": "tts/card_intro/211_european_honey_buzzard.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rudaba",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r02_c10": {
+      "cardNo": "212",
+      "birdName": "큰트이트새",
+      "birdNameEn": "Great Tit",
+      "src": "tts/card_intro/212_great_tit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Wanyan",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c01": {
+      "cardNo": "213",
+      "birdName": "흐오프이느치새",
+      "birdNameEn": "Hawfinch",
+      "src": "tts/card_intro/213_hawfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Roussimoff",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c02": {
+      "cardNo": "214",
+      "birdName": "브우르르프이느치새",
+      "birdNameEn": "Bullfinch",
+      "src": "tts/card_intro/214_bullfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kichiboushi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c03": {
+      "cardNo": "215",
+      "birdName": "브르우에스러오아트새",
+      "birdNameEn": "Bluethroat",
+      "src": "tts/card_intro/215_bluethroat.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Bashar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c04": {
+      "cardNo": "216",
+      "birdName": "일반느이그흐트이느그아르에새",
+      "birdNameEn": "Common Nightingale",
+      "src": "tts/card_intro/216_common_nightingale.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Avin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c05": {
+      "cardNo": "217",
+      "birdName": "에어오프이느로빈",
+      "birdNameEn": "European Robin",
+      "src": "tts/card_intro/217_european_robin.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jasar",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c06": {
+      "cardNo": "218",
+      "birdName": "흰브아크에드딱따구리",
+      "birdNameEn": "White Backed Woodpecker",
+      "src": "tts/card_intro/218_white_backed_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Barbara",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c07": {
+      "cardNo": "219",
+      "birdName": "검은딱따구리",
+      "birdNameEn": "Black Woodpecker 286205Xc",
+      "src": "tts/card_intro/219_black_woodpecker_286205xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Domenico",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c08": {
+      "cardNo": "220",
+      "birdName": "앵무",
+      "birdNameEn": "Parrot Crossbill",
+      "src": "tts/card_intro/220_parrot_crossbill.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kagotsurube_Isshin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c09": {
+      "cardNo": "221",
+      "birdName": "에어오프이느브이이트어새",
+      "birdNameEn": "European Bee Eater",
+      "src": "tts/card_intro/221_european_bee_eater.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Sanhaj",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r03_c10": {
+      "cardNo": "222",
+      "birdName": "검은머리갈매기",
+      "birdNameEn": "Black Headed Gull",
+      "src": "tts/card_intro/222_black_headed_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Katou_Youhei",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c02": {
+      "cardNo": "224",
+      "birdName": "일반검은새",
+      "birdNameEn": "Common Blackbird",
+      "src": "tts/card_intro/224_common_blackbird.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yun_Jin",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c03": {
+      "cardNo": "225",
+      "birdName": "흰올빼미",
+      "birdNameEn": "Snowy Owl",
+      "src": "tts/card_intro/225_snowy_owl.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Eymen",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c04": {
+      "cardNo": "226",
+      "birdName": "붉은크느오트새",
+      "birdNameEn": "Red Knot",
+      "src": "tts/card_intro/226_red_knot.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Xiao",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c05": {
+      "cardNo": "227",
+      "birdName": "검은꼬리갓윗새",
+      "birdNameEn": "Black Tailed Godwit",
+      "src": "tts/card_intro/227_black_tailed_godwit.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Miyuki",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c06": {
+      "cardNo": "228",
+      "birdName": "크오르스이크아느동고비",
+      "birdNameEn": "Corsican Nuthatch Xv",
+      "src": "tts/card_intro/228_corsican_nuthatch_xv.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Coralie",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c07": {
+      "cardNo": "229",
+      "birdName": "에어오프이느트어트르에비둘기",
+      "birdNameEn": "European Turtle Dove",
+      "src": "tts/card_intro/229_european_turtle_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Badr",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c08": {
+      "cardNo": "230",
+      "birdName": "작은브우스트아르드새",
+      "birdNameEn": "Little Bustard",
+      "src": "tts/card_intro/230_little_bustard.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kozue",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c09": {
+      "cardNo": "231",
+      "birdName": "이에르르오흐아므므어새",
+      "birdNameEn": "Yellowhammer",
+      "src": "tts/card_intro/231_yellowhammer.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Royce",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r04_c10": {
+      "cardNo": "232",
+      "birdName": "흰우아그트에이르새",
+      "birdNameEn": "White Wagtail",
+      "src": "tts/card_intro/232_white_wagtail.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Investigate",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c01": {
+      "cardNo": "233",
+      "birdName": "므오르트오느이스워블러",
+      "birdNameEn": "Moltonis Warbler",
+      "src": "tts/card_intro/233_moltonis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Allier",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c02": {
+      "cardNo": "234",
+      "birdName": "그오르드크르에스트새",
+      "birdNameEn": "Goldcrest",
+      "src": "tts/card_intro/234_goldcrest.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Koolau",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c03": {
+      "cardNo": "235",
+      "birdName": "일반므우르흐에느크스크새",
+      "birdNameEn": "Common Moorhen 281025Xc",
+      "src": "tts/card_intro/235_common_moorhen_281025xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Matthias",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c04": {
+      "cardNo": "236",
+      "birdName": "시오르트트오에드트르이크르이프어새",
+      "birdNameEn": "Short Toed Treecreeper",
+      "src": "tts/card_intro/236_short_toed_treecreeper.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Asfand",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c05": {
+      "cardNo": "237",
+      "birdName": "에르에오느오르아스매",
+      "birdNameEn": "Eleonoras Falcon",
+      "src": "tts/card_intro/237_eleonoras_falcon.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Elemental_Being_Grounded_Geoshroom",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c06": {
+      "cardNo": "238",
+      "birdName": "북부그아느느에트새",
+      "birdNameEn": "Northern Gannet",
+      "src": "tts/card_intro/238_northern_gannet.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Mavuika",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c07": {
+      "cardNo": "239",
+      "birdName": "유라시아스프아르르오흐오크새",
+      "birdNameEn": "Eurasian Sparrowhawk",
+      "src": "tts/card_intro/239_eurasian_sparrowhawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kurisu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c08": {
+      "cardNo": "240",
+      "birdName": "북부그오시오크새",
+      "birdNameEn": "Northern Goshawk",
+      "src": "tts/card_intro/240_northern_goshawk.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Goli",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c09": {
+      "cardNo": "241",
+      "birdName": "동부이므프어이아르수리",
+      "birdNameEn": "Eastern Imperial Eagle",
+      "src": "tts/card_intro/241_eastern_imperial_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chef_Mao",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r05_c10": {
+      "cardNo": "242",
+      "birdName": "브오느에르르이스수리",
+      "birdNameEn": "Bonellis Eagle",
+      "src": "tts/card_intro/242_bonellis_eagle.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Arlecchino",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c01": {
+      "cardNo": "243",
+      "birdName": "므오느트아그우스개구리매",
+      "birdNameEn": "Montagus Harrier",
+      "src": "tts/card_intro/243_montagus_harrier.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Koolau",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c02": {
+      "cardNo": "244",
+      "birdName": "일반브우즈즈아르드크스크새",
+      "birdNameEn": "Common Buzzard 619710Xc",
+      "src": "tts/card_intro/244_common_buzzard_619710xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Goli",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c03": {
+      "cardNo": "245",
+      "birdName": "붉은솔개",
+      "birdNameEn": "Red Kite",
+      "src": "tts/card_intro/245_red_kite.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Juza",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c04": {
+      "cardNo": "246",
+      "birdName": "유라시아흐오브브이새",
+      "birdNameEn": "Eurasian Hobby",
+      "src": "tts/card_intro/246_eurasian_hobby.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Eula",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c05": {
+      "cardNo": "247",
+      "birdName": "에어오프이느그오르드프이느치새",
+      "birdNameEn": "European Goldfinch",
+      "src": "tts/card_intro/247_european_goldfinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Jiichirou",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c06": {
+      "cardNo": "248",
+      "birdName": "스느오멧새",
+      "birdNameEn": "Snow Bunting",
+      "src": "tts/card_intro/248_snow_bunting.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ajaw",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c07": {
+      "cardNo": "249",
+      "birdName": "두건까마귀",
+      "birdNameEn": "Hooded Crow",
+      "src": "tts/card_intro/249_hooded_crow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Beidou",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c08": {
+      "cardNo": "250",
+      "birdName": "유라시아크오르르아르에드비둘기",
+      "birdNameEn": "Eurasian Collared Dove",
+      "src": "tts/card_intro/250_eurasian_collared_dove.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Aratani",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c09": {
+      "cardNo": "251",
+      "birdName": "일반찌르레기",
+      "birdNameEn": "Common Starling",
+      "src": "tts/card_intro/251_common_starling.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Rohawi",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r06_c10": {
+      "cardNo": "252",
+      "birdName": "일반칼새",
+      "birdNameEn": "Common Swift 491117Xc",
+      "src": "tts/card_intro/252_common_swift_491117xc.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Kouzen",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c01": {
+      "cardNo": "253",
+      "birdName": "집참새",
+      "birdNameEn": "House Sparrow",
+      "src": "tts/card_intro/253_house_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chiori",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c02": {
+      "cardNo": "254",
+      "birdName": "르우프프새",
+      "birdNameEn": "Ruff",
+      "src": "tts/card_intro/254_ruff.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Biram",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c03": {
+      "cardNo": "255",
+      "birdName": "큰프르아므이느그오새",
+      "birdNameEn": "Greater Flamingo",
+      "src": "tts/card_intro/255_greater_flamingo.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lauwick",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c04": {
+      "cardNo": "256",
+      "birdName": "오드아우이느스갈매기",
+      "birdNameEn": "Audouins Gull",
+      "src": "tts/card_intro/256_audouins_gull.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Scar_Liu",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c05": {
+      "cardNo": "257",
+      "birdName": "일반치아프프이느치새",
+      "birdNameEn": "Common Chaffinch",
+      "src": "tts/card_intro/257_common_chaffinch.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yoimiya",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c06": {
+      "cardNo": "258",
+      "birdName": "일반치이프프치아프프새",
+      "birdNameEn": "Common Chiffchaff",
+      "src": "tts/card_intro/258_common_chiffchaff.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Collei",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c07": {
+      "cardNo": "259",
+      "birdName": "그르에이르아그기러기",
+      "birdNameEn": "Greylag Goose",
+      "src": "tts/card_intro/259_greylag_goose.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Yae_Miko",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c08": {
+      "cardNo": "260",
+      "birdName": "크에트트이스워블러",
+      "birdNameEn": "Cettis Warbler",
+      "src": "tts/card_intro/260_cettis_warbler.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Corneille",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c09": {
+      "cardNo": "261",
+      "birdName": "유라시아초록딱따구리",
+      "birdNameEn": "Eurasian Green Woodpecker",
+      "src": "tts/card_intro/261_eurasian_green_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Fischl",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas03_r07_c10": {
+      "cardNo": "262",
+      "birdName": "아브브오트트스부비",
+      "birdNameEn": "Abbotts Booby",
+      "src": "tts/card_intro/262_abbotts_booby.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Lan_Yan",
       "mappingSource": "atlasSequence"
     }
   }

@@ -191,6 +191,7 @@ body {
   left: max(14px, env(safe-area-inset-left));
   right: max(14px, env(safe-area-inset-right));
   top: max(12px, env(safe-area-inset-top));
+  z-index: 45;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -233,6 +234,106 @@ h1 {
 
 .status.error {
   color: var(--danger);
+}
+
+.candidate-panel {
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  z-index: 35;
+  width: min(88vw, 400px);
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.candidate-panel[hidden] {
+  display: none;
+}
+
+.candidate-list {
+  display: grid;
+  gap: 6px;
+  max-height: 248px;
+  padding: 7px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 12px;
+  background: rgb(13 17 18 / 68%);
+  box-shadow: 0 16px 42px rgb(0 0 0 / 38%);
+  backdrop-filter: blur(15px);
+  scrollbar-width: thin;
+  scrollbar-color: rgb(107 214 154 / 60%) transparent;
+}
+
+.candidate-button {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 54px;
+  padding: 8px 10px;
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 9%);
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.candidate-button.is-leading {
+  border-color: rgb(107 214 154 / 74%);
+  background: rgb(107 214 154 / 15%);
+}
+
+.candidate-button:active {
+  transform: translateY(1px);
+}
+
+.candidate-rank {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 34%);
+  color: var(--green);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.candidate-text {
+  display: grid;
+  min-width: 0;
+  gap: 2px;
+}
+
+.candidate-name,
+.candidate-meta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.candidate-name {
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.candidate-meta {
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.candidate-score {
+  min-width: 42px;
+  color: var(--warning);
+  font-size: 0.82rem;
+  font-weight: 900;
+  text-align: right;
 }
 
 @keyframes success-glow {
@@ -286,6 +387,7 @@ h1 {
   left: max(10px, env(safe-area-inset-left));
   right: max(10px, env(safe-area-inset-right));
   bottom: max(10px, env(safe-area-inset-bottom));
+  z-index: 50;
   display: grid;
   gap: 8px;
   padding: 10px;

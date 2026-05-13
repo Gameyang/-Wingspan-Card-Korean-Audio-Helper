@@ -28,6 +28,8 @@ const OCR_NUMERIC_PAIR_BOOST = 30;
 const STABLE_MATCH_FRAMES = 2;
 const MISS_FRAMES_TO_RESET = 4;
 const SUCCESS_FEEDBACK_COOLDOWN_MS = 4000;
+const MAX_CANDIDATE_SUGGESTIONS = 8;
+const MIN_CANDIDATE_NAME_SCORE = 38;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
 const BIRD_BG_VOLUME = 0.24;
 
@@ -39,6 +41,8 @@ const elements = {
   successGlow: document.querySelector("#successGlow"),
   debugSheet: document.querySelector("#debugSheet"),
   debugToggle: document.querySelector("#debugToggle"),
+  candidatePanel: document.querySelector("#candidatePanel"),
+  candidateList: document.querySelector("#candidateList"),
   abilityToggle: document.querySelector("#abilityToggle"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
@@ -687,6 +691,116 @@ function displayNameForCard(card) {
   return introTtsForCard(card)?.birdName || abilityTtsForCard(card)?.birdName || card.birdName;
 }
 
+function cardById(cardId) {
+  return ocrDb.byCardId?.[cardId] ?? ocrDb.cards.find((card) => card.id === cardId) ?? null;
+}
+
+function isUsefulCandidate(candidate) {
+  if (!candidate) {
+    return false;
+  }
+  if (candidate.numericPairMatched || candidate.abilityScore > 0) {
+    return true;
+  }
+  if ((candidate.numericMatches?.length ?? 0) >= 2) {
+    return true;
+  }
+  if (candidate.nameScore >= MIN_CANDIDATE_NAME_SCORE) {
+    return true;
+  }
+  return (candidate.numericMatches?.length ?? 0) >= 1 && candidate.nameScore >= 25;
+}
+
+function candidateMetaText(candidate) {
+  const parts = [];
+  if (candidate.nameScore > 0) {
+    parts.push(`이름 ${candidate.nameScore}%`);
+  }
+  if (candidate.numericMatches?.length) {
+    parts.push(candidate.numericMatches.join("+"));
+  }
+  if (candidate.abilityScore > 0) {
+    parts.push("능력");
+  }
+  return parts.join(" · ") || "유사 후보";
+}
+
+function hideCandidateSuggestions() {
+  if (!elements.candidatePanel || !elements.candidateList) {
+    return;
+  }
+  elements.candidatePanel.hidden = true;
+  elements.candidateList.replaceChildren();
+}
+
+function candidateButton(candidate, index, leadingCardId) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "candidate-button";
+  if (candidate.id === leadingCardId) {
+    button.classList.add("is-leading");
+  }
+  button.dataset.cardId = candidate.id;
+  button.setAttribute("aria-label", `${displayNameForCard(candidate)} 선택`);
+
+  const rank = document.createElement("span");
+  rank.className = "candidate-rank";
+  rank.textContent = String(index + 1);
+
+  const text = document.createElement("span");
+  text.className = "candidate-text";
+
+  const name = document.createElement("span");
+  name.className = "candidate-name";
+  name.textContent = displayNameForCard(candidate);
+
+  const meta = document.createElement("span");
+  meta.className = "candidate-meta";
+  meta.textContent = `${candidate.cardNo} · ${candidateMetaText(candidate)}`;
+
+  const score = document.createElement("span");
+  score.className = "candidate-score";
+  score.textContent = `${candidate.score}%`;
+
+  text.append(name, meta);
+  button.append(rank, text, score);
+  return button;
+}
+
+function updateCandidateSuggestions(candidates, leadingCardId = "") {
+  if (!elements.candidatePanel || !elements.candidateList) {
+    return;
+  }
+  const suggestions = candidates.filter(isUsefulCandidate).slice(0, MAX_CANDIDATE_SUGGESTIONS);
+  if (!suggestions.length) {
+    hideCandidateSuggestions();
+    return;
+  }
+
+  const previousScrollTop = elements.candidateList.scrollTop;
+  elements.candidateList.replaceChildren(
+    ...suggestions.map((candidate, index) => candidateButton(candidate, index, leadingCardId)),
+  );
+  elements.candidatePanel.hidden = false;
+  elements.candidateList.scrollTop = previousScrollTop;
+}
+
+function selectCandidateCard(card) {
+  if (!card) {
+    return;
+  }
+  missedFrameCount = 0;
+  candidateCardId = card.id;
+  candidateFrameCount = STABLE_MATCH_FRAMES;
+  triggerSuccessFeedback(card, true);
+  const audioMessage = playAudioForCard(card, true);
+  elements.matchName.textContent = displayNameForCard(card);
+  elements.matchScore.textContent = "직접 선택";
+  elements.matchMeta.textContent = `${card.cardNo} ${displayNameForCard(card)} / 사용자 선택 / ${audioMessage}`;
+  setStatus("선택", "ready");
+  hideCandidateSuggestions();
+}
+
 function speechQueueForCard(card) {
   const queue = [];
   const intro = introTtsForCard(card);
@@ -808,12 +922,13 @@ function restartAnimation(element, className) {
   element.classList.add(className);
 }
 
-function triggerSuccessFeedback(card) {
+function triggerSuccessFeedback(card, force = false) {
   if (!card) {
     return;
   }
   const now = performance.now();
   if (
+    !force &&
     lastSuccessFeedbackCardId === card.id &&
     now - lastSuccessFeedbackAt < SUCCESS_FEEDBACK_COOLDOWN_MS
   ) {
@@ -873,9 +988,11 @@ async function identifyCurrentFrame() {
 
     if (matched) {
       missedFrameCount = 0;
+      hideCandidateSuggestions();
       triggerSuccessFeedback(best);
       audioMessage = await playAudioForCard(best);
     } else {
+      updateCandidateSuggestions(candidates, best?.id);
       resetAudioAfterMiss();
       audioMessage = confidence.ok ? `유지 ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
     }
@@ -889,6 +1006,7 @@ async function identifyCurrentFrame() {
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
     updateRecognitionRate(null);
+    hideCandidateSuggestions();
     setStatus("오류", "error");
   } finally {
     isScanning = false;
@@ -971,6 +1089,20 @@ function initDebugSheet() {
   );
 }
 
+function initCandidateSuggestions() {
+  if (!elements.candidateList) {
+    return;
+  }
+  elements.candidateList.addEventListener("click", (event) => {
+    const button = event.target.closest?.(".candidate-button");
+    if (!button) {
+      return;
+    }
+    event.stopPropagation();
+    selectCandidateCard(cardById(button.dataset.cardId));
+  });
+}
+
 function initAbilityToggle() {
   if (!elements.abilityToggle) {
     return;
@@ -989,6 +1121,7 @@ function initAbilityToggle() {
 async function boot() {
   try {
     initDebugSheet();
+    initCandidateSuggestions();
     initAbilityToggle();
     await loadData();
     await initOcrWorker();
