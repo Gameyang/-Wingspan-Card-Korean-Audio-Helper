@@ -2,3 +2,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 src/TestImages/cards/
+src/AtlasImage/httpssteamusercontentaakamaihdnetugc2360517541580567596E55BB976EE621EC67221784040A36C1E50184128.jpg
+src/AtlasImage/httpssteamusercontentaakamaihdnetugc2360517541580570644A06979781010FC97009C687A8E8E2D12E055FCCB.jpg
+src/AtlasImage/httpssteamusercontentaakamaihdnetugc236051754158056559299D22D695BC350D9F7EEB1C39F9D92B68FCF3DF4.jpg
+src/RuleBook/동지종류.png
+src/RuleBook/먹이종류.png
+src/RuleBook/새때.png
+src/RuleBook/포식자.png

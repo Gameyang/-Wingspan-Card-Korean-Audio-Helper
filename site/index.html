@@ -15,7 +15,10 @@
 
       <div class="scan-overlay" id="cameraBox" aria-label="Camera scanner">
         <div class="scan-frame" id="cardGuide" aria-hidden="true">
-          <div class="name-guide"></div>
+          <div class="ocr-guide title-guide"></div>
+          <div class="ocr-guide score-guide"></div>
+          <div class="ocr-guide wing-guide"></div>
+          <div class="ocr-guide ability-guide"></div>
           <span class="corner top-left"></span>
           <span class="corner top-right"></span>
           <span class="corner bottom-left"></span>
@@ -31,26 +34,37 @@
         <div class="status" id="status" role="status">Idle</div>
       </header>
 
-      <section class="bottom-sheet" aria-label="Scanner result">
-        <div class="control-row">
-          <label class="toggle-control">
-            <input type="checkbox" id="abilityToggle" />
-            <span class="toggle-track" aria-hidden="true"></span>
-            <span>능력 설명</span>
-          </label>
-        </div>
-        <div class="result-row">
-          <div class="result-card main-result">
-            <dt>Match</dt>
-            <dd id="matchName">-</dd>
+      <section class="bottom-sheet is-collapsed" id="debugSheet" aria-label="Scanner result">
+        <button
+          class="sheet-toggle"
+          id="debugToggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="debugContent"
+        >
+          결과
+        </button>
+        <div class="sheet-content" id="debugContent">
+          <div class="control-row">
+            <label class="toggle-control">
+              <input type="checkbox" id="abilityToggle" />
+              <span class="toggle-track" aria-hidden="true"></span>
+              <span>능력 설명</span>
+            </label>
           </div>
-          <div class="result-card score-result">
-            <dt>Score</dt>
-            <dd id="matchScore">-</dd>
-          </div>
-          <div class="result-card detail-result">
-            <dt>Details</dt>
-            <dd id="matchMeta">-</dd>
+          <div class="result-row">
+            <div class="result-card main-result">
+              <dt>Match</dt>
+              <dd id="matchName">-</dd>
+            </div>
+            <div class="result-card score-result">
+              <dt>Score</dt>
+              <dd id="matchScore">-</dd>
+            </div>
+            <div class="result-card detail-result">
+              <dt>Details</dt>
+              <dd id="matchMeta">-</dd>
+            </div>
           </div>
         </div>
       </section>

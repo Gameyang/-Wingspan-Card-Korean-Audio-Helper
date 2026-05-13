@@ -27,6 +27,8 @@ const elements = {
   video: document.querySelector("#camera"),
   cameraBox: document.querySelector("#cameraBox"),
   cardGuide: document.querySelector("#cardGuide"),
+  debugSheet: document.querySelector("#debugSheet"),
+  debugToggle: document.querySelector("#debugToggle"),
   abilityToggle: document.querySelector("#abilityToggle"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
@@ -820,6 +822,24 @@ async function handleUserActivation() {
   }
 }
 
+function setDebugSheetCollapsed(collapsed) {
+  if (!elements.debugSheet || !elements.debugToggle) {
+    return;
+  }
+  elements.debugSheet.classList.toggle("is-collapsed", collapsed);
+  elements.debugToggle.setAttribute("aria-expanded", String(!collapsed));
+}
+
+function initDebugSheet() {
+  if (!elements.debugSheet || !elements.debugToggle) {
+    return;
+  }
+  setDebugSheetCollapsed(true);
+  elements.debugToggle.addEventListener("click", () => {
+    setDebugSheetCollapsed(!elements.debugSheet.classList.contains("is-collapsed"));
+  });
+}
+
 function initAbilityToggle() {
   if (!elements.abilityToggle) {
     return;
@@ -837,6 +857,7 @@ function initAbilityToggle() {
 
 async function boot() {
   try {
+    initDebugSheet();
     initAbilityToggle();
     await loadData();
     await initOcrWorker();
