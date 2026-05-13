@@ -3,67 +3,59 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wingspan Korean Card OCR Test</title>
+    <title>Wingspan Korean Card Camera Test</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/tesseract.min.js" defer></script>
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <main class="shell">
-      <section class="summary" aria-labelledby="page-title">
+      <header class="summary">
         <div>
-          <p class="eyebrow">Korean atlas OCR smoke test</p>
-          <h1 id="page-title">새 카드 식별 테스트</h1>
+          <p class="eyebrow">Korean card OCR</p>
+          <h1>카메라 식별 테스트</h1>
         </div>
-        <dl class="stats" aria-label="Atlas summary">
-          <div>
-            <dt>Atlas</dt>
-            <dd>3</dd>
-          </div>
-          <div>
-            <dt>Grid</dt>
-            <dd>10 x 7</dd>
-          </div>
-          <div>
-            <dt>Sample</dt>
-            <dd>1</dd>
-          </div>
-        </dl>
-      </section>
+        <div class="status" id="status" role="status">대기 중</div>
+      </header>
 
-      <section class="workspace" aria-label="Sample card inspection">
-        <figure class="sample">
-          <img
-            src="./assets/new_card_sample.jpg"
-            alt="알락귀뿔논병아리 테스트 카드"
-            width="630"
-            height="970"
-          />
-        </figure>
-
-        <aside class="panel" aria-label="Expected identification">
-          <div class="status-row">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span>샘플 추출 완료</span>
+      <section class="workspace" aria-label="Camera identification workspace">
+        <div class="camera-panel">
+          <div class="camera-box" id="cameraBox">
+            <video id="camera" autoplay muted playsinline></video>
+            <div class="card-guide" id="cardGuide" aria-hidden="true">
+              <div class="name-guide"></div>
+            </div>
           </div>
-          <dl class="details">
-            <div>
-              <dt>위치</dt>
-              <dd>atlas 1, row 1, col 1</dd>
-            </div>
-            <div>
-              <dt>기대 한글명</dt>
-              <dd>알락귀뿔논병아리</dd>
-            </div>
-            <div>
-              <dt>학명</dt>
-              <dd>Podilymbus podiceps</dd>
-            </div>
-            <div>
-              <dt>카드 크기</dt>
-              <dd>630 x 970</dd>
-            </div>
-          </dl>
+          <div class="actions">
+            <button id="startCamera" type="button">카메라 시작</button>
+            <button id="captureIdentify" type="button" disabled>촬영 식별</button>
+            <button id="sampleIdentify" type="button">샘플 식별</button>
+          </div>
+        </div>
+
+        <aside class="result-panel" aria-label="Identification result">
+          <div class="result-card">
+            <dt>판정</dt>
+            <dd id="matchName">-</dd>
+          </div>
+          <div class="result-card">
+            <dt>점수</dt>
+            <dd id="matchScore">-</dd>
+          </div>
+          <div class="result-card full">
+            <dt>OCR</dt>
+            <dd id="ocrText">-</dd>
+          </div>
+          <div class="result-card full">
+            <dt>대상</dt>
+            <dd>알락귀뿔논병아리 · Podilymbus podiceps</dd>
+          </div>
+          <canvas id="namePreview" width="2040" height="400" aria-label="OCR crop preview"></canvas>
         </aside>
       </section>
     </main>
+
+    <canvas id="cardCanvas" width="630" height="970" hidden></canvas>
+    <img id="sampleImage" src="./assets/new_card_sample.jpg" alt="" hidden />
   </body>
 </html>
