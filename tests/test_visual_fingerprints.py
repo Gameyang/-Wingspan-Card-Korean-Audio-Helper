@@ -48,6 +48,25 @@ def test_site_audio_manifest_maps_last_card_to_audio_files() -> None:
         assert (REPO_ROOT / "site" / clip["src"]).is_file()
 
 
+def test_ocr_alias_manifest_maps_scientific_names() -> None:
+    data_path = REPO_ROOT / "site" / "data" / "card_ocr_aliases.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+
+    first = data["byCardId"]["atlas01_r01_c01"]
+    last = data["byCardId"]["atlas03_r07_c10"]
+    black_woodpecker = data["byCardId"]["atlas03_r03_c07"]
+
+    assert data["matchMethod"] == "latin-ocr-normalized-fuzzy"
+    assert len(data["cards"]) == 210
+    assert first["birdName"] == "Pied Billed Grebe"
+    assert "Podilymbus podiceps" in first["aliases"]
+    assert "podilymbuspodiceps" in first["normalizedAliases"]
+    assert last["birdName"] == "Abbotts Booby"
+    assert "Papasula abbotti" in last["aliases"]
+    assert "Dryocopus martius" in black_woodpecker["aliases"]
+    assert all("Bonelli" not in alias for alias in black_woodpecker["aliases"])
+
+
 def test_card_intro_tts_manifest_maps_generated_sample() -> None:
     data_path = REPO_ROOT / "site" / "data" / "card_intro_tts.json"
     data = json.loads(data_path.read_text(encoding="utf-8"))

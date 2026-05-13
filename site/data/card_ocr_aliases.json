@@ -1,0 +1,5574 @@
+{
+  "version": 1,
+  "source": "site/data/audio_clips.json",
+  "taxonomySource": "ebird_taxonomy_v2025.csv",
+  "matchMethod": "latin-ocr-normalized-fuzzy",
+  "cards": [
+    {
+      "id": "atlas01_r01_c01",
+      "cardNo": "53",
+      "birdName": "Pied Billed Grebe",
+      "aliases": [
+        "Pied Billed Grebe",
+        "Podilymbus podiceps"
+      ],
+      "normalizedAliases": [
+        "piedbilledgrebe",
+        "podilymbuspodiceps"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c02",
+      "cardNo": "54",
+      "birdName": "Pileated Woodpecker",
+      "aliases": [
+        "Pileated Woodpecker",
+        "Dryocopus pileatus"
+      ],
+      "normalizedAliases": [
+        "pileatedwoodpecker",
+        "dryocopuspileatus"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c03",
+      "cardNo": "55",
+      "birdName": "Western Meadowlark",
+      "aliases": [
+        "Western Meadowlarkr",
+        "Western Meadowlark",
+        "Sturnella neglecta"
+      ],
+      "normalizedAliases": [
+        "westernmeadowlarkr",
+        "westernmeadowlark",
+        "sturnellaneglecta"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c04",
+      "cardNo": "56",
+      "birdName": "Grasshopper Sparrow",
+      "aliases": [
+        "Grasshopper Sparrow",
+        "Ammodramus savannarum"
+      ],
+      "normalizedAliases": [
+        "grasshoppersparrow",
+        "ammodramussavannarum"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c05",
+      "cardNo": "57",
+      "birdName": "Chipping Sparrow",
+      "aliases": [
+        "Chipping Sparrow",
+        "Spizella passerina"
+      ],
+      "normalizedAliases": [
+        "chippingsparrow",
+        "spizellapasserina"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c06",
+      "cardNo": "58",
+      "birdName": "Cassins Sparrow",
+      "aliases": [
+        "Cassins Sparrow",
+        "Peucaea cassinii"
+      ],
+      "normalizedAliases": [
+        "cassinssparrow",
+        "peucaeacassinii"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c07",
+      "cardNo": "59",
+      "birdName": "Bairds Sparrow",
+      "aliases": [
+        "Bairds Sparrow",
+        "Centronyx bairdii"
+      ],
+      "normalizedAliases": [
+        "bairdssparrow",
+        "centronyxbairdii"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c08",
+      "cardNo": "60",
+      "birdName": "California Quail",
+      "aliases": [
+        "California Quail",
+        "Callipepla californica"
+      ],
+      "normalizedAliases": [
+        "californiaquail",
+        "callipeplacalifornica"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c09",
+      "cardNo": "61",
+      "birdName": "Northern Bobwhite",
+      "aliases": [
+        "Northern Bobwhite",
+        "Colinus virginianus"
+      ],
+      "normalizedAliases": [
+        "northernbobwhite",
+        "colinusvirginianus"
+      ]
+    },
+    {
+      "id": "atlas01_r01_c10",
+      "cardNo": "62",
+      "birdName": "Mourning Dove",
+      "aliases": [
+        "Mourning Dove",
+        "Zenaida macroura"
+      ],
+      "normalizedAliases": [
+        "mourningdove",
+        "zenaidamacroura"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c01",
+      "cardNo": "63",
+      "birdName": "Baltimore Oriole",
+      "aliases": [
+        "Baltimore Oriole",
+        "Icterus galbula"
+      ],
+      "normalizedAliases": [
+        "baltimoreoriole",
+        "icterusgalbula"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c02",
+      "cardNo": "64",
+      "birdName": "Red Crossbill",
+      "aliases": [
+        "Red Crossbill",
+        "Loxia curvirostra"
+      ],
+      "normalizedAliases": [
+        "redcrossbill",
+        "loxiacurvirostra"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c03",
+      "cardNo": "65",
+      "birdName": "Lazuli Bunting",
+      "aliases": [
+        "Lazuli Bunting",
+        "Passerina amoena"
+      ],
+      "normalizedAliases": [
+        "lazulibunting",
+        "passerinaamoena"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c04",
+      "cardNo": "66",
+      "birdName": "American Crow",
+      "aliases": [
+        "American Crow",
+        "Corvus brachyrhynchos"
+      ],
+      "normalizedAliases": [
+        "americancrow",
+        "corvusbrachyrhynchos"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c05",
+      "cardNo": "67",
+      "birdName": "Fish Crow",
+      "aliases": [
+        "Fish Crow",
+        "Corvus ossifragus"
+      ],
+      "normalizedAliases": [
+        "fishcrow",
+        "corvusossifragus"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c06",
+      "cardNo": "68",
+      "birdName": "Black Crowned Night Heron",
+      "aliases": [
+        "Black Crowned Night Heron",
+        "Nycticorax nycticorax"
+      ],
+      "normalizedAliases": [
+        "blackcrownednightheron",
+        "nycticoraxnycticorax"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c07",
+      "cardNo": "69",
+      "birdName": "Chihuahuan Raven",
+      "aliases": [
+        "Chihuahuan Raven",
+        "Corvus cryptoleucus"
+      ],
+      "normalizedAliases": [
+        "chihuahuanraven",
+        "corvuscryptoleucus"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c08",
+      "cardNo": "70",
+      "birdName": "Common Raven",
+      "aliases": [
+        "Common Raven",
+        "Corvus corax"
+      ],
+      "normalizedAliases": [
+        "commonraven",
+        "corvuscorax"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c09",
+      "cardNo": "71",
+      "birdName": "Northern Cardinal",
+      "aliases": [
+        "Northern Cardinal",
+        "Cardinalis cardinalis"
+      ],
+      "normalizedAliases": [
+        "northerncardinal",
+        "cardinaliscardinalis"
+      ]
+    },
+    {
+      "id": "atlas01_r02_c10",
+      "cardNo": "72",
+      "birdName": "Yellow Bellied Sapsucker",
+      "aliases": [
+        "Yellow Bellied Sapsucker",
+        "Sphyrapicus varius"
+      ],
+      "normalizedAliases": [
+        "yellowbelliedsapsucker",
+        "sphyrapicusvarius"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c01",
+      "cardNo": "73",
+      "birdName": "Indigo Bunting",
+      "aliases": [
+        "Indigo Bunting",
+        "Passerina cyanea"
+      ],
+      "normalizedAliases": [
+        "indigobunting",
+        "passerinacyanea"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c02",
+      "cardNo": "74",
+      "birdName": "Western Tanager",
+      "aliases": [
+        "Western Tanager",
+        "Piranga ludoviciana"
+      ],
+      "normalizedAliases": [
+        "westerntanager",
+        "pirangaludoviciana"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c03",
+      "cardNo": "75",
+      "birdName": "Spotted Towhee",
+      "aliases": [
+        "Spotted Towhee",
+        "Pipilo maculatus"
+      ],
+      "normalizedAliases": [
+        "spottedtowhee",
+        "pipilomaculatus"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c04",
+      "cardNo": "76",
+      "birdName": "Rose Breasted Grosbeak",
+      "aliases": [
+        "Rose Breasted Grosbeak",
+        "Pheucticus ludovicianus"
+      ],
+      "normalizedAliases": [
+        "rosebreastedgrosbeak",
+        "pheucticusludovicianus"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c05",
+      "cardNo": "77",
+      "birdName": "Green Heron",
+      "aliases": [
+        "Green Heron",
+        "Butorides virescens"
+      ],
+      "normalizedAliases": [
+        "greenheron",
+        "butoridesvirescens"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c06",
+      "cardNo": "78",
+      "birdName": "Gray Catbird",
+      "aliases": [
+        "Gray Catbird",
+        "Dumetella carolinensis"
+      ],
+      "normalizedAliases": [
+        "graycatbird",
+        "dumetellacarolinensis"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c07",
+      "cardNo": "79",
+      "birdName": "Northern Mockingbird",
+      "aliases": [
+        "Northern Mockingbird",
+        "Mimus polyglottos"
+      ],
+      "normalizedAliases": [
+        "northernmockingbird",
+        "mimuspolyglottos"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c08",
+      "cardNo": "80",
+      "birdName": "Hooded Merganser",
+      "aliases": [
+        "Hooded Merganser",
+        "Lophodytes cucullatus"
+      ],
+      "normalizedAliases": [
+        "hoodedmerganser",
+        "lophodytescucullatus"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c09",
+      "cardNo": "81",
+      "birdName": "Bewicks Wren",
+      "aliases": [
+        "Bewicks Wren",
+        "Thryomanes bewickii"
+      ],
+      "normalizedAliases": [
+        "bewickswren",
+        "thryomanesbewickii"
+      ]
+    },
+    {
+      "id": "atlas01_r03_c10",
+      "cardNo": "82",
+      "birdName": "Yellow Breasted Chat",
+      "aliases": [
+        "Yellow Breasted Chat",
+        "Icteria virens"
+      ],
+      "normalizedAliases": [
+        "yellowbreastedchat",
+        "icteriavirens"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c01",
+      "cardNo": "83",
+      "birdName": "Common Nighthawk",
+      "aliases": [
+        "Common Nighthawk",
+        "Chordeiles minor"
+      ],
+      "normalizedAliases": [
+        "commonnighthawk",
+        "chordeilesminor"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c02",
+      "cardNo": "84",
+      "birdName": "Song Sparrow",
+      "aliases": [
+        "Song Sparrow",
+        "Melospiza melodia"
+      ],
+      "normalizedAliases": [
+        "songsparrow",
+        "melospizamelodia"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c03",
+      "cardNo": "85",
+      "birdName": "White Crowned Sparrow",
+      "aliases": [
+        "White Crowned Sparrow",
+        "Zonotrichia leucophrys"
+      ],
+      "normalizedAliases": [
+        "whitecrownedsparrow",
+        "zonotrichialeucophrys"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c04",
+      "cardNo": "86",
+      "birdName": "Chimney Swift",
+      "aliases": [
+        "Chimney Swift",
+        "Chaetura pelagica"
+      ],
+      "normalizedAliases": [
+        "chimneyswift",
+        "chaeturapelagica"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c05",
+      "cardNo": "87",
+      "birdName": "Blue Grosbeak",
+      "aliases": [
+        "Blue Grosbeak",
+        "Passerina caerulea"
+      ],
+      "normalizedAliases": [
+        "bluegrosbeak",
+        "passerinacaerulea"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c06",
+      "cardNo": "88",
+      "birdName": "Lincolns Sparrow",
+      "aliases": [
+        "Lincolns Sparrow",
+        "Melospiza lincolnii"
+      ],
+      "normalizedAliases": [
+        "lincolnssparrow",
+        "melospizalincolnii"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c07",
+      "cardNo": "89",
+      "birdName": "Greater Roadrunner",
+      "aliases": [
+        "Greater Roadrunner",
+        "Geococcyx californianus"
+      ],
+      "normalizedAliases": [
+        "greaterroadrunner",
+        "geococcyxcalifornianus"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c08",
+      "cardNo": "90",
+      "birdName": "Red Tailed Hawk",
+      "aliases": [
+        "Red Tailed Hawk",
+        "Buteo jamaicensis"
+      ],
+      "normalizedAliases": [
+        "redtailedhawk",
+        "buteojamaicensis"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c09",
+      "cardNo": "91",
+      "birdName": "Northern Harrier",
+      "aliases": [
+        "Northern Harrier Tj",
+        "Northern Harrier",
+        "Circus hudsonius"
+      ],
+      "normalizedAliases": [
+        "northernharriertj",
+        "northernharrier",
+        "circushudsonius"
+      ]
+    },
+    {
+      "id": "atlas01_r04_c10",
+      "cardNo": "92",
+      "birdName": "Coopers Hawk",
+      "aliases": [
+        "Coopers Hawk",
+        "Astur cooperii"
+      ],
+      "normalizedAliases": [
+        "coopershawk",
+        "asturcooperii"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c01",
+      "cardNo": "93",
+      "birdName": "Red Shouldered Hawk",
+      "aliases": [
+        "Red Shouldered Hawk",
+        "Buteo lineatus"
+      ],
+      "normalizedAliases": [
+        "redshoulderedhawk",
+        "buteolineatus"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c02",
+      "cardNo": "94",
+      "birdName": "Barred Owl",
+      "aliases": [
+        "Barred Owl",
+        "Strix varia"
+      ],
+      "normalizedAliases": [
+        "barredowl",
+        "strixvaria"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c03",
+      "cardNo": "95",
+      "birdName": "Swainsons Hawk",
+      "aliases": [
+        "Swainsons Hawk",
+        "Buteo swainsoni"
+      ],
+      "normalizedAliases": [
+        "swainsonshawk",
+        "buteoswainsoni"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c04",
+      "cardNo": "96",
+      "birdName": "Peregrine Falcon",
+      "aliases": [
+        "Peregrine Falcon",
+        "Falco peregrinus"
+      ],
+      "normalizedAliases": [
+        "peregrinefalcon",
+        "falcoperegrinus"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c05",
+      "cardNo": "97",
+      "birdName": "Golden Eagle",
+      "aliases": [
+        "Golden Eagle",
+        "Aquila chrysaetos"
+      ],
+      "normalizedAliases": [
+        "goldeneagle",
+        "aquilachrysaetos"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c06",
+      "cardNo": "98",
+      "birdName": "Great Horned Owl",
+      "aliases": [
+        "Great Horned Owl",
+        "Bubo virginianus"
+      ],
+      "normalizedAliases": [
+        "greathornedowl",
+        "bubovirginianus"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c07",
+      "cardNo": "99",
+      "birdName": "Common Merganser",
+      "aliases": [
+        "Common Merganser",
+        "Mergus merganser"
+      ],
+      "normalizedAliases": [
+        "commonmerganser",
+        "mergusmerganser"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c08",
+      "cardNo": "100",
+      "birdName": "Willet",
+      "aliases": [
+        "Willet",
+        "Tringa semipalmata"
+      ],
+      "normalizedAliases": [
+        "willet",
+        "tringasemipalmata"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c09",
+      "cardNo": "101",
+      "birdName": "Anhinga",
+      "aliases": [
+        "Anhinga",
+        "Anhinga anhinga"
+      ],
+      "normalizedAliases": [
+        "anhinga",
+        "anhingaanhinga"
+      ]
+    },
+    {
+      "id": "atlas01_r05_c10",
+      "cardNo": "102",
+      "birdName": "Snowy Egret",
+      "aliases": [
+        "Snowy Egret",
+        "Egretta thula"
+      ],
+      "normalizedAliases": [
+        "snowyegret",
+        "egrettathula"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c01",
+      "cardNo": "103",
+      "birdName": "White Faced Ibis",
+      "aliases": [
+        "White Faced Ibis",
+        "Plegadis chihi"
+      ],
+      "normalizedAliases": [
+        "whitefacedibis",
+        "plegadischihi"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c02",
+      "cardNo": "104",
+      "birdName": "Black Skimmer",
+      "aliases": [
+        "Black Skimmer",
+        "Rynchops niger"
+      ],
+      "normalizedAliases": [
+        "blackskimmer",
+        "rynchopsniger"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c03",
+      "cardNo": "105",
+      "birdName": "Eastern Screech Owl",
+      "aliases": [
+        "Eastern Screech Owl",
+        "Megascops asio"
+      ],
+      "normalizedAliases": [
+        "easternscreechowl",
+        "megascopsasio"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c04",
+      "cardNo": "106",
+      "birdName": "Mississippi Kite",
+      "aliases": [
+        "Mississippi Kite",
+        "Ictinia mississippiensis"
+      ],
+      "normalizedAliases": [
+        "mississippikite",
+        "ictiniamississippiensis"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c05",
+      "cardNo": "107",
+      "birdName": "Ferruginous Hawk",
+      "aliases": [
+        "Ferruginous Hawk",
+        "Buteo regalis"
+      ],
+      "normalizedAliases": [
+        "ferruginoushawk",
+        "buteoregalis"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c06",
+      "cardNo": "108",
+      "birdName": "American Kestrel",
+      "aliases": [
+        "American Kestrel",
+        "Falco sparverius"
+      ],
+      "normalizedAliases": [
+        "americankestrel",
+        "falcosparverius"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c07",
+      "cardNo": "109",
+      "birdName": "Barn Owl",
+      "aliases": [
+        "Barn Owl",
+        "Western Barn Owl",
+        "Tyto alba"
+      ],
+      "normalizedAliases": [
+        "barnowl",
+        "westernbarnowl",
+        "tytoalba"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c08",
+      "cardNo": "110",
+      "birdName": "Burrowing Owl",
+      "aliases": [
+        "Burrowing Owl",
+        "Athene cunicularia"
+      ],
+      "normalizedAliases": [
+        "burrowingowl",
+        "athenecunicularia"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c09",
+      "cardNo": "111",
+      "birdName": "Sandhill Crane",
+      "aliases": [
+        "Sandhill Crane",
+        "Antigone canadensis"
+      ],
+      "normalizedAliases": [
+        "sandhillcrane",
+        "antigonecanadensis"
+      ]
+    },
+    {
+      "id": "atlas01_r06_c10",
+      "cardNo": "112",
+      "birdName": "Canada Goose",
+      "aliases": [
+        "Canada Goose",
+        "Branta canadensis"
+      ],
+      "normalizedAliases": [
+        "canadagoose",
+        "brantacanadensis"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c01",
+      "cardNo": "113",
+      "birdName": "Black Bellied Whistling Duck",
+      "aliases": [
+        "Black Bellied Whistling Duck",
+        "Dendrocygna autumnalis"
+      ],
+      "normalizedAliases": [
+        "blackbelliedwhistlingduck",
+        "dendrocygnaautumnalis"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c02",
+      "cardNo": "114",
+      "birdName": "Double Crested Cormorant",
+      "aliases": [
+        "Double Crested Cormorant",
+        "Nannopterum auritum"
+      ],
+      "normalizedAliases": [
+        "doublecrestedcormorant",
+        "nannopterumauritum"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c03",
+      "cardNo": "115",
+      "birdName": "American White Pelican",
+      "aliases": [
+        "American White Pelican",
+        "Pelecanus erythrorhynchos"
+      ],
+      "normalizedAliases": [
+        "americanwhitepelican",
+        "pelecanuserythrorhynchos"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c04",
+      "cardNo": "116",
+      "birdName": "Red Winged Blackbird",
+      "aliases": [
+        "Red Winged Blackbird",
+        "Agelaius phoeniceus"
+      ],
+      "normalizedAliases": [
+        "redwingedblackbird",
+        "agelaiusphoeniceus"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c05",
+      "cardNo": "117",
+      "birdName": "Common Grackle",
+      "aliases": [
+        "Common Grackle",
+        "Quiscalus quiscula"
+      ],
+      "normalizedAliases": [
+        "commongrackle",
+        "quiscalusquiscula"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c06",
+      "cardNo": "118",
+      "birdName": "Brewers Blackbird",
+      "aliases": [
+        "Brewers Blackbird",
+        "Euphagus cyanocephalus"
+      ],
+      "normalizedAliases": [
+        "brewersblackbird",
+        "euphaguscyanocephalus"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c07",
+      "cardNo": "119",
+      "birdName": "Yellow Headed Blackbird",
+      "aliases": [
+        "Yellow Headed Blackbird",
+        "Xanthocephalus xanthocephalus"
+      ],
+      "normalizedAliases": [
+        "yellowheadedblackbird",
+        "xanthocephalusxanthocephalus"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c08",
+      "cardNo": "120",
+      "birdName": "Bushtit",
+      "aliases": [
+        "Bushtit",
+        "Psaltriparus minimus"
+      ],
+      "normalizedAliases": [
+        "bushtit",
+        "psaltriparusminimus"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c09",
+      "cardNo": "121",
+      "birdName": "Dickcissel",
+      "aliases": [
+        "Dickcissel",
+        "Spiza americana"
+      ],
+      "normalizedAliases": [
+        "dickcissel",
+        "spizaamericana"
+      ]
+    },
+    {
+      "id": "atlas01_r07_c10",
+      "cardNo": "122",
+      "birdName": "Ring Billed Gull",
+      "aliases": [
+        "Ring Billed Gull",
+        "Larus delawarensis"
+      ],
+      "normalizedAliases": [
+        "ringbilledgull",
+        "larusdelawarensis"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c01",
+      "cardNo": "123",
+      "birdName": "American Coot",
+      "aliases": [
+        "American Coot",
+        "Fulica americana"
+      ],
+      "normalizedAliases": [
+        "americancoot",
+        "fulicaamericana"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c02",
+      "cardNo": "124",
+      "birdName": "Yellow Rumped Warbler",
+      "aliases": [
+        "Yellow Rumped Warbler",
+        "Setophaga coronata"
+      ],
+      "normalizedAliases": [
+        "yellowrumpedwarbler",
+        "setophagacoronata"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c03",
+      "cardNo": "125",
+      "birdName": "American Robin",
+      "aliases": [
+        "American Robin",
+        "Turdus migratorius"
+      ],
+      "normalizedAliases": [
+        "americanrobin",
+        "turdusmigratorius"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c04",
+      "cardNo": "126",
+      "birdName": "House Finch",
+      "aliases": [
+        "House Finch",
+        "Haemorhous mexicanus"
+      ],
+      "normalizedAliases": [
+        "housefinch",
+        "haemorhousmexicanus"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c05",
+      "cardNo": "127",
+      "birdName": "Barn Swallow",
+      "aliases": [
+        "Barn Swallow",
+        "Hirundo rustica"
+      ],
+      "normalizedAliases": [
+        "barnswallow",
+        "hirundorustica"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c06",
+      "cardNo": "128",
+      "birdName": "Tree Swallow",
+      "aliases": [
+        "Tree Swallow",
+        "Tachycineta bicolor"
+      ],
+      "normalizedAliases": [
+        "treeswallow",
+        "tachycinetabicolor"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c07",
+      "cardNo": "129",
+      "birdName": "Purple Martin",
+      "aliases": [
+        "Purple Martin",
+        "Progne subis"
+      ],
+      "normalizedAliases": [
+        "purplemartin",
+        "prognesubis"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c08",
+      "cardNo": "130",
+      "birdName": "Violet Green Swallow",
+      "aliases": [
+        "Violet Green Swallow",
+        "Tachycineta thalassina"
+      ],
+      "normalizedAliases": [
+        "violetgreenswallow",
+        "tachycinetathalassina"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c09",
+      "cardNo": "131",
+      "birdName": "Cedar Waxwing",
+      "aliases": [
+        "Cedar Waxwing",
+        "Bombycilla cedrorum"
+      ],
+      "normalizedAliases": [
+        "cedarwaxwing",
+        "bombycillacedrorum"
+      ]
+    },
+    {
+      "id": "atlas02_r01_c10",
+      "cardNo": "132",
+      "birdName": "Pygmy Nuthatch",
+      "aliases": [
+        "Pygmy Nuthatch",
+        "Sitta pygmaea"
+      ],
+      "normalizedAliases": [
+        "pygmynuthatch",
+        "sittapygmaea"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c01",
+      "cardNo": "133",
+      "birdName": "Pine Siskin",
+      "aliases": [
+        "Pine Siskin",
+        "Spinus pinus"
+      ],
+      "normalizedAliases": [
+        "pinesiskin",
+        "spinuspinus"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c02",
+      "cardNo": "134",
+      "birdName": "Dark Eyed Junco",
+      "aliases": [
+        "Dark Eyed Junco",
+        "Junco hyemalis"
+      ],
+      "normalizedAliases": [
+        "darkeyedjunco",
+        "juncohyemalis"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c03",
+      "cardNo": "135",
+      "birdName": "American Oystercatcher",
+      "aliases": [
+        "American Oystercatcher",
+        "Haematopus palliatus"
+      ],
+      "normalizedAliases": [
+        "americanoystercatcher",
+        "haematopuspalliatus"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c04",
+      "cardNo": "136",
+      "birdName": "Carolina Wren",
+      "aliases": [
+        "Carolina Wren",
+        "Thryothorus ludovicianus"
+      ],
+      "normalizedAliases": [
+        "carolinawren",
+        "thryothorusludovicianus"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c05",
+      "cardNo": "137",
+      "birdName": "Black Necked Stilt",
+      "aliases": [
+        "Black Necked Stilt",
+        "Himantopus mexicanus"
+      ],
+      "normalizedAliases": [
+        "blackneckedstilt",
+        "himantopusmexicanus"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c06",
+      "cardNo": "138",
+      "birdName": "Inca Dove",
+      "aliases": [
+        "Inca Dove",
+        "Columbina inca"
+      ],
+      "normalizedAliases": [
+        "incadove",
+        "columbinainca"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c07",
+      "cardNo": "139",
+      "birdName": "Says Phoebe",
+      "aliases": [
+        "Says Phoebe",
+        "Sayornis saya"
+      ],
+      "normalizedAliases": [
+        "saysphoebe",
+        "sayornissaya"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c08",
+      "cardNo": "140",
+      "birdName": "Ash Throated Flycatcher",
+      "aliases": [
+        "Ash Throated Flycatcher",
+        "Myiarchus cinerascens"
+      ],
+      "normalizedAliases": [
+        "ashthroatedflycatcher",
+        "myiarchuscinerascens"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c09",
+      "cardNo": "141",
+      "birdName": "Bobolink",
+      "aliases": [
+        "Bobolink",
+        "Dolichonyx oryzivorus"
+      ],
+      "normalizedAliases": [
+        "bobolink",
+        "dolichonyxoryzivorus"
+      ]
+    },
+    {
+      "id": "atlas02_r02_c10",
+      "cardNo": "142",
+      "birdName": "Brown Pelican",
+      "aliases": [
+        "Brown Pelican",
+        "Pelecanus occidentalis"
+      ],
+      "normalizedAliases": [
+        "brownpelican",
+        "pelecanusoccidentalis"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c01",
+      "cardNo": "143",
+      "birdName": "American Goldfinch",
+      "aliases": [
+        "American Goldfinch",
+        "Spinus tristis"
+      ],
+      "normalizedAliases": [
+        "americangoldfinch",
+        "spinustristis"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c02",
+      "cardNo": "144",
+      "birdName": "Northern Flicker",
+      "aliases": [
+        "Northern Flicker",
+        "Colaptes auratus"
+      ],
+      "normalizedAliases": [
+        "northernflicker",
+        "colaptesauratus"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c03",
+      "cardNo": "145",
+      "birdName": "Bald Eagle",
+      "aliases": [
+        "Bald Eagle",
+        "Haliaeetus leucocephalus"
+      ],
+      "normalizedAliases": [
+        "baldeagle",
+        "haliaeetusleucocephalus"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c04",
+      "cardNo": "146",
+      "birdName": "Wood Stork",
+      "aliases": [
+        "Wood Stork",
+        "Mycteria americana"
+      ],
+      "normalizedAliases": [
+        "woodstork",
+        "mycteriaamericana"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c05",
+      "cardNo": "147",
+      "birdName": "Roseate Spoonbill",
+      "aliases": [
+        "Roseate Spoonbill",
+        "Platalea ajaja"
+      ],
+      "normalizedAliases": [
+        "roseatespoonbill",
+        "plataleaajaja"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c06",
+      "cardNo": "148",
+      "birdName": "Cerulean Warbler",
+      "aliases": [
+        "Cerulean Warbler",
+        "Setophaga cerulea"
+      ],
+      "normalizedAliases": [
+        "ceruleanwarbler",
+        "setophagacerulea"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c07",
+      "cardNo": "149",
+      "birdName": "Chestnut Collared Longspur",
+      "aliases": [
+        "Chestnut Collared Longspur",
+        "Calcarius ornatus"
+      ],
+      "normalizedAliases": [
+        "chestnutcollaredlongspur",
+        "calcariusornatus"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c08",
+      "cardNo": "150",
+      "birdName": "King Rail",
+      "aliases": [
+        "King Rail",
+        "Rallus elegans"
+      ],
+      "normalizedAliases": [
+        "kingrail",
+        "ralluselegans"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c09",
+      "cardNo": "151",
+      "birdName": "Red Cockaded Woodpecker",
+      "aliases": [
+        "Red Cockaded Woodpecker",
+        "Leuconotopicus borealis"
+      ],
+      "normalizedAliases": [
+        "redcockadedwoodpecker",
+        "leuconotopicusborealis"
+      ]
+    },
+    {
+      "id": "atlas02_r03_c10",
+      "cardNo": "152",
+      "birdName": "Whooping Crane",
+      "aliases": [
+        "Whooping Crane",
+        "Grus americana"
+      ],
+      "normalizedAliases": [
+        "whoopingcrane",
+        "grusamericana"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c01",
+      "cardNo": "153",
+      "birdName": "Spotted Owl",
+      "aliases": [
+        "Spotted Owl",
+        "Strix occidentalis"
+      ],
+      "normalizedAliases": [
+        "spottedowl",
+        "strixoccidentalis"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c02",
+      "cardNo": "154",
+      "birdName": "Cassins Finch",
+      "aliases": [
+        "Cassins Finch",
+        "Haemorhous cassinii"
+      ],
+      "normalizedAliases": [
+        "cassinsfinch",
+        "haemorhouscassinii"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c03",
+      "cardNo": "155",
+      "birdName": "Bells Vireo",
+      "aliases": [
+        "Bells Vireo",
+        "Vireo bellii"
+      ],
+      "normalizedAliases": [
+        "bellsvireo",
+        "vireobellii"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c04",
+      "cardNo": "156",
+      "birdName": "Painted Bunting",
+      "aliases": [
+        "Painted Bunting",
+        "Passerina ciris"
+      ],
+      "normalizedAliases": [
+        "paintedbunting",
+        "passerinaciris"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c05",
+      "cardNo": "157",
+      "birdName": "Greater Prairie Chicken",
+      "aliases": [
+        "Greater Prairie Chicken",
+        "Tympanuchus cupido"
+      ],
+      "normalizedAliases": [
+        "greaterprairiechicken",
+        "tympanuchuscupido"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c06",
+      "cardNo": "158",
+      "birdName": "Atlantic Puffin",
+      "aliases": [
+        "Atlantic Puffin",
+        "Fratercula arctica"
+      ],
+      "normalizedAliases": [
+        "atlanticpuffin",
+        "fraterculaarctica"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c07",
+      "cardNo": "159",
+      "birdName": "Spragues Pipit",
+      "aliases": [
+        "Spragues Pipit",
+        "Anthus spragueii"
+      ],
+      "normalizedAliases": [
+        "spraguespipit",
+        "anthusspragueii"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c08",
+      "cardNo": "160",
+      "birdName": "California Condor",
+      "aliases": [
+        "California Condor",
+        "Gymnogyps californianus"
+      ],
+      "normalizedAliases": [
+        "californiacondor",
+        "gymnogypscalifornianus"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c09",
+      "cardNo": "161",
+      "birdName": "Downy Woodpecker",
+      "aliases": [
+        "Downy Woodpecker",
+        "Dryobates pubescens"
+      ],
+      "normalizedAliases": [
+        "downywoodpecker",
+        "dryobatespubescens"
+      ]
+    },
+    {
+      "id": "atlas02_r04_c10",
+      "cardNo": "162",
+      "birdName": "Tufted Titmouse",
+      "aliases": [
+        "Tufted Titmouse",
+        "Baeolophus bicolor"
+      ],
+      "normalizedAliases": [
+        "tuftedtitmouse",
+        "baeolophusbicolor"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c01",
+      "cardNo": "163",
+      "birdName": "Ruby Crowned Kinglet",
+      "aliases": [
+        "Ruby Crowned Kinglet",
+        "Corthylio calendula"
+      ],
+      "normalizedAliases": [
+        "rubycrownedkinglet",
+        "corthyliocalendula"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c02",
+      "cardNo": "164",
+      "birdName": "Red Eyed Vireo",
+      "aliases": [
+        "Red Eyed Vireo",
+        "Vireo olivaceus"
+      ],
+      "normalizedAliases": [
+        "redeyedvireo",
+        "vireoolivaceus"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c03",
+      "cardNo": "165",
+      "birdName": "House Wren",
+      "aliases": [
+        "House Wren",
+        "Northern House Wren",
+        "Troglodytes aedon"
+      ],
+      "normalizedAliases": [
+        "housewren",
+        "northernhousewren",
+        "troglodytesaedon"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c04",
+      "cardNo": "166",
+      "birdName": "Savannah Sparrow",
+      "aliases": [
+        "Savannah Sparrow",
+        "Passerculus sandwichensis"
+      ],
+      "normalizedAliases": [
+        "savannahsparrow",
+        "passerculussandwichensis"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c05",
+      "cardNo": "167",
+      "birdName": "Eastern Bluebird",
+      "aliases": [
+        "Eastern Bluebird",
+        "Sialia sialis"
+      ],
+      "normalizedAliases": [
+        "easternbluebird",
+        "sialiasialis"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c06",
+      "cardNo": "168",
+      "birdName": "Mountain Bluebird",
+      "aliases": [
+        "Mountain Bluebird",
+        "Sialia currucoides"
+      ],
+      "normalizedAliases": [
+        "mountainbluebird",
+        "sialiacurrucoides"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c07",
+      "cardNo": "169",
+      "birdName": "Great Blue Heron",
+      "aliases": [
+        "Great Blue Heron",
+        "Ardea herodias"
+      ],
+      "normalizedAliases": [
+        "greatblueheron",
+        "ardeaherodias"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c08",
+      "cardNo": "170",
+      "birdName": "Great Egret",
+      "aliases": [
+        "Great Egret",
+        "Ardea alba"
+      ],
+      "normalizedAliases": [
+        "greategret",
+        "ardeaalba"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c09",
+      "cardNo": "171",
+      "birdName": "Broad Winged Hawk",
+      "aliases": [
+        "Broad Winged Hawk",
+        "Buteo platypterus"
+      ],
+      "normalizedAliases": [
+        "broadwingedhawk",
+        "buteoplatypterus"
+      ]
+    },
+    {
+      "id": "atlas02_r05_c10",
+      "cardNo": "172",
+      "birdName": "American Redstart",
+      "aliases": [
+        "American Redstart",
+        "Setophaga ruticilla"
+      ],
+      "normalizedAliases": [
+        "americanredstart",
+        "setophagaruticilla"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c01",
+      "cardNo": "173",
+      "birdName": "Canvasback",
+      "aliases": [
+        "Canvasback",
+        "Aythya valisineria"
+      ],
+      "normalizedAliases": [
+        "canvasback",
+        "aythyavalisineria"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c02",
+      "cardNo": "174",
+      "birdName": "Vauxs Swift",
+      "aliases": [
+        "Vauxs Swift",
+        "Chaetura vauxi"
+      ],
+      "normalizedAliases": [
+        "vauxsswift",
+        "chaeturavauxi"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c03",
+      "cardNo": "175",
+      "birdName": "Brant",
+      "aliases": [
+        "Brant",
+        "Branta bernicla"
+      ],
+      "normalizedAliases": [
+        "brant",
+        "brantabernicla"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c04",
+      "cardNo": "176",
+      "birdName": "White Throated Swift",
+      "aliases": [
+        "White Throated Swift",
+        "Aeronautes saxatalis"
+      ],
+      "normalizedAliases": [
+        "whitethroatedswift",
+        "aeronautessaxatalis"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c05",
+      "cardNo": "177",
+      "birdName": "Scaled Quail",
+      "aliases": [
+        "Scaled Quail",
+        "Callipepla squamata"
+      ],
+      "normalizedAliases": [
+        "scaledquail",
+        "callipeplasquamata"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c06",
+      "cardNo": "178",
+      "birdName": "Black Chinned Hummingbird",
+      "aliases": [
+        "Black Chinned Hummingbird",
+        "Archilochus alexandri"
+      ],
+      "normalizedAliases": [
+        "blackchinnedhummingbird",
+        "archilochusalexandri"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c07",
+      "cardNo": "179",
+      "birdName": "Red Breasted Merganser",
+      "aliases": [
+        "Red Breasted Merganser",
+        "Mergus serrator"
+      ],
+      "normalizedAliases": [
+        "redbreastedmerganser",
+        "mergusserrator"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c08",
+      "cardNo": "180",
+      "birdName": "Painted Whitestart",
+      "aliases": [
+        "Painted Whitestart",
+        "Painted Redstart",
+        "Myioborus pictus"
+      ],
+      "normalizedAliases": [
+        "paintedwhitestart",
+        "paintedredstart",
+        "myioboruspictus"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c09",
+      "cardNo": "181",
+      "birdName": "Eurasian Magpie",
+      "aliases": [
+        "Eurasian Magpie",
+        "Pica pica"
+      ],
+      "normalizedAliases": [
+        "eurasianmagpie",
+        "picapica"
+      ]
+    },
+    {
+      "id": "atlas02_r06_c10",
+      "cardNo": "182",
+      "birdName": "Carrion Crow",
+      "aliases": [
+        "Carrion Crow",
+        "Corvus corone"
+      ],
+      "normalizedAliases": [
+        "carrioncrow",
+        "corvuscorone"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c01",
+      "cardNo": "183",
+      "birdName": "Griffon Vulture",
+      "aliases": [
+        "Griffon Vulture",
+        "Eurasian Griffon",
+        "Gyps fulvus"
+      ],
+      "normalizedAliases": [
+        "griffonvulture",
+        "eurasiangriffon",
+        "gypsfulvus"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c02",
+      "cardNo": "184",
+      "birdName": "Coal Tit",
+      "aliases": [
+        "Coal Tit",
+        "Periparus ater"
+      ],
+      "normalizedAliases": [
+        "coaltit",
+        "periparusater"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c03",
+      "cardNo": "185",
+      "birdName": "Eurasian Nuthatch",
+      "aliases": [
+        "Eurasian Nuthatch",
+        "Sitta europaea"
+      ],
+      "normalizedAliases": [
+        "eurasiannuthatch",
+        "sittaeuropaea"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c04",
+      "cardNo": "186",
+      "birdName": "Eurasian Nutcracker",
+      "aliases": [
+        "Eurasian Nutcracker",
+        "Northern Nutcracker",
+        "Nucifraga caryocatactes"
+      ],
+      "normalizedAliases": [
+        "eurasiannutcracker",
+        "northernnutcracker",
+        "nucifragacaryocatactes"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c05",
+      "cardNo": "187",
+      "birdName": "Red Backed Shrike",
+      "aliases": [
+        "Red Backed Shrike",
+        "Lanius collurio"
+      ],
+      "normalizedAliases": [
+        "redbackedshrike",
+        "laniuscollurio"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c06",
+      "cardNo": "188",
+      "birdName": "Common Kingfisher",
+      "aliases": [
+        "Common Kingfisher",
+        "Alcedo atthis"
+      ],
+      "normalizedAliases": [
+        "commonkingfisher",
+        "alcedoatthis"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c07",
+      "cardNo": "189",
+      "birdName": "Little Owl",
+      "aliases": [
+        "Little Owl",
+        "Athene noctua"
+      ],
+      "normalizedAliases": [
+        "littleowl",
+        "athenenoctua"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c08",
+      "cardNo": "190",
+      "birdName": "Eurasian Jay",
+      "aliases": [
+        "Eurasian Jay",
+        "Garrulus glandarius"
+      ],
+      "normalizedAliases": [
+        "eurasianjay",
+        "garrulusglandarius"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c09",
+      "cardNo": "191",
+      "birdName": "White Stork",
+      "aliases": [
+        "White Stork",
+        "Ciconia ciconia"
+      ],
+      "normalizedAliases": [
+        "whitestork",
+        "ciconiaciconia"
+      ]
+    },
+    {
+      "id": "atlas02_r07_c10",
+      "cardNo": "192",
+      "birdName": "White Throated Dipper",
+      "aliases": [
+        "White Throated Dipper",
+        "Cinclus cinclus"
+      ],
+      "normalizedAliases": [
+        "whitethroateddipper",
+        "cincluscinclus"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c01",
+      "cardNo": "193",
+      "birdName": "Black Throated Diver",
+      "aliases": [
+        "Black Throated Diver",
+        "Arctic Loon",
+        "Gavia arctica"
+      ],
+      "normalizedAliases": [
+        "blackthroateddiver",
+        "arcticloon",
+        "gaviaarctica"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c02",
+      "cardNo": "194",
+      "birdName": "Wilsons Storm Petrel",
+      "aliases": [
+        "Wilsons Storm Petrel",
+        "Oceanites oceanicus"
+      ],
+      "normalizedAliases": [
+        "wilsonsstormpetrel",
+        "oceanitesoceanicus"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c03",
+      "cardNo": "195",
+      "birdName": "Great Crested Grebe",
+      "aliases": [
+        "Great Crested Grebe",
+        "Podiceps cristatus"
+      ],
+      "normalizedAliases": [
+        "greatcrestedgrebe",
+        "podicepscristatus"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c04",
+      "cardNo": "196",
+      "birdName": "Common Little Bittern",
+      "aliases": [
+        "Common Little Bittern",
+        "Little Bittern",
+        "Ixobrychus minutus",
+        "Botaurus minutus"
+      ],
+      "normalizedAliases": [
+        "commonlittlebittern",
+        "littlebittern",
+        "ixobrychusminutus",
+        "botaurusminutus"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c05",
+      "cardNo": "197",
+      "birdName": "Squacco Heron",
+      "aliases": [
+        "Squacco Heron",
+        "Ardeola ralloides"
+      ],
+      "normalizedAliases": [
+        "squaccoheron",
+        "ardeolaralloides"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c06",
+      "cardNo": "198",
+      "birdName": "Savis Warbler",
+      "aliases": [
+        "Savis Warbler",
+        "Locustella luscinioides"
+      ],
+      "normalizedAliases": [
+        "saviswarbler",
+        "locustellaluscinioides"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c07",
+      "cardNo": "199",
+      "birdName": "Mute Swan",
+      "aliases": [
+        "Mute Swan",
+        "Cygnus olor"
+      ],
+      "normalizedAliases": [
+        "muteswan",
+        "cygnusolor"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c08",
+      "cardNo": "200",
+      "birdName": "Grey Heron",
+      "aliases": [
+        "Grey Heron",
+        "Gray Heron",
+        "Ardea cinerea"
+      ],
+      "normalizedAliases": [
+        "greyheron",
+        "grayheron",
+        "ardeacinerea"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c09",
+      "cardNo": "201",
+      "birdName": "Common Cuckoo",
+      "aliases": [
+        "Common Cuckoo 281235Xc",
+        "Common Cuckoo",
+        "Cuculus canorus"
+      ],
+      "normalizedAliases": [
+        "commoncuckoo281235xc",
+        "commoncuckoo",
+        "cuculuscanorus"
+      ]
+    },
+    {
+      "id": "atlas03_r01_c10",
+      "cardNo": "202",
+      "birdName": "Dunnock",
+      "aliases": [
+        "Dunnock",
+        "Prunella modularis"
+      ],
+      "normalizedAliases": [
+        "dunnock",
+        "prunellamodularis"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c01",
+      "cardNo": "203",
+      "birdName": "Black Redstart",
+      "aliases": [
+        "Black Redstart",
+        "Phoenicurus ochruros"
+      ],
+      "normalizedAliases": [
+        "blackredstart",
+        "phoenicurusochruros"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c02",
+      "cardNo": "204",
+      "birdName": "Lesser Whitethroat",
+      "aliases": [
+        "Lesser Whitethroat",
+        "Curruca curruca"
+      ],
+      "normalizedAliases": [
+        "lesserwhitethroat",
+        "currucacurruca"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c03",
+      "cardNo": "205",
+      "birdName": "Common Goldeneye",
+      "aliases": [
+        "Common Goldeneye",
+        "Bucephala clangula"
+      ],
+      "normalizedAliases": [
+        "commongoldeneye",
+        "bucephalaclangula"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c04",
+      "cardNo": "206",
+      "birdName": "Red Legged Partridge",
+      "aliases": [
+        "Red Legged Partridge",
+        "Alectoris rufa"
+      ],
+      "normalizedAliases": [
+        "redleggedpartridge",
+        "alectorisrufa"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c05",
+      "cardNo": "207",
+      "birdName": "Theklas Lark",
+      "aliases": [
+        "Theklas Lark",
+        "Galerida theklae"
+      ],
+      "normalizedAliases": [
+        "theklaslark",
+        "galeridatheklae"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c06",
+      "cardNo": "208",
+      "birdName": "European Roller",
+      "aliases": [
+        "European Roller",
+        "Coracias garrulus"
+      ],
+      "normalizedAliases": [
+        "europeanroller",
+        "coraciasgarrulus"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c07",
+      "cardNo": "209",
+      "birdName": "Eurasian Golden Oriole",
+      "aliases": [
+        "Eurasian Golden Oriole",
+        "Oriolus oriolus"
+      ],
+      "normalizedAliases": [
+        "eurasiangoldenoriole",
+        "oriolusoriolus"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c08",
+      "cardNo": "210",
+      "birdName": "Eurasian Tree Sparrow",
+      "aliases": [
+        "Eurasian Tree Sparrow",
+        "Passer montanus"
+      ],
+      "normalizedAliases": [
+        "eurasiantreesparrow",
+        "passermontanus"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c09",
+      "cardNo": "211",
+      "birdName": "European Honey Buzzard",
+      "aliases": [
+        "European Honey Buzzard",
+        "Pernis apivorus"
+      ],
+      "normalizedAliases": [
+        "europeanhoneybuzzard",
+        "pernisapivorus"
+      ]
+    },
+    {
+      "id": "atlas03_r02_c10",
+      "cardNo": "212",
+      "birdName": "Great Tit",
+      "aliases": [
+        "Great Tit",
+        "Parus major"
+      ],
+      "normalizedAliases": [
+        "greattit",
+        "parusmajor"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c01",
+      "cardNo": "213",
+      "birdName": "Hawfinch",
+      "aliases": [
+        "Hawfinch",
+        "Coccothraustes coccothraustes"
+      ],
+      "normalizedAliases": [
+        "hawfinch",
+        "coccothraustescoccothraustes"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c02",
+      "cardNo": "214",
+      "birdName": "Bullfinch",
+      "aliases": [
+        "Bullfinch",
+        "Eurasian Bullfinch",
+        "Pyrrhula pyrrhula"
+      ],
+      "normalizedAliases": [
+        "bullfinch",
+        "eurasianbullfinch",
+        "pyrrhulapyrrhula"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c03",
+      "cardNo": "215",
+      "birdName": "Bluethroat",
+      "aliases": [
+        "Bluethroat",
+        "Luscinia svecica"
+      ],
+      "normalizedAliases": [
+        "bluethroat",
+        "lusciniasvecica"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c04",
+      "cardNo": "216",
+      "birdName": "Common Nightingale",
+      "aliases": [
+        "Common Nightingale",
+        "Luscinia megarhynchos"
+      ],
+      "normalizedAliases": [
+        "commonnightingale",
+        "lusciniamegarhynchos"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c05",
+      "cardNo": "217",
+      "birdName": "European Robin",
+      "aliases": [
+        "European Robin",
+        "Erithacus rubecula"
+      ],
+      "normalizedAliases": [
+        "europeanrobin",
+        "erithacusrubecula"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c06",
+      "cardNo": "218",
+      "birdName": "White Backed Woodpecker",
+      "aliases": [
+        "White Backed Woodpecker",
+        "Dendrocopos leucotos"
+      ],
+      "normalizedAliases": [
+        "whitebackedwoodpecker",
+        "dendrocoposleucotos"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c07",
+      "cardNo": "219",
+      "birdName": "Black Woodpecker",
+      "aliases": [
+        "Black Woodpecker 286205Xc",
+        "Black Woodpecker",
+        "Dryocopus martius"
+      ],
+      "normalizedAliases": [
+        "blackwoodpecker286205xc",
+        "blackwoodpecker",
+        "dryocopusmartius"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c08",
+      "cardNo": "220",
+      "birdName": "Parrot Crossbill",
+      "aliases": [
+        "Parrot Crossbill",
+        "Loxia pytyopsittacus"
+      ],
+      "normalizedAliases": [
+        "parrotcrossbill",
+        "loxiapytyopsittacus"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c09",
+      "cardNo": "221",
+      "birdName": "European Bee Eater",
+      "aliases": [
+        "European Bee Eater",
+        "Merops apiaster"
+      ],
+      "normalizedAliases": [
+        "europeanbeeeater",
+        "meropsapiaster"
+      ]
+    },
+    {
+      "id": "atlas03_r03_c10",
+      "cardNo": "222",
+      "birdName": "Black Headed Gull",
+      "aliases": [
+        "Black Headed Gull",
+        "Chroicocephalus ridibundus"
+      ],
+      "normalizedAliases": [
+        "blackheadedgull",
+        "chroicocephalusridibundus"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c01",
+      "cardNo": "223",
+      "birdName": "Long Tailed Tit",
+      "aliases": [
+        "Long Tailed Tit",
+        "Aegithalos caudatus"
+      ],
+      "normalizedAliases": [
+        "longtailedtit",
+        "aegithaloscaudatus"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c02",
+      "cardNo": "224",
+      "birdName": "Common Blackbird",
+      "aliases": [
+        "Common Blackbird",
+        "Eurasian Blackbird",
+        "Turdus merula"
+      ],
+      "normalizedAliases": [
+        "commonblackbird",
+        "eurasianblackbird",
+        "turdusmerula"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c03",
+      "cardNo": "225",
+      "birdName": "Snowy Owl",
+      "aliases": [
+        "Snowy Owl",
+        "Bubo scandiacus"
+      ],
+      "normalizedAliases": [
+        "snowyowl",
+        "buboscandiacus"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c04",
+      "cardNo": "226",
+      "birdName": "Red Knot",
+      "aliases": [
+        "Red Knot",
+        "Calidris canutus"
+      ],
+      "normalizedAliases": [
+        "redknot",
+        "calidriscanutus"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c05",
+      "cardNo": "227",
+      "birdName": "Black Tailed Godwit",
+      "aliases": [
+        "Black Tailed Godwit",
+        "Limosa limosa"
+      ],
+      "normalizedAliases": [
+        "blacktailedgodwit",
+        "limosalimosa"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c06",
+      "cardNo": "228",
+      "birdName": "Corsican Nuthatch",
+      "aliases": [
+        "Corsican Nuthatch Xv",
+        "Corsican Nuthatch",
+        "Sitta whiteheadi"
+      ],
+      "normalizedAliases": [
+        "corsicannuthatchxv",
+        "corsicannuthatch",
+        "sittawhiteheadi"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c07",
+      "cardNo": "229",
+      "birdName": "European Turtle Dove",
+      "aliases": [
+        "European Turtle Dove",
+        "Streptopelia turtur"
+      ],
+      "normalizedAliases": [
+        "europeanturtledove",
+        "streptopeliaturtur"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c08",
+      "cardNo": "230",
+      "birdName": "Little Bustard",
+      "aliases": [
+        "Little Bustard",
+        "Tetrax tetrax"
+      ],
+      "normalizedAliases": [
+        "littlebustard",
+        "tetraxtetrax"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c09",
+      "cardNo": "231",
+      "birdName": "Yellowhammer",
+      "aliases": [
+        "Yellowhammer",
+        "Emberiza citrinella"
+      ],
+      "normalizedAliases": [
+        "yellowhammer",
+        "emberizacitrinella"
+      ]
+    },
+    {
+      "id": "atlas03_r04_c10",
+      "cardNo": "232",
+      "birdName": "White Wagtail",
+      "aliases": [
+        "White Wagtail",
+        "Motacilla alba"
+      ],
+      "normalizedAliases": [
+        "whitewagtail",
+        "motacillaalba"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c01",
+      "cardNo": "233",
+      "birdName": "Moltonis Warbler",
+      "aliases": [
+        "Moltonis Warbler",
+        "Curruca subalpina"
+      ],
+      "normalizedAliases": [
+        "moltoniswarbler",
+        "currucasubalpina"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c02",
+      "cardNo": "234",
+      "birdName": "Goldcrest",
+      "aliases": [
+        "Goldcrest",
+        "Regulus regulus"
+      ],
+      "normalizedAliases": [
+        "goldcrest",
+        "regulusregulus"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c03",
+      "cardNo": "235",
+      "birdName": "Common Moorhen",
+      "aliases": [
+        "Common Moorhen 281025Xc",
+        "Common Moorhen",
+        "Eurasian Moorhen",
+        "Gallinula chloropus"
+      ],
+      "normalizedAliases": [
+        "commonmoorhen281025xc",
+        "commonmoorhen",
+        "eurasianmoorhen",
+        "gallinulachloropus"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c04",
+      "cardNo": "236",
+      "birdName": "Short Toed Treecreeper",
+      "aliases": [
+        "Short Toed Treecreeper",
+        "Certhia brachydactyla"
+      ],
+      "normalizedAliases": [
+        "shorttoedtreecreeper",
+        "certhiabrachydactyla"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c05",
+      "cardNo": "237",
+      "birdName": "Eleonoras Falcon",
+      "aliases": [
+        "Eleonoras Falcon",
+        "Falco eleonorae"
+      ],
+      "normalizedAliases": [
+        "eleonorasfalcon",
+        "falcoeleonorae"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c06",
+      "cardNo": "238",
+      "birdName": "Northern Gannet",
+      "aliases": [
+        "Northern Gannet",
+        "Morus bassanus"
+      ],
+      "normalizedAliases": [
+        "northerngannet",
+        "morusbassanus"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c07",
+      "cardNo": "239",
+      "birdName": "Eurasian Sparrowhawk",
+      "aliases": [
+        "Eurasian Sparrowhawk",
+        "Accipiter nisus"
+      ],
+      "normalizedAliases": [
+        "eurasiansparrowhawk",
+        "accipiternisus"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c08",
+      "cardNo": "240",
+      "birdName": "Northern Goshawk",
+      "aliases": [
+        "Northern Goshawk",
+        "Eurasian Goshawk",
+        "Accipiter gentilis",
+        "Astur gentilis"
+      ],
+      "normalizedAliases": [
+        "northerngoshawk",
+        "eurasiangoshawk",
+        "accipitergentilis",
+        "asturgentilis"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c09",
+      "cardNo": "241",
+      "birdName": "Eastern Imperial Eagle",
+      "aliases": [
+        "Eastern Imperial Eagle",
+        "Imperial Eagle",
+        "Aquila heliaca"
+      ],
+      "normalizedAliases": [
+        "easternimperialeagle",
+        "imperialeagle",
+        "aquilaheliaca"
+      ]
+    },
+    {
+      "id": "atlas03_r05_c10",
+      "cardNo": "242",
+      "birdName": "Bonellis Eagle",
+      "aliases": [
+        "Bonellis Eagle",
+        "Aquila fasciata"
+      ],
+      "normalizedAliases": [
+        "bonelliseagle",
+        "aquilafasciata"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c01",
+      "cardNo": "243",
+      "birdName": "Montagus Harrier",
+      "aliases": [
+        "Montagus Harrier",
+        "Circus pygargus"
+      ],
+      "normalizedAliases": [
+        "montagusharrier",
+        "circuspygargus"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c02",
+      "cardNo": "244",
+      "birdName": "Common Buzzard",
+      "aliases": [
+        "Common Buzzard 619710Xc",
+        "Common Buzzard",
+        "Buteo buteo"
+      ],
+      "normalizedAliases": [
+        "commonbuzzard619710xc",
+        "commonbuzzard",
+        "buteobuteo"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c03",
+      "cardNo": "245",
+      "birdName": "Red Kite",
+      "aliases": [
+        "Red Kite",
+        "Milvus milvus"
+      ],
+      "normalizedAliases": [
+        "redkite",
+        "milvusmilvus"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c04",
+      "cardNo": "246",
+      "birdName": "Eurasian Hobby",
+      "aliases": [
+        "Eurasian Hobby",
+        "Falco subbuteo"
+      ],
+      "normalizedAliases": [
+        "eurasianhobby",
+        "falcosubbuteo"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c05",
+      "cardNo": "247",
+      "birdName": "European Goldfinch",
+      "aliases": [
+        "European Goldfinch",
+        "Carduelis carduelis"
+      ],
+      "normalizedAliases": [
+        "europeangoldfinch",
+        "cardueliscarduelis"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c06",
+      "cardNo": "248",
+      "birdName": "Snow Bunting",
+      "aliases": [
+        "Snow Bunting",
+        "Plectrophenax nivalis"
+      ],
+      "normalizedAliases": [
+        "snowbunting",
+        "plectrophenaxnivalis"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c07",
+      "cardNo": "249",
+      "birdName": "Hooded Crow",
+      "aliases": [
+        "Hooded Crow",
+        "Corvus cornix"
+      ],
+      "normalizedAliases": [
+        "hoodedcrow",
+        "corvuscornix"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c08",
+      "cardNo": "250",
+      "birdName": "Eurasian Collared Dove",
+      "aliases": [
+        "Eurasian Collared Dove",
+        "Streptopelia decaocto"
+      ],
+      "normalizedAliases": [
+        "eurasiancollareddove",
+        "streptopeliadecaocto"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c09",
+      "cardNo": "251",
+      "birdName": "Common Starling",
+      "aliases": [
+        "Common Starling",
+        "European Starling",
+        "Sturnus vulgaris"
+      ],
+      "normalizedAliases": [
+        "commonstarling",
+        "europeanstarling",
+        "sturnusvulgaris"
+      ]
+    },
+    {
+      "id": "atlas03_r06_c10",
+      "cardNo": "252",
+      "birdName": "Common Swift",
+      "aliases": [
+        "Common Swift 491117Xc",
+        "Common Swift",
+        "Apus apus"
+      ],
+      "normalizedAliases": [
+        "commonswift491117xc",
+        "commonswift",
+        "apusapus"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c01",
+      "cardNo": "253",
+      "birdName": "House Sparrow",
+      "aliases": [
+        "House Sparrow",
+        "Passer domesticus"
+      ],
+      "normalizedAliases": [
+        "housesparrow",
+        "passerdomesticus"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c02",
+      "cardNo": "254",
+      "birdName": "Ruff",
+      "aliases": [
+        "Ruff",
+        "Calidris pugnax"
+      ],
+      "normalizedAliases": [
+        "ruff",
+        "calidrispugnax"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c03",
+      "cardNo": "255",
+      "birdName": "Greater Flamingo",
+      "aliases": [
+        "Greater Flamingo",
+        "Phoenicopterus roseus"
+      ],
+      "normalizedAliases": [
+        "greaterflamingo",
+        "phoenicopterusroseus"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c04",
+      "cardNo": "256",
+      "birdName": "Audouins Gull",
+      "aliases": [
+        "Audouins Gull",
+        "Ichthyaetus audouinii"
+      ],
+      "normalizedAliases": [
+        "audouinsgull",
+        "ichthyaetusaudouinii"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c05",
+      "cardNo": "257",
+      "birdName": "Common Chaffinch",
+      "aliases": [
+        "Common Chaffinch",
+        "Fringilla coelebs"
+      ],
+      "normalizedAliases": [
+        "commonchaffinch",
+        "fringillacoelebs"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c06",
+      "cardNo": "258",
+      "birdName": "Common Chiffchaff",
+      "aliases": [
+        "Common Chiffchaff",
+        "Phylloscopus collybita"
+      ],
+      "normalizedAliases": [
+        "commonchiffchaff",
+        "phylloscopuscollybita"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c07",
+      "cardNo": "259",
+      "birdName": "Greylag Goose",
+      "aliases": [
+        "Greylag Goose",
+        "Graylag Goose",
+        "Anser anser"
+      ],
+      "normalizedAliases": [
+        "greylaggoose",
+        "graylaggoose",
+        "anseranser"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c08",
+      "cardNo": "260",
+      "birdName": "Cettis Warbler",
+      "aliases": [
+        "Cettis Warbler",
+        "Cettia cetti"
+      ],
+      "normalizedAliases": [
+        "cettiswarbler",
+        "cettiacetti"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c09",
+      "cardNo": "261",
+      "birdName": "Eurasian Green Woodpecker",
+      "aliases": [
+        "Eurasian Green Woodpecker",
+        "Picus viridis"
+      ],
+      "normalizedAliases": [
+        "eurasiangreenwoodpecker",
+        "picusviridis"
+      ]
+    },
+    {
+      "id": "atlas03_r07_c10",
+      "cardNo": "262",
+      "birdName": "Abbotts Booby",
+      "aliases": [
+        "Abbotts Booby",
+        "Papasula abbotti"
+      ],
+      "normalizedAliases": [
+        "abbottsbooby",
+        "papasulaabbotti"
+      ]
+    }
+  ],
+  "byCardId": {
+    "atlas01_r01_c01": {
+      "id": "atlas01_r01_c01",
+      "cardNo": "53",
+      "birdName": "Pied Billed Grebe",
+      "aliases": [
+        "Pied Billed Grebe",
+        "Podilymbus podiceps"
+      ],
+      "normalizedAliases": [
+        "piedbilledgrebe",
+        "podilymbuspodiceps"
+      ]
+    },
+    "atlas01_r01_c02": {
+      "id": "atlas01_r01_c02",
+      "cardNo": "54",
+      "birdName": "Pileated Woodpecker",
+      "aliases": [
+        "Pileated Woodpecker",
+        "Dryocopus pileatus"
+      ],
+      "normalizedAliases": [
+        "pileatedwoodpecker",
+        "dryocopuspileatus"
+      ]
+    },
+    "atlas01_r01_c03": {
+      "id": "atlas01_r01_c03",
+      "cardNo": "55",
+      "birdName": "Western Meadowlark",
+      "aliases": [
+        "Western Meadowlarkr",
+        "Western Meadowlark",
+        "Sturnella neglecta"
+      ],
+      "normalizedAliases": [
+        "westernmeadowlarkr",
+        "westernmeadowlark",
+        "sturnellaneglecta"
+      ]
+    },
+    "atlas01_r01_c04": {
+      "id": "atlas01_r01_c04",
+      "cardNo": "56",
+      "birdName": "Grasshopper Sparrow",
+      "aliases": [
+        "Grasshopper Sparrow",
+        "Ammodramus savannarum"
+      ],
+      "normalizedAliases": [
+        "grasshoppersparrow",
+        "ammodramussavannarum"
+      ]
+    },
+    "atlas01_r01_c05": {
+      "id": "atlas01_r01_c05",
+      "cardNo": "57",
+      "birdName": "Chipping Sparrow",
+      "aliases": [
+        "Chipping Sparrow",
+        "Spizella passerina"
+      ],
+      "normalizedAliases": [
+        "chippingsparrow",
+        "spizellapasserina"
+      ]
+    },
+    "atlas01_r01_c06": {
+      "id": "atlas01_r01_c06",
+      "cardNo": "58",
+      "birdName": "Cassins Sparrow",
+      "aliases": [
+        "Cassins Sparrow",
+        "Peucaea cassinii"
+      ],
+      "normalizedAliases": [
+        "cassinssparrow",
+        "peucaeacassinii"
+      ]
+    },
+    "atlas01_r01_c07": {
+      "id": "atlas01_r01_c07",
+      "cardNo": "59",
+      "birdName": "Bairds Sparrow",
+      "aliases": [
+        "Bairds Sparrow",
+        "Centronyx bairdii"
+      ],
+      "normalizedAliases": [
+        "bairdssparrow",
+        "centronyxbairdii"
+      ]
+    },
+    "atlas01_r01_c08": {
+      "id": "atlas01_r01_c08",
+      "cardNo": "60",
+      "birdName": "California Quail",
+      "aliases": [
+        "California Quail",
+        "Callipepla californica"
+      ],
+      "normalizedAliases": [
+        "californiaquail",
+        "callipeplacalifornica"
+      ]
+    },
+    "atlas01_r01_c09": {
+      "id": "atlas01_r01_c09",
+      "cardNo": "61",
+      "birdName": "Northern Bobwhite",
+      "aliases": [
+        "Northern Bobwhite",
+        "Colinus virginianus"
+      ],
+      "normalizedAliases": [
+        "northernbobwhite",
+        "colinusvirginianus"
+      ]
+    },
+    "atlas01_r01_c10": {
+      "id": "atlas01_r01_c10",
+      "cardNo": "62",
+      "birdName": "Mourning Dove",
+      "aliases": [
+        "Mourning Dove",
+        "Zenaida macroura"
+      ],
+      "normalizedAliases": [
+        "mourningdove",
+        "zenaidamacroura"
+      ]
+    },
+    "atlas01_r02_c01": {
+      "id": "atlas01_r02_c01",
+      "cardNo": "63",
+      "birdName": "Baltimore Oriole",
+      "aliases": [
+        "Baltimore Oriole",
+        "Icterus galbula"
+      ],
+      "normalizedAliases": [
+        "baltimoreoriole",
+        "icterusgalbula"
+      ]
+    },
+    "atlas01_r02_c02": {
+      "id": "atlas01_r02_c02",
+      "cardNo": "64",
+      "birdName": "Red Crossbill",
+      "aliases": [
+        "Red Crossbill",
+        "Loxia curvirostra"
+      ],
+      "normalizedAliases": [
+        "redcrossbill",
+        "loxiacurvirostra"
+      ]
+    },
+    "atlas01_r02_c03": {
+      "id": "atlas01_r02_c03",
+      "cardNo": "65",
+      "birdName": "Lazuli Bunting",
+      "aliases": [
+        "Lazuli Bunting",
+        "Passerina amoena"
+      ],
+      "normalizedAliases": [
+        "lazulibunting",
+        "passerinaamoena"
+      ]
+    },
+    "atlas01_r02_c04": {
+      "id": "atlas01_r02_c04",
+      "cardNo": "66",
+      "birdName": "American Crow",
+      "aliases": [
+        "American Crow",
+        "Corvus brachyrhynchos"
+      ],
+      "normalizedAliases": [
+        "americancrow",
+        "corvusbrachyrhynchos"
+      ]
+    },
+    "atlas01_r02_c05": {
+      "id": "atlas01_r02_c05",
+      "cardNo": "67",
+      "birdName": "Fish Crow",
+      "aliases": [
+        "Fish Crow",
+        "Corvus ossifragus"
+      ],
+      "normalizedAliases": [
+        "fishcrow",
+        "corvusossifragus"
+      ]
+    },
+    "atlas01_r02_c06": {
+      "id": "atlas01_r02_c06",
+      "cardNo": "68",
+      "birdName": "Black Crowned Night Heron",
+      "aliases": [
+        "Black Crowned Night Heron",
+        "Nycticorax nycticorax"
+      ],
+      "normalizedAliases": [
+        "blackcrownednightheron",
+        "nycticoraxnycticorax"
+      ]
+    },
+    "atlas01_r02_c07": {
+      "id": "atlas01_r02_c07",
+      "cardNo": "69",
+      "birdName": "Chihuahuan Raven",
+      "aliases": [
+        "Chihuahuan Raven",
+        "Corvus cryptoleucus"
+      ],
+      "normalizedAliases": [
+        "chihuahuanraven",
+        "corvuscryptoleucus"
+      ]
+    },
+    "atlas01_r02_c08": {
+      "id": "atlas01_r02_c08",
+      "cardNo": "70",
+      "birdName": "Common Raven",
+      "aliases": [
+        "Common Raven",
+        "Corvus corax"
+      ],
+      "normalizedAliases": [
+        "commonraven",
+        "corvuscorax"
+      ]
+    },
+    "atlas01_r02_c09": {
+      "id": "atlas01_r02_c09",
+      "cardNo": "71",
+      "birdName": "Northern Cardinal",
+      "aliases": [
+        "Northern Cardinal",
+        "Cardinalis cardinalis"
+      ],
+      "normalizedAliases": [
+        "northerncardinal",
+        "cardinaliscardinalis"
+      ]
+    },
+    "atlas01_r02_c10": {
+      "id": "atlas01_r02_c10",
+      "cardNo": "72",
+      "birdName": "Yellow Bellied Sapsucker",
+      "aliases": [
+        "Yellow Bellied Sapsucker",
+        "Sphyrapicus varius"
+      ],
+      "normalizedAliases": [
+        "yellowbelliedsapsucker",
+        "sphyrapicusvarius"
+      ]
+    },
+    "atlas01_r03_c01": {
+      "id": "atlas01_r03_c01",
+      "cardNo": "73",
+      "birdName": "Indigo Bunting",
+      "aliases": [
+        "Indigo Bunting",
+        "Passerina cyanea"
+      ],
+      "normalizedAliases": [
+        "indigobunting",
+        "passerinacyanea"
+      ]
+    },
+    "atlas01_r03_c02": {
+      "id": "atlas01_r03_c02",
+      "cardNo": "74",
+      "birdName": "Western Tanager",
+      "aliases": [
+        "Western Tanager",
+        "Piranga ludoviciana"
+      ],
+      "normalizedAliases": [
+        "westerntanager",
+        "pirangaludoviciana"
+      ]
+    },
+    "atlas01_r03_c03": {
+      "id": "atlas01_r03_c03",
+      "cardNo": "75",
+      "birdName": "Spotted Towhee",
+      "aliases": [
+        "Spotted Towhee",
+        "Pipilo maculatus"
+      ],
+      "normalizedAliases": [
+        "spottedtowhee",
+        "pipilomaculatus"
+      ]
+    },
+    "atlas01_r03_c04": {
+      "id": "atlas01_r03_c04",
+      "cardNo": "76",
+      "birdName": "Rose Breasted Grosbeak",
+      "aliases": [
+        "Rose Breasted Grosbeak",
+        "Pheucticus ludovicianus"
+      ],
+      "normalizedAliases": [
+        "rosebreastedgrosbeak",
+        "pheucticusludovicianus"
+      ]
+    },
+    "atlas01_r03_c05": {
+      "id": "atlas01_r03_c05",
+      "cardNo": "77",
+      "birdName": "Green Heron",
+      "aliases": [
+        "Green Heron",
+        "Butorides virescens"
+      ],
+      "normalizedAliases": [
+        "greenheron",
+        "butoridesvirescens"
+      ]
+    },
+    "atlas01_r03_c06": {
+      "id": "atlas01_r03_c06",
+      "cardNo": "78",
+      "birdName": "Gray Catbird",
+      "aliases": [
+        "Gray Catbird",
+        "Dumetella carolinensis"
+      ],
+      "normalizedAliases": [
+        "graycatbird",
+        "dumetellacarolinensis"
+      ]
+    },
+    "atlas01_r03_c07": {
+      "id": "atlas01_r03_c07",
+      "cardNo": "79",
+      "birdName": "Northern Mockingbird",
+      "aliases": [
+        "Northern Mockingbird",
+        "Mimus polyglottos"
+      ],
+      "normalizedAliases": [
+        "northernmockingbird",
+        "mimuspolyglottos"
+      ]
+    },
+    "atlas01_r03_c08": {
+      "id": "atlas01_r03_c08",
+      "cardNo": "80",
+      "birdName": "Hooded Merganser",
+      "aliases": [
+        "Hooded Merganser",
+        "Lophodytes cucullatus"
+      ],
+      "normalizedAliases": [
+        "hoodedmerganser",
+        "lophodytescucullatus"
+      ]
+    },
+    "atlas01_r03_c09": {
+      "id": "atlas01_r03_c09",
+      "cardNo": "81",
+      "birdName": "Bewicks Wren",
+      "aliases": [
+        "Bewicks Wren",
+        "Thryomanes bewickii"
+      ],
+      "normalizedAliases": [
+        "bewickswren",
+        "thryomanesbewickii"
+      ]
+    },
+    "atlas01_r03_c10": {
+      "id": "atlas01_r03_c10",
+      "cardNo": "82",
+      "birdName": "Yellow Breasted Chat",
+      "aliases": [
+        "Yellow Breasted Chat",
+        "Icteria virens"
+      ],
+      "normalizedAliases": [
+        "yellowbreastedchat",
+        "icteriavirens"
+      ]
+    },
+    "atlas01_r04_c01": {
+      "id": "atlas01_r04_c01",
+      "cardNo": "83",
+      "birdName": "Common Nighthawk",
+      "aliases": [
+        "Common Nighthawk",
+        "Chordeiles minor"
+      ],
+      "normalizedAliases": [
+        "commonnighthawk",
+        "chordeilesminor"
+      ]
+    },
+    "atlas01_r04_c02": {
+      "id": "atlas01_r04_c02",
+      "cardNo": "84",
+      "birdName": "Song Sparrow",
+      "aliases": [
+        "Song Sparrow",
+        "Melospiza melodia"
+      ],
+      "normalizedAliases": [
+        "songsparrow",
+        "melospizamelodia"
+      ]
+    },
+    "atlas01_r04_c03": {
+      "id": "atlas01_r04_c03",
+      "cardNo": "85",
+      "birdName": "White Crowned Sparrow",
+      "aliases": [
+        "White Crowned Sparrow",
+        "Zonotrichia leucophrys"
+      ],
+      "normalizedAliases": [
+        "whitecrownedsparrow",
+        "zonotrichialeucophrys"
+      ]
+    },
+    "atlas01_r04_c04": {
+      "id": "atlas01_r04_c04",
+      "cardNo": "86",
+      "birdName": "Chimney Swift",
+      "aliases": [
+        "Chimney Swift",
+        "Chaetura pelagica"
+      ],
+      "normalizedAliases": [
+        "chimneyswift",
+        "chaeturapelagica"
+      ]
+    },
+    "atlas01_r04_c05": {
+      "id": "atlas01_r04_c05",
+      "cardNo": "87",
+      "birdName": "Blue Grosbeak",
+      "aliases": [
+        "Blue Grosbeak",
+        "Passerina caerulea"
+      ],
+      "normalizedAliases": [
+        "bluegrosbeak",
+        "passerinacaerulea"
+      ]
+    },
+    "atlas01_r04_c06": {
+      "id": "atlas01_r04_c06",
+      "cardNo": "88",
+      "birdName": "Lincolns Sparrow",
+      "aliases": [
+        "Lincolns Sparrow",
+        "Melospiza lincolnii"
+      ],
+      "normalizedAliases": [
+        "lincolnssparrow",
+        "melospizalincolnii"
+      ]
+    },
+    "atlas01_r04_c07": {
+      "id": "atlas01_r04_c07",
+      "cardNo": "89",
+      "birdName": "Greater Roadrunner",
+      "aliases": [
+        "Greater Roadrunner",
+        "Geococcyx californianus"
+      ],
+      "normalizedAliases": [
+        "greaterroadrunner",
+        "geococcyxcalifornianus"
+      ]
+    },
+    "atlas01_r04_c08": {
+      "id": "atlas01_r04_c08",
+      "cardNo": "90",
+      "birdName": "Red Tailed Hawk",
+      "aliases": [
+        "Red Tailed Hawk",
+        "Buteo jamaicensis"
+      ],
+      "normalizedAliases": [
+        "redtailedhawk",
+        "buteojamaicensis"
+      ]
+    },
+    "atlas01_r04_c09": {
+      "id": "atlas01_r04_c09",
+      "cardNo": "91",
+      "birdName": "Northern Harrier",
+      "aliases": [
+        "Northern Harrier Tj",
+        "Northern Harrier",
+        "Circus hudsonius"
+      ],
+      "normalizedAliases": [
+        "northernharriertj",
+        "northernharrier",
+        "circushudsonius"
+      ]
+    },
+    "atlas01_r04_c10": {
+      "id": "atlas01_r04_c10",
+      "cardNo": "92",
+      "birdName": "Coopers Hawk",
+      "aliases": [
+        "Coopers Hawk",
+        "Astur cooperii"
+      ],
+      "normalizedAliases": [
+        "coopershawk",
+        "asturcooperii"
+      ]
+    },
+    "atlas01_r05_c01": {
+      "id": "atlas01_r05_c01",
+      "cardNo": "93",
+      "birdName": "Red Shouldered Hawk",
+      "aliases": [
+        "Red Shouldered Hawk",
+        "Buteo lineatus"
+      ],
+      "normalizedAliases": [
+        "redshoulderedhawk",
+        "buteolineatus"
+      ]
+    },
+    "atlas01_r05_c02": {
+      "id": "atlas01_r05_c02",
+      "cardNo": "94",
+      "birdName": "Barred Owl",
+      "aliases": [
+        "Barred Owl",
+        "Strix varia"
+      ],
+      "normalizedAliases": [
+        "barredowl",
+        "strixvaria"
+      ]
+    },
+    "atlas01_r05_c03": {
+      "id": "atlas01_r05_c03",
+      "cardNo": "95",
+      "birdName": "Swainsons Hawk",
+      "aliases": [
+        "Swainsons Hawk",
+        "Buteo swainsoni"
+      ],
+      "normalizedAliases": [
+        "swainsonshawk",
+        "buteoswainsoni"
+      ]
+    },
+    "atlas01_r05_c04": {
+      "id": "atlas01_r05_c04",
+      "cardNo": "96",
+      "birdName": "Peregrine Falcon",
+      "aliases": [
+        "Peregrine Falcon",
+        "Falco peregrinus"
+      ],
+      "normalizedAliases": [
+        "peregrinefalcon",
+        "falcoperegrinus"
+      ]
+    },
+    "atlas01_r05_c05": {
+      "id": "atlas01_r05_c05",
+      "cardNo": "97",
+      "birdName": "Golden Eagle",
+      "aliases": [
+        "Golden Eagle",
+        "Aquila chrysaetos"
+      ],
+      "normalizedAliases": [
+        "goldeneagle",
+        "aquilachrysaetos"
+      ]
+    },
+    "atlas01_r05_c06": {
+      "id": "atlas01_r05_c06",
+      "cardNo": "98",
+      "birdName": "Great Horned Owl",
+      "aliases": [
+        "Great Horned Owl",
+        "Bubo virginianus"
+      ],
+      "normalizedAliases": [
+        "greathornedowl",
+        "bubovirginianus"
+      ]
+    },
+    "atlas01_r05_c07": {
+      "id": "atlas01_r05_c07",
+      "cardNo": "99",
+      "birdName": "Common Merganser",
+      "aliases": [
+        "Common Merganser",
+        "Mergus merganser"
+      ],
+      "normalizedAliases": [
+        "commonmerganser",
+        "mergusmerganser"
+      ]
+    },
+    "atlas01_r05_c08": {
+      "id": "atlas01_r05_c08",
+      "cardNo": "100",
+      "birdName": "Willet",
+      "aliases": [
+        "Willet",
+        "Tringa semipalmata"
+      ],
+      "normalizedAliases": [
+        "willet",
+        "tringasemipalmata"
+      ]
+    },
+    "atlas01_r05_c09": {
+      "id": "atlas01_r05_c09",
+      "cardNo": "101",
+      "birdName": "Anhinga",
+      "aliases": [
+        "Anhinga",
+        "Anhinga anhinga"
+      ],
+      "normalizedAliases": [
+        "anhinga",
+        "anhingaanhinga"
+      ]
+    },
+    "atlas01_r05_c10": {
+      "id": "atlas01_r05_c10",
+      "cardNo": "102",
+      "birdName": "Snowy Egret",
+      "aliases": [
+        "Snowy Egret",
+        "Egretta thula"
+      ],
+      "normalizedAliases": [
+        "snowyegret",
+        "egrettathula"
+      ]
+    },
+    "atlas01_r06_c01": {
+      "id": "atlas01_r06_c01",
+      "cardNo": "103",
+      "birdName": "White Faced Ibis",
+      "aliases": [
+        "White Faced Ibis",
+        "Plegadis chihi"
+      ],
+      "normalizedAliases": [
+        "whitefacedibis",
+        "plegadischihi"
+      ]
+    },
+    "atlas01_r06_c02": {
+      "id": "atlas01_r06_c02",
+      "cardNo": "104",
+      "birdName": "Black Skimmer",
+      "aliases": [
+        "Black Skimmer",
+        "Rynchops niger"
+      ],
+      "normalizedAliases": [
+        "blackskimmer",
+        "rynchopsniger"
+      ]
+    },
+    "atlas01_r06_c03": {
+      "id": "atlas01_r06_c03",
+      "cardNo": "105",
+      "birdName": "Eastern Screech Owl",
+      "aliases": [
+        "Eastern Screech Owl",
+        "Megascops asio"
+      ],
+      "normalizedAliases": [
+        "easternscreechowl",
+        "megascopsasio"
+      ]
+    },
+    "atlas01_r06_c04": {
+      "id": "atlas01_r06_c04",
+      "cardNo": "106",
+      "birdName": "Mississippi Kite",
+      "aliases": [
+        "Mississippi Kite",
+        "Ictinia mississippiensis"
+      ],
+      "normalizedAliases": [
+        "mississippikite",
+        "ictiniamississippiensis"
+      ]
+    },
+    "atlas01_r06_c05": {
+      "id": "atlas01_r06_c05",
+      "cardNo": "107",
+      "birdName": "Ferruginous Hawk",
+      "aliases": [
+        "Ferruginous Hawk",
+        "Buteo regalis"
+      ],
+      "normalizedAliases": [
+        "ferruginoushawk",
+        "buteoregalis"
+      ]
+    },
+    "atlas01_r06_c06": {
+      "id": "atlas01_r06_c06",
+      "cardNo": "108",
+      "birdName": "American Kestrel",
+      "aliases": [
+        "American Kestrel",
+        "Falco sparverius"
+      ],
+      "normalizedAliases": [
+        "americankestrel",
+        "falcosparverius"
+      ]
+    },
+    "atlas01_r06_c07": {
+      "id": "atlas01_r06_c07",
+      "cardNo": "109",
+      "birdName": "Barn Owl",
+      "aliases": [
+        "Barn Owl",
+        "Western Barn Owl",
+        "Tyto alba"
+      ],
+      "normalizedAliases": [
+        "barnowl",
+        "westernbarnowl",
+        "tytoalba"
+      ]
+    },
+    "atlas01_r06_c08": {
+      "id": "atlas01_r06_c08",
+      "cardNo": "110",
+      "birdName": "Burrowing Owl",
+      "aliases": [
+        "Burrowing Owl",
+        "Athene cunicularia"
+      ],
+      "normalizedAliases": [
+        "burrowingowl",
+        "athenecunicularia"
+      ]
+    },
+    "atlas01_r06_c09": {
+      "id": "atlas01_r06_c09",
+      "cardNo": "111",
+      "birdName": "Sandhill Crane",
+      "aliases": [
+        "Sandhill Crane",
+        "Antigone canadensis"
+      ],
+      "normalizedAliases": [
+        "sandhillcrane",
+        "antigonecanadensis"
+      ]
+    },
+    "atlas01_r06_c10": {
+      "id": "atlas01_r06_c10",
+      "cardNo": "112",
+      "birdName": "Canada Goose",
+      "aliases": [
+        "Canada Goose",
+        "Branta canadensis"
+      ],
+      "normalizedAliases": [
+        "canadagoose",
+        "brantacanadensis"
+      ]
+    },
+    "atlas01_r07_c01": {
+      "id": "atlas01_r07_c01",
+      "cardNo": "113",
+      "birdName": "Black Bellied Whistling Duck",
+      "aliases": [
+        "Black Bellied Whistling Duck",
+        "Dendrocygna autumnalis"
+      ],
+      "normalizedAliases": [
+        "blackbelliedwhistlingduck",
+        "dendrocygnaautumnalis"
+      ]
+    },
+    "atlas01_r07_c02": {
+      "id": "atlas01_r07_c02",
+      "cardNo": "114",
+      "birdName": "Double Crested Cormorant",
+      "aliases": [
+        "Double Crested Cormorant",
+        "Nannopterum auritum"
+      ],
+      "normalizedAliases": [
+        "doublecrestedcormorant",
+        "nannopterumauritum"
+      ]
+    },
+    "atlas01_r07_c03": {
+      "id": "atlas01_r07_c03",
+      "cardNo": "115",
+      "birdName": "American White Pelican",
+      "aliases": [
+        "American White Pelican",
+        "Pelecanus erythrorhynchos"
+      ],
+      "normalizedAliases": [
+        "americanwhitepelican",
+        "pelecanuserythrorhynchos"
+      ]
+    },
+    "atlas01_r07_c04": {
+      "id": "atlas01_r07_c04",
+      "cardNo": "116",
+      "birdName": "Red Winged Blackbird",
+      "aliases": [
+        "Red Winged Blackbird",
+        "Agelaius phoeniceus"
+      ],
+      "normalizedAliases": [
+        "redwingedblackbird",
+        "agelaiusphoeniceus"
+      ]
+    },
+    "atlas01_r07_c05": {
+      "id": "atlas01_r07_c05",
+      "cardNo": "117",
+      "birdName": "Common Grackle",
+      "aliases": [
+        "Common Grackle",
+        "Quiscalus quiscula"
+      ],
+      "normalizedAliases": [
+        "commongrackle",
+        "quiscalusquiscula"
+      ]
+    },
+    "atlas01_r07_c06": {
+      "id": "atlas01_r07_c06",
+      "cardNo": "118",
+      "birdName": "Brewers Blackbird",
+      "aliases": [
+        "Brewers Blackbird",
+        "Euphagus cyanocephalus"
+      ],
+      "normalizedAliases": [
+        "brewersblackbird",
+        "euphaguscyanocephalus"
+      ]
+    },
+    "atlas01_r07_c07": {
+      "id": "atlas01_r07_c07",
+      "cardNo": "119",
+      "birdName": "Yellow Headed Blackbird",
+      "aliases": [
+        "Yellow Headed Blackbird",
+        "Xanthocephalus xanthocephalus"
+      ],
+      "normalizedAliases": [
+        "yellowheadedblackbird",
+        "xanthocephalusxanthocephalus"
+      ]
+    },
+    "atlas01_r07_c08": {
+      "id": "atlas01_r07_c08",
+      "cardNo": "120",
+      "birdName": "Bushtit",
+      "aliases": [
+        "Bushtit",
+        "Psaltriparus minimus"
+      ],
+      "normalizedAliases": [
+        "bushtit",
+        "psaltriparusminimus"
+      ]
+    },
+    "atlas01_r07_c09": {
+      "id": "atlas01_r07_c09",
+      "cardNo": "121",
+      "birdName": "Dickcissel",
+      "aliases": [
+        "Dickcissel",
+        "Spiza americana"
+      ],
+      "normalizedAliases": [
+        "dickcissel",
+        "spizaamericana"
+      ]
+    },
+    "atlas01_r07_c10": {
+      "id": "atlas01_r07_c10",
+      "cardNo": "122",
+      "birdName": "Ring Billed Gull",
+      "aliases": [
+        "Ring Billed Gull",
+        "Larus delawarensis"
+      ],
+      "normalizedAliases": [
+        "ringbilledgull",
+        "larusdelawarensis"
+      ]
+    },
+    "atlas02_r01_c01": {
+      "id": "atlas02_r01_c01",
+      "cardNo": "123",
+      "birdName": "American Coot",
+      "aliases": [
+        "American Coot",
+        "Fulica americana"
+      ],
+      "normalizedAliases": [
+        "americancoot",
+        "fulicaamericana"
+      ]
+    },
+    "atlas02_r01_c02": {
+      "id": "atlas02_r01_c02",
+      "cardNo": "124",
+      "birdName": "Yellow Rumped Warbler",
+      "aliases": [
+        "Yellow Rumped Warbler",
+        "Setophaga coronata"
+      ],
+      "normalizedAliases": [
+        "yellowrumpedwarbler",
+        "setophagacoronata"
+      ]
+    },
+    "atlas02_r01_c03": {
+      "id": "atlas02_r01_c03",
+      "cardNo": "125",
+      "birdName": "American Robin",
+      "aliases": [
+        "American Robin",
+        "Turdus migratorius"
+      ],
+      "normalizedAliases": [
+        "americanrobin",
+        "turdusmigratorius"
+      ]
+    },
+    "atlas02_r01_c04": {
+      "id": "atlas02_r01_c04",
+      "cardNo": "126",
+      "birdName": "House Finch",
+      "aliases": [
+        "House Finch",
+        "Haemorhous mexicanus"
+      ],
+      "normalizedAliases": [
+        "housefinch",
+        "haemorhousmexicanus"
+      ]
+    },
+    "atlas02_r01_c05": {
+      "id": "atlas02_r01_c05",
+      "cardNo": "127",
+      "birdName": "Barn Swallow",
+      "aliases": [
+        "Barn Swallow",
+        "Hirundo rustica"
+      ],
+      "normalizedAliases": [
+        "barnswallow",
+        "hirundorustica"
+      ]
+    },
+    "atlas02_r01_c06": {
+      "id": "atlas02_r01_c06",
+      "cardNo": "128",
+      "birdName": "Tree Swallow",
+      "aliases": [
+        "Tree Swallow",
+        "Tachycineta bicolor"
+      ],
+      "normalizedAliases": [
+        "treeswallow",
+        "tachycinetabicolor"
+      ]
+    },
+    "atlas02_r01_c07": {
+      "id": "atlas02_r01_c07",
+      "cardNo": "129",
+      "birdName": "Purple Martin",
+      "aliases": [
+        "Purple Martin",
+        "Progne subis"
+      ],
+      "normalizedAliases": [
+        "purplemartin",
+        "prognesubis"
+      ]
+    },
+    "atlas02_r01_c08": {
+      "id": "atlas02_r01_c08",
+      "cardNo": "130",
+      "birdName": "Violet Green Swallow",
+      "aliases": [
+        "Violet Green Swallow",
+        "Tachycineta thalassina"
+      ],
+      "normalizedAliases": [
+        "violetgreenswallow",
+        "tachycinetathalassina"
+      ]
+    },
+    "atlas02_r01_c09": {
+      "id": "atlas02_r01_c09",
+      "cardNo": "131",
+      "birdName": "Cedar Waxwing",
+      "aliases": [
+        "Cedar Waxwing",
+        "Bombycilla cedrorum"
+      ],
+      "normalizedAliases": [
+        "cedarwaxwing",
+        "bombycillacedrorum"
+      ]
+    },
+    "atlas02_r01_c10": {
+      "id": "atlas02_r01_c10",
+      "cardNo": "132",
+      "birdName": "Pygmy Nuthatch",
+      "aliases": [
+        "Pygmy Nuthatch",
+        "Sitta pygmaea"
+      ],
+      "normalizedAliases": [
+        "pygmynuthatch",
+        "sittapygmaea"
+      ]
+    },
+    "atlas02_r02_c01": {
+      "id": "atlas02_r02_c01",
+      "cardNo": "133",
+      "birdName": "Pine Siskin",
+      "aliases": [
+        "Pine Siskin",
+        "Spinus pinus"
+      ],
+      "normalizedAliases": [
+        "pinesiskin",
+        "spinuspinus"
+      ]
+    },
+    "atlas02_r02_c02": {
+      "id": "atlas02_r02_c02",
+      "cardNo": "134",
+      "birdName": "Dark Eyed Junco",
+      "aliases": [
+        "Dark Eyed Junco",
+        "Junco hyemalis"
+      ],
+      "normalizedAliases": [
+        "darkeyedjunco",
+        "juncohyemalis"
+      ]
+    },
+    "atlas02_r02_c03": {
+      "id": "atlas02_r02_c03",
+      "cardNo": "135",
+      "birdName": "American Oystercatcher",
+      "aliases": [
+        "American Oystercatcher",
+        "Haematopus palliatus"
+      ],
+      "normalizedAliases": [
+        "americanoystercatcher",
+        "haematopuspalliatus"
+      ]
+    },
+    "atlas02_r02_c04": {
+      "id": "atlas02_r02_c04",
+      "cardNo": "136",
+      "birdName": "Carolina Wren",
+      "aliases": [
+        "Carolina Wren",
+        "Thryothorus ludovicianus"
+      ],
+      "normalizedAliases": [
+        "carolinawren",
+        "thryothorusludovicianus"
+      ]
+    },
+    "atlas02_r02_c05": {
+      "id": "atlas02_r02_c05",
+      "cardNo": "137",
+      "birdName": "Black Necked Stilt",
+      "aliases": [
+        "Black Necked Stilt",
+        "Himantopus mexicanus"
+      ],
+      "normalizedAliases": [
+        "blackneckedstilt",
+        "himantopusmexicanus"
+      ]
+    },
+    "atlas02_r02_c06": {
+      "id": "atlas02_r02_c06",
+      "cardNo": "138",
+      "birdName": "Inca Dove",
+      "aliases": [
+        "Inca Dove",
+        "Columbina inca"
+      ],
+      "normalizedAliases": [
+        "incadove",
+        "columbinainca"
+      ]
+    },
+    "atlas02_r02_c07": {
+      "id": "atlas02_r02_c07",
+      "cardNo": "139",
+      "birdName": "Says Phoebe",
+      "aliases": [
+        "Says Phoebe",
+        "Sayornis saya"
+      ],
+      "normalizedAliases": [
+        "saysphoebe",
+        "sayornissaya"
+      ]
+    },
+    "atlas02_r02_c08": {
+      "id": "atlas02_r02_c08",
+      "cardNo": "140",
+      "birdName": "Ash Throated Flycatcher",
+      "aliases": [
+        "Ash Throated Flycatcher",
+        "Myiarchus cinerascens"
+      ],
+      "normalizedAliases": [
+        "ashthroatedflycatcher",
+        "myiarchuscinerascens"
+      ]
+    },
+    "atlas02_r02_c09": {
+      "id": "atlas02_r02_c09",
+      "cardNo": "141",
+      "birdName": "Bobolink",
+      "aliases": [
+        "Bobolink",
+        "Dolichonyx oryzivorus"
+      ],
+      "normalizedAliases": [
+        "bobolink",
+        "dolichonyxoryzivorus"
+      ]
+    },
+    "atlas02_r02_c10": {
+      "id": "atlas02_r02_c10",
+      "cardNo": "142",
+      "birdName": "Brown Pelican",
+      "aliases": [
+        "Brown Pelican",
+        "Pelecanus occidentalis"
+      ],
+      "normalizedAliases": [
+        "brownpelican",
+        "pelecanusoccidentalis"
+      ]
+    },
+    "atlas02_r03_c01": {
+      "id": "atlas02_r03_c01",
+      "cardNo": "143",
+      "birdName": "American Goldfinch",
+      "aliases": [
+        "American Goldfinch",
+        "Spinus tristis"
+      ],
+      "normalizedAliases": [
+        "americangoldfinch",
+        "spinustristis"
+      ]
+    },
+    "atlas02_r03_c02": {
+      "id": "atlas02_r03_c02",
+      "cardNo": "144",
+      "birdName": "Northern Flicker",
+      "aliases": [
+        "Northern Flicker",
+        "Colaptes auratus"
+      ],
+      "normalizedAliases": [
+        "northernflicker",
+        "colaptesauratus"
+      ]
+    },
+    "atlas02_r03_c03": {
+      "id": "atlas02_r03_c03",
+      "cardNo": "145",
+      "birdName": "Bald Eagle",
+      "aliases": [
+        "Bald Eagle",
+        "Haliaeetus leucocephalus"
+      ],
+      "normalizedAliases": [
+        "baldeagle",
+        "haliaeetusleucocephalus"
+      ]
+    },
+    "atlas02_r03_c04": {
+      "id": "atlas02_r03_c04",
+      "cardNo": "146",
+      "birdName": "Wood Stork",
+      "aliases": [
+        "Wood Stork",
+        "Mycteria americana"
+      ],
+      "normalizedAliases": [
+        "woodstork",
+        "mycteriaamericana"
+      ]
+    },
+    "atlas02_r03_c05": {
+      "id": "atlas02_r03_c05",
+      "cardNo": "147",
+      "birdName": "Roseate Spoonbill",
+      "aliases": [
+        "Roseate Spoonbill",
+        "Platalea ajaja"
+      ],
+      "normalizedAliases": [
+        "roseatespoonbill",
+        "plataleaajaja"
+      ]
+    },
+    "atlas02_r03_c06": {
+      "id": "atlas02_r03_c06",
+      "cardNo": "148",
+      "birdName": "Cerulean Warbler",
+      "aliases": [
+        "Cerulean Warbler",
+        "Setophaga cerulea"
+      ],
+      "normalizedAliases": [
+        "ceruleanwarbler",
+        "setophagacerulea"
+      ]
+    },
+    "atlas02_r03_c07": {
+      "id": "atlas02_r03_c07",
+      "cardNo": "149",
+      "birdName": "Chestnut Collared Longspur",
+      "aliases": [
+        "Chestnut Collared Longspur",
+        "Calcarius ornatus"
+      ],
+      "normalizedAliases": [
+        "chestnutcollaredlongspur",
+        "calcariusornatus"
+      ]
+    },
+    "atlas02_r03_c08": {
+      "id": "atlas02_r03_c08",
+      "cardNo": "150",
+      "birdName": "King Rail",
+      "aliases": [
+        "King Rail",
+        "Rallus elegans"
+      ],
+      "normalizedAliases": [
+        "kingrail",
+        "ralluselegans"
+      ]
+    },
+    "atlas02_r03_c09": {
+      "id": "atlas02_r03_c09",
+      "cardNo": "151",
+      "birdName": "Red Cockaded Woodpecker",
+      "aliases": [
+        "Red Cockaded Woodpecker",
+        "Leuconotopicus borealis"
+      ],
+      "normalizedAliases": [
+        "redcockadedwoodpecker",
+        "leuconotopicusborealis"
+      ]
+    },
+    "atlas02_r03_c10": {
+      "id": "atlas02_r03_c10",
+      "cardNo": "152",
+      "birdName": "Whooping Crane",
+      "aliases": [
+        "Whooping Crane",
+        "Grus americana"
+      ],
+      "normalizedAliases": [
+        "whoopingcrane",
+        "grusamericana"
+      ]
+    },
+    "atlas02_r04_c01": {
+      "id": "atlas02_r04_c01",
+      "cardNo": "153",
+      "birdName": "Spotted Owl",
+      "aliases": [
+        "Spotted Owl",
+        "Strix occidentalis"
+      ],
+      "normalizedAliases": [
+        "spottedowl",
+        "strixoccidentalis"
+      ]
+    },
+    "atlas02_r04_c02": {
+      "id": "atlas02_r04_c02",
+      "cardNo": "154",
+      "birdName": "Cassins Finch",
+      "aliases": [
+        "Cassins Finch",
+        "Haemorhous cassinii"
+      ],
+      "normalizedAliases": [
+        "cassinsfinch",
+        "haemorhouscassinii"
+      ]
+    },
+    "atlas02_r04_c03": {
+      "id": "atlas02_r04_c03",
+      "cardNo": "155",
+      "birdName": "Bells Vireo",
+      "aliases": [
+        "Bells Vireo",
+        "Vireo bellii"
+      ],
+      "normalizedAliases": [
+        "bellsvireo",
+        "vireobellii"
+      ]
+    },
+    "atlas02_r04_c04": {
+      "id": "atlas02_r04_c04",
+      "cardNo": "156",
+      "birdName": "Painted Bunting",
+      "aliases": [
+        "Painted Bunting",
+        "Passerina ciris"
+      ],
+      "normalizedAliases": [
+        "paintedbunting",
+        "passerinaciris"
+      ]
+    },
+    "atlas02_r04_c05": {
+      "id": "atlas02_r04_c05",
+      "cardNo": "157",
+      "birdName": "Greater Prairie Chicken",
+      "aliases": [
+        "Greater Prairie Chicken",
+        "Tympanuchus cupido"
+      ],
+      "normalizedAliases": [
+        "greaterprairiechicken",
+        "tympanuchuscupido"
+      ]
+    },
+    "atlas02_r04_c06": {
+      "id": "atlas02_r04_c06",
+      "cardNo": "158",
+      "birdName": "Atlantic Puffin",
+      "aliases": [
+        "Atlantic Puffin",
+        "Fratercula arctica"
+      ],
+      "normalizedAliases": [
+        "atlanticpuffin",
+        "fraterculaarctica"
+      ]
+    },
+    "atlas02_r04_c07": {
+      "id": "atlas02_r04_c07",
+      "cardNo": "159",
+      "birdName": "Spragues Pipit",
+      "aliases": [
+        "Spragues Pipit",
+        "Anthus spragueii"
+      ],
+      "normalizedAliases": [
+        "spraguespipit",
+        "anthusspragueii"
+      ]
+    },
+    "atlas02_r04_c08": {
+      "id": "atlas02_r04_c08",
+      "cardNo": "160",
+      "birdName": "California Condor",
+      "aliases": [
+        "California Condor",
+        "Gymnogyps californianus"
+      ],
+      "normalizedAliases": [
+        "californiacondor",
+        "gymnogypscalifornianus"
+      ]
+    },
+    "atlas02_r04_c09": {
+      "id": "atlas02_r04_c09",
+      "cardNo": "161",
+      "birdName": "Downy Woodpecker",
+      "aliases": [
+        "Downy Woodpecker",
+        "Dryobates pubescens"
+      ],
+      "normalizedAliases": [
+        "downywoodpecker",
+        "dryobatespubescens"
+      ]
+    },
+    "atlas02_r04_c10": {
+      "id": "atlas02_r04_c10",
+      "cardNo": "162",
+      "birdName": "Tufted Titmouse",
+      "aliases": [
+        "Tufted Titmouse",
+        "Baeolophus bicolor"
+      ],
+      "normalizedAliases": [
+        "tuftedtitmouse",
+        "baeolophusbicolor"
+      ]
+    },
+    "atlas02_r05_c01": {
+      "id": "atlas02_r05_c01",
+      "cardNo": "163",
+      "birdName": "Ruby Crowned Kinglet",
+      "aliases": [
+        "Ruby Crowned Kinglet",
+        "Corthylio calendula"
+      ],
+      "normalizedAliases": [
+        "rubycrownedkinglet",
+        "corthyliocalendula"
+      ]
+    },
+    "atlas02_r05_c02": {
+      "id": "atlas02_r05_c02",
+      "cardNo": "164",
+      "birdName": "Red Eyed Vireo",
+      "aliases": [
+        "Red Eyed Vireo",
+        "Vireo olivaceus"
+      ],
+      "normalizedAliases": [
+        "redeyedvireo",
+        "vireoolivaceus"
+      ]
+    },
+    "atlas02_r05_c03": {
+      "id": "atlas02_r05_c03",
+      "cardNo": "165",
+      "birdName": "House Wren",
+      "aliases": [
+        "House Wren",
+        "Northern House Wren",
+        "Troglodytes aedon"
+      ],
+      "normalizedAliases": [
+        "housewren",
+        "northernhousewren",
+        "troglodytesaedon"
+      ]
+    },
+    "atlas02_r05_c04": {
+      "id": "atlas02_r05_c04",
+      "cardNo": "166",
+      "birdName": "Savannah Sparrow",
+      "aliases": [
+        "Savannah Sparrow",
+        "Passerculus sandwichensis"
+      ],
+      "normalizedAliases": [
+        "savannahsparrow",
+        "passerculussandwichensis"
+      ]
+    },
+    "atlas02_r05_c05": {
+      "id": "atlas02_r05_c05",
+      "cardNo": "167",
+      "birdName": "Eastern Bluebird",
+      "aliases": [
+        "Eastern Bluebird",
+        "Sialia sialis"
+      ],
+      "normalizedAliases": [
+        "easternbluebird",
+        "sialiasialis"
+      ]
+    },
+    "atlas02_r05_c06": {
+      "id": "atlas02_r05_c06",
+      "cardNo": "168",
+      "birdName": "Mountain Bluebird",
+      "aliases": [
+        "Mountain Bluebird",
+        "Sialia currucoides"
+      ],
+      "normalizedAliases": [
+        "mountainbluebird",
+        "sialiacurrucoides"
+      ]
+    },
+    "atlas02_r05_c07": {
+      "id": "atlas02_r05_c07",
+      "cardNo": "169",
+      "birdName": "Great Blue Heron",
+      "aliases": [
+        "Great Blue Heron",
+        "Ardea herodias"
+      ],
+      "normalizedAliases": [
+        "greatblueheron",
+        "ardeaherodias"
+      ]
+    },
+    "atlas02_r05_c08": {
+      "id": "atlas02_r05_c08",
+      "cardNo": "170",
+      "birdName": "Great Egret",
+      "aliases": [
+        "Great Egret",
+        "Ardea alba"
+      ],
+      "normalizedAliases": [
+        "greategret",
+        "ardeaalba"
+      ]
+    },
+    "atlas02_r05_c09": {
+      "id": "atlas02_r05_c09",
+      "cardNo": "171",
+      "birdName": "Broad Winged Hawk",
+      "aliases": [
+        "Broad Winged Hawk",
+        "Buteo platypterus"
+      ],
+      "normalizedAliases": [
+        "broadwingedhawk",
+        "buteoplatypterus"
+      ]
+    },
+    "atlas02_r05_c10": {
+      "id": "atlas02_r05_c10",
+      "cardNo": "172",
+      "birdName": "American Redstart",
+      "aliases": [
+        "American Redstart",
+        "Setophaga ruticilla"
+      ],
+      "normalizedAliases": [
+        "americanredstart",
+        "setophagaruticilla"
+      ]
+    },
+    "atlas02_r06_c01": {
+      "id": "atlas02_r06_c01",
+      "cardNo": "173",
+      "birdName": "Canvasback",
+      "aliases": [
+        "Canvasback",
+        "Aythya valisineria"
+      ],
+      "normalizedAliases": [
+        "canvasback",
+        "aythyavalisineria"
+      ]
+    },
+    "atlas02_r06_c02": {
+      "id": "atlas02_r06_c02",
+      "cardNo": "174",
+      "birdName": "Vauxs Swift",
+      "aliases": [
+        "Vauxs Swift",
+        "Chaetura vauxi"
+      ],
+      "normalizedAliases": [
+        "vauxsswift",
+        "chaeturavauxi"
+      ]
+    },
+    "atlas02_r06_c03": {
+      "id": "atlas02_r06_c03",
+      "cardNo": "175",
+      "birdName": "Brant",
+      "aliases": [
+        "Brant",
+        "Branta bernicla"
+      ],
+      "normalizedAliases": [
+        "brant",
+        "brantabernicla"
+      ]
+    },
+    "atlas02_r06_c04": {
+      "id": "atlas02_r06_c04",
+      "cardNo": "176",
+      "birdName": "White Throated Swift",
+      "aliases": [
+        "White Throated Swift",
+        "Aeronautes saxatalis"
+      ],
+      "normalizedAliases": [
+        "whitethroatedswift",
+        "aeronautessaxatalis"
+      ]
+    },
+    "atlas02_r06_c05": {
+      "id": "atlas02_r06_c05",
+      "cardNo": "177",
+      "birdName": "Scaled Quail",
+      "aliases": [
+        "Scaled Quail",
+        "Callipepla squamata"
+      ],
+      "normalizedAliases": [
+        "scaledquail",
+        "callipeplasquamata"
+      ]
+    },
+    "atlas02_r06_c06": {
+      "id": "atlas02_r06_c06",
+      "cardNo": "178",
+      "birdName": "Black Chinned Hummingbird",
+      "aliases": [
+        "Black Chinned Hummingbird",
+        "Archilochus alexandri"
+      ],
+      "normalizedAliases": [
+        "blackchinnedhummingbird",
+        "archilochusalexandri"
+      ]
+    },
+    "atlas02_r06_c07": {
+      "id": "atlas02_r06_c07",
+      "cardNo": "179",
+      "birdName": "Red Breasted Merganser",
+      "aliases": [
+        "Red Breasted Merganser",
+        "Mergus serrator"
+      ],
+      "normalizedAliases": [
+        "redbreastedmerganser",
+        "mergusserrator"
+      ]
+    },
+    "atlas02_r06_c08": {
+      "id": "atlas02_r06_c08",
+      "cardNo": "180",
+      "birdName": "Painted Whitestart",
+      "aliases": [
+        "Painted Whitestart",
+        "Painted Redstart",
+        "Myioborus pictus"
+      ],
+      "normalizedAliases": [
+        "paintedwhitestart",
+        "paintedredstart",
+        "myioboruspictus"
+      ]
+    },
+    "atlas02_r06_c09": {
+      "id": "atlas02_r06_c09",
+      "cardNo": "181",
+      "birdName": "Eurasian Magpie",
+      "aliases": [
+        "Eurasian Magpie",
+        "Pica pica"
+      ],
+      "normalizedAliases": [
+        "eurasianmagpie",
+        "picapica"
+      ]
+    },
+    "atlas02_r06_c10": {
+      "id": "atlas02_r06_c10",
+      "cardNo": "182",
+      "birdName": "Carrion Crow",
+      "aliases": [
+        "Carrion Crow",
+        "Corvus corone"
+      ],
+      "normalizedAliases": [
+        "carrioncrow",
+        "corvuscorone"
+      ]
+    },
+    "atlas02_r07_c01": {
+      "id": "atlas02_r07_c01",
+      "cardNo": "183",
+      "birdName": "Griffon Vulture",
+      "aliases": [
+        "Griffon Vulture",
+        "Eurasian Griffon",
+        "Gyps fulvus"
+      ],
+      "normalizedAliases": [
+        "griffonvulture",
+        "eurasiangriffon",
+        "gypsfulvus"
+      ]
+    },
+    "atlas02_r07_c02": {
+      "id": "atlas02_r07_c02",
+      "cardNo": "184",
+      "birdName": "Coal Tit",
+      "aliases": [
+        "Coal Tit",
+        "Periparus ater"
+      ],
+      "normalizedAliases": [
+        "coaltit",
+        "periparusater"
+      ]
+    },
+    "atlas02_r07_c03": {
+      "id": "atlas02_r07_c03",
+      "cardNo": "185",
+      "birdName": "Eurasian Nuthatch",
+      "aliases": [
+        "Eurasian Nuthatch",
+        "Sitta europaea"
+      ],
+      "normalizedAliases": [
+        "eurasiannuthatch",
+        "sittaeuropaea"
+      ]
+    },
+    "atlas02_r07_c04": {
+      "id": "atlas02_r07_c04",
+      "cardNo": "186",
+      "birdName": "Eurasian Nutcracker",
+      "aliases": [
+        "Eurasian Nutcracker",
+        "Northern Nutcracker",
+        "Nucifraga caryocatactes"
+      ],
+      "normalizedAliases": [
+        "eurasiannutcracker",
+        "northernnutcracker",
+        "nucifragacaryocatactes"
+      ]
+    },
+    "atlas02_r07_c05": {
+      "id": "atlas02_r07_c05",
+      "cardNo": "187",
+      "birdName": "Red Backed Shrike",
+      "aliases": [
+        "Red Backed Shrike",
+        "Lanius collurio"
+      ],
+      "normalizedAliases": [
+        "redbackedshrike",
+        "laniuscollurio"
+      ]
+    },
+    "atlas02_r07_c06": {
+      "id": "atlas02_r07_c06",
+      "cardNo": "188",
+      "birdName": "Common Kingfisher",
+      "aliases": [
+        "Common Kingfisher",
+        "Alcedo atthis"
+      ],
+      "normalizedAliases": [
+        "commonkingfisher",
+        "alcedoatthis"
+      ]
+    },
+    "atlas02_r07_c07": {
+      "id": "atlas02_r07_c07",
+      "cardNo": "189",
+      "birdName": "Little Owl",
+      "aliases": [
+        "Little Owl",
+        "Athene noctua"
+      ],
+      "normalizedAliases": [
+        "littleowl",
+        "athenenoctua"
+      ]
+    },
+    "atlas02_r07_c08": {
+      "id": "atlas02_r07_c08",
+      "cardNo": "190",
+      "birdName": "Eurasian Jay",
+      "aliases": [
+        "Eurasian Jay",
+        "Garrulus glandarius"
+      ],
+      "normalizedAliases": [
+        "eurasianjay",
+        "garrulusglandarius"
+      ]
+    },
+    "atlas02_r07_c09": {
+      "id": "atlas02_r07_c09",
+      "cardNo": "191",
+      "birdName": "White Stork",
+      "aliases": [
+        "White Stork",
+        "Ciconia ciconia"
+      ],
+      "normalizedAliases": [
+        "whitestork",
+        "ciconiaciconia"
+      ]
+    },
+    "atlas02_r07_c10": {
+      "id": "atlas02_r07_c10",
+      "cardNo": "192",
+      "birdName": "White Throated Dipper",
+      "aliases": [
+        "White Throated Dipper",
+        "Cinclus cinclus"
+      ],
+      "normalizedAliases": [
+        "whitethroateddipper",
+        "cincluscinclus"
+      ]
+    },
+    "atlas03_r01_c01": {
+      "id": "atlas03_r01_c01",
+      "cardNo": "193",
+      "birdName": "Black Throated Diver",
+      "aliases": [
+        "Black Throated Diver",
+        "Arctic Loon",
+        "Gavia arctica"
+      ],
+      "normalizedAliases": [
+        "blackthroateddiver",
+        "arcticloon",
+        "gaviaarctica"
+      ]
+    },
+    "atlas03_r01_c02": {
+      "id": "atlas03_r01_c02",
+      "cardNo": "194",
+      "birdName": "Wilsons Storm Petrel",
+      "aliases": [
+        "Wilsons Storm Petrel",
+        "Oceanites oceanicus"
+      ],
+      "normalizedAliases": [
+        "wilsonsstormpetrel",
+        "oceanitesoceanicus"
+      ]
+    },
+    "atlas03_r01_c03": {
+      "id": "atlas03_r01_c03",
+      "cardNo": "195",
+      "birdName": "Great Crested Grebe",
+      "aliases": [
+        "Great Crested Grebe",
+        "Podiceps cristatus"
+      ],
+      "normalizedAliases": [
+        "greatcrestedgrebe",
+        "podicepscristatus"
+      ]
+    },
+    "atlas03_r01_c04": {
+      "id": "atlas03_r01_c04",
+      "cardNo": "196",
+      "birdName": "Common Little Bittern",
+      "aliases": [
+        "Common Little Bittern",
+        "Little Bittern",
+        "Ixobrychus minutus",
+        "Botaurus minutus"
+      ],
+      "normalizedAliases": [
+        "commonlittlebittern",
+        "littlebittern",
+        "ixobrychusminutus",
+        "botaurusminutus"
+      ]
+    },
+    "atlas03_r01_c05": {
+      "id": "atlas03_r01_c05",
+      "cardNo": "197",
+      "birdName": "Squacco Heron",
+      "aliases": [
+        "Squacco Heron",
+        "Ardeola ralloides"
+      ],
+      "normalizedAliases": [
+        "squaccoheron",
+        "ardeolaralloides"
+      ]
+    },
+    "atlas03_r01_c06": {
+      "id": "atlas03_r01_c06",
+      "cardNo": "198",
+      "birdName": "Savis Warbler",
+      "aliases": [
+        "Savis Warbler",
+        "Locustella luscinioides"
+      ],
+      "normalizedAliases": [
+        "saviswarbler",
+        "locustellaluscinioides"
+      ]
+    },
+    "atlas03_r01_c07": {
+      "id": "atlas03_r01_c07",
+      "cardNo": "199",
+      "birdName": "Mute Swan",
+      "aliases": [
+        "Mute Swan",
+        "Cygnus olor"
+      ],
+      "normalizedAliases": [
+        "muteswan",
+        "cygnusolor"
+      ]
+    },
+    "atlas03_r01_c08": {
+      "id": "atlas03_r01_c08",
+      "cardNo": "200",
+      "birdName": "Grey Heron",
+      "aliases": [
+        "Grey Heron",
+        "Gray Heron",
+        "Ardea cinerea"
+      ],
+      "normalizedAliases": [
+        "greyheron",
+        "grayheron",
+        "ardeacinerea"
+      ]
+    },
+    "atlas03_r01_c09": {
+      "id": "atlas03_r01_c09",
+      "cardNo": "201",
+      "birdName": "Common Cuckoo",
+      "aliases": [
+        "Common Cuckoo 281235Xc",
+        "Common Cuckoo",
+        "Cuculus canorus"
+      ],
+      "normalizedAliases": [
+        "commoncuckoo281235xc",
+        "commoncuckoo",
+        "cuculuscanorus"
+      ]
+    },
+    "atlas03_r01_c10": {
+      "id": "atlas03_r01_c10",
+      "cardNo": "202",
+      "birdName": "Dunnock",
+      "aliases": [
+        "Dunnock",
+        "Prunella modularis"
+      ],
+      "normalizedAliases": [
+        "dunnock",
+        "prunellamodularis"
+      ]
+    },
+    "atlas03_r02_c01": {
+      "id": "atlas03_r02_c01",
+      "cardNo": "203",
+      "birdName": "Black Redstart",
+      "aliases": [
+        "Black Redstart",
+        "Phoenicurus ochruros"
+      ],
+      "normalizedAliases": [
+        "blackredstart",
+        "phoenicurusochruros"
+      ]
+    },
+    "atlas03_r02_c02": {
+      "id": "atlas03_r02_c02",
+      "cardNo": "204",
+      "birdName": "Lesser Whitethroat",
+      "aliases": [
+        "Lesser Whitethroat",
+        "Curruca curruca"
+      ],
+      "normalizedAliases": [
+        "lesserwhitethroat",
+        "currucacurruca"
+      ]
+    },
+    "atlas03_r02_c03": {
+      "id": "atlas03_r02_c03",
+      "cardNo": "205",
+      "birdName": "Common Goldeneye",
+      "aliases": [
+        "Common Goldeneye",
+        "Bucephala clangula"
+      ],
+      "normalizedAliases": [
+        "commongoldeneye",
+        "bucephalaclangula"
+      ]
+    },
+    "atlas03_r02_c04": {
+      "id": "atlas03_r02_c04",
+      "cardNo": "206",
+      "birdName": "Red Legged Partridge",
+      "aliases": [
+        "Red Legged Partridge",
+        "Alectoris rufa"
+      ],
+      "normalizedAliases": [
+        "redleggedpartridge",
+        "alectorisrufa"
+      ]
+    },
+    "atlas03_r02_c05": {
+      "id": "atlas03_r02_c05",
+      "cardNo": "207",
+      "birdName": "Theklas Lark",
+      "aliases": [
+        "Theklas Lark",
+        "Galerida theklae"
+      ],
+      "normalizedAliases": [
+        "theklaslark",
+        "galeridatheklae"
+      ]
+    },
+    "atlas03_r02_c06": {
+      "id": "atlas03_r02_c06",
+      "cardNo": "208",
+      "birdName": "European Roller",
+      "aliases": [
+        "European Roller",
+        "Coracias garrulus"
+      ],
+      "normalizedAliases": [
+        "europeanroller",
+        "coraciasgarrulus"
+      ]
+    },
+    "atlas03_r02_c07": {
+      "id": "atlas03_r02_c07",
+      "cardNo": "209",
+      "birdName": "Eurasian Golden Oriole",
+      "aliases": [
+        "Eurasian Golden Oriole",
+        "Oriolus oriolus"
+      ],
+      "normalizedAliases": [
+        "eurasiangoldenoriole",
+        "oriolusoriolus"
+      ]
+    },
+    "atlas03_r02_c08": {
+      "id": "atlas03_r02_c08",
+      "cardNo": "210",
+      "birdName": "Eurasian Tree Sparrow",
+      "aliases": [
+        "Eurasian Tree Sparrow",
+        "Passer montanus"
+      ],
+      "normalizedAliases": [
+        "eurasiantreesparrow",
+        "passermontanus"
+      ]
+    },
+    "atlas03_r02_c09": {
+      "id": "atlas03_r02_c09",
+      "cardNo": "211",
+      "birdName": "European Honey Buzzard",
+      "aliases": [
+        "European Honey Buzzard",
+        "Pernis apivorus"
+      ],
+      "normalizedAliases": [
+        "europeanhoneybuzzard",
+        "pernisapivorus"
+      ]
+    },
+    "atlas03_r02_c10": {
+      "id": "atlas03_r02_c10",
+      "cardNo": "212",
+      "birdName": "Great Tit",
+      "aliases": [
+        "Great Tit",
+        "Parus major"
+      ],
+      "normalizedAliases": [
+        "greattit",
+        "parusmajor"
+      ]
+    },
+    "atlas03_r03_c01": {
+      "id": "atlas03_r03_c01",
+      "cardNo": "213",
+      "birdName": "Hawfinch",
+      "aliases": [
+        "Hawfinch",
+        "Coccothraustes coccothraustes"
+      ],
+      "normalizedAliases": [
+        "hawfinch",
+        "coccothraustescoccothraustes"
+      ]
+    },
+    "atlas03_r03_c02": {
+      "id": "atlas03_r03_c02",
+      "cardNo": "214",
+      "birdName": "Bullfinch",
+      "aliases": [
+        "Bullfinch",
+        "Eurasian Bullfinch",
+        "Pyrrhula pyrrhula"
+      ],
+      "normalizedAliases": [
+        "bullfinch",
+        "eurasianbullfinch",
+        "pyrrhulapyrrhula"
+      ]
+    },
+    "atlas03_r03_c03": {
+      "id": "atlas03_r03_c03",
+      "cardNo": "215",
+      "birdName": "Bluethroat",
+      "aliases": [
+        "Bluethroat",
+        "Luscinia svecica"
+      ],
+      "normalizedAliases": [
+        "bluethroat",
+        "lusciniasvecica"
+      ]
+    },
+    "atlas03_r03_c04": {
+      "id": "atlas03_r03_c04",
+      "cardNo": "216",
+      "birdName": "Common Nightingale",
+      "aliases": [
+        "Common Nightingale",
+        "Luscinia megarhynchos"
+      ],
+      "normalizedAliases": [
+        "commonnightingale",
+        "lusciniamegarhynchos"
+      ]
+    },
+    "atlas03_r03_c05": {
+      "id": "atlas03_r03_c05",
+      "cardNo": "217",
+      "birdName": "European Robin",
+      "aliases": [
+        "European Robin",
+        "Erithacus rubecula"
+      ],
+      "normalizedAliases": [
+        "europeanrobin",
+        "erithacusrubecula"
+      ]
+    },
+    "atlas03_r03_c06": {
+      "id": "atlas03_r03_c06",
+      "cardNo": "218",
+      "birdName": "White Backed Woodpecker",
+      "aliases": [
+        "White Backed Woodpecker",
+        "Dendrocopos leucotos"
+      ],
+      "normalizedAliases": [
+        "whitebackedwoodpecker",
+        "dendrocoposleucotos"
+      ]
+    },
+    "atlas03_r03_c07": {
+      "id": "atlas03_r03_c07",
+      "cardNo": "219",
+      "birdName": "Black Woodpecker",
+      "aliases": [
+        "Black Woodpecker 286205Xc",
+        "Black Woodpecker",
+        "Dryocopus martius"
+      ],
+      "normalizedAliases": [
+        "blackwoodpecker286205xc",
+        "blackwoodpecker",
+        "dryocopusmartius"
+      ]
+    },
+    "atlas03_r03_c08": {
+      "id": "atlas03_r03_c08",
+      "cardNo": "220",
+      "birdName": "Parrot Crossbill",
+      "aliases": [
+        "Parrot Crossbill",
+        "Loxia pytyopsittacus"
+      ],
+      "normalizedAliases": [
+        "parrotcrossbill",
+        "loxiapytyopsittacus"
+      ]
+    },
+    "atlas03_r03_c09": {
+      "id": "atlas03_r03_c09",
+      "cardNo": "221",
+      "birdName": "European Bee Eater",
+      "aliases": [
+        "European Bee Eater",
+        "Merops apiaster"
+      ],
+      "normalizedAliases": [
+        "europeanbeeeater",
+        "meropsapiaster"
+      ]
+    },
+    "atlas03_r03_c10": {
+      "id": "atlas03_r03_c10",
+      "cardNo": "222",
+      "birdName": "Black Headed Gull",
+      "aliases": [
+        "Black Headed Gull",
+        "Chroicocephalus ridibundus"
+      ],
+      "normalizedAliases": [
+        "blackheadedgull",
+        "chroicocephalusridibundus"
+      ]
+    },
+    "atlas03_r04_c01": {
+      "id": "atlas03_r04_c01",
+      "cardNo": "223",
+      "birdName": "Long Tailed Tit",
+      "aliases": [
+        "Long Tailed Tit",
+        "Aegithalos caudatus"
+      ],
+      "normalizedAliases": [
+        "longtailedtit",
+        "aegithaloscaudatus"
+      ]
+    },
+    "atlas03_r04_c02": {
+      "id": "atlas03_r04_c02",
+      "cardNo": "224",
+      "birdName": "Common Blackbird",
+      "aliases": [
+        "Common Blackbird",
+        "Eurasian Blackbird",
+        "Turdus merula"
+      ],
+      "normalizedAliases": [
+        "commonblackbird",
+        "eurasianblackbird",
+        "turdusmerula"
+      ]
+    },
+    "atlas03_r04_c03": {
+      "id": "atlas03_r04_c03",
+      "cardNo": "225",
+      "birdName": "Snowy Owl",
+      "aliases": [
+        "Snowy Owl",
+        "Bubo scandiacus"
+      ],
+      "normalizedAliases": [
+        "snowyowl",
+        "buboscandiacus"
+      ]
+    },
+    "atlas03_r04_c04": {
+      "id": "atlas03_r04_c04",
+      "cardNo": "226",
+      "birdName": "Red Knot",
+      "aliases": [
+        "Red Knot",
+        "Calidris canutus"
+      ],
+      "normalizedAliases": [
+        "redknot",
+        "calidriscanutus"
+      ]
+    },
+    "atlas03_r04_c05": {
+      "id": "atlas03_r04_c05",
+      "cardNo": "227",
+      "birdName": "Black Tailed Godwit",
+      "aliases": [
+        "Black Tailed Godwit",
+        "Limosa limosa"
+      ],
+      "normalizedAliases": [
+        "blacktailedgodwit",
+        "limosalimosa"
+      ]
+    },
+    "atlas03_r04_c06": {
+      "id": "atlas03_r04_c06",
+      "cardNo": "228",
+      "birdName": "Corsican Nuthatch",
+      "aliases": [
+        "Corsican Nuthatch Xv",
+        "Corsican Nuthatch",
+        "Sitta whiteheadi"
+      ],
+      "normalizedAliases": [
+        "corsicannuthatchxv",
+        "corsicannuthatch",
+        "sittawhiteheadi"
+      ]
+    },
+    "atlas03_r04_c07": {
+      "id": "atlas03_r04_c07",
+      "cardNo": "229",
+      "birdName": "European Turtle Dove",
+      "aliases": [
+        "European Turtle Dove",
+        "Streptopelia turtur"
+      ],
+      "normalizedAliases": [
+        "europeanturtledove",
+        "streptopeliaturtur"
+      ]
+    },
+    "atlas03_r04_c08": {
+      "id": "atlas03_r04_c08",
+      "cardNo": "230",
+      "birdName": "Little Bustard",
+      "aliases": [
+        "Little Bustard",
+        "Tetrax tetrax"
+      ],
+      "normalizedAliases": [
+        "littlebustard",
+        "tetraxtetrax"
+      ]
+    },
+    "atlas03_r04_c09": {
+      "id": "atlas03_r04_c09",
+      "cardNo": "231",
+      "birdName": "Yellowhammer",
+      "aliases": [
+        "Yellowhammer",
+        "Emberiza citrinella"
+      ],
+      "normalizedAliases": [
+        "yellowhammer",
+        "emberizacitrinella"
+      ]
+    },
+    "atlas03_r04_c10": {
+      "id": "atlas03_r04_c10",
+      "cardNo": "232",
+      "birdName": "White Wagtail",
+      "aliases": [
+        "White Wagtail",
+        "Motacilla alba"
+      ],
+      "normalizedAliases": [
+        "whitewagtail",
+        "motacillaalba"
+      ]
+    },
+    "atlas03_r05_c01": {
+      "id": "atlas03_r05_c01",
+      "cardNo": "233",
+      "birdName": "Moltonis Warbler",
+      "aliases": [
+        "Moltonis Warbler",
+        "Curruca subalpina"
+      ],
+      "normalizedAliases": [
+        "moltoniswarbler",
+        "currucasubalpina"
+      ]
+    },
+    "atlas03_r05_c02": {
+      "id": "atlas03_r05_c02",
+      "cardNo": "234",
+      "birdName": "Goldcrest",
+      "aliases": [
+        "Goldcrest",
+        "Regulus regulus"
+      ],
+      "normalizedAliases": [
+        "goldcrest",
+        "regulusregulus"
+      ]
+    },
+    "atlas03_r05_c03": {
+      "id": "atlas03_r05_c03",
+      "cardNo": "235",
+      "birdName": "Common Moorhen",
+      "aliases": [
+        "Common Moorhen 281025Xc",
+        "Common Moorhen",
+        "Eurasian Moorhen",
+        "Gallinula chloropus"
+      ],
+      "normalizedAliases": [
+        "commonmoorhen281025xc",
+        "commonmoorhen",
+        "eurasianmoorhen",
+        "gallinulachloropus"
+      ]
+    },
+    "atlas03_r05_c04": {
+      "id": "atlas03_r05_c04",
+      "cardNo": "236",
+      "birdName": "Short Toed Treecreeper",
+      "aliases": [
+        "Short Toed Treecreeper",
+        "Certhia brachydactyla"
+      ],
+      "normalizedAliases": [
+        "shorttoedtreecreeper",
+        "certhiabrachydactyla"
+      ]
+    },
+    "atlas03_r05_c05": {
+      "id": "atlas03_r05_c05",
+      "cardNo": "237",
+      "birdName": "Eleonoras Falcon",
+      "aliases": [
+        "Eleonoras Falcon",
+        "Falco eleonorae"
+      ],
+      "normalizedAliases": [
+        "eleonorasfalcon",
+        "falcoeleonorae"
+      ]
+    },
+    "atlas03_r05_c06": {
+      "id": "atlas03_r05_c06",
+      "cardNo": "238",
+      "birdName": "Northern Gannet",
+      "aliases": [
+        "Northern Gannet",
+        "Morus bassanus"
+      ],
+      "normalizedAliases": [
+        "northerngannet",
+        "morusbassanus"
+      ]
+    },
+    "atlas03_r05_c07": {
+      "id": "atlas03_r05_c07",
+      "cardNo": "239",
+      "birdName": "Eurasian Sparrowhawk",
+      "aliases": [
+        "Eurasian Sparrowhawk",
+        "Accipiter nisus"
+      ],
+      "normalizedAliases": [
+        "eurasiansparrowhawk",
+        "accipiternisus"
+      ]
+    },
+    "atlas03_r05_c08": {
+      "id": "atlas03_r05_c08",
+      "cardNo": "240",
+      "birdName": "Northern Goshawk",
+      "aliases": [
+        "Northern Goshawk",
+        "Eurasian Goshawk",
+        "Accipiter gentilis",
+        "Astur gentilis"
+      ],
+      "normalizedAliases": [
+        "northerngoshawk",
+        "eurasiangoshawk",
+        "accipitergentilis",
+        "asturgentilis"
+      ]
+    },
+    "atlas03_r05_c09": {
+      "id": "atlas03_r05_c09",
+      "cardNo": "241",
+      "birdName": "Eastern Imperial Eagle",
+      "aliases": [
+        "Eastern Imperial Eagle",
+        "Imperial Eagle",
+        "Aquila heliaca"
+      ],
+      "normalizedAliases": [
+        "easternimperialeagle",
+        "imperialeagle",
+        "aquilaheliaca"
+      ]
+    },
+    "atlas03_r05_c10": {
+      "id": "atlas03_r05_c10",
+      "cardNo": "242",
+      "birdName": "Bonellis Eagle",
+      "aliases": [
+        "Bonellis Eagle",
+        "Aquila fasciata"
+      ],
+      "normalizedAliases": [
+        "bonelliseagle",
+        "aquilafasciata"
+      ]
+    },
+    "atlas03_r06_c01": {
+      "id": "atlas03_r06_c01",
+      "cardNo": "243",
+      "birdName": "Montagus Harrier",
+      "aliases": [
+        "Montagus Harrier",
+        "Circus pygargus"
+      ],
+      "normalizedAliases": [
+        "montagusharrier",
+        "circuspygargus"
+      ]
+    },
+    "atlas03_r06_c02": {
+      "id": "atlas03_r06_c02",
+      "cardNo": "244",
+      "birdName": "Common Buzzard",
+      "aliases": [
+        "Common Buzzard 619710Xc",
+        "Common Buzzard",
+        "Buteo buteo"
+      ],
+      "normalizedAliases": [
+        "commonbuzzard619710xc",
+        "commonbuzzard",
+        "buteobuteo"
+      ]
+    },
+    "atlas03_r06_c03": {
+      "id": "atlas03_r06_c03",
+      "cardNo": "245",
+      "birdName": "Red Kite",
+      "aliases": [
+        "Red Kite",
+        "Milvus milvus"
+      ],
+      "normalizedAliases": [
+        "redkite",
+        "milvusmilvus"
+      ]
+    },
+    "atlas03_r06_c04": {
+      "id": "atlas03_r06_c04",
+      "cardNo": "246",
+      "birdName": "Eurasian Hobby",
+      "aliases": [
+        "Eurasian Hobby",
+        "Falco subbuteo"
+      ],
+      "normalizedAliases": [
+        "eurasianhobby",
+        "falcosubbuteo"
+      ]
+    },
+    "atlas03_r06_c05": {
+      "id": "atlas03_r06_c05",
+      "cardNo": "247",
+      "birdName": "European Goldfinch",
+      "aliases": [
+        "European Goldfinch",
+        "Carduelis carduelis"
+      ],
+      "normalizedAliases": [
+        "europeangoldfinch",
+        "cardueliscarduelis"
+      ]
+    },
+    "atlas03_r06_c06": {
+      "id": "atlas03_r06_c06",
+      "cardNo": "248",
+      "birdName": "Snow Bunting",
+      "aliases": [
+        "Snow Bunting",
+        "Plectrophenax nivalis"
+      ],
+      "normalizedAliases": [
+        "snowbunting",
+        "plectrophenaxnivalis"
+      ]
+    },
+    "atlas03_r06_c07": {
+      "id": "atlas03_r06_c07",
+      "cardNo": "249",
+      "birdName": "Hooded Crow",
+      "aliases": [
+        "Hooded Crow",
+        "Corvus cornix"
+      ],
+      "normalizedAliases": [
+        "hoodedcrow",
+        "corvuscornix"
+      ]
+    },
+    "atlas03_r06_c08": {
+      "id": "atlas03_r06_c08",
+      "cardNo": "250",
+      "birdName": "Eurasian Collared Dove",
+      "aliases": [
+        "Eurasian Collared Dove",
+        "Streptopelia decaocto"
+      ],
+      "normalizedAliases": [
+        "eurasiancollareddove",
+        "streptopeliadecaocto"
+      ]
+    },
+    "atlas03_r06_c09": {
+      "id": "atlas03_r06_c09",
+      "cardNo": "251",
+      "birdName": "Common Starling",
+      "aliases": [
+        "Common Starling",
+        "European Starling",
+        "Sturnus vulgaris"
+      ],
+      "normalizedAliases": [
+        "commonstarling",
+        "europeanstarling",
+        "sturnusvulgaris"
+      ]
+    },
+    "atlas03_r06_c10": {
+      "id": "atlas03_r06_c10",
+      "cardNo": "252",
+      "birdName": "Common Swift",
+      "aliases": [
+        "Common Swift 491117Xc",
+        "Common Swift",
+        "Apus apus"
+      ],
+      "normalizedAliases": [
+        "commonswift491117xc",
+        "commonswift",
+        "apusapus"
+      ]
+    },
+    "atlas03_r07_c01": {
+      "id": "atlas03_r07_c01",
+      "cardNo": "253",
+      "birdName": "House Sparrow",
+      "aliases": [
+        "House Sparrow",
+        "Passer domesticus"
+      ],
+      "normalizedAliases": [
+        "housesparrow",
+        "passerdomesticus"
+      ]
+    },
+    "atlas03_r07_c02": {
+      "id": "atlas03_r07_c02",
+      "cardNo": "254",
+      "birdName": "Ruff",
+      "aliases": [
+        "Ruff",
+        "Calidris pugnax"
+      ],
+      "normalizedAliases": [
+        "ruff",
+        "calidrispugnax"
+      ]
+    },
+    "atlas03_r07_c03": {
+      "id": "atlas03_r07_c03",
+      "cardNo": "255",
+      "birdName": "Greater Flamingo",
+      "aliases": [
+        "Greater Flamingo",
+        "Phoenicopterus roseus"
+      ],
+      "normalizedAliases": [
+        "greaterflamingo",
+        "phoenicopterusroseus"
+      ]
+    },
+    "atlas03_r07_c04": {
+      "id": "atlas03_r07_c04",
+      "cardNo": "256",
+      "birdName": "Audouins Gull",
+      "aliases": [
+        "Audouins Gull",
+        "Ichthyaetus audouinii"
+      ],
+      "normalizedAliases": [
+        "audouinsgull",
+        "ichthyaetusaudouinii"
+      ]
+    },
+    "atlas03_r07_c05": {
+      "id": "atlas03_r07_c05",
+      "cardNo": "257",
+      "birdName": "Common Chaffinch",
+      "aliases": [
+        "Common Chaffinch",
+        "Fringilla coelebs"
+      ],
+      "normalizedAliases": [
+        "commonchaffinch",
+        "fringillacoelebs"
+      ]
+    },
+    "atlas03_r07_c06": {
+      "id": "atlas03_r07_c06",
+      "cardNo": "258",
+      "birdName": "Common Chiffchaff",
+      "aliases": [
+        "Common Chiffchaff",
+        "Phylloscopus collybita"
+      ],
+      "normalizedAliases": [
+        "commonchiffchaff",
+        "phylloscopuscollybita"
+      ]
+    },
+    "atlas03_r07_c07": {
+      "id": "atlas03_r07_c07",
+      "cardNo": "259",
+      "birdName": "Greylag Goose",
+      "aliases": [
+        "Greylag Goose",
+        "Graylag Goose",
+        "Anser anser"
+      ],
+      "normalizedAliases": [
+        "greylaggoose",
+        "graylaggoose",
+        "anseranser"
+      ]
+    },
+    "atlas03_r07_c08": {
+      "id": "atlas03_r07_c08",
+      "cardNo": "260",
+      "birdName": "Cettis Warbler",
+      "aliases": [
+        "Cettis Warbler",
+        "Cettia cetti"
+      ],
+      "normalizedAliases": [
+        "cettiswarbler",
+        "cettiacetti"
+      ]
+    },
+    "atlas03_r07_c09": {
+      "id": "atlas03_r07_c09",
+      "cardNo": "261",
+      "birdName": "Eurasian Green Woodpecker",
+      "aliases": [
+        "Eurasian Green Woodpecker",
+        "Picus viridis"
+      ],
+      "normalizedAliases": [
+        "eurasiangreenwoodpecker",
+        "picusviridis"
+      ]
+    },
+    "atlas03_r07_c10": {
+      "id": "atlas03_r07_c10",
+      "cardNo": "262",
+      "birdName": "Abbotts Booby",
+      "aliases": [
+        "Abbotts Booby",
+        "Papasula abbotti"
+      ],
+      "normalizedAliases": [
+        "abbottsbooby",
+        "papasulaabbotti"
+      ]
+    }
+  },
+  "diagnostics": {
+    "cardCount": 210,
+    "weakTaxonomyMatches": []
+  }
+}

@@ -6,6 +6,7 @@
     <title>Wingspan Scanner</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
@@ -14,7 +15,7 @@
 
       <div class="scan-overlay" id="cameraBox" aria-label="Camera scanner">
         <div class="scan-frame" id="cardGuide" aria-hidden="true">
-          <div class="art-guide"></div>
+          <div class="name-guide"></div>
           <span class="corner top-left"></span>
           <span class="corner top-right"></span>
           <span class="corner bottom-left"></span>
@@ -24,17 +25,13 @@
 
       <header class="scanner-top">
         <div>
-          <p class="eyebrow">Visual fingerprint</p>
+          <p class="eyebrow">Latin OCR</p>
           <h1>Wingspan Scanner</h1>
         </div>
         <div class="status" id="status" role="status">Idle</div>
       </header>
 
-      <section class="bottom-sheet" aria-label="Scanner controls and result">
-        <div class="actions">
-          <button id="startCamera" type="button">Start camera</button>
-        </div>
-
+      <section class="bottom-sheet" aria-label="Scanner result">
         <div class="result-row">
           <div class="result-card main-result">
             <dt>Match</dt>
@@ -49,8 +46,6 @@
             <dd id="matchMeta">-</dd>
           </div>
         </div>
-
-        <canvas id="artPreview" width="565" height="515" aria-label="Visual fingerprint preview"></canvas>
       </section>
     </main>
   </body>

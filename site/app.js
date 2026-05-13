@@ -1,79 +1,50 @@
-const ART_REGION = {
-  x: 45,
-  y: 145,
-  width: 565,
-  height: 515,
-};
 const CARD_SIZE = {
   width: 630,
   height: 970,
 };
-const HASH_WIDTH = 17;
-const HASH_HEIGHT = 16;
-const HASH_BITS = (HASH_WIDTH - 1) * HASH_HEIGHT;
-const FRAME_SAMPLE_WIDTH = 126;
-const FRAME_SAMPLE_HEIGHT = 194;
-const FRAME_SEARCH_OFFSETS = [-0.045, 0, 0.045];
-const FRAME_SEARCH_SCALES = [0.94, 1, 1.06];
-const FRAME_MIN_LAYOUT_SCORE = 36;
-const FRAME_MIN_LUMA_RANGE = 28;
-const MATCH_SCORE_THRESHOLD = 64;
-const MATCH_MIN_GAP_BITS = 6;
+const NAME_REGION = {
+  x: 165,
+  y: 28,
+  width: 450,
+  height: 112,
+};
+const OCR_CANVAS_WIDTH = 1000;
+const OCR_INTERVAL_MS = 1350;
+const OCR_MATCH_THRESHOLD = 78;
+const OCR_MIN_GAP = 5;
+const OCR_MIN_QUERY_LENGTH = 6;
 const STABLE_MATCH_FRAMES = 2;
-const MISS_FRAMES_TO_RESET = 3;
+const MISS_FRAMES_TO_RESET = 4;
 
 const elements = {
   status: document.querySelector("#status"),
   video: document.querySelector("#camera"),
   cameraBox: document.querySelector("#cameraBox"),
   cardGuide: document.querySelector("#cardGuide"),
-  artGuide: document.querySelector(".art-guide"),
-  startCamera: document.querySelector("#startCamera"),
-  artPreview: document.querySelector("#artPreview"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
   matchMeta: document.querySelector("#matchMeta"),
 };
 
 let stream;
-let fingerprintDb;
+let ocrDb = { cards: [], byCardId: {} };
 let audioManifest = { byCardId: {} };
-let ttsManifest = { byCardId: {}, byCardNo: {} };
+let tesseractWorker;
 let scanTimer;
 let isScanning = false;
 let activeAudioCardId = "";
-let pendingAudioCardId = "";
+let pendingAudioCard = null;
 let lastAudioMessage = "";
 let missedFrameCount = 0;
 let candidateCardId = "";
 let candidateFrameCount = 0;
 
-const TTS_GAIN = 1;
-const BIRD_BGM_GAIN = 0.22;
+const soundElement = new Audio();
+soundElement.preload = "auto";
+soundElement.loop = false;
 
-const audioMixer = {
-  context: null,
-  ttsEl: new Audio(),
-  birdEl: new Audio(),
-  ttsSource: null,
-  birdSource: null,
-  ttsGain: null,
-  birdGain: null,
-};
-
-audioMixer.ttsEl.preload = "auto";
-audioMixer.birdEl.preload = "auto";
-audioMixer.birdEl.loop = true;
-audioMixer.ttsEl.volume = TTS_GAIN;
-audioMixer.birdEl.volume = BIRD_BGM_GAIN;
-
-const frameProbe = document.createElement("canvas");
-frameProbe.width = FRAME_SAMPLE_WIDTH;
-frameProbe.height = FRAME_SAMPLE_HEIGHT;
-
-const nibbleBits = Array.from({ length: 16 }, (_, value) =>
-  value.toString(2).replaceAll("0", "").length,
-);
+const ocrCanvas = document.createElement("canvas");
+const ocrContext = ocrCanvas.getContext("2d", { willReadFrequently: true });
 
 function setStatus(message, type = "") {
   elements.status.textContent = message;
@@ -84,309 +55,66 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
 }
 
-async function loadFingerprintDb() {
+function cleanBirdName(value) {
+  return String(value)
+    .replace(/\b(?:XC|XV)\s*\d*\w*\b|\b\d+\s*(?:XC|XV)\b/gi, " ")
+    .replace(/\bTJ\b/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .replace(/larkr$/i, "lark");
+}
+
+function normalizeForMatch(value) {
+  return cleanBirdName(value)
+    .toLocaleLowerCase("en-US")
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "");
+}
+
+function extractLatinText(value) {
+  const matches = String(value).match(/[A-Za-z][A-Za-z.'-]{1,}/g) ?? [];
+  return matches
+    .map((part) => part.replace(/^[.'-]+|[.'-]+$/g, ""))
+    .filter((part) => part.length > 1)
+    .join(" ");
+}
+
+async function fetchJson(path, fallback) {
+  try {
+    const response = await fetch(path, { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`${path} ${response.status}`);
+    }
+    return await response.json();
+  } catch (error) {
+    return fallback;
+  }
+}
+
+async function loadData() {
   setStatus("Loading", "ready");
-  const response = await fetch("./data/card_fingerprints.json", { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`fingerprint data ${response.status}`);
-  }
-  fingerprintDb = prepareFingerprintDb(await response.json());
-  setStatus(`${fingerprintDb.cards.length} ready`, "ready");
-}
-
-async function loadAudioManifest() {
-  try {
-    const response = await fetch("./data/audio_clips.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`audio data ${response.status}`);
-    }
-    audioManifest = await response.json();
-  } catch (error) {
-    audioManifest = { byCardId: {} };
-    lastAudioMessage = "audio unavailable";
+  [ocrDb, audioManifest] = await Promise.all([
+    fetchJson("./data/card_ocr_aliases.json", { cards: [], byCardId: {} }),
+    fetchJson("./data/audio_clips.json", { byCardId: {} }),
+  ]);
+  if (!ocrDb.cards.length) {
+    throw new Error("OCR data unavailable.");
   }
 }
 
-async function loadTtsManifest() {
-  try {
-    const response = await fetch("./data/card_intro_tts.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`tts data ${response.status}`);
-    }
-    ttsManifest = await response.json();
-  } catch (error) {
-    ttsManifest = { byCardId: {}, byCardNo: {} };
+async function initOcrWorker() {
+  if (tesseractWorker) {
+    return;
   }
-}
-
-function hammingDistanceHex(left, right) {
-  const length = Math.min(left.length, right.length);
-  let distance = Math.abs(left.length - right.length) * 4;
-  for (let index = 0; index < length; index += 1) {
-    const xor = Number.parseInt(left[index], 16) ^ Number.parseInt(right[index], 16);
-    distance += nibbleBits[xor];
+  if (!window.Tesseract?.createWorker) {
+    throw new Error("OCR engine unavailable.");
   }
-  return distance;
-}
-
-function prepareFingerprintDb(rawDb) {
-  const hashCounts = new Map();
-  for (const card of rawDb.cards) {
-    hashCounts.set(card.hash, (hashCounts.get(card.hash) ?? 0) + 1);
-  }
-
-  return {
-    ...rawDb,
-    cards: rawDb.cards.map((card) => {
-      const duplicateCount = hashCounts.get(card.hash) ?? 1;
-      return {
-        ...card,
-        duplicateCount,
-        ambiguousFingerprint: duplicateCount > 1 || /^0+$/.test(card.hash),
-      };
-    }),
-  };
-}
-
-function rankByFingerprint(hash) {
-  return fingerprintDb.cards
-    .map((card) => {
-      const distance = hammingDistanceHex(hash, card.hash);
-      const score = Math.max(0, Math.round(100 * (1 - distance / HASH_BITS)));
-      return { ...card, distance, score };
-    })
-    .sort((a, b) => a.distance - b.distance || a.id.localeCompare(b.id));
-}
-
-function matchConfidence(best, second) {
-  if (!best) {
-    return { ok: false, gap: 0, reason: "no candidate" };
-  }
-
-  const gap = second ? second.distance - best.distance : HASH_BITS;
-  if (best.ambiguousFingerprint) {
-    return { ok: false, gap, reason: `ambiguous hash x${best.duplicateCount}` };
-  }
-  if (best.score < MATCH_SCORE_THRESHOLD) {
-    return { ok: false, gap, reason: `weak < ${MATCH_SCORE_THRESHOLD}%` };
-  }
-  if (gap < MATCH_MIN_GAP_BITS) {
-    return { ok: false, gap, reason: `close next gap ${gap}` };
-  }
-
-  return { ok: true, gap, reason: "" };
-}
-
-function stableFramesForCandidate(best, confident) {
-  if (!confident || !best) {
-    candidateCardId = "";
-    candidateFrameCount = 0;
-    return 0;
-  }
-
-  if (candidateCardId === best.id) {
-    candidateFrameCount += 1;
-  } else {
-    candidateCardId = best.id;
-    candidateFrameCount = 1;
-  }
-
-  return candidateFrameCount;
-}
-
-function audioClipsForCard(cardId) {
-  return audioManifest?.byCardId?.[cardId] ?? [];
-}
-
-function ttsIntroForCard(cardId) {
-  return ttsManifest?.byCardId?.[cardId] ?? null;
-}
-
-function displayNameForCard(card) {
-  const intro = ttsIntroForCard(card.id);
-  if (intro && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
-    return intro.birdName;
-  }
-  const clips = audioClipsForCard(card.id);
-  if (clips.length && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
-    return clips[0].birdName;
-  }
-  return card.displayName;
-}
-
-function formatFrameSummary(frame) {
-  if (!frame) {
-    return "";
-  }
-  return `frame ${Math.round(frame.layoutScore)} r${Math.round(frame.range)}`;
-}
-
-function frameRejectReason(frame) {
-  if (!frame) {
-    return "frame not found";
-  }
-  if (frame.range < FRAME_MIN_LUMA_RANGE) {
-    return `low contrast ${Math.round(frame.range)}`;
-  }
-  return `layout ${Math.round(frame.layoutScore)} < ${FRAME_MIN_LAYOUT_SCORE}`;
-}
-
-function formatMatchMeta(best, second, audioMessage = "", confidence = null, frame = null) {
-  if (!best) {
-    return frame ? `${formatFrameSummary(frame)} / ${frameRejectReason(frame)}` : "-";
-  }
-
-  const parts = [best.id];
-  if (frame) {
-    parts.push(formatFrameSummary(frame));
-  }
-  if (second) {
-    parts.push(`next ${second.id} (${second.score}% d${second.distance})`);
-  }
-  if (confidence) {
-    parts.push(`gap ${confidence.gap}`);
-    if (confidence.reason) {
-      parts.push(confidence.reason);
-    }
-  }
-  if (audioMessage) {
-    parts.push(audioMessage);
-  }
-  return parts.join(" / ");
-}
-
-function setupAudioMixer() {
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextClass) {
-    return null;
-  }
-  if (!audioMixer.context) {
-    audioMixer.context = new AudioContextClass();
-  }
-  if (!audioMixer.ttsSource) {
-    audioMixer.ttsSource = audioMixer.context.createMediaElementSource(audioMixer.ttsEl);
-    audioMixer.ttsGain = audioMixer.context.createGain();
-    audioMixer.ttsGain.gain.value = TTS_GAIN;
-    audioMixer.ttsSource.connect(audioMixer.ttsGain);
-    audioMixer.ttsGain.connect(audioMixer.context.destination);
-  }
-  if (!audioMixer.birdSource) {
-    audioMixer.birdSource = audioMixer.context.createMediaElementSource(audioMixer.birdEl);
-    audioMixer.birdGain = audioMixer.context.createGain();
-    audioMixer.birdGain.gain.value = BIRD_BGM_GAIN;
-    audioMixer.birdSource.connect(audioMixer.birdGain);
-    audioMixer.birdGain.connect(audioMixer.context.destination);
-  }
-  return audioMixer.context;
-}
-
-async function unlockAudioMixer() {
-  const context = setupAudioMixer();
-  if (context?.state === "suspended") {
-    await context.resume();
-  }
-}
-
-function stopAudioElement(audioElement) {
-  audioElement.pause();
-  audioElement.removeAttribute("src");
-  audioElement.load();
-}
-
-function stopBirdBgm() {
-  stopAudioElement(audioMixer.birdEl);
-}
-
-function stopAudioMix() {
-  stopAudioElement(audioMixer.ttsEl);
-  stopAudioElement(audioMixer.birdEl);
-}
-
-function randomBirdClipForCard(card) {
-  const clips = audioClipsForCard(card.id);
-  if (!clips.length) {
-    return null;
-  }
-  return clips[Math.floor(Math.random() * clips.length)];
-}
-
-async function playAudioMixForCard(card, force = false) {
-  if (!force && activeAudioCardId === card.id) {
-    return lastAudioMessage;
-  }
-
-  activeAudioCardId = card.id;
-  const intro = ttsIntroForCard(card.id);
-  const birdClip = randomBirdClipForCard(card);
-  if (!intro && !birdClip) {
-    stopAudioMix();
-    lastAudioMessage = "no audio";
-    return lastAudioMessage;
-  }
-
-  stopAudioMix();
-  await unlockAudioMixer();
-
-  let birdStarted = false;
-  if (birdClip) {
-    audioMixer.birdEl.src = birdClip.src;
-    audioMixer.birdEl.loop = Boolean(intro);
-    try {
-      await audioMixer.birdEl.play();
-      birdStarted = true;
-    } catch (error) {
-      birdStarted = false;
-    }
-  }
-
-  if (!intro) {
-    lastAudioMessage = birdStarted ? "bird bgm" : "tap button for sound";
-    if (birdStarted) {
-      pendingAudioCardId = "";
-    } else {
-      pendingAudioCardId = card.id;
-    }
-    return lastAudioMessage;
-  }
-
-  audioMixer.ttsEl.src = intro.src;
-  audioMixer.ttsEl.onended = stopBirdBgm;
-  audioMixer.ttsEl.onerror = stopBirdBgm;
-
-  try {
-    await audioMixer.ttsEl.play();
-    pendingAudioCardId = "";
-    lastAudioMessage = birdStarted ? "tts + bird bgm" : "tts";
-  } catch (error) {
-    stopBirdBgm();
-    pendingAudioCardId = card.id;
-    lastAudioMessage = "tap button for sound";
-  }
-
-  return lastAudioMessage;
-}
-
-function resetAudioAfterMiss() {
-  missedFrameCount += 1;
-  if (missedFrameCount >= MISS_FRAMES_TO_RESET) {
-    activeAudioCardId = "";
-    pendingAudioCardId = "";
-    lastAudioMessage = "";
-    stopAudioMix();
-  }
-}
-
-function resetCandidateMatch() {
-  candidateCardId = "";
-  candidateFrameCount = 0;
-}
-
-function drawPreviewFromSource(source, sx, sy, sw, sh) {
-  const context = elements.artPreview.getContext("2d", { willReadFrequently: true });
-  elements.artPreview.width = ART_REGION.width;
-  elements.artPreview.height = ART_REGION.height;
-  context.imageSmoothingEnabled = true;
-  context.drawImage(source, sx, sy, sw, sh, 0, 0, ART_REGION.width, ART_REGION.height);
+  setStatus("OCR", "ready");
+  tesseractWorker = await window.Tesseract.createWorker("eng");
+  await tesseractWorker.setParameters({
+    preserve_interword_spaces: "1",
+    tessedit_char_whitelist: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .'-",
+  });
 }
 
 function getVideoSourceRect(targetElement) {
@@ -403,10 +131,10 @@ function getVideoSourceRect(targetElement) {
   const targetY = targetRect.top - frameRect.top;
 
   return {
-    sx: Math.max(0, (targetX - offsetX) / scale),
-    sy: Math.max(0, (targetY - offsetY) / scale),
-    sw: Math.min(videoWidth, targetRect.width / scale),
-    sh: Math.min(videoHeight, targetRect.height / scale),
+    sx: clamp((targetX - offsetX) / scale, 0, videoWidth),
+    sy: clamp((targetY - offsetY) / scale, 0, videoHeight),
+    sw: clamp(targetRect.width / scale, 1, videoWidth),
+    sh: clamp(targetRect.height / scale, 1, videoHeight),
   };
 }
 
@@ -423,53 +151,54 @@ function clampSourceRect(rect) {
   };
 }
 
-function candidateRectFromBase(baseRect, offsetX, offsetY, scale) {
-  const sw = baseRect.sw * scale;
-  const sh = baseRect.sh * scale;
-  const centerX = baseRect.sx + baseRect.sw * (0.5 + offsetX);
-  const centerY = baseRect.sy + baseRect.sh * (0.5 + offsetY);
+function nameSourceRect() {
+  const cardRect = getVideoSourceRect(elements.cardGuide);
   return clampSourceRect({
-    sx: centerX - sw / 2,
-    sy: centerY - sh / 2,
-    sw,
-    sh,
+    sx: cardRect.sx + (cardRect.sw * NAME_REGION.x) / CARD_SIZE.width,
+    sy: cardRect.sy + (cardRect.sh * NAME_REGION.y) / CARD_SIZE.height,
+    sw: (cardRect.sw * NAME_REGION.width) / CARD_SIZE.width,
+    sh: (cardRect.sh * NAME_REGION.height) / CARD_SIZE.height,
   });
 }
 
-function grayAt(grays, width, x, y) {
-  return grays[y * width + x];
-}
+function preprocessOcrCanvas() {
+  const imageData = ocrContext.getImageData(0, 0, ocrCanvas.width, ocrCanvas.height);
+  const data = imageData.data;
+  let min = 255;
+  let max = 0;
+  const grays = new Uint8Array(ocrCanvas.width * ocrCanvas.height);
 
-function horizontalEdge(grays, width, height, yRatio, xStartRatio, xEndRatio) {
-  const y = clamp(Math.round(yRatio * height), 1, height - 2);
-  const xStart = clamp(Math.round(xStartRatio * width), 1, width - 2);
-  const xEnd = clamp(Math.round(xEndRatio * width), xStart + 1, width - 2);
-  let total = 0;
-  let count = 0;
-  for (let x = xStart; x <= xEnd; x += 1) {
-    total += Math.abs(grayAt(grays, width, x, y - 1) - grayAt(grays, width, x, y + 1));
-    count += 1;
+  for (let index = 0, pixel = 0; index < data.length; index += 4, pixel += 1) {
+    const gray = data[index] * 0.299 + data[index + 1] * 0.587 + data[index + 2] * 0.114;
+    grays[pixel] = gray;
+    min = Math.min(min, gray);
+    max = Math.max(max, gray);
   }
-  return count ? total / count : 0;
-}
 
-function verticalEdge(grays, width, height, xRatio, yStartRatio, yEndRatio) {
-  const x = clamp(Math.round(xRatio * width), 1, width - 2);
-  const yStart = clamp(Math.round(yStartRatio * height), 1, height - 2);
-  const yEnd = clamp(Math.round(yEndRatio * height), yStart + 1, height - 2);
-  let total = 0;
-  let count = 0;
-  for (let y = yStart; y <= yEnd; y += 1) {
-    total += Math.abs(grayAt(grays, width, x - 1, y) - grayAt(grays, width, x + 1, y));
-    count += 1;
+  const range = Math.max(1, max - min);
+  for (let index = 0, pixel = 0; index < data.length; index += 4, pixel += 1) {
+    const normalized = ((grays[pixel] - min) / range) * 255;
+    const value = normalized > 128 ? 255 : 0;
+    data[index] = value;
+    data[index + 1] = value;
+    data[index + 2] = value;
+    data[index + 3] = 255;
   }
-  return count ? total / count : 0;
+  ocrContext.putImageData(imageData, 0, 0);
 }
 
-function evaluateCardFrame(rect) {
-  const context = frameProbe.getContext("2d", { willReadFrequently: true });
-  context.imageSmoothingEnabled = true;
-  context.drawImage(
+function drawNameCropForOcr() {
+  if (!elements.video.videoWidth || !elements.video.videoHeight) {
+    throw new Error("Camera is not ready.");
+  }
+
+  const rect = nameSourceRect();
+  const scale = OCR_CANVAS_WIDTH / rect.sw;
+  ocrCanvas.width = OCR_CANVAS_WIDTH;
+  ocrCanvas.height = Math.max(96, Math.round(rect.sh * scale));
+  ocrContext.imageSmoothingEnabled = true;
+  ocrContext.filter = "grayscale(1) contrast(1.75) brightness(1.08)";
+  ocrContext.drawImage(
     elements.video,
     rect.sx,
     rect.sy,
@@ -477,152 +206,237 @@ function evaluateCardFrame(rect) {
     rect.sh,
     0,
     0,
-    FRAME_SAMPLE_WIDTH,
-    FRAME_SAMPLE_HEIGHT,
+    ocrCanvas.width,
+    ocrCanvas.height,
   );
-
-  const imageData = context.getImageData(0, 0, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT).data;
-  const grays = [];
-  let min = 255;
-  let max = 0;
-  for (let index = 0; index < imageData.length; index += 4) {
-    const gray = imageData[index] * 0.299 + imageData[index + 1] * 0.587 + imageData[index + 2] * 0.114;
-    grays.push(gray);
-    min = Math.min(min, gray);
-    max = Math.max(max, gray);
-  }
-
-  const range = max - min;
-  const layoutScore =
-    horizontalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.145, 0.34, 0.96) * 0.95 +
-    verticalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.36, 0.03, 0.15) * 0.8 +
-    horizontalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.69, 0.03, 0.97) * 1.15 +
-    horizontalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.82, 0.03, 0.97) * 1.05 +
-    verticalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.07, 0.03, 0.18) * 0.55 +
-    verticalEdge(grays, FRAME_SAMPLE_WIDTH, FRAME_SAMPLE_HEIGHT, 0.31, 0.03, 0.18) * 0.55;
-
-  return {
-    rect,
-    layoutScore,
-    range,
-    ok: layoutScore >= FRAME_MIN_LAYOUT_SCORE && range >= FRAME_MIN_LUMA_RANGE,
-  };
+  ocrContext.filter = "none";
+  preprocessOcrCanvas();
 }
 
-function findBestCardFrame() {
-  const baseRect = getVideoSourceRect(elements.cardGuide);
-  let best = null;
-  for (const scale of FRAME_SEARCH_SCALES) {
-    for (const offsetY of FRAME_SEARCH_OFFSETS) {
-      for (const offsetX of FRAME_SEARCH_OFFSETS) {
-        const candidate = candidateRectFromBase(baseRect, offsetX, offsetY, scale);
-        const result = evaluateCardFrame(candidate);
-        if (
-          !best ||
-          result.layoutScore > best.layoutScore ||
-          (result.layoutScore === best.layoutScore && result.range > best.range)
-        ) {
-          best = result;
-        }
-      }
+function levenshteinDistance(left, right) {
+  if (left === right) {
+    return 0;
+  }
+  if (!left.length) {
+    return right.length;
+  }
+  if (!right.length) {
+    return left.length;
+  }
+
+  const previous = Array.from({ length: right.length + 1 }, (_, index) => index);
+  const current = Array(right.length + 1).fill(0);
+
+  for (let i = 1; i <= left.length; i += 1) {
+    current[0] = i;
+    for (let j = 1; j <= right.length; j += 1) {
+      const cost = left[i - 1] === right[j - 1] ? 0 : 1;
+      current[j] = Math.min(previous[j] + 1, current[j - 1] + 1, previous[j - 1] + cost);
+    }
+    for (let j = 0; j <= right.length; j += 1) {
+      previous[j] = current[j];
     }
   }
+  return previous[right.length];
+}
 
-  if (!best) {
-    return {
-      rect: baseRect,
-      layoutScore: 0,
-      range: 0,
-      ok: false,
-    };
+function bigramCounts(value) {
+  const counts = new Map();
+  if (value.length < 2) {
+    counts.set(value, 1);
+    return counts;
+  }
+  for (let index = 0; index < value.length - 1; index += 1) {
+    const bigram = value.slice(index, index + 2);
+    counts.set(bigram, (counts.get(bigram) ?? 0) + 1);
+  }
+  return counts;
+}
+
+function diceSimilarity(left, right) {
+  const leftCounts = bigramCounts(left);
+  const rightCounts = bigramCounts(right);
+  let overlap = 0;
+  for (const [bigram, count] of leftCounts.entries()) {
+    overlap += Math.min(count, rightCounts.get(bigram) ?? 0);
+  }
+  const total = Math.max(1, left.length - 1) + Math.max(1, right.length - 1);
+  return (2 * overlap) / total;
+}
+
+function normalizedSimilarity(left, right) {
+  if (!left || !right) {
+    return 0;
+  }
+  if (left === right) {
+    return 100;
+  }
+  if (left.length >= 10 && left.includes(right)) {
+    return Math.min(99, 92 + Math.round((right.length / left.length) * 7));
+  }
+  if (right.length >= 10 && right.includes(left)) {
+    return left.length >= 8 ? 90 : 68;
   }
 
+  const distance = levenshteinDistance(left, right);
+  const editScore = 1 - distance / Math.max(left.length, right.length);
+  const diceScore = diceSimilarity(left, right);
+  return Math.round(100 * (editScore * 0.68 + diceScore * 0.32));
+}
+
+function bestAliasScore(query, card) {
+  let best = { alias: "", score: 0 };
+  for (const alias of card.aliases ?? []) {
+    const normalized = normalizeForMatch(alias);
+    const score = normalizedSimilarity(query, normalized);
+    if (score > best.score) {
+      best = { alias, score };
+    }
+  }
   return best;
 }
 
-function drawAlignedVideoArtPreview(frame) {
-  const rect = frame.rect;
-  drawPreviewFromSource(
-    elements.video,
-    rect.sx + (rect.sw * ART_REGION.x) / CARD_SIZE.width,
-    rect.sy + (rect.sh * ART_REGION.y) / CARD_SIZE.height,
-    (rect.sw * ART_REGION.width) / CARD_SIZE.width,
-    (rect.sh * ART_REGION.height) / CARD_SIZE.height,
-  );
+function rankOcrCandidates(ocrText) {
+  const latinText = extractLatinText(ocrText);
+  const query = normalizeForMatch(latinText);
+  if (query.length < OCR_MIN_QUERY_LENGTH) {
+    return { latinText, query, candidates: [] };
+  }
+
+  const candidates = ocrDb.cards
+    .map((card) => {
+      const best = bestAliasScore(query, card);
+      return {
+        ...card,
+        matchedAlias: best.alias,
+        score: best.score,
+      };
+    })
+    .sort((a, b) => b.score - a.score || a.cardNo.localeCompare(b.cardNo));
+
+  return { latinText, query, candidates };
 }
 
-function drawVideoArtPreview() {
-  if (!elements.video.videoWidth || !elements.video.videoHeight) {
-    throw new Error("Camera is not ready.");
+function matchConfidence(best, second) {
+  if (!best) {
+    return { ok: false, gap: 0, reason: "no candidate" };
   }
-
-  const frame = findBestCardFrame();
-  if (frame.ok) {
-    drawAlignedVideoArtPreview(frame);
+  const gap = best.score - (second?.score ?? 0);
+  if (best.score < OCR_MATCH_THRESHOLD) {
+    return { ok: false, gap, reason: `weak < ${OCR_MATCH_THRESHOLD}%` };
   }
-  return frame;
+  if (gap < OCR_MIN_GAP) {
+    return { ok: false, gap, reason: `close next ${gap}%` };
+  }
+  return { ok: true, gap, reason: "" };
 }
 
-function computeDHash() {
-  const canvas = document.createElement("canvas");
-  canvas.width = HASH_WIDTH;
-  canvas.height = HASH_HEIGHT;
-  const context = canvas.getContext("2d", { willReadFrequently: true });
-  context.imageSmoothingEnabled = true;
-  context.drawImage(elements.artPreview, 0, 0, HASH_WIDTH, HASH_HEIGHT);
+function stableFramesForCandidate(best, confident) {
+  if (!confident || !best) {
+    candidateCardId = "";
+    candidateFrameCount = 0;
+    return 0;
+  }
+  if (candidateCardId === best.id) {
+    candidateFrameCount += 1;
+  } else {
+    candidateCardId = best.id;
+    candidateFrameCount = 1;
+  }
+  return candidateFrameCount;
+}
 
-  const data = context.getImageData(0, 0, HASH_WIDTH, HASH_HEIGHT).data;
-  const grays = [];
-  let min = 255;
-  let max = 0;
-  for (let index = 0; index < data.length; index += 4) {
-    const gray = data[index] * 0.299 + data[index + 1] * 0.587 + data[index + 2] * 0.114;
-    grays.push(gray);
-    min = Math.min(min, gray);
-    max = Math.max(max, gray);
+function audioClipsForCard(card) {
+  const clips = audioManifest?.byCardId?.[card.id] ?? [];
+  if (!clips.length) {
+    return [];
+  }
+  const targetName = normalizeForMatch(card.birdName);
+  const filtered = clips.filter((clip) => normalizeForMatch(clip.birdName) === targetName);
+  return filtered.length ? filtered : clips;
+}
+
+function randomBirdClipForCard(card) {
+  const clips = audioClipsForCard(card);
+  if (!clips.length) {
+    return null;
+  }
+  return clips[Math.floor(Math.random() * clips.length)];
+}
+
+async function playAudioForCard(card, force = false) {
+  if (!force && activeAudioCardId === card.id) {
+    return lastAudioMessage;
   }
 
-  const range = Math.max(1, max - min);
-  const bits = [];
-  for (let y = 0; y < HASH_HEIGHT; y += 1) {
-    const rowOffset = y * HASH_WIDTH;
-    for (let x = 0; x < HASH_WIDTH - 1; x += 1) {
-      const left = (grays[rowOffset + x] - min) / range;
-      const right = (grays[rowOffset + x + 1] - min) / range;
-      bits.push(left > right ? "1" : "0");
-    }
+  activeAudioCardId = card.id;
+  const clip = randomBirdClipForCard(card);
+  if (!clip) {
+    soundElement.pause();
+    soundElement.removeAttribute("src");
+    lastAudioMessage = "no audio";
+    return lastAudioMessage;
   }
 
-  let hash = "";
-  for (let index = 0; index < bits.length; index += 4) {
-    hash += Number.parseInt(bits.slice(index, index + 4).join(""), 2).toString(16);
+  soundElement.pause();
+  soundElement.currentTime = 0;
+  soundElement.src = clip.src;
+  soundElement.loop = false;
+
+  try {
+    await soundElement.play();
+    pendingAudioCard = null;
+    lastAudioMessage = `audio ${clip.clipType ?? "clip"}`;
+  } catch (error) {
+    pendingAudioCard = card;
+    lastAudioMessage = "tap screen for sound";
   }
-  return hash;
+  return lastAudioMessage;
+}
+
+function resetAudioAfterMiss() {
+  missedFrameCount += 1;
+  if (missedFrameCount >= MISS_FRAMES_TO_RESET) {
+    activeAudioCardId = "";
+    pendingAudioCard = null;
+    lastAudioMessage = "";
+    soundElement.pause();
+    soundElement.removeAttribute("src");
+  }
+}
+
+function formatMeta(best, second, latinText, audioMessage, confidence) {
+  const parts = [];
+  if (latinText) {
+    parts.push(`read "${latinText.slice(0, 44)}"`);
+  }
+  if (best) {
+    parts.push(`${best.cardNo} ${best.matchedAlias}`);
+  }
+  if (second) {
+    parts.push(`next ${second.cardNo} ${second.score}%`);
+  }
+  if (confidence?.reason) {
+    parts.push(confidence.reason);
+  }
+  if (audioMessage) {
+    parts.push(audioMessage);
+  }
+  return parts.join(" / ") || "-";
 }
 
 async function identifyCurrentFrame() {
-  if (isScanning || !stream) {
+  if (isScanning || !stream || !tesseractWorker) {
     return;
   }
 
   isScanning = true;
   try {
-    if (!fingerprintDb) {
-      await loadFingerprintDb();
-    }
-    const frame = drawVideoArtPreview();
-    if (!frame.ok) {
-      resetCandidateMatch();
-      resetAudioAfterMiss();
-      elements.matchName.textContent = "Align card";
-      elements.matchScore.textContent = formatFrameSummary(frame);
-      elements.matchMeta.textContent = formatMatchMeta(null, null, lastAudioMessage, null, frame);
-      setStatus("Align", "error");
-      return;
-    }
-
-    const hash = computeDHash();
-    const [best, second] = rankByFingerprint(hash);
+    drawNameCropForOcr();
+    const result = await tesseractWorker.recognize(ocrCanvas);
+    const ocrText = result?.data?.text ?? "";
+    const { latinText, candidates } = rankOcrCandidates(ocrText);
+    const [best, second] = candidates;
     const confidence = matchConfidence(best, second);
     const stableFrames = stableFramesForCandidate(best, confidence.ok);
     const matched = confidence.ok && stableFrames >= STABLE_MATCH_FRAMES;
@@ -630,20 +444,16 @@ async function identifyCurrentFrame() {
 
     if (matched) {
       missedFrameCount = 0;
-      audioMessage = await playAudioMixForCard(best);
+      audioMessage = await playAudioForCard(best);
     } else {
       resetAudioAfterMiss();
-      audioMessage = confidence.ok
-        ? `hold ${stableFrames}/${STABLE_MATCH_FRAMES}`
-        : lastAudioMessage;
+      audioMessage = confidence.ok ? `hold ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
     }
 
-    elements.matchName.textContent = confidence.ok || matched ? displayNameForCard(best) : "Check";
-    elements.matchScore.textContent = best
-      ? `${best.score}% / d${best.distance} / gap ${confidence.gap}`
-      : "-";
-    elements.matchMeta.textContent = formatMatchMeta(best, second, audioMessage, confidence, frame);
-    setStatus(matched ? "Matched" : confidence.ok ? "Hold" : "Check", matched ? "ready" : "error");
+    elements.matchName.textContent = confidence.ok || matched ? best.birdName : "Scanning";
+    elements.matchScore.textContent = best ? `${best.score}% / gap ${confidence.gap}` : "-";
+    elements.matchMeta.textContent = formatMeta(best, second, latinText, audioMessage, confidence);
+    setStatus(matched ? "Matched" : confidence.ok ? "Hold" : "Reading", matched ? "ready" : "");
   } catch (error) {
     elements.matchName.textContent = "Error";
     elements.matchScore.textContent = "-";
@@ -656,68 +466,60 @@ async function identifyCurrentFrame() {
 
 function startScanLoop() {
   window.clearInterval(scanTimer);
-  scanTimer = window.setInterval(identifyCurrentFrame, 850);
+  scanTimer = window.setInterval(identifyCurrentFrame, OCR_INTERVAL_MS);
   identifyCurrentFrame();
 }
 
 async function startCamera() {
-  try {
-    if (!window.isSecureContext) {
-      throw new Error("HTTPS is required.");
-    }
-    if (!navigator.mediaDevices?.getUserMedia) {
-      throw new Error("Camera API is not supported.");
-    }
-
-    setStatus("Permission", "ready");
-    if (stream) {
-      stream.getTracks().forEach((track) => track.stop());
-    }
-    stream = await navigator.mediaDevices.getUserMedia({
-      audio: false,
-      video: {
-        facingMode: { ideal: "environment" },
-        width: { ideal: 1920 },
-        height: { ideal: 1080 },
-      },
-    });
-    elements.video.srcObject = stream;
-    await elements.video.play();
-    if (pendingAudioCardId && fingerprintDb) {
-      const pendingCard = fingerprintDb.cards.find((card) => card.id === pendingAudioCardId);
-      if (pendingCard) {
-        await playAudioMixForCard(pendingCard, true);
-      }
-    }
-    elements.startCamera.textContent = "Restart camera";
-    setStatus("Scanning", "ready");
-    startScanLoop();
-  } catch (error) {
-    elements.matchMeta.textContent = error.message;
-    setStatus("Camera error", "error");
+  if (!window.isSecureContext) {
+    throw new Error("HTTPS is required.");
   }
+  if (!navigator.mediaDevices?.getUserMedia) {
+    throw new Error("Camera API is not supported.");
+  }
+
+  setStatus("Permission", "ready");
+  if (stream) {
+    stream.getTracks().forEach((track) => track.stop());
+  }
+  stream = await navigator.mediaDevices.getUserMedia({
+    audio: false,
+    video: {
+      facingMode: { ideal: "environment" },
+      width: { ideal: 1920 },
+      height: { ideal: 1080 },
+    },
+  });
+  elements.video.srcObject = stream;
+  await elements.video.play();
+  setStatus("Scanning", "ready");
+  startScanLoop();
 }
 
-async function handleStartCameraClick() {
-  if (pendingAudioCardId && fingerprintDb) {
-    const pendingCard = fingerprintDb.cards.find((card) => card.id === pendingAudioCardId);
-    if (pendingCard) {
-      await playAudioMixForCard(pendingCard, true);
-    }
+async function handleUserActivation() {
+  if (pendingAudioCard) {
+    await playAudioForCard(pendingAudioCard, true);
   }
-  await startCamera();
 }
-
-elements.startCamera.addEventListener("click", handleStartCameraClick);
 
 async function boot() {
   try {
-    await Promise.all([loadFingerprintDb(), loadAudioManifest(), loadTtsManifest()]);
+    await loadData();
+    await initOcrWorker();
     await startCamera();
   } catch (error) {
+    elements.matchName.textContent = "Camera";
+    elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
-    setStatus("Tap camera", "error");
+    setStatus("Tap screen", "error");
   }
 }
+
+document.addEventListener("pointerdown", handleUserActivation, { passive: true });
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    soundElement.pause();
+  }
+});
 
 boot();

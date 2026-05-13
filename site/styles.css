@@ -31,30 +31,6 @@ body {
     sans-serif;
 }
 
-button,
-.file-button {
-  display: inline-grid;
-  place-items: center;
-  min-height: 44px;
-  border: 1px solid rgb(255 255 255 / 16%);
-  border-radius: 999px;
-  background: rgb(22 163 209 / 92%);
-  color: #fff;
-  font: inherit;
-  font-size: 0.95rem;
-  font-weight: 800;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  touch-action: manipulation;
-}
-
-button:disabled {
-  background: rgb(255 255 255 / 16%);
-  color: rgb(255 255 255 / 48%);
-  cursor: not-allowed;
-}
-
 .scanner {
   position: fixed;
   inset: 0;
@@ -79,8 +55,8 @@ button:disabled {
 .scan-frame {
   position: absolute;
   left: 50%;
-  top: 47%;
-  width: min(78vw, calc((100vh - 210px) * 0.6495));
+  top: 46%;
+  width: min(82vw, calc((100vh - 180px) * 0.6495));
   max-width: 430px;
   aspect-ratio: 630 / 970;
   transform: translate(-50%, -50%);
@@ -89,15 +65,15 @@ button:disabled {
   box-shadow: 0 0 0 999px rgb(0 0 0 / 34%);
 }
 
-.art-guide {
+.name-guide {
   position: absolute;
-  left: 7.1%;
-  top: 14.9%;
-  width: 89.7%;
-  height: 53.1%;
-  border: 2px solid rgb(107 214 154 / 94%);
-  border-radius: 9px;
-  background: rgb(107 214 154 / 8%);
+  left: 26.2%;
+  top: 2.9%;
+  width: 71.4%;
+  height: 11.5%;
+  border: 2px solid rgb(22 163 209 / 96%);
+  border-radius: 6px;
+  background: rgb(22 163 209 / 10%);
 }
 
 .corner {
@@ -203,12 +179,6 @@ h1 {
   backdrop-filter: blur(16px);
 }
 
-.actions {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 8px;
-}
-
 .result-row {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(86px, 0.65fr);
@@ -245,14 +215,11 @@ dd {
   color: var(--warning);
 }
 
-#artPreview {
-  display: none;
-}
-
 @media (orientation: landscape) {
   .scan-frame {
     top: 50%;
-    width: min(34vw, calc(100vh - 34px));
+    left: 40%;
+    width: min(42vw, calc(100vh - 28px));
     max-width: none;
   }
 
@@ -263,16 +230,6 @@ dd {
     bottom: max(12px, env(safe-area-inset-bottom));
     width: min(360px, 38vw);
     align-content: start;
-  }
-
-  .actions {
-    grid-template-columns: 1fr;
-  }
-
-  button,
-  .file-button {
-    min-height: 40px;
-    font-size: 0.9rem;
   }
 }
 
