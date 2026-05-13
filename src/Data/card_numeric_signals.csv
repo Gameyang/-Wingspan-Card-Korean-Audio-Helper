@@ -1,0 +1,211 @@
+card_no,bird_name_en,point_value,wingspan_cm
+53,Pied Billed Grebe,0,41
+54,Pileated Woodpecker,4,74
+55,Western Meadowlark,2,38
+56,Grasshopper Sparrow,2,20
+57,Chipping Sparrow,1,23
+58,Cassins Sparrow,3,20
+59,Bairds Sparrow,3,23
+60,California Quail,3,36
+61,Northern Bobwhite,5,33
+62,Mourning Dove,0,46
+63,Baltimore Oriole,9,30
+64,Red Crossbill,6,28
+65,Lazuli Bunting,4,23
+66,American Crow,4,99
+67,Fish Crow,6,91
+68,Black Crowned Night Heron,9,112
+69,Chihuahuan Raven,4,112
+70,Common Raven,5,135
+71,Northern Cardinal,3,30
+72,Yellow Bellied Sapsucker,3,41
+73,Indigo Bunting,5,20
+74,Western Tanager,6,30
+75,Spotted Towhee,0,28
+76,Rose Breasted Grosbeak,6,33
+77,Green Heron,4,66
+78,Gray Catbird,5,28
+79,Northern Mockingbird,2,36
+80,Hooded Merganser,5,61
+81,Bewicks Wren,4,18
+82,Yellow Breasted Chat,5,25
+83,Common Nighthawk,3,56
+84,Song Sparrow,0,20
+85,White Crowned Sparrow,2,25
+86,Chimney Swift,3,36
+87,Blue Grosbeak,4,28
+88,Lincolns Sparrow,3,20
+89,Greater Roadrunner,7,56
+90,Red Tailed Hawk,5,124
+91,Northern Harrier,3,109
+92,Coopers Hawk,3,79
+93,Red Shouldered Hawk,3,102
+94,Barred Owl,3,107
+95,Swainsons Hawk,5,130
+96,Peregrine Falcon,5,104
+97,Golden Eagle,8,201
+98,Great Horned Owl,8,112
+99,Common Merganser,5,86
+100,Willet,4,66
+101,Anhinga,6,114
+102,Snowy Egret,4,104
+103,White Faced Ibis,8,91
+104,Black Skimmer,6,112
+105,Eastern Screech Owl,4,51
+106,Mississippi Kite,4,79
+107,Ferruginous Hawk,6,142
+108,American Kestrel,5,56
+109,Barn Owl,5,107
+110,Burrowing Owl,5,53
+111,Sandhill Crane,5,196
+112,Canada Goose,3,132
+113,Black Bellied Whistling Duck,2,76
+114,Double Crested Cormorant,3,132
+115,American White Pelican,5,274
+116,Red Winged Blackbird,2,33
+117,Common Grackle,3,43
+118,Brewers Blackbird,3,41
+119,Yellow Headed Blackbird,4,38
+120,Bushtit,2,15
+121,Dickcissel,4,25
+122,Ring Billed Gull,4,122
+123,American Coot,3,61
+124,Yellow Rumped Warbler,1,23
+125,American Robin,1,43
+126,House Finch,3,25
+127,Barn Swallow,1,38
+128,Tree Swallow,3,38
+129,Purple Martin,2,46
+130,Violet Green Swallow,3,36
+131,Cedar Waxwing,3,25
+132,Pygmy Nuthatch,2,20
+133,Pine Siskin,3,23
+134,Dark Eyed Junco,3,23
+135,American Oystercatcher,5,81
+136,Carolina Wren,1,20
+137,Black Necked Stilt,4,74
+138,Inca Dove,2,28
+139,Says Phoebe,5,33
+140,Ash Throated Flycatcher,4,30
+141,Bobolink,4,30
+142,Brown Pelican,4,201
+143,American Goldfinch,3,23
+144,Northern Flicker,2,51
+145,Bald Eagle,9,203
+146,Wood Stork,6,155
+147,Roseate Spoonbill,6,127
+148,Cerulean Warbler,4,20
+149,Chestnut Collared Longspur,5,25
+150,King Rail,4,51
+151,Red Cockaded Woodpecker,4,36
+152,Whooping Crane,6,221
+153,Spotted Owl,5,102
+154,Cassins Finch,4,30
+155,Bells Vireo,4,18
+156,Painted Bunting,5,23
+157,Greater Prairie Chicken,5,71
+158,Atlantic Puffin,8,53
+159,Spragues Pipit,3,25
+160,California Condor,1,277
+161,Downy Woodpecker,3,30
+162,Tufted Titmouse,2,25
+163,Ruby Crowned Kinglet,2,20
+164,Red Eyed Vireo,3,25
+165,House Wren,1,15
+166,Savannah Sparrow,2,18
+167,Eastern Bluebird,4,33
+168,Mountain Bluebird,4,36
+169,Great Blue Heron,5,183
+170,Great Egret,7,130
+171,Broad Winged Hawk,4,85
+172,American Redstart,4,20
+173,Canvasback,4,82
+174,Vauxs Swift,2,31
+175,Brant,3,114
+176,White Throated Swift,2,38
+177,Scaled Quail,0,36
+178,Black Chinned Hummingbird,4,8
+179,Red Breasted Merganser,3,78
+180,Painted Whitestart,1,22
+181,Eurasian Magpie,1,56
+182,Carrion Crow,3,92
+183,Griffon Vulture,1,252
+184,Coal Tit,2,16
+185,Eurasian Nuthatch,3,25
+186,Eurasian Nutcracker,5,55
+187,Red Backed Shrike,5,33
+188,Common Kingfisher,4,26
+189,Little Owl,4,56
+190,Eurasian Jay,4,56
+191,White Stork,8,160
+192,White Throated Dipper,3,28
+193,Black Throated Diver,5,120
+194,Wilsons Storm Petrel,6,38
+195,Great Crested Grebe,3,65
+196,Common Little Bittern,2,49
+197,Squacco Heron,3,86
+198,Savis Warbler,1,20
+199,Mute Swan,4,220
+200,Grey Heron,3,185
+201,Common Cuckoo,4,57
+202,Dunnock,1,20
+203,Black Redstart,0,24
+204,Lesser Whitethroat,0,18
+205,Common Goldeneye,2,73
+206,Red Legged Partridge,1,48
+207,Theklas Lark,4,34
+208,European Roller,3,70
+209,Eurasian Golden Oriole,4,46
+210,Eurasian Tree Sparrow,3,21
+211,European Honey Buzzard,4,134
+212,Great Tit,4,24
+213,Hawfinch,4,30
+214,Bullfinch,3,24
+215,Bluethroat,7,22
+216,Common Nightingale,3,23
+217,European Robin,4,22
+218,White Backed Woodpecker,2,39
+219,Black Woodpecker,4,70
+220,Parrot Crossbill,6,30
+221,European Bee Eater,3,38
+222,Black Headed Gull,3,102
+223,Long Tailed Tit,0,18
+224,Common Blackbird,4,36
+225,Snowy Owl,4,138
+226,Red Knot,7,50
+227,Black Tailed Godwit,6,76
+228,Corsican Nuthatch,4,21
+229,European Turtle Dove,4,51
+230,Little Bustard,4,110
+231,Yellowhammer,2,26
+232,White Wagtail,2,28
+233,Moltonis Warbler,3,17
+234,Goldcrest,1,15
+235,Common Moorhen,3,53
+236,Short Toed Treecreeper,2,20
+237,Eleonoras Falcon,6,95
+238,Northern Gannet,5,173
+239,Eurasian Sparrowhawk,4,65
+240,Northern Goshawk,5,106
+241,Eastern Imperial Eagle,7,200
+242,Bonellis Eagle,8,160
+243,Montagus Harrier,4,113
+244,Common Buzzard,4,123
+245,Red Kite,4,157
+246,Eurasian Hobby,4,75
+247,European Goldfinch,6,23
+248,Snow Bunting,5,35
+249,Hooded Crow,3,99
+250,Eurasian Collared Dove,5,52
+251,Common Starling,3,38
+252,Common Swift,5,46
+253,House Sparrow,6,22
+254,Ruff,2,56
+255,Greater Flamingo,3,152
+256,Audouins Gull,1,132
+257,Common Chaffinch,4,23
+258,Common Chiffchaff,3,20
+259,Greylag Goose,7,164
+260,Cettis Warbler,4,17
+261,Eurasian Green Woodpecker,4,48
+262,Abbotts Booby,5,190

@@ -59,13 +59,15 @@ def test_ocr_alias_manifest_maps_scientific_names() -> None:
     assert data["version"] == 2
     assert data["matchMethod"] == "multi-signal-kor-eng-ocr"
     assert len(data["cards"]) == 210
+    assert data["diagnostics"]["numericSignalCount"] == 210
     assert first["birdName"] == "Pied Billed Grebe"
     assert first["birdNameKo"] == "\uc5bc\ub8e9\ubd80\ub9ac\ub17c\ubcd1\uc544\ub9ac"
     assert "\uc5bc\ub8e9\ubd80\ub9ac\ub17c\ubcd1\uc544\ub9ac" in first["koreanAliases"]
-    assert first["numericSignals"] == {"pointValue": "", "wingspanCm": ""}
+    assert first["numericSignals"] == {"pointValue": "0", "wingspanCm": "41"}
     assert "Podilymbus podiceps" in first["aliases"]
     assert "podilymbuspodiceps" in first["normalizedAliases"]
     assert last["birdName"] == "Abbotts Booby"
+    assert last["numericSignals"] == {"pointValue": "5", "wingspanCm": "190"}
     assert "Papasula abbotti" in last["aliases"]
     assert "Dryocopus martius" in black_woodpecker["aliases"]
     assert all("Bonelli" not in alias for alias in black_woodpecker["aliases"])

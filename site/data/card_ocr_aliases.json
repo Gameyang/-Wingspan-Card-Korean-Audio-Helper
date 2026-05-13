@@ -3,7 +3,7 @@
   "source": "site/data/audio_clips.json",
   "koreanNameSource": "src/Data/card_intro_tts_ko.csv",
   "abilityKeywordSource": "src/Data/card_ability_ocr.csv",
-  "numericSignalSource": null,
+  "numericSignalSource": "src/Data/card_numeric_signals.csv",
   "taxonomySource": null,
   "matchMethod": "multi-signal-kor-eng-ocr",
   "cards": [
@@ -27,8 +27,8 @@
         "얼룩부리논병아리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "41"
       },
       "abilityKeywords": [
         "2장을",
@@ -60,8 +60,8 @@
         "도가머리딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "74"
       },
       "abilityKeywords": [
         "플레이어는",
@@ -96,8 +96,8 @@
         "서부종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "38"
       },
       "abilityKeywords": [
         "플레이어는",
@@ -130,8 +130,8 @@
         "메뚜기참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": [
         "원하는",
@@ -160,8 +160,8 @@
         "칩핑참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "23"
       },
       "abilityKeywords": [
         "원하는",
@@ -190,8 +190,8 @@
         "캐신참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -215,8 +215,8 @@
         "베어드참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -240,8 +240,8 @@
         "캘리포니아메추라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -265,8 +265,8 @@
         "북부보브화이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -290,8 +290,8 @@
         "애도비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -315,8 +315,8 @@
         "볼티모어꾀꼬리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -340,8 +340,8 @@
         "붉은솔잣새새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -365,8 +365,8 @@
         "라줄리멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -390,8 +390,8 @@
         "아메리카까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "99"
       },
       "abilityKeywords": []
     },
@@ -415,8 +415,8 @@
         "물고기까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "91"
       },
       "abilityKeywords": []
     },
@@ -440,8 +440,8 @@
         "검은관밤왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -465,8 +465,8 @@
         "치와와큰까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -490,8 +490,8 @@
         "큰까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "135"
       },
       "abilityKeywords": []
     },
@@ -515,8 +515,8 @@
         "북부홍관조"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -540,8 +540,8 @@
         "노란배딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "41"
       },
       "abilityKeywords": []
     },
@@ -565,8 +565,8 @@
         "남색멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -590,8 +590,8 @@
         "서부풍금조"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -615,8 +615,8 @@
         "점박이토히"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -640,8 +640,8 @@
         "장밋빛가슴콩새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -665,8 +665,8 @@
         "초록왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "66"
       },
       "abilityKeywords": []
     },
@@ -690,8 +690,8 @@
         "회색크아트브어드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -715,8 +715,8 @@
         "북부흉내지빠귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -740,8 +740,8 @@
         "두건비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "61"
       },
       "abilityKeywords": []
     },
@@ -765,8 +765,8 @@
         "뷰익굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -790,8 +790,8 @@
         "노란가슴챗"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -815,8 +815,8 @@
         "일반쏙독새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -840,8 +840,8 @@
         "노래참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -865,8 +865,8 @@
         "흰관참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -890,8 +890,8 @@
         "굴뚝칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -915,8 +915,8 @@
         "푸른콩새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -940,8 +940,8 @@
         "링컨참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -965,8 +965,8 @@
         "큰로드러너"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -990,8 +990,8 @@
         "붉은꼬리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "124"
       },
       "abilityKeywords": []
     },
@@ -1017,8 +1017,8 @@
         "북부개구리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "109"
       },
       "abilityKeywords": []
     },
@@ -1042,8 +1042,8 @@
         "쿠퍼매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "79"
       },
       "abilityKeywords": []
     },
@@ -1067,8 +1067,8 @@
         "붉은시아우르드어에드매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -1092,8 +1092,8 @@
         "줄무늬올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "107"
       },
       "abilityKeywords": []
     },
@@ -1117,8 +1117,8 @@
         "스웨인슨매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "130"
       },
       "abilityKeywords": []
     },
@@ -1142,8 +1142,8 @@
         "송골매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "104"
       },
       "abilityKeywords": []
     },
@@ -1167,8 +1167,8 @@
         "검독수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "201"
       },
       "abilityKeywords": []
     },
@@ -1192,8 +1192,8 @@
         "아메리카수리부엉이"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -1217,8 +1217,8 @@
         "일반비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "86"
       },
       "abilityKeywords": []
     },
@@ -1242,8 +1242,8 @@
         "윌렛"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "66"
       },
       "abilityKeywords": []
     },
@@ -1267,8 +1267,8 @@
         "아닝가새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "114"
       },
       "abilityKeywords": []
     },
@@ -1292,8 +1292,8 @@
         "눈백로"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "104"
       },
       "abilityKeywords": []
     },
@@ -1317,8 +1317,8 @@
         "흰프아크에드따오기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "91"
       },
       "abilityKeywords": []
     },
@@ -1342,8 +1342,8 @@
         "검은가위부리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -1367,8 +1367,8 @@
         "동부스크이치올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -1392,8 +1392,8 @@
         "미시시피솔개"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "79"
       },
       "abilityKeywords": []
     },
@@ -1417,8 +1417,8 @@
         "프어르우그이느아우스매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "142"
       },
       "abilityKeywords": []
     },
@@ -1442,8 +1442,8 @@
         "아메리카황조롱이"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -1469,8 +1469,8 @@
         "가면올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "107"
       },
       "abilityKeywords": []
     },
@@ -1494,8 +1494,8 @@
         "굴파는올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -1519,8 +1519,8 @@
         "캐나다두루미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "196"
       },
       "abilityKeywords": []
     },
@@ -1544,8 +1544,8 @@
         "캐나다기러기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -1569,8 +1569,8 @@
         "검은배휘파람오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "76"
       },
       "abilityKeywords": []
     },
@@ -1594,8 +1594,8 @@
         "두겹볏가마우지"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -1619,8 +1619,8 @@
         "아메리카흰펠리컨"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "274"
       },
       "abilityKeywords": []
     },
@@ -1644,8 +1644,8 @@
         "붉은날개검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -1669,8 +1669,8 @@
         "일반검정새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "43"
       },
       "abilityKeywords": []
     },
@@ -1694,8 +1694,8 @@
         "브루어검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "41"
       },
       "abilityKeywords": []
     },
@@ -1719,8 +1719,8 @@
         "노란머리검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -1744,8 +1744,8 @@
         "부시팃새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -1769,8 +1769,8 @@
         "딕시슬새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -1794,8 +1794,8 @@
         "고리부리갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "122"
       },
       "abilityKeywords": []
     },
@@ -1819,8 +1819,8 @@
         "아메리카물닭"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "61"
       },
       "abilityKeywords": []
     },
@@ -1844,8 +1844,8 @@
         "노란르우므프에드워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -1869,8 +1869,8 @@
         "아메리카로빈"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "43"
       },
       "abilityKeywords": []
     },
@@ -1894,8 +1894,8 @@
         "집되새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -1919,8 +1919,8 @@
         "브아르느제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -1944,8 +1944,8 @@
         "트르이제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -1969,8 +1969,8 @@
         "보라제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -1994,8 +1994,8 @@
         "보라초록제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -2019,8 +2019,8 @@
         "크에드아르여새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -2044,8 +2044,8 @@
         "꼬마동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -2069,8 +2069,8 @@
         "소나무스이스크이느새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -2094,8 +2094,8 @@
         "검은에이에드정코새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -2119,8 +2119,8 @@
         "아메리카검은머리물떼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "81"
       },
       "abilityKeywords": []
     },
@@ -2144,8 +2144,8 @@
         "캐롤라이나굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -2169,8 +2169,8 @@
         "검은느에크에드장다리물떼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "74"
       },
       "abilityKeywords": []
     },
@@ -2194,8 +2194,8 @@
         "잉카비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -2219,8 +2219,8 @@
         "스에이스피비새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -2244,8 +2244,8 @@
         "아시목딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -2269,8 +2269,8 @@
         "보보링크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -2294,8 +2294,8 @@
         "갈색펠리컨"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "201"
       },
       "abilityKeywords": []
     },
@@ -2319,8 +2319,8 @@
         "아메리카그오르드프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -2344,8 +2344,8 @@
         "북부딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -2369,8 +2369,8 @@
         "흰머리수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "203"
       },
       "abilityKeywords": []
     },
@@ -2394,8 +2394,8 @@
         "숲황새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "155"
       },
       "abilityKeywords": []
     },
@@ -2419,8 +2419,8 @@
         "르오스이트에저어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "127"
       },
       "abilityKeywords": []
     },
@@ -2444,8 +2444,8 @@
         "하늘빛워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -2469,8 +2469,8 @@
         "밤색크오르르아르에드긴발톱멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -2494,8 +2494,8 @@
         "크이느그뜸부기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -2519,8 +2519,8 @@
         "붉은크오크아드에드딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -2544,8 +2544,8 @@
         "아메리카흰두루미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "221"
       },
       "abilityKeywords": []
     },
@@ -2569,8 +2569,8 @@
         "점박이올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -2594,8 +2594,8 @@
         "캐신되새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -2619,8 +2619,8 @@
         "벨비레오"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -2644,8 +2644,8 @@
         "채색멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -2669,8 +2669,8 @@
         "큰프르에이르이치이크에느새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "71"
       },
       "abilityKeywords": []
     },
@@ -2694,8 +2694,8 @@
         "대서양퍼핀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -2719,8 +2719,8 @@
         "스프르아그우에스밭종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -2744,8 +2744,8 @@
         "캘리포니아콘도르"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "277"
       },
       "abilityKeywords": []
     },
@@ -2769,8 +2769,8 @@
         "솜털딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -2794,8 +2794,8 @@
         "볏박새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -2819,8 +2819,8 @@
         "루비관크이느그르에트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -2844,8 +2844,8 @@
         "붉은에이에드비레오"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -2871,8 +2871,8 @@
         "집굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -2896,8 +2896,8 @@
         "사바나참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -2921,8 +2921,8 @@
         "동부파랑새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -2946,8 +2946,8 @@
         "산파랑새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -2971,8 +2971,8 @@
         "큰푸른왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "183"
       },
       "abilityKeywords": []
     },
@@ -2996,8 +2996,8 @@
         "대백로"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "130"
       },
       "abilityKeywords": []
     },
@@ -3021,8 +3021,8 @@
         "넓은날개매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "85"
       },
       "abilityKeywords": []
     },
@@ -3046,8 +3046,8 @@
         "아메리카딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -3071,8 +3071,8 @@
         "캔버스백새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "82"
       },
       "abilityKeywords": []
     },
@@ -3096,8 +3096,8 @@
         "브오크스스칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "31"
       },
       "abilityKeywords": []
     },
@@ -3121,8 +3121,8 @@
         "브란트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "114"
       },
       "abilityKeywords": []
     },
@@ -3146,8 +3146,8 @@
         "흰목칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -3171,8 +3171,8 @@
         "스크아르에드메추라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -3196,8 +3196,8 @@
         "검은치이느느에드벌새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "8"
       },
       "abilityKeywords": []
     },
@@ -3221,8 +3221,8 @@
         "붉은가슴비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "78"
       },
       "abilityKeywords": []
     },
@@ -3248,8 +3248,8 @@
         "채색우이트에스트아르트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -3273,8 +3273,8 @@
         "유라시아까치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -3298,8 +3298,8 @@
         "크아르르이오느까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "92"
       },
       "abilityKeywords": []
     },
@@ -3325,8 +3325,8 @@
         "그르이프프오느독수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "252"
       },
       "abilityKeywords": []
     },
@@ -3350,8 +3350,8 @@
         "크오아르트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "16"
       },
       "abilityKeywords": []
     },
@@ -3375,8 +3375,8 @@
         "유라시아동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -3402,8 +3402,8 @@
         "유라시아잣까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "55"
       },
       "abilityKeywords": []
     },
@@ -3427,8 +3427,8 @@
         "붉은브아크에드때까치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -3452,8 +3452,8 @@
         "물총새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "26"
       },
       "abilityKeywords": []
     },
@@ -3477,8 +3477,8 @@
         "금눈쇠올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -3502,8 +3502,8 @@
         "어치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -3527,8 +3527,8 @@
         "황새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "160"
       },
       "abilityKeywords": []
     },
@@ -3552,8 +3552,8 @@
         "흰목물까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -3579,8 +3579,8 @@
         "검은목드이브어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "120"
       },
       "abilityKeywords": []
     },
@@ -3604,8 +3604,8 @@
         "윌슨스트오르므페트럴새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -3629,8 +3629,8 @@
         "뿔논병아리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "65"
       },
       "abilityKeywords": []
     },
@@ -3658,8 +3658,8 @@
         "일반작은해오라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "49"
       },
       "abilityKeywords": []
     },
@@ -3683,8 +3683,8 @@
         "스쿠아크크오왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "86"
       },
       "abilityKeywords": []
     },
@@ -3708,8 +3708,8 @@
         "스아브이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -3733,8 +3733,8 @@
         "므우트에고니"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "220"
       },
       "abilityKeywords": []
     },
@@ -3760,8 +3760,8 @@
         "왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "185"
       },
       "abilityKeywords": []
     },
@@ -3787,8 +3787,8 @@
         "일반뻐꾸기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "57"
       },
       "abilityKeywords": []
     },
@@ -3812,8 +3812,8 @@
         "드우느느오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -3837,8 +3837,8 @@
         "검은딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -3862,8 +3862,8 @@
         "작은우이트에스러오아트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -3887,8 +3887,8 @@
         "일반흰죽지오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "73"
       },
       "abilityKeywords": []
     },
@@ -3912,8 +3912,8 @@
         "붉은르에그그에드프아르트르이드그에새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "48"
       },
       "abilityKeywords": []
     },
@@ -3937,8 +3937,8 @@
         "스에크르아스종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "34"
       },
       "abilityKeywords": []
     },
@@ -3962,8 +3962,8 @@
         "에어오프이느르오르르어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "70"
       },
       "abilityKeywords": []
     },
@@ -3987,8 +3987,8 @@
         "유라시아금빛꾀꼬리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -4012,8 +4012,8 @@
         "유라시아트르이참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "21"
       },
       "abilityKeywords": []
     },
@@ -4037,8 +4037,8 @@
         "에어오프이느흐오느에이브우즈즈아르드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "134"
       },
       "abilityKeywords": []
     },
@@ -4062,8 +4062,8 @@
         "큰트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -4087,8 +4087,8 @@
         "흐오프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -4114,8 +4114,8 @@
         "브우르르프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -4139,8 +4139,8 @@
         "브르우에스러오아트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -4164,8 +4164,8 @@
         "일반느이그흐트이느그아르에새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -4189,8 +4189,8 @@
         "에어오프이느로빈"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -4214,8 +4214,8 @@
         "흰브아크에드딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "39"
       },
       "abilityKeywords": []
     },
@@ -4241,8 +4241,8 @@
         "검은딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "70"
       },
       "abilityKeywords": []
     },
@@ -4266,8 +4266,8 @@
         "앵무"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -4291,8 +4291,8 @@
         "에어오프이느브이이트어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -4316,8 +4316,8 @@
         "검은머리갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -4341,8 +4341,8 @@
         "르오느그꼬리트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -4368,8 +4368,8 @@
         "일반검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -4393,8 +4393,8 @@
         "흰올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "138"
       },
       "abilityKeywords": []
     },
@@ -4418,8 +4418,8 @@
         "붉은크느오트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "50"
       },
       "abilityKeywords": []
     },
@@ -4443,8 +4443,8 @@
         "검은꼬리갓윗새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "76"
       },
       "abilityKeywords": []
     },
@@ -4470,8 +4470,8 @@
         "크오르스이크아느동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "21"
       },
       "abilityKeywords": []
     },
@@ -4495,8 +4495,8 @@
         "에어오프이느트어트르에비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -4520,8 +4520,8 @@
         "작은브우스트아르드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "110"
       },
       "abilityKeywords": []
     },
@@ -4545,8 +4545,8 @@
         "이에르르오흐아므므어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "26"
       },
       "abilityKeywords": []
     },
@@ -4570,8 +4570,8 @@
         "흰우아그트에이르새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -4595,8 +4595,8 @@
         "므오르트오느이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "17"
       },
       "abilityKeywords": []
     },
@@ -4620,8 +4620,8 @@
         "그오르드크르에스트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -4649,8 +4649,8 @@
         "일반므우르흐에느크스크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -4674,8 +4674,8 @@
         "시오르트트오에드트르이크르이프어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -4699,8 +4699,8 @@
         "에르에오느오르아스매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "95"
       },
       "abilityKeywords": []
     },
@@ -4724,8 +4724,8 @@
         "북부그아느느에트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "173"
       },
       "abilityKeywords": []
     },
@@ -4749,8 +4749,8 @@
         "유라시아스프아르르오흐오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "65"
       },
       "abilityKeywords": []
     },
@@ -4778,8 +4778,8 @@
         "북부그오시오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "106"
       },
       "abilityKeywords": []
     },
@@ -4805,8 +4805,8 @@
         "동부이므프어이아르수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "200"
       },
       "abilityKeywords": []
     },
@@ -4830,8 +4830,8 @@
         "브오느에르르이스수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "160"
       },
       "abilityKeywords": []
     },
@@ -4855,8 +4855,8 @@
         "므오느트아그우스개구리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "113"
       },
       "abilityKeywords": []
     },
@@ -4882,8 +4882,8 @@
         "일반브우즈즈아르드크스크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "123"
       },
       "abilityKeywords": []
     },
@@ -4907,8 +4907,8 @@
         "붉은솔개"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "157"
       },
       "abilityKeywords": []
     },
@@ -4932,8 +4932,8 @@
         "유라시아흐오브브이새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "75"
       },
       "abilityKeywords": []
     },
@@ -4957,8 +4957,8 @@
         "에어오프이느그오르드프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -4982,8 +4982,8 @@
         "스느오멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "35"
       },
       "abilityKeywords": []
     },
@@ -5007,8 +5007,8 @@
         "두건까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "99"
       },
       "abilityKeywords": []
     },
@@ -5032,8 +5032,8 @@
         "유라시아크오르르아르에드비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "52"
       },
       "abilityKeywords": []
     },
@@ -5059,8 +5059,8 @@
         "일반찌르레기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -5086,8 +5086,8 @@
         "일반칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -5111,8 +5111,8 @@
         "집참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -5136,8 +5136,8 @@
         "르우프프새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -5161,8 +5161,8 @@
         "큰프르아므이느그오새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "152"
       },
       "abilityKeywords": []
     },
@@ -5186,8 +5186,8 @@
         "오드아우이느스갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -5211,8 +5211,8 @@
         "일반치아프프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -5236,8 +5236,8 @@
         "일반치이프프치아프프새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -5263,8 +5263,8 @@
         "그르에이르아그기러기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "164"
       },
       "abilityKeywords": []
     },
@@ -5288,8 +5288,8 @@
         "크에트트이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "17"
       },
       "abilityKeywords": []
     },
@@ -5313,8 +5313,8 @@
         "유라시아초록딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "48"
       },
       "abilityKeywords": []
     },
@@ -5338,8 +5338,8 @@
         "아브브오트트스부비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "190"
       },
       "abilityKeywords": []
     }
@@ -5365,8 +5365,8 @@
         "얼룩부리논병아리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "41"
       },
       "abilityKeywords": [
         "2장을",
@@ -5398,8 +5398,8 @@
         "도가머리딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "74"
       },
       "abilityKeywords": [
         "플레이어는",
@@ -5434,8 +5434,8 @@
         "서부종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "38"
       },
       "abilityKeywords": [
         "플레이어는",
@@ -5468,8 +5468,8 @@
         "메뚜기참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": [
         "원하는",
@@ -5498,8 +5498,8 @@
         "칩핑참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "23"
       },
       "abilityKeywords": [
         "원하는",
@@ -5528,8 +5528,8 @@
         "캐신참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -5553,8 +5553,8 @@
         "베어드참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -5578,8 +5578,8 @@
         "캘리포니아메추라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -5603,8 +5603,8 @@
         "북부보브화이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -5628,8 +5628,8 @@
         "애도비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -5653,8 +5653,8 @@
         "볼티모어꾀꼬리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -5678,8 +5678,8 @@
         "붉은솔잣새새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -5703,8 +5703,8 @@
         "라줄리멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -5728,8 +5728,8 @@
         "아메리카까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "99"
       },
       "abilityKeywords": []
     },
@@ -5753,8 +5753,8 @@
         "물고기까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "91"
       },
       "abilityKeywords": []
     },
@@ -5778,8 +5778,8 @@
         "검은관밤왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -5803,8 +5803,8 @@
         "치와와큰까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -5828,8 +5828,8 @@
         "큰까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "135"
       },
       "abilityKeywords": []
     },
@@ -5853,8 +5853,8 @@
         "북부홍관조"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -5878,8 +5878,8 @@
         "노란배딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "41"
       },
       "abilityKeywords": []
     },
@@ -5903,8 +5903,8 @@
         "남색멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -5928,8 +5928,8 @@
         "서부풍금조"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -5953,8 +5953,8 @@
         "점박이토히"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -5978,8 +5978,8 @@
         "장밋빛가슴콩새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -6003,8 +6003,8 @@
         "초록왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "66"
       },
       "abilityKeywords": []
     },
@@ -6028,8 +6028,8 @@
         "회색크아트브어드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -6053,8 +6053,8 @@
         "북부흉내지빠귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -6078,8 +6078,8 @@
         "두건비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "61"
       },
       "abilityKeywords": []
     },
@@ -6103,8 +6103,8 @@
         "뷰익굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -6128,8 +6128,8 @@
         "노란가슴챗"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -6153,8 +6153,8 @@
         "일반쏙독새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -6178,8 +6178,8 @@
         "노래참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -6203,8 +6203,8 @@
         "흰관참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -6228,8 +6228,8 @@
         "굴뚝칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -6253,8 +6253,8 @@
         "푸른콩새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -6278,8 +6278,8 @@
         "링컨참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -6303,8 +6303,8 @@
         "큰로드러너"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -6328,8 +6328,8 @@
         "붉은꼬리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "124"
       },
       "abilityKeywords": []
     },
@@ -6355,8 +6355,8 @@
         "북부개구리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "109"
       },
       "abilityKeywords": []
     },
@@ -6380,8 +6380,8 @@
         "쿠퍼매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "79"
       },
       "abilityKeywords": []
     },
@@ -6405,8 +6405,8 @@
         "붉은시아우르드어에드매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -6430,8 +6430,8 @@
         "줄무늬올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "107"
       },
       "abilityKeywords": []
     },
@@ -6455,8 +6455,8 @@
         "스웨인슨매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "130"
       },
       "abilityKeywords": []
     },
@@ -6480,8 +6480,8 @@
         "송골매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "104"
       },
       "abilityKeywords": []
     },
@@ -6505,8 +6505,8 @@
         "검독수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "201"
       },
       "abilityKeywords": []
     },
@@ -6530,8 +6530,8 @@
         "아메리카수리부엉이"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -6555,8 +6555,8 @@
         "일반비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "86"
       },
       "abilityKeywords": []
     },
@@ -6580,8 +6580,8 @@
         "윌렛"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "66"
       },
       "abilityKeywords": []
     },
@@ -6605,8 +6605,8 @@
         "아닝가새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "114"
       },
       "abilityKeywords": []
     },
@@ -6630,8 +6630,8 @@
         "눈백로"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "104"
       },
       "abilityKeywords": []
     },
@@ -6655,8 +6655,8 @@
         "흰프아크에드따오기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "91"
       },
       "abilityKeywords": []
     },
@@ -6680,8 +6680,8 @@
         "검은가위부리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "112"
       },
       "abilityKeywords": []
     },
@@ -6705,8 +6705,8 @@
         "동부스크이치올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -6730,8 +6730,8 @@
         "미시시피솔개"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "79"
       },
       "abilityKeywords": []
     },
@@ -6755,8 +6755,8 @@
         "프어르우그이느아우스매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "142"
       },
       "abilityKeywords": []
     },
@@ -6780,8 +6780,8 @@
         "아메리카황조롱이"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -6807,8 +6807,8 @@
         "가면올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "107"
       },
       "abilityKeywords": []
     },
@@ -6832,8 +6832,8 @@
         "굴파는올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -6857,8 +6857,8 @@
         "캐나다두루미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "196"
       },
       "abilityKeywords": []
     },
@@ -6882,8 +6882,8 @@
         "캐나다기러기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -6907,8 +6907,8 @@
         "검은배휘파람오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "76"
       },
       "abilityKeywords": []
     },
@@ -6932,8 +6932,8 @@
         "두겹볏가마우지"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -6957,8 +6957,8 @@
         "아메리카흰펠리컨"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "274"
       },
       "abilityKeywords": []
     },
@@ -6982,8 +6982,8 @@
         "붉은날개검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -7007,8 +7007,8 @@
         "일반검정새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "43"
       },
       "abilityKeywords": []
     },
@@ -7032,8 +7032,8 @@
         "브루어검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "41"
       },
       "abilityKeywords": []
     },
@@ -7057,8 +7057,8 @@
         "노란머리검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -7082,8 +7082,8 @@
         "부시팃새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -7107,8 +7107,8 @@
         "딕시슬새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -7132,8 +7132,8 @@
         "고리부리갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "122"
       },
       "abilityKeywords": []
     },
@@ -7157,8 +7157,8 @@
         "아메리카물닭"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "61"
       },
       "abilityKeywords": []
     },
@@ -7182,8 +7182,8 @@
         "노란르우므프에드워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -7207,8 +7207,8 @@
         "아메리카로빈"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "43"
       },
       "abilityKeywords": []
     },
@@ -7232,8 +7232,8 @@
         "집되새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -7257,8 +7257,8 @@
         "브아르느제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -7282,8 +7282,8 @@
         "트르이제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -7307,8 +7307,8 @@
         "보라제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -7332,8 +7332,8 @@
         "보라초록제비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -7357,8 +7357,8 @@
         "크에드아르여새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -7382,8 +7382,8 @@
         "꼬마동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -7407,8 +7407,8 @@
         "소나무스이스크이느새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -7432,8 +7432,8 @@
         "검은에이에드정코새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -7457,8 +7457,8 @@
         "아메리카검은머리물떼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "81"
       },
       "abilityKeywords": []
     },
@@ -7482,8 +7482,8 @@
         "캐롤라이나굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -7507,8 +7507,8 @@
         "검은느에크에드장다리물떼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "74"
       },
       "abilityKeywords": []
     },
@@ -7532,8 +7532,8 @@
         "잉카비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -7557,8 +7557,8 @@
         "스에이스피비새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -7582,8 +7582,8 @@
         "아시목딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -7607,8 +7607,8 @@
         "보보링크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -7632,8 +7632,8 @@
         "갈색펠리컨"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "201"
       },
       "abilityKeywords": []
     },
@@ -7657,8 +7657,8 @@
         "아메리카그오르드프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -7682,8 +7682,8 @@
         "북부딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -7707,8 +7707,8 @@
         "흰머리수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "9",
+        "wingspanCm": "203"
       },
       "abilityKeywords": []
     },
@@ -7732,8 +7732,8 @@
         "숲황새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "155"
       },
       "abilityKeywords": []
     },
@@ -7757,8 +7757,8 @@
         "르오스이트에저어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "127"
       },
       "abilityKeywords": []
     },
@@ -7782,8 +7782,8 @@
         "하늘빛워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -7807,8 +7807,8 @@
         "밤색크오르르아르에드긴발톱멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -7832,8 +7832,8 @@
         "크이느그뜸부기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -7857,8 +7857,8 @@
         "붉은크오크아드에드딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -7882,8 +7882,8 @@
         "아메리카흰두루미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "221"
       },
       "abilityKeywords": []
     },
@@ -7907,8 +7907,8 @@
         "점박이올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -7932,8 +7932,8 @@
         "캐신되새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -7957,8 +7957,8 @@
         "벨비레오"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -7982,8 +7982,8 @@
         "채색멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -8007,8 +8007,8 @@
         "큰프르에이르이치이크에느새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "71"
       },
       "abilityKeywords": []
     },
@@ -8032,8 +8032,8 @@
         "대서양퍼핀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -8057,8 +8057,8 @@
         "스프르아그우에스밭종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -8082,8 +8082,8 @@
         "캘리포니아콘도르"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "277"
       },
       "abilityKeywords": []
     },
@@ -8107,8 +8107,8 @@
         "솜털딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -8132,8 +8132,8 @@
         "볏박새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -8157,8 +8157,8 @@
         "루비관크이느그르에트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -8182,8 +8182,8 @@
         "붉은에이에드비레오"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -8209,8 +8209,8 @@
         "집굴뚝새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -8234,8 +8234,8 @@
         "사바나참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -8259,8 +8259,8 @@
         "동부파랑새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -8284,8 +8284,8 @@
         "산파랑새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -8309,8 +8309,8 @@
         "큰푸른왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "183"
       },
       "abilityKeywords": []
     },
@@ -8334,8 +8334,8 @@
         "대백로"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "130"
       },
       "abilityKeywords": []
     },
@@ -8359,8 +8359,8 @@
         "넓은날개매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "85"
       },
       "abilityKeywords": []
     },
@@ -8384,8 +8384,8 @@
         "아메리카딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -8409,8 +8409,8 @@
         "캔버스백새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "82"
       },
       "abilityKeywords": []
     },
@@ -8434,8 +8434,8 @@
         "브오크스스칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "31"
       },
       "abilityKeywords": []
     },
@@ -8459,8 +8459,8 @@
         "브란트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "114"
       },
       "abilityKeywords": []
     },
@@ -8484,8 +8484,8 @@
         "흰목칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -8509,8 +8509,8 @@
         "스크아르에드메추라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -8534,8 +8534,8 @@
         "검은치이느느에드벌새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "8"
       },
       "abilityKeywords": []
     },
@@ -8559,8 +8559,8 @@
         "붉은가슴비오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "78"
       },
       "abilityKeywords": []
     },
@@ -8586,8 +8586,8 @@
         "채색우이트에스트아르트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -8611,8 +8611,8 @@
         "유라시아까치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -8636,8 +8636,8 @@
         "크아르르이오느까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "92"
       },
       "abilityKeywords": []
     },
@@ -8663,8 +8663,8 @@
         "그르이프프오느독수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "252"
       },
       "abilityKeywords": []
     },
@@ -8688,8 +8688,8 @@
         "크오아르트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "16"
       },
       "abilityKeywords": []
     },
@@ -8713,8 +8713,8 @@
         "유라시아동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "25"
       },
       "abilityKeywords": []
     },
@@ -8740,8 +8740,8 @@
         "유라시아잣까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "55"
       },
       "abilityKeywords": []
     },
@@ -8765,8 +8765,8 @@
         "붉은브아크에드때까치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "33"
       },
       "abilityKeywords": []
     },
@@ -8790,8 +8790,8 @@
         "물총새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "26"
       },
       "abilityKeywords": []
     },
@@ -8815,8 +8815,8 @@
         "금눈쇠올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -8840,8 +8840,8 @@
         "어치"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -8865,8 +8865,8 @@
         "황새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "160"
       },
       "abilityKeywords": []
     },
@@ -8890,8 +8890,8 @@
         "흰목물까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -8917,8 +8917,8 @@
         "검은목드이브어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "120"
       },
       "abilityKeywords": []
     },
@@ -8942,8 +8942,8 @@
         "윌슨스트오르므페트럴새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -8967,8 +8967,8 @@
         "뿔논병아리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "65"
       },
       "abilityKeywords": []
     },
@@ -8996,8 +8996,8 @@
         "일반작은해오라기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "49"
       },
       "abilityKeywords": []
     },
@@ -9021,8 +9021,8 @@
         "스쿠아크크오왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "86"
       },
       "abilityKeywords": []
     },
@@ -9046,8 +9046,8 @@
         "스아브이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -9071,8 +9071,8 @@
         "므우트에고니"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "220"
       },
       "abilityKeywords": []
     },
@@ -9098,8 +9098,8 @@
         "왜가리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "185"
       },
       "abilityKeywords": []
     },
@@ -9125,8 +9125,8 @@
         "일반뻐꾸기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "57"
       },
       "abilityKeywords": []
     },
@@ -9150,8 +9150,8 @@
         "드우느느오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -9175,8 +9175,8 @@
         "검은딱새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -9200,8 +9200,8 @@
         "작은우이트에스러오아트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -9225,8 +9225,8 @@
         "일반흰죽지오리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "73"
       },
       "abilityKeywords": []
     },
@@ -9250,8 +9250,8 @@
         "붉은르에그그에드프아르트르이드그에새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "48"
       },
       "abilityKeywords": []
     },
@@ -9275,8 +9275,8 @@
         "스에크르아스종다리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "34"
       },
       "abilityKeywords": []
     },
@@ -9300,8 +9300,8 @@
         "에어오프이느르오르르어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "70"
       },
       "abilityKeywords": []
     },
@@ -9325,8 +9325,8 @@
         "유라시아금빛꾀꼬리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -9350,8 +9350,8 @@
         "유라시아트르이참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "21"
       },
       "abilityKeywords": []
     },
@@ -9375,8 +9375,8 @@
         "에어오프이느흐오느에이브우즈즈아르드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "134"
       },
       "abilityKeywords": []
     },
@@ -9400,8 +9400,8 @@
         "큰트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -9425,8 +9425,8 @@
         "흐오프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -9452,8 +9452,8 @@
         "브우르르프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "24"
       },
       "abilityKeywords": []
     },
@@ -9477,8 +9477,8 @@
         "브르우에스러오아트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -9502,8 +9502,8 @@
         "일반느이그흐트이느그아르에새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -9527,8 +9527,8 @@
         "에어오프이느로빈"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -9552,8 +9552,8 @@
         "흰브아크에드딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "39"
       },
       "abilityKeywords": []
     },
@@ -9579,8 +9579,8 @@
         "검은딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "70"
       },
       "abilityKeywords": []
     },
@@ -9604,8 +9604,8 @@
         "앵무"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "30"
       },
       "abilityKeywords": []
     },
@@ -9629,8 +9629,8 @@
         "에어오프이느브이이트어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -9654,8 +9654,8 @@
         "검은머리갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "102"
       },
       "abilityKeywords": []
     },
@@ -9679,8 +9679,8 @@
         "르오느그꼬리트이트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "0",
+        "wingspanCm": "18"
       },
       "abilityKeywords": []
     },
@@ -9706,8 +9706,8 @@
         "일반검은새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "36"
       },
       "abilityKeywords": []
     },
@@ -9731,8 +9731,8 @@
         "흰올빼미"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "138"
       },
       "abilityKeywords": []
     },
@@ -9756,8 +9756,8 @@
         "붉은크느오트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "50"
       },
       "abilityKeywords": []
     },
@@ -9781,8 +9781,8 @@
         "검은꼬리갓윗새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "76"
       },
       "abilityKeywords": []
     },
@@ -9808,8 +9808,8 @@
         "크오르스이크아느동고비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "21"
       },
       "abilityKeywords": []
     },
@@ -9833,8 +9833,8 @@
         "에어오프이느트어트르에비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "51"
       },
       "abilityKeywords": []
     },
@@ -9858,8 +9858,8 @@
         "작은브우스트아르드새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "110"
       },
       "abilityKeywords": []
     },
@@ -9883,8 +9883,8 @@
         "이에르르오흐아므므어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "26"
       },
       "abilityKeywords": []
     },
@@ -9908,8 +9908,8 @@
         "흰우아그트에이르새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "28"
       },
       "abilityKeywords": []
     },
@@ -9933,8 +9933,8 @@
         "므오르트오느이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "17"
       },
       "abilityKeywords": []
     },
@@ -9958,8 +9958,8 @@
         "그오르드크르에스트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "15"
       },
       "abilityKeywords": []
     },
@@ -9987,8 +9987,8 @@
         "일반므우르흐에느크스크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "53"
       },
       "abilityKeywords": []
     },
@@ -10012,8 +10012,8 @@
         "시오르트트오에드트르이크르이프어새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -10037,8 +10037,8 @@
         "에르에오느오르아스매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "95"
       },
       "abilityKeywords": []
     },
@@ -10062,8 +10062,8 @@
         "북부그아느느에트새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "173"
       },
       "abilityKeywords": []
     },
@@ -10087,8 +10087,8 @@
         "유라시아스프아르르오흐오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "65"
       },
       "abilityKeywords": []
     },
@@ -10116,8 +10116,8 @@
         "북부그오시오크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "106"
       },
       "abilityKeywords": []
     },
@@ -10143,8 +10143,8 @@
         "동부이므프어이아르수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "200"
       },
       "abilityKeywords": []
     },
@@ -10168,8 +10168,8 @@
         "브오느에르르이스수리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "8",
+        "wingspanCm": "160"
       },
       "abilityKeywords": []
     },
@@ -10193,8 +10193,8 @@
         "므오느트아그우스개구리매"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "113"
       },
       "abilityKeywords": []
     },
@@ -10220,8 +10220,8 @@
         "일반브우즈즈아르드크스크새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "123"
       },
       "abilityKeywords": []
     },
@@ -10245,8 +10245,8 @@
         "붉은솔개"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "157"
       },
       "abilityKeywords": []
     },
@@ -10270,8 +10270,8 @@
         "유라시아흐오브브이새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "75"
       },
       "abilityKeywords": []
     },
@@ -10295,8 +10295,8 @@
         "에어오프이느그오르드프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -10320,8 +10320,8 @@
         "스느오멧새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "35"
       },
       "abilityKeywords": []
     },
@@ -10345,8 +10345,8 @@
         "두건까마귀"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "99"
       },
       "abilityKeywords": []
     },
@@ -10370,8 +10370,8 @@
         "유라시아크오르르아르에드비둘기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "52"
       },
       "abilityKeywords": []
     },
@@ -10397,8 +10397,8 @@
         "일반찌르레기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "38"
       },
       "abilityKeywords": []
     },
@@ -10424,8 +10424,8 @@
         "일반칼새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "46"
       },
       "abilityKeywords": []
     },
@@ -10449,8 +10449,8 @@
         "집참새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "6",
+        "wingspanCm": "22"
       },
       "abilityKeywords": []
     },
@@ -10474,8 +10474,8 @@
         "르우프프새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "2",
+        "wingspanCm": "56"
       },
       "abilityKeywords": []
     },
@@ -10499,8 +10499,8 @@
         "큰프르아므이느그오새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "152"
       },
       "abilityKeywords": []
     },
@@ -10524,8 +10524,8 @@
         "오드아우이느스갈매기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "1",
+        "wingspanCm": "132"
       },
       "abilityKeywords": []
     },
@@ -10549,8 +10549,8 @@
         "일반치아프프이느치새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "23"
       },
       "abilityKeywords": []
     },
@@ -10574,8 +10574,8 @@
         "일반치이프프치아프프새"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "3",
+        "wingspanCm": "20"
       },
       "abilityKeywords": []
     },
@@ -10601,8 +10601,8 @@
         "그르에이르아그기러기"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "7",
+        "wingspanCm": "164"
       },
       "abilityKeywords": []
     },
@@ -10626,8 +10626,8 @@
         "크에트트이스워블러"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "17"
       },
       "abilityKeywords": []
     },
@@ -10651,8 +10651,8 @@
         "유라시아초록딱따구리"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "4",
+        "wingspanCm": "48"
       },
       "abilityKeywords": []
     },
@@ -10676,8 +10676,8 @@
         "아브브오트트스부비"
       ],
       "numericSignals": {
-        "pointValue": "",
-        "wingspanCm": ""
+        "pointValue": "5",
+        "wingspanCm": "190"
       },
       "abilityKeywords": []
     }
@@ -10685,7 +10685,7 @@
   "diagnostics": {
     "cardCount": 210,
     "koreanAliasCount": 210,
-    "numericSignalCount": 0,
+    "numericSignalCount": 210,
     "abilityKeywordCardCount": 5,
     "weakTaxonomyMatches": []
   }

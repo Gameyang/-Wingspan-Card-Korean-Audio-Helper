@@ -18,6 +18,10 @@ const OCR_MEDIUM_NAME_SCORE = 70;
 const OCR_MIN_NAME_SCORE = 60;
 const OCR_MIN_GAP = 5;
 const OCR_MIN_QUERY_LENGTH = 2;
+const OCR_SCORE_SIGNAL_LABEL = "점수";
+const OCR_WING_SIGNAL_LABEL = "날개길이";
+const OCR_NUMERIC_SINGLE_BOOST = 10;
+const OCR_NUMERIC_PAIR_BOOST = 30;
 const STABLE_MATCH_FRAMES = 2;
 const MISS_FRAMES_TO_RESET = 4;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
@@ -486,12 +490,19 @@ function exactNumericMatches(signals, card) {
   const wingspanCm = String(numericSignals.wingspanCm ?? "");
 
   if (pointValue && signals.scoreNumbers.includes(pointValue)) {
-    matches.push("점수");
+    matches.push(OCR_SCORE_SIGNAL_LABEL);
   }
   if (wingspanCm && signals.wingNumbers.includes(wingspanCm)) {
-    matches.push("날개길이");
+    matches.push(OCR_WING_SIGNAL_LABEL);
   }
   return matches;
+}
+
+function hasExactNumericPair(numericMatches) {
+  return (
+    numericMatches.includes(OCR_SCORE_SIGNAL_LABEL) &&
+    numericMatches.includes(OCR_WING_SIGNAL_LABEL)
+  );
 }
 
 function abilityKeywordScore(signals, card) {
@@ -504,8 +515,11 @@ function abilityKeywordScore(signals, card) {
   return Math.min(12, hits.length * 4);
 }
 
-function compositeCandidateScore(nameScore, numericMatches, abilityScore) {
-  return Math.min(100, Math.round(nameScore + numericMatches.length * 12 + abilityScore));
+function compositeCandidateRankScore(nameScore, numericMatches, abilityScore) {
+  const pairBoost = hasExactNumericPair(numericMatches) ? OCR_NUMERIC_PAIR_BOOST : 0;
+  return Math.round(
+    nameScore + numericMatches.length * OCR_NUMERIC_SINGLE_BOOST + pairBoost + abilityScore,
+  );
 }
 
 function rankOcrCandidates(signals) {
@@ -523,19 +537,22 @@ function rankOcrCandidates(signals) {
       const best = bestNameScore(signals, card);
       const numericMatches = exactNumericMatches(signals, card);
       const abilityScore = abilityKeywordScore(signals, card);
+      const rankScore = compositeCandidateRankScore(best.score, numericMatches, abilityScore);
       return {
         ...card,
         matchedAlias: best.alias,
         matchKind: best.kind,
         nameScore: best.score,
         numericMatches,
+        numericPairMatched: hasExactNumericPair(numericMatches),
         abilityScore,
-        score: compositeCandidateScore(best.score, numericMatches, abilityScore),
+        rankScore,
+        score: Math.min(100, rankScore),
       };
     })
     .sort(
       (a, b) =>
-        b.score - a.score ||
+        b.rankScore - a.rankScore ||
         b.nameScore - a.nameScore ||
         b.numericMatches.length - a.numericMatches.length ||
         a.cardNo.localeCompare(b.cardNo),
@@ -548,7 +565,7 @@ function matchConfidence(best, second) {
   if (!best) {
     return { ok: false, gap: 0, reason: "후보 없음" };
   }
-  const gap = best.score - (second?.score ?? 0);
+  const gap = (best.rankScore ?? best.score) - (second?.rankScore ?? second?.score ?? 0);
   const exactCount = best.numericMatches?.length ?? 0;
   if (best.nameScore < OCR_MIN_NAME_SCORE) {
     return { ok: false, gap, reason: `이름 ${best.nameScore}% < ${OCR_MIN_NAME_SCORE}%` };
@@ -738,7 +755,10 @@ function formatMeta(best, second, signals, audioMessage, confidence) {
   }
   if (best) {
     const exact = best.numericMatches?.length ? ` 숫자 일치 ${best.numericMatches.join("+")}` : "";
-    parts.push(`${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%${exact}`);
+    const numericPair = best.numericPairMatched ? " 점수+cm 우선" : "";
+    parts.push(
+      `${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%${exact}${numericPair}`,
+    );
   }
   if (second) {
     parts.push(`다음 ${second.cardNo} ${second.score}%`);
