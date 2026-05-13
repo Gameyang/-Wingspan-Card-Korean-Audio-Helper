@@ -3,14 +3,15 @@ const CARD_SIZE = {
   height: 970,
 };
 const OCR_SIGNAL_REGIONS = [
-  { key: "title", x: 100, y: 0, width: 525, height: 132, targetWidth: 1000, minHeight: 160 },
-  { key: "score", x: 0, y: 210, width: 95, height: 190, targetWidth: 250, minHeight: 320 },
-  { key: "wing", x: 480, y: 420, width: 150, height: 130, targetWidth: 360, minHeight: 210 },
-  { key: "ability", x: 0, y: 535, width: 630, height: 128, targetWidth: 1060, minHeight: 190 },
+  { key: "title", x: 205, y: 0, width: 420, height: 155, targetWidth: 1000, minHeight: 300 },
+  { key: "score", x: 0, y: 220, width: 95, height: 160, targetWidth: 250, minHeight: 360 },
+  { key: "wing", x: 480, y: 540, width: 150, height: 115, targetWidth: 360, minHeight: 260 },
+  { key: "ability", x: 0, y: 650, width: 630, height: 190, targetWidth: 1060, minHeight: 300 },
 ];
 const OCR_CANVAS_WIDTH = 1100;
 const OCR_CANVAS_PADDING = 18;
 const OCR_SECTION_GAP = 18;
+const OCR_REGION_MARGIN = 0.08;
 const OCR_INTERVAL_MS = 1350;
 const OCR_STRONG_NAME_SCORE = 85;
 const OCR_MEDIUM_NAME_SCORE = 70;
@@ -212,11 +213,17 @@ function clampSourceRect(rect) {
 
 function cardRegionSourceRect(region) {
   const cardRect = getVideoSourceRect(elements.cardGuide);
+  const marginX = region.width * OCR_REGION_MARGIN;
+  const marginY = region.height * OCR_REGION_MARGIN;
+  const x = Math.max(0, region.x - marginX);
+  const y = Math.max(0, region.y - marginY);
+  const width = Math.min(CARD_SIZE.width - x, region.width + marginX * 2);
+  const height = Math.min(CARD_SIZE.height - y, region.height + marginY * 2);
   return clampSourceRect({
-    sx: cardRect.sx + (cardRect.sw * region.x) / CARD_SIZE.width,
-    sy: cardRect.sy + (cardRect.sh * region.y) / CARD_SIZE.height,
-    sw: (cardRect.sw * region.width) / CARD_SIZE.width,
-    sh: (cardRect.sh * region.height) / CARD_SIZE.height,
+    sx: cardRect.sx + (cardRect.sw * x) / CARD_SIZE.width,
+    sy: cardRect.sy + (cardRect.sh * y) / CARD_SIZE.height,
+    sw: (cardRect.sw * width) / CARD_SIZE.width,
+    sh: (cardRect.sh * height) / CARD_SIZE.height,
   });
 }
 
