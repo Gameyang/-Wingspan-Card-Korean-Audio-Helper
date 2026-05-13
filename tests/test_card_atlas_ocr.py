@@ -39,11 +39,11 @@ def test_card_bbox_and_sample_crop_dimensions(tmp_path: Path) -> None:
         assert image.size == atlas_ocr.CARD_SIZE
 
 
-def test_matching_ranks_korean_card_name() -> None:
-    candidates = ["붉은물오리", "알락귀뿔논병아리", "원앙"]
-    ranked = atlas_ocr.rank_candidates("알락귀뿔 논병아리 Podilymbus podiceps", candidates)
+def test_matching_ranks_latin_card_name() -> None:
+    candidates = ["Oxyura jamaicensis", "Podilymbus podiceps", "Aix sponsa"]
+    ranked = atlas_ocr.rank_candidates("Podilymbus podiceps", candidates)
 
-    assert ranked[0][0] == "알락귀뿔논병아리"
+    assert ranked[0][0] == "Podilymbus podiceps"
     assert ranked[0][1] >= 80
 
 
@@ -58,12 +58,12 @@ def test_build_review_csv_checks_ocr_before_writing(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
-    def raise_missing(language: str = "kor+eng") -> None:
+    def raise_missing(language: str = "eng") -> None:
         raise RuntimeError(f"missing {language}")
 
     monkeypatch.setattr(atlas_ocr, "ensure_tesseract_ready", raise_missing)
 
-    with pytest.raises(RuntimeError, match="missing kor\\+eng"):
+    with pytest.raises(RuntimeError, match="missing eng"):
         atlas_ocr.build_review_csv(
             images_dir=IMAGES_DIR,
             output_csv=tmp_path / "review.csv",
@@ -85,20 +85,20 @@ def test_validate_identification_calculates_accuracy(tmp_path: Path) -> None:
                 "row": "0",
                 "col": "0",
                 "card_crop_path": "card1.jpg",
-                "ocr_text": "알락귀뿔 논병아리 Podilymbus podiceps",
+                "ocr_text": "Podilymbus podiceps",
                 "ocr_confidence": "92.0",
-                "expected_name_ko": "알락귀뿔논병아리",
                 "expected_name_latin": "Podilymbus podiceps",
+                "display_name_ko": "알락귀뿔논병아리",
             },
             {
                 "atlas_file": "atlas01.jpg",
                 "row": "0",
                 "col": "1",
                 "card_crop_path": "card2.jpg",
-                "ocr_text": "붉은물오리 Oxyura jamaicensis",
+                "ocr_text": "Oxyura jamaicensis",
                 "ocr_confidence": "91.0",
-                "expected_name_ko": "붉은물오리",
                 "expected_name_latin": "Oxyura jamaicensis",
+                "display_name_ko": "붉은물오리",
             },
         ],
     )

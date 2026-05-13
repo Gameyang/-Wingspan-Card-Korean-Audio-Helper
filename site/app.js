@@ -9,7 +9,7 @@ const NAME_REGION = {
 const OCR_SCALE = 4;
 const TARGET_CARDS = [
   {
-    nameKo: "알락귀뿔논병아리",
+    displayName: "알락귀뿔논병아리",
     matchName: "Podilymbus podiceps",
   },
 ];
@@ -208,7 +208,7 @@ async function identify(drawSource) {
     const matched = best && best.score >= 70;
 
     elements.ocrText.textContent = text || "인식된 텍스트 없음";
-    elements.matchName.textContent = matched ? `${best.nameKo} (${best.matchName})` : "확인 필요";
+    elements.matchName.textContent = matched ? `${best.displayName} (${best.matchName})` : "확인 필요";
     elements.matchScore.textContent = best ? `${Math.round(best.score)}점` : "-";
     setStatus(matched ? "식별 완료" : "확인 필요", matched ? "ready" : "error");
   } catch (error) {

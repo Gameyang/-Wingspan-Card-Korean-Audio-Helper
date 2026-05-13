@@ -27,9 +27,8 @@ DEFAULT_SAMPLE_PATH = DEFAULT_OUTPUT_DIR / "new_card_sample.jpg"
 DEFAULT_CROPS_DIR = DEFAULT_OUTPUT_DIR / "cards"
 DEFAULT_REVIEW_CSV = DEFAULT_OUTPUT_DIR / "atlas_ocr_review.csv"
 
-# Name plaque inside a single 630x970 card cell. It includes Korean and Latin
-# names because Tesseract is more reliable when it sees the whole plaque.
-NAME_REGION = (105, 12, 615, 112)
+# Latin/scientific name line inside a single 630x970 card cell.
+NAME_REGION = (105, 45, 615, 105)
 
 REVIEW_FIELDS = [
     "atlas_file",
@@ -38,8 +37,8 @@ REVIEW_FIELDS = [
     "card_crop_path",
     "ocr_text",
     "ocr_confidence",
-    "expected_name_ko",
     "expected_name_latin",
+    "display_name_ko",
 ]
 
 REPORT_FIELDS = [
@@ -47,8 +46,8 @@ REPORT_FIELDS = [
     "row",
     "col",
     "ocr_text",
-    "expected_name_ko",
-    "matched_name_ko",
+    "expected_name_latin",
+    "matched_name_latin",
     "matched_score",
     "top_candidates",
     "top1_correct",
@@ -158,12 +157,12 @@ def extract_sample_card(
     return output_path
 
 
-def ensure_tesseract_ready(language: str = "kor+eng") -> None:
+def ensure_tesseract_ready(language: str = "eng") -> None:
     executable = shutil.which("tesseract")
     if not executable:
         raise RuntimeError(
             "Tesseract executable was not found. Install Tesseract OCR and add it "
-            "to PATH, then install Korean and English language data."
+            "to PATH, then install English language data."
         )
 
     languages = {part.strip().lower() for part in language.split("+") if part.strip()}
@@ -184,7 +183,7 @@ def ensure_tesseract_ready(language: str = "kor+eng") -> None:
     if result.returncode != 0 or missing:
         raise RuntimeError(
             "Tesseract language data is not ready. Missing languages: "
-            f"{', '.join(missing) if missing else language}. Install kor and eng traineddata."
+            f"{', '.join(missing) if missing else language}. Install eng traineddata."
         )
 
 
@@ -202,7 +201,7 @@ def ensure_pytesseract_available():
 
 def run_ocr(
     card_image: Image.Image,
-    language: str = "kor+eng",
+    language: str = "eng",
     check_tesseract: bool = True,
 ) -> tuple[str, float]:
     if check_tesseract:
@@ -251,7 +250,7 @@ def normalize_spaces(value: str) -> str:
 
 def normalize_for_match(value: str) -> str:
     value = normalize_spaces(value).casefold()
-    return re.sub(r"[^0-9a-z가-힣]+", "", value)
+    return re.sub(r"[^0-9a-z]+", "", value)
 
 
 def _score_with_difflib(query: str, candidate: str) -> float:
@@ -261,22 +260,19 @@ def _score_with_difflib(query: str, candidate: str) -> float:
 
 
 def score_candidate(query: str, candidate: str) -> float:
-    query_variants = [
-        normalize_for_match(query),
-        normalize_for_match(re.sub(r"[A-Za-z][A-Za-z .'-]*", " ", query)),
-    ]
+    query_norm = normalize_for_match(query)
     candidate_norm = normalize_for_match(candidate)
-    if not candidate_norm:
+    if not query_norm or not candidate_norm:
         return 0.0
-    if any(candidate_norm and candidate_norm in variant for variant in query_variants):
+    if candidate_norm in query_norm or query_norm in candidate_norm:
         return 100.0
 
     try:
         from rapidfuzz import fuzz
     except ImportError:
-        return max(_score_with_difflib(variant, candidate_norm) for variant in query_variants)
+        return _score_with_difflib(query_norm, candidate_norm)
 
-    return max(float(fuzz.WRatio(variant, candidate_norm)) for variant in query_variants)
+    return float(fuzz.WRatio(query_norm, candidate_norm))
 
 
 def rank_candidates(query: str, expected_names: Iterable[str], limit: int = 3) -> list[tuple[str, float]]:
@@ -301,7 +297,7 @@ def build_review_csv(
     images_dir: Path = DEFAULT_IMAGES_DIR,
     output_csv: Path = DEFAULT_REVIEW_CSV,
     crops_dir: Path = DEFAULT_CROPS_DIR,
-    language: str = "kor+eng",
+    language: str = "eng",
     skip_ocr: bool = False,
     force: bool = False,
 ) -> tuple[int, Path]:
@@ -345,8 +341,8 @@ def build_review_csv(
                 "card_crop_path": str(crop_path.as_posix()),
                 "ocr_text": ocr_text,
                 "ocr_confidence": ocr_confidence,
-                "expected_name_ko": "",
                 "expected_name_latin": "",
+                "display_name_ko": "",
             }
         )
 
@@ -359,6 +355,10 @@ def read_review_rows(csv_path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(handle))
 
 
+def expected_latin_name(row: dict[str, str]) -> str:
+    return normalize_spaces(row.get("expected_name_latin", ""))
+
+
 def validate_identification(
     csv_path: Path = DEFAULT_REVIEW_CSV,
     report_csv: Path | None = None,
@@ -366,14 +366,14 @@ def validate_identification(
     rows = read_review_rows(csv_path)
     expected_names = sorted(
         {
-            normalize_spaces(row.get("expected_name_ko", ""))
+            expected_latin_name(row)
             for row in rows
-            if normalize_spaces(row.get("expected_name_ko", ""))
+            if expected_latin_name(row)
         }
     )
     if not expected_names:
         raise ValueError(
-            f"No expected_name_ko values found in {csv_path}. Fill the review CSV first."
+            f"No expected_name_latin values found in {csv_path}. Fill the review CSV first."
         )
 
     evaluated = 0
@@ -382,7 +382,7 @@ def validate_identification(
     report_rows: list[dict[str, str]] = []
 
     for row in rows:
-        expected = normalize_spaces(row.get("expected_name_ko", ""))
+        expected = expected_latin_name(row)
         if not expected:
             continue
 
@@ -404,8 +404,8 @@ def validate_identification(
                 "row": row.get("row", ""),
                 "col": row.get("col", ""),
                 "ocr_text": ocr_text,
-                "expected_name_ko": expected,
-                "matched_name_ko": matched_name,
+                "expected_name_latin": expected,
+                "matched_name_latin": matched_name,
                 "matched_score": f"{matched_score:.3f}",
                 "top_candidates": " | ".join(top_names),
                 "top1_correct": str(row_top1).lower(),
@@ -433,7 +433,7 @@ def print_accuracy(summary: dict[str, float | int]) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Crop Korean Wingspan card atlases, OCR card names, and validate matches."
+        description="Crop Wingspan card atlases, OCR Latin names, and validate matches."
     )
     parser.add_argument("--images-dir", type=Path, default=DEFAULT_IMAGES_DIR)
 
@@ -448,7 +448,7 @@ def build_parser() -> argparse.ArgumentParser:
     review_parser = subparsers.add_parser("build-review-csv")
     review_parser.add_argument("--output-csv", type=Path, default=DEFAULT_REVIEW_CSV)
     review_parser.add_argument("--crops-dir", type=Path, default=DEFAULT_CROPS_DIR)
-    review_parser.add_argument("--language", default="kor+eng")
+    review_parser.add_argument("--language", default="eng")
     review_parser.add_argument("--skip-ocr", action="store_true")
     review_parser.add_argument("--force", action="store_true")
 
