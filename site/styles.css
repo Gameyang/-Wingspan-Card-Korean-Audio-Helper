@@ -71,6 +71,25 @@ body {
   background: rgb(22 163 209 / 8%);
 }
 
+.ocr-guide::before {
+  content: attr(data-label);
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  max-width: calc(100% - 10px);
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 62%);
+  color: var(--ink);
+  font-size: 0.62rem;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 70%);
+}
+
 .title-guide {
   left: 15.9%;
   top: 0;
@@ -210,17 +229,17 @@ h1 {
 }
 
 .bottom-sheet.is-collapsed {
-  left: 50%;
-  right: auto;
+  left: auto;
+  right: max(10px, env(safe-area-inset-right));
   width: auto;
-  min-width: 86px;
+  min-width: 108px;
   padding: 6px;
   border-radius: 999px;
-  transform: translateX(-50%);
+  transform: none;
 }
 
 .sheet-toggle {
-  min-width: 74px;
+  min-width: 96px;
   min-height: 34px;
   padding: 7px 14px;
   border: 1px solid var(--line);
@@ -357,13 +376,13 @@ dd {
   }
 
   .bottom-sheet.is-collapsed {
-    left: 50%;
+    left: auto;
     top: auto;
-    right: auto;
+    right: max(10px, env(safe-area-inset-right));
     bottom: max(10px, env(safe-area-inset-bottom));
     width: auto;
     align-content: center;
-    transform: translateX(-50%);
+    transform: none;
   }
 }
 

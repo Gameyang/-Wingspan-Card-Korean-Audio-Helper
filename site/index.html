@@ -15,10 +15,10 @@
 
       <div class="scan-overlay" id="cameraBox" aria-label="카메라 스캐너">
         <div class="scan-frame" id="cardGuide" aria-hidden="true">
-          <div class="ocr-guide title-guide"></div>
-          <div class="ocr-guide score-guide"></div>
-          <div class="ocr-guide wing-guide"></div>
-          <div class="ocr-guide ability-guide"></div>
+          <div class="ocr-guide title-guide" data-label="이름/학명"></div>
+          <div class="ocr-guide score-guide" data-label="점수"></div>
+          <div class="ocr-guide wing-guide" data-label="날개길이"></div>
+          <div class="ocr-guide ability-guide" data-label="능력 문구"></div>
           <span class="corner top-left"></span>
           <span class="corner top-right"></span>
           <span class="corner bottom-left"></span>
@@ -42,7 +42,7 @@
           aria-expanded="false"
           aria-controls="debugContent"
         >
-          결과
+          인식률 --
         </button>
         <div class="sheet-content" id="debugContent">
           <div class="control-row">
@@ -58,7 +58,7 @@
               <dd id="matchName">-</dd>
             </div>
             <div class="result-card score-result">
-              <dt>신뢰도</dt>
+              <dt>인식률</dt>
               <dd id="matchScore">-</dd>
             </div>
             <div class="result-card detail-result">

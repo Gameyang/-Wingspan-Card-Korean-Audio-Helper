@@ -761,6 +761,7 @@ async function identifyCurrentFrame() {
     const stableFrames = stableFramesForCandidate(best, confidence.ok);
     const matched = confidence.ok && stableFrames >= STABLE_MATCH_FRAMES;
     let audioMessage = "";
+    updateRecognitionRate(best?.score);
 
     if (matched) {
       missedFrameCount = 0;
@@ -778,6 +779,7 @@ async function identifyCurrentFrame() {
     elements.matchName.textContent = "오류";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
+    updateRecognitionRate(null);
     setStatus("오류", "error");
   } finally {
     isScanning = false;
@@ -830,14 +832,34 @@ function setDebugSheetCollapsed(collapsed) {
   elements.debugToggle.setAttribute("aria-expanded", String(!collapsed));
 }
 
+function updateRecognitionRate(score) {
+  if (!elements.debugToggle) {
+    return;
+  }
+  const label = Number.isFinite(score) ? `인식률 ${score}%` : "인식률 --";
+  elements.debugToggle.textContent = label;
+  elements.debugToggle.setAttribute("aria-label", label);
+}
+
 function initDebugSheet() {
   if (!elements.debugSheet || !elements.debugToggle) {
     return;
   }
+  updateRecognitionRate(null);
   setDebugSheetCollapsed(true);
-  elements.debugToggle.addEventListener("click", () => {
+  elements.debugToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
     setDebugSheetCollapsed(!elements.debugSheet.classList.contains("is-collapsed"));
   });
+  document.addEventListener(
+    "pointerdown",
+    (event) => {
+      if (!elements.debugSheet.contains(event.target)) {
+        setDebugSheetCollapsed(true);
+      }
+    },
+    { passive: true },
+  );
 }
 
 function initAbilityToggle() {
@@ -866,6 +888,7 @@ async function boot() {
     elements.matchName.textContent = "카메라";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
+    updateRecognitionRate(null);
     setStatus("화면 탭", "error");
   }
 }
