@@ -1,0 +1,167 @@
+:root {
+  color-scheme: light;
+  --ink: #20211f;
+  --muted: #62665f;
+  --line: #d8d4ca;
+  --paper: #f7f3ea;
+  --panel: #fffdf8;
+  --blue: #0f6d9a;
+  --green: #2e7557;
+  --ochre: #9a642b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family:
+    "Noto Sans KR",
+    "Apple SD Gothic Neo",
+    "Malgun Gothic",
+    system-ui,
+    sans-serif;
+}
+
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0;
+}
+
+.summary {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+  line-height: 1.15;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(82px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.stats div,
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.stats div {
+  min-height: 66px;
+  padding: 10px 12px;
+}
+
+dt {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.stats dd {
+  margin-top: 4px;
+  font-size: 1.2rem;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(280px, 630px) minmax(240px, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding-top: 24px;
+}
+
+.sample {
+  margin: 0;
+}
+
+.sample img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: #eee9dd;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  color: var(--green);
+  font-weight: 800;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgb(46 117 87 / 14%);
+}
+
+.details {
+  display: grid;
+  gap: 14px;
+  margin: 16px 0 0;
+}
+
+.details div {
+  display: grid;
+  gap: 4px;
+}
+
+.details dd {
+  color: var(--ochre);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 24px, 620px);
+    padding: 18px 0;
+  }
+
+  .summary,
+  .workspace {
+    display: grid;
+  }
+
+  .stats {
+    width: 100%;
+  }
+}
