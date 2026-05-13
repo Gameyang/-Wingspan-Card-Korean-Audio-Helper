@@ -1,92 +1,83 @@
-const CARD_WIDTH = 630;
-const CARD_HEIGHT = 970;
-const NAME_REGION = {
-  x: 105,
-  y: 45,
-  width: 510,
-  height: 60,
+const ART_REGION = {
+  x: 45,
+  y: 145,
+  width: 565,
+  height: 515,
 };
-const OCR_SCALE = 4;
-const TARGET_CARDS = [
-  {
-    displayName: "알락귀뿔논병아리",
-    matchName: "Podilymbus podiceps",
-  },
-];
+const HASH_WIDTH = 17;
+const HASH_HEIGHT = 16;
+const HASH_BITS = (HASH_WIDTH - 1) * HASH_HEIGHT;
+const MATCH_THRESHOLD = 58;
 
 const elements = {
   status: document.querySelector("#status"),
   video: document.querySelector("#camera"),
   cameraBox: document.querySelector("#cameraBox"),
-  cardGuide: document.querySelector("#cardGuide"),
+  artGuide: document.querySelector(".art-guide"),
   startCamera: document.querySelector("#startCamera"),
   captureIdentify: document.querySelector("#captureIdentify"),
+  photoInput: document.querySelector("#photoInput"),
   sampleIdentify: document.querySelector("#sampleIdentify"),
-  cardCanvas: document.querySelector("#cardCanvas"),
-  namePreview: document.querySelector("#namePreview"),
+  artPreview: document.querySelector("#artPreview"),
   sampleImage: document.querySelector("#sampleImage"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
-  ocrText: document.querySelector("#ocrText"),
+  matchMeta: document.querySelector("#matchMeta"),
 };
 
 let stream;
-let workerPromise;
+let fingerprintDb;
+
+const nibbleBits = Array.from({ length: 16 }, (_, value) =>
+  value.toString(2).replaceAll("0", "").length,
+);
 
 function setStatus(message, type = "") {
   elements.status.textContent = message;
   elements.status.className = `status ${type}`.trim();
 }
 
-function normalizeLatin(value) {
-  return value.toLowerCase().replace(/[^a-z]/g, "");
-}
-
-function levenshtein(a, b) {
-  const previous = Array.from({ length: b.length + 1 }, (_, index) => index);
-  const current = Array.from({ length: b.length + 1 }, () => 0);
-
-  for (let i = 1; i <= a.length; i += 1) {
-    current[0] = i;
-    for (let j = 1; j <= b.length; j += 1) {
-      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      current[j] = Math.min(
-        previous[j] + 1,
-        current[j - 1] + 1,
-        previous[j - 1] + cost,
-      );
-    }
-    previous.splice(0, previous.length, ...current);
+async function loadFingerprintDb() {
+  setStatus("데이터 로드", "ready");
+  const response = await fetch("./data/card_fingerprints.json", { cache: "no-store" });
+  if (!response.ok) {
+    throw new Error(`fingerprint data ${response.status}`);
   }
-
-  return previous[b.length];
+  fingerprintDb = await response.json();
+  setStatus(`${fingerprintDb.cards.length}장 준비`, "ready");
 }
 
-function scoreCandidate(ocrText, candidate) {
-  const query = normalizeLatin(ocrText);
-  const target = normalizeLatin(candidate.matchName);
-
-  if (!query) {
-    return 0;
+function hammingDistanceHex(left, right) {
+  const length = Math.min(left.length, right.length);
+  let distance = Math.abs(left.length - right.length) * 4;
+  for (let index = 0; index < length; index += 1) {
+    const xor = Number.parseInt(left[index], 16) ^ Number.parseInt(right[index], 16);
+    distance += nibbleBits[xor];
   }
-  if (query.includes(target) || target.includes(query)) {
-    return 100;
-  }
-
-  const distance = levenshtein(query, target);
-  return Math.max(0, 100 * (1 - distance / Math.max(query.length, target.length)));
+  return distance;
 }
 
-function rankCandidates(ocrText) {
-  return TARGET_CARDS.map((card) => ({
-    ...card,
-    score: scoreCandidate(ocrText, card),
-  })).sort((a, b) => b.score - a.score);
+function rankByFingerprint(hash) {
+  return fingerprintDb.cards
+    .map((card) => {
+      const distance = hammingDistanceHex(hash, card.hash);
+      const score = Math.max(0, Math.round(100 * (1 - distance / HASH_BITS)));
+      return { ...card, distance, score };
+    })
+    .sort((a, b) => a.distance - b.distance || a.id.localeCompare(b.id));
 }
 
-function getVideoSourceRect() {
+function drawPreviewFromSource(source, sx, sy, sw, sh) {
+  const context = elements.artPreview.getContext("2d", { willReadFrequently: true });
+  elements.artPreview.width = ART_REGION.width;
+  elements.artPreview.height = ART_REGION.height;
+  context.imageSmoothingEnabled = true;
+  context.drawImage(source, sx, sy, sw, sh, 0, 0, ART_REGION.width, ART_REGION.height);
+}
+
+function getVideoSourceRect(targetElement) {
   const frameRect = elements.cameraBox.getBoundingClientRect();
-  const guideRect = elements.cardGuide.getBoundingClientRect();
+  const targetRect = targetElement.getBoundingClientRect();
   const videoWidth = elements.video.videoWidth;
   const videoHeight = elements.video.videoHeight;
   const scale = Math.max(frameRect.width / videoWidth, frameRect.height / videoHeight);
@@ -94,130 +85,136 @@ function getVideoSourceRect() {
   const renderedHeight = videoHeight * scale;
   const offsetX = (frameRect.width - renderedWidth) / 2;
   const offsetY = (frameRect.height - renderedHeight) / 2;
-  const guideX = guideRect.left - frameRect.left;
-  const guideY = guideRect.top - frameRect.top;
+  const targetX = targetRect.left - frameRect.left;
+  const targetY = targetRect.top - frameRect.top;
 
   return {
-    sx: Math.max(0, (guideX - offsetX) / scale),
-    sy: Math.max(0, (guideY - offsetY) / scale),
-    sw: Math.min(videoWidth, guideRect.width / scale),
-    sh: Math.min(videoHeight, guideRect.height / scale),
+    sx: Math.max(0, (targetX - offsetX) / scale),
+    sy: Math.max(0, (targetY - offsetY) / scale),
+    sw: Math.min(videoWidth, targetRect.width / scale),
+    sh: Math.min(videoHeight, targetRect.height / scale),
   };
 }
 
-function drawVideoCard() {
+function drawVideoArtPreview() {
   if (!elements.video.videoWidth || !elements.video.videoHeight) {
     throw new Error("카메라 영상이 아직 준비되지 않았습니다.");
   }
 
-  const { sx, sy, sw, sh } = getVideoSourceRect();
-  const context = elements.cardCanvas.getContext("2d", { willReadFrequently: true });
-  context.drawImage(
-    elements.video,
-    sx,
-    sy,
-    sw,
-    sh,
-    0,
-    0,
-    CARD_WIDTH,
-    CARD_HEIGHT,
+  const rect = getVideoSourceRect(elements.artGuide);
+  drawPreviewFromSource(elements.video, rect.sx, rect.sy, rect.sw, rect.sh);
+}
+
+function drawSampleArtPreview() {
+  drawPreviewFromSource(
+    elements.sampleImage,
+    ART_REGION.x,
+    ART_REGION.y,
+    ART_REGION.width,
+    ART_REGION.height,
   );
 }
 
-function drawSampleCard() {
-  const context = elements.cardCanvas.getContext("2d", { willReadFrequently: true });
-  context.drawImage(elements.sampleImage, 0, 0, CARD_WIDTH, CARD_HEIGHT);
+function drawUploadedPhotoPreview(image) {
+  const sourceAspect = image.naturalWidth / image.naturalHeight;
+  const targetAspect = ART_REGION.width / ART_REGION.height;
+  let sx = 0;
+  let sy = 0;
+  let sw = image.naturalWidth;
+  let sh = image.naturalHeight;
+
+  if (sourceAspect > targetAspect) {
+    sw = image.naturalHeight * targetAspect;
+    sx = (image.naturalWidth - sw) / 2;
+  } else {
+    sh = image.naturalWidth / targetAspect;
+    sy = (image.naturalHeight - sh) / 2;
+  }
+
+  drawPreviewFromSource(image, sx, sy, sw, sh);
 }
 
-function drawNamePreview() {
-  const context = elements.namePreview.getContext("2d", { willReadFrequently: true });
-  const targetWidth = NAME_REGION.width * OCR_SCALE;
-  const targetHeight = NAME_REGION.height * OCR_SCALE;
-  elements.namePreview.width = targetWidth;
-  elements.namePreview.height = targetHeight;
-
+function computeDHash() {
+  const canvas = document.createElement("canvas");
+  canvas.width = HASH_WIDTH;
+  canvas.height = HASH_HEIGHT;
+  const context = canvas.getContext("2d", { willReadFrequently: true });
   context.imageSmoothingEnabled = true;
-  context.drawImage(
-    elements.cardCanvas,
-    NAME_REGION.x,
-    NAME_REGION.y,
-    NAME_REGION.width,
-    NAME_REGION.height,
-    0,
-    0,
-    targetWidth,
-    targetHeight,
-  );
+  context.drawImage(elements.artPreview, 0, 0, HASH_WIDTH, HASH_HEIGHT);
 
-  const image = context.getImageData(0, 0, targetWidth, targetHeight);
-  for (let index = 0; index < image.data.length; index += 4) {
-    const gray =
-      image.data[index] * 0.299 +
-      image.data[index + 1] * 0.587 +
-      image.data[index + 2] * 0.114;
-    const contrasted = gray < 178 ? 0 : 255;
-    image.data[index] = contrasted;
-    image.data[index + 1] = contrasted;
-    image.data[index + 2] = contrasted;
-  }
-  context.putImageData(image, 0, 0);
-}
-
-async function getWorker() {
-  if (!window.Tesseract) {
-    throw new Error("OCR 라이브러리를 불러오지 못했습니다.");
+  const data = context.getImageData(0, 0, HASH_WIDTH, HASH_HEIGHT).data;
+  const grays = [];
+  let min = 255;
+  let max = 0;
+  for (let index = 0; index < data.length; index += 4) {
+    const gray = data[index] * 0.299 + data[index + 1] * 0.587 + data[index + 2] * 0.114;
+    grays.push(gray);
+    min = Math.min(min, gray);
+    max = Math.max(max, gray);
   }
 
-  if (!workerPromise) {
-    workerPromise = window.Tesseract.createWorker(["eng"], 1, {
-      logger: (message) => {
-        if (message.status === "recognizing text") {
-          setStatus(`${Math.round(message.progress * 100)}%`, "ready");
-        }
-      },
-    }).then(async (worker) => {
-      const psm = window.Tesseract.PSM?.SINGLE_BLOCK ?? "6";
-      await worker.setParameters({
-        tessedit_pageseg_mode: psm,
-        tessedit_char_whitelist: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .-",
-        preserve_interword_spaces: "1",
-      });
-      return worker;
-    });
+  const range = Math.max(1, max - min);
+  const bits = [];
+  for (let y = 0; y < HASH_HEIGHT; y += 1) {
+    const rowOffset = y * HASH_WIDTH;
+    for (let x = 0; x < HASH_WIDTH - 1; x += 1) {
+      const left = (grays[rowOffset + x] - min) / range;
+      const right = (grays[rowOffset + x + 1] - min) / range;
+      bits.push(left > right ? "1" : "0");
+    }
   }
 
-  return workerPromise;
-}
-
-async function recognizeCurrentPreview() {
-  setStatus("OCR 준비", "ready");
-  const worker = await getWorker();
-  setStatus("OCR 실행", "ready");
-  const result = await worker.recognize(elements.namePreview);
-  return result.data.text.replace(/\s+/g, " ").trim();
+  let hash = "";
+  for (let index = 0; index < bits.length; index += 4) {
+    hash += Number.parseInt(bits.slice(index, index + 4).join(""), 2).toString(16);
+  }
+  return hash;
 }
 
 async function identify(drawSource) {
   try {
+    if (!fingerprintDb) {
+      await loadFingerprintDb();
+    }
     elements.captureIdentify.disabled = true;
     drawSource();
-    drawNamePreview();
-    const text = await recognizeCurrentPreview();
-    const [best] = rankCandidates(text);
-    const matched = best && best.score >= 70;
+    const hash = computeDHash();
+    const [best, second] = rankByFingerprint(hash);
+    const matched = best && best.score >= MATCH_THRESHOLD;
 
-    elements.ocrText.textContent = text || "인식된 텍스트 없음";
-    elements.matchName.textContent = matched ? `${best.displayName} (${best.matchName})` : "확인 필요";
-    elements.matchScore.textContent = best ? `${Math.round(best.score)}점` : "-";
+    elements.matchName.textContent = matched ? best.displayName : "확인 필요";
+    elements.matchScore.textContent = best ? `${best.score}점 / 거리 ${best.distance}` : "-";
+    elements.matchMeta.textContent = best
+      ? `${best.id}${second ? ` · 다음 후보 ${second.id} (${second.score}점)` : ""}`
+      : "-";
     setStatus(matched ? "식별 완료" : "확인 필요", matched ? "ready" : "error");
   } catch (error) {
-    elements.ocrText.textContent = error.message;
     elements.matchName.textContent = "오류";
     elements.matchScore.textContent = "-";
+    elements.matchMeta.textContent = error.message;
     setStatus("오류", "error");
   } finally {
     elements.captureIdentify.disabled = !stream;
+  }
+}
+
+async function identifyPhoto(file) {
+  if (!file) {
+    return;
+  }
+
+  const image = new Image();
+  const objectUrl = URL.createObjectURL(file);
+  try {
+    await new Promise((resolve, reject) => {
+      image.onload = resolve;
+      image.onerror = reject;
+      image.src = objectUrl;
+    });
+    await identify(() => drawUploadedPhotoPreview(image));
+  } finally {
+    URL.revokeObjectURL(objectUrl);
+    elements.photoInput.value = "";
   }
 }
 
@@ -244,12 +241,18 @@ async function startCamera() {
     elements.captureIdentify.disabled = false;
     setStatus("카메라 준비", "ready");
   } catch (error) {
-    elements.ocrText.textContent = error.message;
+    elements.matchMeta.textContent = error.message;
     setStatus("카메라 오류", "error");
   }
 }
 
 elements.startCamera.addEventListener("click", startCamera);
-elements.captureIdentify.addEventListener("click", () => identify(drawVideoCard));
-elements.sampleIdentify.addEventListener("click", () => identify(drawSampleCard));
-elements.sampleImage.addEventListener("load", drawSampleCard);
+elements.captureIdentify.addEventListener("click", () => identify(drawVideoArtPreview));
+elements.photoInput.addEventListener("change", (event) => identifyPhoto(event.target.files?.[0]));
+elements.sampleIdentify.addEventListener("click", () => identify(drawSampleArtPreview));
+elements.sampleImage.addEventListener("load", drawSampleArtPreview);
+
+loadFingerprintDb().catch((error) => {
+  elements.matchMeta.textContent = error.message;
+  setStatus("데이터 오류", "error");
+});

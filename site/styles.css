@@ -28,7 +28,10 @@ body {
     sans-serif;
 }
 
-button {
+button,
+.file-button {
+  display: inline-grid;
+  place-items: center;
   min-height: 44px;
   border: 1px solid var(--blue);
   border-radius: 8px;
@@ -37,6 +40,8 @@ button {
   font: inherit;
   font-weight: 800;
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }
 
 button:disabled {
@@ -143,19 +148,19 @@ h1 {
     inset 0 0 0 1px rgb(0 0 0 / 35%);
 }
 
-.name-guide {
+.art-guide {
   position: absolute;
-  left: 16.7%;
-  top: 4.6%;
-  width: 81%;
-  height: 6.2%;
+  left: 7.1%;
+  top: 14.9%;
+  width: 89.7%;
+  height: 53.1%;
   border: 2px solid rgb(255 255 255 / 92%);
-  background: rgb(12 111 147 / 12%);
+  background: rgb(12 111 147 / 10%);
 }
 
 .actions {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
 }
 
@@ -172,7 +177,7 @@ h1 {
 }
 
 .result-card.full,
-#namePreview {
+#artPreview {
   grid-column: 1 / -1;
 }
 
@@ -193,10 +198,10 @@ dd {
   color: var(--ochre);
 }
 
-#namePreview {
+#artPreview {
   width: 100%;
   height: auto;
-  min-height: 78px;
+  min-height: 160px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);

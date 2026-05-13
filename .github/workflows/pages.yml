@@ -30,6 +30,7 @@ jobs:
           test -f site/index.html
           test -f site/styles.css
           test -f site/app.js
+          test -f site/data/card_fingerprints.json
           test -f site/assets/new_card_sample.jpg
 
       - name: Configure Pages

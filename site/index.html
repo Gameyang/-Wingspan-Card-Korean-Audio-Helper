@@ -3,17 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wingspan Latin Card OCR Test</title>
+    <title>Wingspan Visual Card Matcher</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@6.0.1/dist/tesseract.min.js" defer></script>
     <script src="./app.js" defer></script>
   </head>
   <body>
     <main class="shell">
       <header class="summary">
         <div>
-          <p class="eyebrow">Latin-name OCR</p>
-          <h1>영문 이름 식별 테스트</h1>
+          <p class="eyebrow">Visual fingerprint</p>
+          <h1>새 그림 식별 테스트</h1>
         </div>
         <div class="status" id="status" role="status">대기 중</div>
       </header>
@@ -23,13 +22,15 @@
           <div class="camera-box" id="cameraBox">
             <video id="camera" autoplay muted playsinline></video>
             <div class="card-guide" id="cardGuide" aria-hidden="true">
-              <div class="name-guide"></div>
+              <div class="art-guide"></div>
             </div>
           </div>
           <div class="actions">
             <button id="startCamera" type="button">카메라 시작</button>
             <button id="captureIdentify" type="button" disabled>촬영 식별</button>
+            <label class="file-button" for="photoInput">사진 식별</label>
             <button id="sampleIdentify" type="button">샘플 식별</button>
+            <input id="photoInput" type="file" accept="image/*" capture="environment" hidden />
           </div>
         </div>
 
@@ -43,19 +44,18 @@
             <dd id="matchScore">-</dd>
           </div>
           <div class="result-card full">
-            <dt>영문 OCR</dt>
-            <dd id="ocrText">-</dd>
+            <dt>매칭 정보</dt>
+            <dd id="matchMeta">-</dd>
           </div>
           <div class="result-card full">
             <dt>식별 기준</dt>
-            <dd>Podilymbus podiceps</dd>
+            <dd>atlas 새 그림 fingerprint</dd>
           </div>
-          <canvas id="namePreview" width="2040" height="400" aria-label="OCR crop preview"></canvas>
+          <canvas id="artPreview" width="565" height="515" aria-label="Visual fingerprint preview"></canvas>
         </aside>
       </section>
     </main>
 
-    <canvas id="cardCanvas" width="630" height="970" hidden></canvas>
     <img id="sampleImage" src="./assets/new_card_sample.jpg" alt="" hidden />
   </body>
 </html>
