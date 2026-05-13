@@ -1,0 +1,6 @@
+card_no,card_id,bird_name,bird_name_ko,atlas,row,col,ability_ocr_text,ability_text_ko,ability_tts_text,ability_id,ocr_engine,ocr_confidence,review_status
+53,atlas01_r01_c01,Pied Billed Grebe,얼룩부리논병아리,1,1,1,"카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.","카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.","카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다",ability_6312f682d460,reviewed_seed,,draft
+54,atlas01_r01_c02,Pileated Woodpecker,도가머리딱따구리,1,1,2,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다,ability_c315fb1c7bfa,reviewed_seed,,draft
+55,atlas01_r01_c03,Western Meadowlark,서부종다리,1,1,3,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.,모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다,ability_8cf45975375d,reviewed_seed,,draft
+56,atlas01_r01_c04,Grasshopper Sparrow,메뚜기참새,1,1,4,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다,ability_bf7a70efb2e5,reviewed_seed,,draft
+57,atlas01_r01_c05,Chipping Sparrow,칩핑참새,1,1,5,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다.,원하는 새 1마리에 알 1개를 낳습니다,ability_bf7a70efb2e5,reviewed_seed,,draft

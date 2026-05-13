@@ -2,25 +2,32 @@ const CARD_SIZE = {
   width: 630,
   height: 970,
 };
-const NAME_REGION = {
-  x: 165,
-  y: 28,
-  width: 450,
-  height: 112,
-};
-const OCR_CANVAS_WIDTH = 1000;
+const OCR_SIGNAL_REGIONS = [
+  { key: "title", x: 100, y: 0, width: 525, height: 132, targetWidth: 1000, minHeight: 160 },
+  { key: "score", x: 0, y: 210, width: 95, height: 190, targetWidth: 250, minHeight: 320 },
+  { key: "wing", x: 480, y: 420, width: 150, height: 130, targetWidth: 360, minHeight: 210 },
+  { key: "ability", x: 0, y: 535, width: 630, height: 128, targetWidth: 1060, minHeight: 190 },
+];
+const OCR_CANVAS_WIDTH = 1100;
+const OCR_CANVAS_PADDING = 18;
+const OCR_SECTION_GAP = 18;
 const OCR_INTERVAL_MS = 1350;
-const OCR_MATCH_THRESHOLD = 78;
+const OCR_STRONG_NAME_SCORE = 85;
+const OCR_MEDIUM_NAME_SCORE = 70;
+const OCR_MIN_NAME_SCORE = 60;
 const OCR_MIN_GAP = 5;
-const OCR_MIN_QUERY_LENGTH = 6;
+const OCR_MIN_QUERY_LENGTH = 2;
 const STABLE_MATCH_FRAMES = 2;
 const MISS_FRAMES_TO_RESET = 4;
+const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
+const BIRD_BG_VOLUME = 0.24;
 
 const elements = {
   status: document.querySelector("#status"),
   video: document.querySelector("#camera"),
   cameraBox: document.querySelector("#cameraBox"),
   cardGuide: document.querySelector("#cardGuide"),
+  abilityToggle: document.querySelector("#abilityToggle"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
   matchMeta: document.querySelector("#matchMeta"),
@@ -29,22 +36,31 @@ const elements = {
 let stream;
 let ocrDb = { cards: [], byCardId: {} };
 let audioManifest = { byCardId: {} };
+let introTtsManifest = { byCardId: {}, byCardNo: {} };
+let abilityTtsManifest = { byCardId: {}, byCardNo: {} };
 let tesseractWorker;
 let scanTimer;
 let isScanning = false;
 let activeAudioCardId = "";
 let pendingAudioCard = null;
 let lastAudioMessage = "";
+let playbackToken = 0;
 let missedFrameCount = 0;
 let candidateCardId = "";
 let candidateFrameCount = 0;
 
-const soundElement = new Audio();
-soundElement.preload = "auto";
-soundElement.loop = false;
+const speechElement = new Audio();
+speechElement.preload = "auto";
+speechElement.loop = false;
+
+const birdBgElement = new Audio();
+birdBgElement.preload = "auto";
+birdBgElement.loop = false;
+birdBgElement.volume = 1;
 
 const ocrCanvas = document.createElement("canvas");
 const ocrContext = ocrCanvas.getContext("2d", { willReadFrequently: true });
+let ocrSections = [];
 
 function setStatus(message, type = "") {
   elements.status.textContent = message;
@@ -71,12 +87,52 @@ function normalizeForMatch(value) {
     .replace(/[^a-z0-9]+/g, "");
 }
 
+function normalizeOcrTextForMatch(value) {
+  return String(value)
+    .normalize("NFKC")
+    .toLocaleLowerCase("ko-KR")
+    .replace(/&/g, "and")
+    .replace(/[^0-9a-z\u3131-\u318e\uac00-\ud7a3]+/g, "");
+}
+
 function extractLatinText(value) {
   const matches = String(value).match(/[A-Za-z][A-Za-z.'-]{1,}/g) ?? [];
   return matches
     .map((part) => part.replace(/^[.'-]+|[.'-]+$/g, ""))
     .filter((part) => part.length > 1)
     .join(" ");
+}
+
+function extractKoreanText(value) {
+  const matches = String(value).match(/[\u3131-\u318e\uac00-\ud7a3]{2,}/g) ?? [];
+  return matches.join(" ");
+}
+
+function normalizeDigitsForOcr(value) {
+  return String(value)
+    .normalize("NFKC")
+    .replace(/[Oo]/g, "0")
+    .replace(/[Il|]/g, "1");
+}
+
+function uniqueValues(values) {
+  return [...new Set(values.filter(Boolean))];
+}
+
+function extractSingleDigitNumbers(value) {
+  const normalized = normalizeDigitsForOcr(value);
+  const matches = [...normalized.matchAll(/(^|[^\d])([0-9])(?=$|[^\d])/g)];
+  return uniqueValues(matches.map((match) => match[2]));
+}
+
+function extractCmNumbers(value) {
+  const normalized = normalizeDigitsForOcr(value);
+  const cmMatches = [...normalized.matchAll(/(^|[^\d])([0-9]{2,3})\s*[cC]\s*[mM]\b/g)];
+  if (cmMatches.length) {
+    return uniqueValues(cmMatches.map((match) => match[2]));
+  }
+  const numericMatches = [...normalized.matchAll(/(^|[^\d])([0-9]{2,3})(?=$|[^\d])/g)];
+  return uniqueValues(numericMatches.map((match) => match[2]));
 }
 
 async function fetchJson(path, fallback) {
@@ -93,9 +149,11 @@ async function fetchJson(path, fallback) {
 
 async function loadData() {
   setStatus("Loading", "ready");
-  [ocrDb, audioManifest] = await Promise.all([
+  [ocrDb, audioManifest, introTtsManifest, abilityTtsManifest] = await Promise.all([
     fetchJson("./data/card_ocr_aliases.json", { cards: [], byCardId: {} }),
     fetchJson("./data/audio_clips.json", { byCardId: {} }),
+    fetchJson("./data/card_intro_tts.json", { byCardId: {}, byCardNo: {} }),
+    fetchJson("./data/card_ability_tts.json", { byCardId: {}, byCardNo: {} }),
   ]);
   if (!ocrDb.cards.length) {
     throw new Error("OCR data unavailable.");
@@ -110,10 +168,9 @@ async function initOcrWorker() {
     throw new Error("OCR engine unavailable.");
   }
   setStatus("OCR", "ready");
-  tesseractWorker = await window.Tesseract.createWorker("eng");
+  tesseractWorker = await window.Tesseract.createWorker("kor+eng");
   await tesseractWorker.setParameters({
     preserve_interword_spaces: "1",
-    tessedit_char_whitelist: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .'-",
   });
 }
 
@@ -151,13 +208,13 @@ function clampSourceRect(rect) {
   };
 }
 
-function nameSourceRect() {
+function cardRegionSourceRect(region) {
   const cardRect = getVideoSourceRect(elements.cardGuide);
   return clampSourceRect({
-    sx: cardRect.sx + (cardRect.sw * NAME_REGION.x) / CARD_SIZE.width,
-    sy: cardRect.sy + (cardRect.sh * NAME_REGION.y) / CARD_SIZE.height,
-    sw: (cardRect.sw * NAME_REGION.width) / CARD_SIZE.width,
-    sh: (cardRect.sh * NAME_REGION.height) / CARD_SIZE.height,
+    sx: cardRect.sx + (cardRect.sw * region.x) / CARD_SIZE.width,
+    sy: cardRect.sy + (cardRect.sh * region.y) / CARD_SIZE.height,
+    sw: (cardRect.sw * region.width) / CARD_SIZE.width,
+    sh: (cardRect.sh * region.height) / CARD_SIZE.height,
   });
 }
 
@@ -187,28 +244,61 @@ function preprocessOcrCanvas() {
   ocrContext.putImageData(imageData, 0, 0);
 }
 
-function drawNameCropForOcr() {
+function drawCardSignalsForOcr() {
   if (!elements.video.videoWidth || !elements.video.videoHeight) {
     throw new Error("Camera is not ready.");
   }
 
-  const rect = nameSourceRect();
-  const scale = OCR_CANVAS_WIDTH / rect.sw;
+  const layouts = OCR_SIGNAL_REGIONS.map((region) => {
+    const rect = cardRegionSourceRect(region);
+    const targetWidth = Math.min(OCR_CANVAS_WIDTH - OCR_CANVAS_PADDING * 2, region.targetWidth);
+    const scale = targetWidth / rect.sw;
+    const targetHeight = Math.max(region.minHeight, Math.round(rect.sh * scale));
+    return {
+      region,
+      rect,
+      targetWidth,
+      targetHeight,
+      targetX: Math.round((OCR_CANVAS_WIDTH - targetWidth) / 2),
+    };
+  });
+
+  let y = OCR_CANVAS_PADDING;
+  for (const layout of layouts) {
+    layout.targetY = y;
+    y += layout.targetHeight + OCR_SECTION_GAP;
+  }
+
   ocrCanvas.width = OCR_CANVAS_WIDTH;
-  ocrCanvas.height = Math.max(96, Math.round(rect.sh * scale));
+  ocrCanvas.height = Math.max(96, y - OCR_SECTION_GAP + OCR_CANVAS_PADDING);
   ocrContext.imageSmoothingEnabled = true;
-  ocrContext.filter = "grayscale(1) contrast(1.75) brightness(1.08)";
-  ocrContext.drawImage(
-    elements.video,
-    rect.sx,
-    rect.sy,
-    rect.sw,
-    rect.sh,
-    0,
-    0,
-    ocrCanvas.width,
-    ocrCanvas.height,
-  );
+  ocrContext.fillStyle = "#ffffff";
+  ocrContext.fillRect(0, 0, ocrCanvas.width, ocrCanvas.height);
+
+  ocrSections = [];
+  for (const layout of layouts) {
+    const { region, rect, targetX, targetY, targetWidth, targetHeight } = layout;
+    ocrContext.filter =
+      region.key === "ability"
+        ? "grayscale(1) contrast(2.05) brightness(1.12)"
+        : "grayscale(1) contrast(1.85) brightness(1.1)";
+    ocrContext.drawImage(
+      elements.video,
+      rect.sx,
+      rect.sy,
+      rect.sw,
+      rect.sh,
+      targetX,
+      targetY,
+      targetWidth,
+      targetHeight,
+    );
+    ocrSections.push({
+      key: region.key,
+      top: targetY,
+      bottom: targetY + targetHeight,
+    });
+  }
   ocrContext.filter = "none";
   preprocessOcrCanvas();
 }
@@ -284,10 +374,78 @@ function normalizedSimilarity(left, right) {
   return Math.round(100 * (editScore * 0.68 + diceScore * 0.32));
 }
 
-function bestAliasScore(query, card) {
+function wordCenterY(word) {
+  const box = word?.bbox ?? word;
+  const y0 = Number(box?.y0);
+  const y1 = Number(box?.y1);
+  if (Number.isFinite(y0) && Number.isFinite(y1)) {
+    return (y0 + y1) / 2;
+  }
+  return null;
+}
+
+function textItemsFromOcrResult(result) {
+  const words = result?.data?.words ?? [];
+  if (words.length) {
+    return words.map((word) => ({ text: word.text ?? "", centerY: wordCenterY(word) }));
+  }
+  const lines = result?.data?.lines ?? [];
+  return lines.map((line) => ({ text: line.text ?? "", centerY: wordCenterY(line) }));
+}
+
+function sectionForY(centerY) {
+  if (!Number.isFinite(centerY)) {
+    return null;
+  }
+  return ocrSections.find((section) => centerY >= section.top && centerY <= section.bottom) ?? null;
+}
+
+function groupedOcrText(result) {
+  const allText = result?.data?.text ?? "";
+  const sections = Object.fromEntries(OCR_SIGNAL_REGIONS.map((region) => [region.key, ""]));
+  let grouped = false;
+
+  for (const item of textItemsFromOcrResult(result)) {
+    const section = sectionForY(item.centerY);
+    const text = String(item.text ?? "").trim();
+    if (!section || !text) {
+      continue;
+    }
+    sections[section.key] = `${sections[section.key]} ${text}`.trim();
+    grouped = true;
+  }
+
+  if (!grouped) {
+    sections.title = allText;
+  }
+  return { allText, sections };
+}
+
+function extractOcrSignals(result) {
+  const { allText, sections } = groupedOcrText(result);
+  const titleText = sections.title || allText;
+  const scoreText = sections.score || "";
+  const wingText = sections.wing || "";
+  const abilityText = sections.ability || "";
+
+  return {
+    allText,
+    titleText,
+    latinText: extractLatinText(titleText),
+    koreanText: extractKoreanText(titleText),
+    scoreNumbers: extractSingleDigitNumbers(scoreText),
+    wingNumbers: extractCmNumbers(wingText),
+    abilityText,
+  };
+}
+
+function bestScoreForAliases(query, aliases, normalizer) {
   let best = { alias: "", score: 0 };
-  for (const alias of card.aliases ?? []) {
-    const normalized = normalizeForMatch(alias);
+  if (query.length < OCR_MIN_QUERY_LENGTH) {
+    return best;
+  }
+  for (const alias of aliases ?? []) {
+    const normalized = normalizer(alias);
     const score = normalizedSimilarity(query, normalized);
     if (score > best.score) {
       best = { alias, score };
@@ -296,25 +454,85 @@ function bestAliasScore(query, card) {
   return best;
 }
 
-function rankOcrCandidates(ocrText) {
-  const latinText = extractLatinText(ocrText);
-  const query = normalizeForMatch(latinText);
-  if (query.length < OCR_MIN_QUERY_LENGTH) {
-    return { latinText, query, candidates: [] };
+function bestNameScore(signals, card) {
+  const latinQuery = normalizeForMatch(signals.latinText);
+  const koreanQuery = normalizeOcrTextForMatch(signals.koreanText);
+  const latinBest = bestScoreForAliases(latinQuery, card.aliases, normalizeForMatch);
+  const koreanBest = bestScoreForAliases(
+    koreanQuery,
+    card.koreanAliases ?? [],
+    normalizeOcrTextForMatch,
+  );
+
+  if (koreanBest.score > latinBest.score) {
+    return { ...koreanBest, kind: "ko" };
+  }
+  return { ...latinBest, kind: "en" };
+}
+
+function exactNumericMatches(signals, card) {
+  const numericSignals = card.numericSignals ?? {};
+  const matches = [];
+  const pointValue = String(numericSignals.pointValue ?? "");
+  const wingspanCm = String(numericSignals.wingspanCm ?? "");
+
+  if (pointValue && signals.scoreNumbers.includes(pointValue)) {
+    matches.push("score");
+  }
+  if (wingspanCm && signals.wingNumbers.includes(wingspanCm)) {
+    matches.push("cm");
+  }
+  return matches;
+}
+
+function abilityKeywordScore(signals, card) {
+  const abilityText = normalizeOcrTextForMatch(signals.abilityText);
+  if (!abilityText) {
+    return 0;
+  }
+  const keywords = card.abilityKeywords ?? [];
+  const hits = keywords.filter((keyword) => abilityText.includes(normalizeOcrTextForMatch(keyword)));
+  return Math.min(12, hits.length * 4);
+}
+
+function compositeCandidateScore(nameScore, numericMatches, abilityScore) {
+  return Math.min(100, Math.round(nameScore + numericMatches.length * 12 + abilityScore));
+}
+
+function rankOcrCandidates(signals) {
+  const hasReadableText =
+    normalizeForMatch(signals.latinText).length >= OCR_MIN_QUERY_LENGTH ||
+    normalizeOcrTextForMatch(signals.koreanText).length >= OCR_MIN_QUERY_LENGTH ||
+    signals.scoreNumbers.length > 0 ||
+    signals.wingNumbers.length > 0;
+  if (!hasReadableText) {
+    return { candidates: [] };
   }
 
   const candidates = ocrDb.cards
     .map((card) => {
-      const best = bestAliasScore(query, card);
+      const best = bestNameScore(signals, card);
+      const numericMatches = exactNumericMatches(signals, card);
+      const abilityScore = abilityKeywordScore(signals, card);
       return {
         ...card,
         matchedAlias: best.alias,
-        score: best.score,
+        matchKind: best.kind,
+        nameScore: best.score,
+        numericMatches,
+        abilityScore,
+        score: compositeCandidateScore(best.score, numericMatches, abilityScore),
       };
     })
-    .sort((a, b) => b.score - a.score || a.cardNo.localeCompare(b.cardNo));
+    .sort(
+      (a, b) =>
+        b.score - a.score ||
+        b.nameScore - a.nameScore ||
+        b.numericMatches.length - a.numericMatches.length ||
+        a.cardNo.localeCompare(b.cardNo),
+    );
 
-  return { latinText, query, candidates };
+  return { candidates };
 }
 
 function matchConfidence(best, second) {
@@ -322,8 +540,20 @@ function matchConfidence(best, second) {
     return { ok: false, gap: 0, reason: "no candidate" };
   }
   const gap = best.score - (second?.score ?? 0);
-  if (best.score < OCR_MATCH_THRESHOLD) {
-    return { ok: false, gap, reason: `weak < ${OCR_MATCH_THRESHOLD}%` };
+  const exactCount = best.numericMatches?.length ?? 0;
+  if (best.nameScore < OCR_MIN_NAME_SCORE) {
+    return { ok: false, gap, reason: `name ${best.nameScore}% < ${OCR_MIN_NAME_SCORE}%` };
+  }
+
+  const strongName = best.nameScore >= OCR_STRONG_NAME_SCORE;
+  const mediumNameWithNumber = best.nameScore >= OCR_MEDIUM_NAME_SCORE && exactCount >= 1;
+  const weakNameWithNumbers = best.nameScore >= OCR_MIN_NAME_SCORE && exactCount >= 2;
+  if (!strongName && !mediumNameWithNumber && !weakNameWithNumbers) {
+    return {
+      ok: false,
+      gap,
+      reason: exactCount ? `need more signal ${exactCount}/2` : `name ${best.nameScore}%`,
+    };
   }
   if (gap < OCR_MIN_GAP) {
     return { ok: false, gap, reason: `close next ${gap}%` };
@@ -364,33 +594,120 @@ function randomBirdClipForCard(card) {
   return clips[Math.floor(Math.random() * clips.length)];
 }
 
-async function playAudioForCard(card, force = false) {
+function introTtsForCard(card) {
+  return introTtsManifest?.byCardId?.[card.id] ?? introTtsManifest?.byCardNo?.[card.cardNo] ?? null;
+}
+
+function abilityTtsForCard(card) {
+  return abilityTtsManifest?.byCardId?.[card.id] ?? abilityTtsManifest?.byCardNo?.[card.cardNo] ?? null;
+}
+
+function includeAbilityTts() {
+  return Boolean(elements.abilityToggle?.checked);
+}
+
+function displayNameForCard(card) {
+  return introTtsForCard(card)?.birdName || abilityTtsForCard(card)?.birdName || card.birdName;
+}
+
+function speechQueueForCard(card) {
+  const queue = [];
+  const intro = introTtsForCard(card);
+  if (intro?.src) {
+    queue.push({ kind: "intro", src: intro.src });
+  }
+  const ability = abilityTtsForCard(card);
+  if (includeAbilityTts() && ability?.src) {
+    queue.push({ kind: "ability", src: ability.src });
+  }
+  return queue;
+}
+
+function waitForAudioEnd(audio) {
+  return new Promise((resolve, reject) => {
+    const cleanup = () => {
+      audio.removeEventListener("ended", handleEnded);
+      audio.removeEventListener("error", handleError);
+    };
+    const handleEnded = () => {
+      cleanup();
+      resolve();
+    };
+    const handleError = () => {
+      cleanup();
+      reject(new Error("audio playback failed"));
+    };
+    audio.addEventListener("ended", handleEnded, { once: true });
+    audio.addEventListener("error", handleError, { once: true });
+  });
+}
+
+function stopAudioPlayback() {
+  playbackToken += 1;
+  speechElement.pause();
+  speechElement.removeAttribute("src");
+  birdBgElement.pause();
+  birdBgElement.removeAttribute("src");
+}
+
+async function playSpeechQueue(queue, token, card) {
+  try {
+    for (const item of queue) {
+      if (token !== playbackToken) {
+        return;
+      }
+      speechElement.pause();
+      speechElement.currentTime = 0;
+      speechElement.src = item.src;
+      await speechElement.play();
+      await waitForAudioEnd(speechElement);
+    }
+    if (token === playbackToken) {
+      birdBgElement.pause();
+    }
+  } catch (error) {
+    if (token === playbackToken) {
+      pendingAudioCard = card;
+      lastAudioMessage = "tap screen for sound";
+      birdBgElement.pause();
+    }
+  }
+}
+
+function playAudioForCard(card, force = false) {
   if (!force && activeAudioCardId === card.id) {
     return lastAudioMessage;
   }
 
   activeAudioCardId = card.id;
   const clip = randomBirdClipForCard(card);
-  if (!clip) {
-    soundElement.pause();
-    soundElement.removeAttribute("src");
+  const queue = speechQueueForCard(card);
+  if (!clip && !queue.length) {
+    stopAudioPlayback();
     lastAudioMessage = "no audio";
     return lastAudioMessage;
   }
 
-  soundElement.pause();
-  soundElement.currentTime = 0;
-  soundElement.src = clip.src;
-  soundElement.loop = false;
+  stopAudioPlayback();
+  const token = playbackToken;
 
-  try {
-    await soundElement.play();
-    pendingAudioCard = null;
-    lastAudioMessage = `audio ${clip.clipType ?? "clip"}`;
-  } catch (error) {
-    pendingAudioCard = card;
-    lastAudioMessage = "tap screen for sound";
+  if (clip) {
+    birdBgElement.currentTime = 0;
+    birdBgElement.src = clip.src;
+    birdBgElement.loop = Boolean(queue.length);
+    birdBgElement.volume = queue.length ? BIRD_BG_VOLUME : 1;
+    birdBgElement.play().catch(() => {});
   }
+
+  if (queue.length) {
+    pendingAudioCard = null;
+    playSpeechQueue(queue, token, card);
+    lastAudioMessage = includeAbilityTts() && abilityTtsForCard(card) ? "intro + ability" : "intro";
+    return lastAudioMessage;
+  }
+
+  pendingAudioCard = null;
+  lastAudioMessage = `audio ${clip.clipType ?? "clip"}`;
   return lastAudioMessage;
 }
 
@@ -400,18 +717,19 @@ function resetAudioAfterMiss() {
     activeAudioCardId = "";
     pendingAudioCard = null;
     lastAudioMessage = "";
-    soundElement.pause();
-    soundElement.removeAttribute("src");
+    stopAudioPlayback();
   }
 }
 
-function formatMeta(best, second, latinText, audioMessage, confidence) {
+function formatMeta(best, second, signals, audioMessage, confidence) {
   const parts = [];
-  if (latinText) {
-    parts.push(`read "${latinText.slice(0, 44)}"`);
+  const readText = signals.titleText || signals.allText;
+  if (readText) {
+    parts.push(`read "${readText.replace(/\s+/g, " ").slice(0, 44)}"`);
   }
   if (best) {
-    parts.push(`${best.cardNo} ${best.matchedAlias}`);
+    const exact = best.numericMatches?.length ? ` exact ${best.numericMatches.join("+")}` : "";
+    parts.push(`${best.cardNo} ${best.matchedAlias || best.birdName} name ${best.nameScore}%${exact}`);
   }
   if (second) {
     parts.push(`next ${second.cardNo} ${second.score}%`);
@@ -432,10 +750,10 @@ async function identifyCurrentFrame() {
 
   isScanning = true;
   try {
-    drawNameCropForOcr();
+    drawCardSignalsForOcr();
     const result = await tesseractWorker.recognize(ocrCanvas);
-    const ocrText = result?.data?.text ?? "";
-    const { latinText, candidates } = rankOcrCandidates(ocrText);
+    const signals = extractOcrSignals(result);
+    const { candidates } = rankOcrCandidates(signals);
     const [best, second] = candidates;
     const confidence = matchConfidence(best, second);
     const stableFrames = stableFramesForCandidate(best, confidence.ok);
@@ -450,9 +768,9 @@ async function identifyCurrentFrame() {
       audioMessage = confidence.ok ? `hold ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
     }
 
-    elements.matchName.textContent = confidence.ok || matched ? best.birdName : "Scanning";
+    elements.matchName.textContent = confidence.ok || matched ? displayNameForCard(best) : "Scanning";
     elements.matchScore.textContent = best ? `${best.score}% / gap ${confidence.gap}` : "-";
-    elements.matchMeta.textContent = formatMeta(best, second, latinText, audioMessage, confidence);
+    elements.matchMeta.textContent = formatMeta(best, second, signals, audioMessage, confidence);
     setStatus(matched ? "Matched" : confidence.ok ? "Hold" : "Reading", matched ? "ready" : "");
   } catch (error) {
     elements.matchName.textContent = "Error";
@@ -498,12 +816,28 @@ async function startCamera() {
 
 async function handleUserActivation() {
   if (pendingAudioCard) {
-    await playAudioForCard(pendingAudioCard, true);
+    playAudioForCard(pendingAudioCard, true);
   }
+}
+
+function initAbilityToggle() {
+  if (!elements.abilityToggle) {
+    return;
+  }
+  elements.abilityToggle.checked = localStorage.getItem(ABILITY_TOGGLE_STORAGE_KEY) === "true";
+  elements.abilityToggle.addEventListener("change", () => {
+    localStorage.setItem(ABILITY_TOGGLE_STORAGE_KEY, String(elements.abilityToggle.checked));
+    stopAudioPlayback();
+    activeAudioCardId = "";
+    if (pendingAudioCard) {
+      playAudioForCard(pendingAudioCard, true);
+    }
+  });
 }
 
 async function boot() {
   try {
+    initAbilityToggle();
     await loadData();
     await initOcrWorker();
     await startCamera();
@@ -518,7 +852,7 @@ async function boot() {
 document.addEventListener("pointerdown", handleUserActivation, { passive: true });
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
-    soundElement.pause();
+    stopAudioPlayback();
   }
 });
 

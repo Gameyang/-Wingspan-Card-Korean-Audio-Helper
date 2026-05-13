@@ -6,6 +6,8 @@ Wingspan card scanning should play a Korean spoken card intro while using the ex
 
 The target unit is one Korean intro per `card_no`. The source CSV has multiple VO rows per card, so tooling selects one representative source row for review and TTS generation.
 
+Card power narration is separate from intro narration. Power text is captured per card from the atlas images into `src/Data/card_ability_ocr.csv`, then deduplicated into `src/Data/card_ability_tts_ko.csv` so cards with the same power reuse one generated TTS file.
+
 ## Data Flow
 
 1. Build Korean TTS draft data:
@@ -25,7 +27,22 @@ The target unit is one Korean intro per `card_no`. The source CSV has multiple V
 3. Browser playback:
    - Korean TTS intro plays in the foreground.
    - One random bird clip for the matched card plays quietly as background audio.
+   - The `능력 설명` toggle appends the matched card's power narration after the intro.
    - When the matched card changes, the current TTS and bird background audio stop and the next card starts.
+
+4. Build Korean ability TTS data from OCR/review rows:
+   ```powershell
+   python tools/build_card_ability_tts_ko.py --card-range 53-57
+   python tools/build_card_ability_tts_ko.py --skip-ocr
+   ```
+   The OCR step supports Tesseract when installed, and falls back to Windows OCR on this machine. OCR rows should be reviewed because small Korean text on the atlas images can need correction.
+
+5. Generate deduplicated ability audio:
+   ```powershell
+   python tools/generate_card_ability_tts.py --card-range 53-57
+   python tools/generate_card_ability_tts.py --manifest-only
+   ```
+   Output audio is written to `site/tts/card_ability/`, and the browser manifest is written to `site/data/card_ability_tts.json`.
 
 ## Files and Interfaces
 
@@ -48,11 +65,30 @@ The target unit is one Korean intro per `card_no`. The source CSV has multiple V
   - Defaults to Qwen3 tag mode via `generate_single_segment`.
   - Supports `--dry-run`, `--limit`, `--card-no`, `--card-range`, `--skip-existing`, `--manifest-only`, `--api-base`, `--voice-tag`, and generation parameter overrides.
 
+- `src/Data/card_ability_ocr.csv`
+  - Card-level OCR/review table for the card power area.
+  - `ability_ocr_text`: raw OCR result.
+  - `ability_text_ko`: reviewed Korean power text used for narration.
+  - `ability_id`: stable dedupe key. Matching powers share one `ability_id`.
+
+- `src/Data/card_ability_tts_ko.csv`
+  - Unique ability-level Korean TTS list.
+  - `source_card_nos` and `source_card_ids` map each shared ability back to the cards that use it.
+
+- `site/data/card_ability_tts.json`
+  - `byAbilityId`: all generated ability audio keyed by dedupe id.
+  - `byCardNo` and `byCardId`: card-to-ability audio mapping for browser playback.
+
+- `tools/generate_card_ability_tts.py`
+  - Uses the same Qwen3 endpoint and audio conversion path as intro generation.
+  - Supports `--dry-run`, `--limit`, `--ability-id`, `--card-no`, `--card-range`, `--skip-existing`, and `--manifest-only`.
+
 ## Defaults
 
 - Qwen3 API base: `http://100.66.10.225:3000/tools/qwen3-tts`
 - Language: `korean`
-- Voice tag: `Jean`
+- Voice selection: random per generated clip from `D:\Weeks\Qwen3-TTS\data\voices\ref\voices.json`
+- Fixed voice override: pass `--override-voice-tag Jean` or another tag when a consistent voice is needed.
 - Output format: M4A, AAC 64 kbps, 32 kHz mono
 - Fingerprint mapping start: card no `53`, matching the current site audio manifest.
 
@@ -61,6 +97,8 @@ The target unit is one Korean intro per `card_no`. The source CSV has multiple V
 - Run `python tools/build_card_intro_tts_ko.py --dry-run` to check representative card counts without writing files.
 - Run `python tools/generate_card_intro_tts.py --dry-run --limit 3` to confirm Qwen3 jobs without generating audio.
 - Run `python tools/generate_card_intro_tts.py --manifest-only` after audio exists to rebuild only `site/data/card_intro_tts.json`.
+- Run `python tools/build_card_ability_tts_ko.py --skip-ocr --dry-run` to check deduplicated ability rows.
+- Run `python tools/generate_card_ability_tts.py --dry-run --card-range 53-57` to confirm unique ability jobs.
 - Run `pytest` to verify existing fingerprint and audio manifest behavior.
 
 ## Notes

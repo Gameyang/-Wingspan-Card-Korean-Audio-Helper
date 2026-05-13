@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "source": "src/Data/card_ability_tts_ko.csv",
+  "cardMapSource": "src/Data/card_ability_ocr.csv",
+  "audioRoot": "tts/card_ability",
+  "byAbilityId": {
+    "ability_6312f682d460": {
+      "abilityId": "ability_6312f682d460",
+      "abilityTextKo": "카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.",
+      "src": "tts/card_ability/ability_6312f682d460.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chourei",
+      "sourceCardNos": [
+        "53"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c01"
+      ]
+    },
+    "ability_8cf45975375d": {
+      "abilityId": "ability_8cf45975375d",
+      "abilityTextKo": "모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_8cf45975375d.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ningguang",
+      "sourceCardNos": [
+        "55"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c03"
+      ]
+    },
+    "ability_bf7a70efb2e5": {
+      "abilityId": "ability_bf7a70efb2e5",
+      "abilityTextKo": "원하는 새 1마리에 알 1개를 낳습니다.",
+      "src": "tts/card_ability/ability_bf7a70efb2e5.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "sourceCardNos": [
+        "56",
+        "57"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c04",
+        "atlas01_r01_c05"
+      ]
+    },
+    "ability_c315fb1c7bfa": {
+      "abilityId": "ability_c315fb1c7bfa",
+      "abilityTextKo": "모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_c315fb1c7bfa.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Razor",
+      "sourceCardNos": [
+        "54"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c02"
+      ]
+    }
+  },
+  "byCardNo": {
+    "53": {
+      "abilityId": "ability_6312f682d460",
+      "abilityTextKo": "카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.",
+      "src": "tts/card_ability/ability_6312f682d460.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chourei",
+      "sourceCardNos": [
+        "53"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c01"
+      ],
+      "cardNo": "53",
+      "cardId": "atlas01_r01_c01",
+      "birdName": "얼룩부리논병아리",
+      "birdNameEn": "Pied Billed Grebe"
+    },
+    "54": {
+      "abilityId": "ability_c315fb1c7bfa",
+      "abilityTextKo": "모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_c315fb1c7bfa.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Razor",
+      "sourceCardNos": [
+        "54"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c02"
+      ],
+      "cardNo": "54",
+      "cardId": "atlas01_r01_c02",
+      "birdName": "도가머리딱따구리",
+      "birdNameEn": "Pileated Woodpecker"
+    },
+    "55": {
+      "abilityId": "ability_8cf45975375d",
+      "abilityTextKo": "모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_8cf45975375d.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ningguang",
+      "sourceCardNos": [
+        "55"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c03"
+      ],
+      "cardNo": "55",
+      "cardId": "atlas01_r01_c03",
+      "birdName": "서부종다리",
+      "birdNameEn": "Western Meadowlark"
+    },
+    "56": {
+      "abilityId": "ability_bf7a70efb2e5",
+      "abilityTextKo": "원하는 새 1마리에 알 1개를 낳습니다.",
+      "src": "tts/card_ability/ability_bf7a70efb2e5.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "sourceCardNos": [
+        "56",
+        "57"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c04",
+        "atlas01_r01_c05"
+      ],
+      "cardNo": "56",
+      "cardId": "atlas01_r01_c04",
+      "birdName": "메뚜기참새",
+      "birdNameEn": "Grasshopper Sparrow"
+    },
+    "57": {
+      "abilityId": "ability_bf7a70efb2e5",
+      "abilityTextKo": "원하는 새 1마리에 알 1개를 낳습니다.",
+      "src": "tts/card_ability/ability_bf7a70efb2e5.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "sourceCardNos": [
+        "56",
+        "57"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c04",
+        "atlas01_r01_c05"
+      ],
+      "cardNo": "57",
+      "cardId": "atlas01_r01_c05",
+      "birdName": "칩핑참새",
+      "birdNameEn": "Chipping Sparrow"
+    }
+  },
+  "byCardId": {
+    "atlas01_r01_c01": {
+      "abilityId": "ability_6312f682d460",
+      "abilityTextKo": "카드 2장을 뽑습니다. 그렇게 했다면, 당신의 턴이 끝날 때 손에 있는 카드 1장을 버립니다.",
+      "src": "tts/card_ability/ability_6312f682d460.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Chourei",
+      "sourceCardNos": [
+        "53"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c01"
+      ],
+      "cardNo": "53",
+      "cardId": "atlas01_r01_c01",
+      "birdName": "얼룩부리논병아리",
+      "birdNameEn": "Pied Billed Grebe"
+    },
+    "atlas01_r01_c02": {
+      "abilityId": "ability_c315fb1c7bfa",
+      "abilityTextKo": "모든 플레이어는 구멍형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 구멍형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_c315fb1c7bfa.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Razor",
+      "sourceCardNos": [
+        "54"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c02"
+      ],
+      "cardNo": "54",
+      "cardId": "atlas01_r01_c02",
+      "birdName": "도가머리딱따구리",
+      "birdNameEn": "Pileated Woodpecker"
+    },
+    "atlas01_r01_c03": {
+      "abilityId": "ability_8cf45975375d",
+      "abilityTextKo": "모든 플레이어는 바닥형 둥지 새 1마리에 알 1개를 낳습니다. 당신은 추가로 바닥형 둥지 새 1마리에 알 1개를 낳을 수 있습니다.",
+      "src": "tts/card_ability/ability_8cf45975375d.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Ningguang",
+      "sourceCardNos": [
+        "55"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c03"
+      ],
+      "cardNo": "55",
+      "cardId": "atlas01_r01_c03",
+      "birdName": "서부종다리",
+      "birdNameEn": "Western Meadowlark"
+    },
+    "atlas01_r01_c04": {
+      "abilityId": "ability_bf7a70efb2e5",
+      "abilityTextKo": "원하는 새 1마리에 알 1개를 낳습니다.",
+      "src": "tts/card_ability/ability_bf7a70efb2e5.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "sourceCardNos": [
+        "56",
+        "57"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c04",
+        "atlas01_r01_c05"
+      ],
+      "cardNo": "56",
+      "cardId": "atlas01_r01_c04",
+      "birdName": "메뚜기참새",
+      "birdNameEn": "Grasshopper Sparrow"
+    },
+    "atlas01_r01_c05": {
+      "abilityId": "ability_bf7a70efb2e5",
+      "abilityTextKo": "원하는 새 1마리에 알 1개를 낳습니다.",
+      "src": "tts/card_ability/ability_bf7a70efb2e5.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "voiceTag": "Etienne",
+      "sourceCardNos": [
+        "56",
+        "57"
+      ],
+      "sourceCardIds": [
+        "atlas01_r01_c04",
+        "atlas01_r01_c05"
+      ],
+      "cardNo": "57",
+      "cardId": "atlas01_r01_c05",
+      "birdName": "칩핑참새",
+      "birdNameEn": "Chipping Sparrow"
+    }
+  }
+}

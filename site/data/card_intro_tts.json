@@ -11,6 +11,38 @@
       "src": "tts/card_intro/53_pied_billed_grebe.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft"
+    },
+    "54": {
+      "cardNo": "54",
+      "birdName": "도가머리딱따구리",
+      "birdNameEn": "Pileated Woodpecker",
+      "src": "tts/card_intro/54_pileated_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft"
+    },
+    "55": {
+      "cardNo": "55",
+      "birdName": "서부종다리",
+      "birdNameEn": "Western Meadowlark",
+      "src": "tts/card_intro/55_western_meadowlark.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft"
+    },
+    "56": {
+      "cardNo": "56",
+      "birdName": "메뚜기참새",
+      "birdNameEn": "Grasshopper Sparrow",
+      "src": "tts/card_intro/56_grasshopper_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft"
+    },
+    "57": {
+      "cardNo": "57",
+      "birdName": "칩핑참새",
+      "birdNameEn": "Chipping Sparrow",
+      "src": "tts/card_intro/57_chipping_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft"
     }
   },
   "byCardId": {
@@ -19,6 +51,42 @@
       "birdName": "얼룩부리논병아리",
       "birdNameEn": "Pied Billed Grebe",
       "src": "tts/card_intro/53_pied_billed_grebe.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c02": {
+      "cardNo": "54",
+      "birdName": "도가머리딱따구리",
+      "birdNameEn": "Pileated Woodpecker",
+      "src": "tts/card_intro/54_pileated_woodpecker.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c03": {
+      "cardNo": "55",
+      "birdName": "서부종다리",
+      "birdNameEn": "Western Meadowlark",
+      "src": "tts/card_intro/55_western_meadowlark.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c04": {
+      "cardNo": "56",
+      "birdName": "메뚜기참새",
+      "birdNameEn": "Grasshopper Sparrow",
+      "src": "tts/card_intro/56_grasshopper_sparrow.m4a",
+      "mimeType": "audio/mp4",
+      "reviewStatus": "draft",
+      "mappingSource": "atlasSequence"
+    },
+    "atlas01_r01_c05": {
+      "cardNo": "57",
+      "birdName": "칩핑참새",
+      "birdNameEn": "Chipping Sparrow",
+      "src": "tts/card_intro/57_chipping_sparrow.m4a",
       "mimeType": "audio/mp4",
       "reviewStatus": "draft",
       "mappingSource": "atlasSequence"

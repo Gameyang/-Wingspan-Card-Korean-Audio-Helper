@@ -25,13 +25,20 @@
 
       <header class="scanner-top">
         <div>
-          <p class="eyebrow">Latin OCR</p>
+          <p class="eyebrow">Korean OCR</p>
           <h1>Wingspan Scanner</h1>
         </div>
         <div class="status" id="status" role="status">Idle</div>
       </header>
 
       <section class="bottom-sheet" aria-label="Scanner result">
+        <div class="control-row">
+          <label class="toggle-control">
+            <input type="checkbox" id="abilityToggle" />
+            <span class="toggle-track" aria-hidden="true"></span>
+            <span>능력 설명</span>
+          </label>
+        </div>
         <div class="result-row">
           <div class="result-card main-result">
             <dt>Match</dt>

@@ -4,6 +4,7 @@ import argparse
 import csv
 import json
 import mimetypes
+import random
 import re
 import shutil
 import subprocess
@@ -20,6 +21,7 @@ DEFAULT_FINGERPRINTS = Path("site/data/card_fingerprints.json")
 DEFAULT_OUTPUT_DIR = Path("site/tts/card_intro")
 DEFAULT_MANIFEST = Path("site/data/card_intro_tts.json")
 DEFAULT_API_BASE = "http://100.66.10.225:3000/tools/qwen3-tts"
+DEFAULT_VOICES_JSON = Path(r"D:\Weeks\Qwen3-TTS\data\voices\ref\voices.json")
 DEFAULT_LANGUAGE = "korean"
 DEFAULT_VOICE_TAG = "Jean"
 DEFAULT_SEQUENCE_START_CARD_NO = 53
@@ -35,8 +37,15 @@ class TtsJob:
     bird_name: str
     text: str
     voice_tag: str
+    voice_id: str
     wav_path: Path
     m4a_path: Path
+
+
+@dataclass(frozen=True)
+class VoiceRef:
+    tag: str
+    voice_id: str
 
 
 def read_csv(path: Path) -> list[dict[str, str]]:
@@ -55,6 +64,41 @@ def slugify(value: str) -> str:
 
 def audio_stem(card_no: str, bird_name: str) -> str:
     return f"{card_no}_{slugify(bird_name)}"
+
+
+def load_voice_refs(path: Path, *, prompt_lang: str = "korean", include_xvec_only: bool = False) -> list[VoiceRef]:
+    if not path.is_file():
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    voices = payload.get("voices", []) if isinstance(payload, dict) else payload
+    refs: list[VoiceRef] = []
+    for item in voices:
+        if not isinstance(item, dict):
+            continue
+        tag = str(item.get("tag", "")).strip()
+        if not tag:
+            continue
+        if prompt_lang and str(item.get("prompt_lang", "")).strip().casefold() != prompt_lang.casefold():
+            continue
+        if item.get("xvec_only") and not include_xvec_only:
+            continue
+        refs.append(VoiceRef(tag=tag, voice_id=str(item.get("id", "")).strip()))
+    return refs
+
+
+def selected_voice_for_row(
+    row: dict[str, str],
+    *,
+    default_voice_tag: str,
+    override_voice_tag: str,
+    voice_refs: list[VoiceRef],
+    rng: random.Random,
+) -> VoiceRef:
+    if override_voice_tag:
+        return VoiceRef(tag=override_voice_tag, voice_id="")
+    if voice_refs:
+        return rng.choice(voice_refs)
+    return VoiceRef(tag=str(row.get("voice_tag", "")).strip() or default_voice_tag, voice_id="")
 
 
 def selected_rows(
@@ -98,18 +142,30 @@ def build_jobs(
     output_dir: Path,
     default_voice_tag: str,
     override_voice_tag: str = "",
+    voice_refs: list[VoiceRef] | None = None,
+    rng: random.Random | None = None,
 ) -> list[TtsJob]:
     jobs: list[TtsJob] = []
+    voice_refs = voice_refs or []
+    rng = rng or random.Random()
     for row in rows:
         card_no = str(row["card_no"]).strip()
         bird_name = str(row.get("bird_name", "")).strip() or f"card_{card_no}"
         stem = audio_stem(card_no, bird_name)
+        voice = selected_voice_for_row(
+            row,
+            default_voice_tag=default_voice_tag,
+            override_voice_tag=override_voice_tag,
+            voice_refs=voice_refs,
+            rng=rng,
+        )
         jobs.append(
             TtsJob(
                 card_no=card_no,
                 bird_name=bird_name,
                 text=str(row.get("tts_text", "")).strip(),
-                voice_tag=override_voice_tag or str(row.get("voice_tag", "")).strip() or default_voice_tag,
+                voice_tag=voice.tag,
+                voice_id=voice.voice_id,
                 wav_path=output_dir / f"{stem}.wav",
                 m4a_path=output_dir / f"{stem}.m4a",
             )
@@ -280,6 +336,7 @@ def build_manifest(
     manifest_path: Path,
     fingerprints_path: Path,
     sequence_start_card_no: int,
+    voice_tags_by_card_no: dict[str, str] | None = None,
 ) -> tuple[int, int]:
     by_card_no: dict[str, dict[str, object]] = {}
     rows_by_card_no = {str(row.get("card_no", "")).strip(): row for row in tts_rows if row.get("card_no")}
@@ -298,6 +355,7 @@ def build_manifest(
             "src": site_relative_src(path),
             "mimeType": mime_type(path),
             "reviewStatus": str(row.get("review_status", "")),
+            "voiceTag": (voice_tags_by_card_no or {}).get(card_no, str(row.get("voice_tag", "")).strip()),
         }
 
     by_card_id: dict[str, dict[str, object]] = {}
@@ -340,6 +398,10 @@ def main() -> int:
     parser.add_argument("--language", default=DEFAULT_LANGUAGE)
     parser.add_argument("--voice-tag", default=DEFAULT_VOICE_TAG)
     parser.add_argument("--override-voice-tag", default="", help="Use this voice tag for all selected rows.")
+    parser.add_argument("--voices-json", type=Path, default=DEFAULT_VOICES_JSON, help="Qwen3 reference voices JSON used for per-clip random voice selection.")
+    parser.add_argument("--random-voice", action=argparse.BooleanOptionalAction, default=True, help="Randomly choose one voice per generated clip from --voices-json.")
+    parser.add_argument("--voice-seed", type=int, default=None, help="Optional seed for reproducible random voice selection.")
+    parser.add_argument("--include-xvec-only-voices", action="store_true")
     parser.add_argument("--card-no", action="append", default=[], help="Generate only this card number. Repeatable.")
     parser.add_argument("--card-range", action="append", default=[], help="Generate an inclusive card range, e.g. 53-262.")
     parser.add_argument("--limit", type=int, default=None)
@@ -379,27 +441,40 @@ def main() -> int:
         limit=args.limit,
         approved_only=args.approved_only,
     )
+    voice_refs = []
+    if args.random_voice and not str(args.override_voice_tag).strip():
+        voice_refs = load_voice_refs(
+            args.voices_json,
+            prompt_lang=args.language,
+            include_xvec_only=args.include_xvec_only_voices,
+        )
+        if not voice_refs:
+            print(f"[warn] No random voices loaded from {args.voices_json}; falling back to row/default voice tags.")
+    rng = random.Random(args.voice_seed)
     jobs = build_jobs(
         selected,
         output_dir=args.output_dir,
         default_voice_tag=args.voice_tag,
         override_voice_tag=str(args.override_voice_tag).strip(),
+        voice_refs=voice_refs,
+        rng=rng,
     )
 
     if args.dry_run:
         print(f"Input rows: {len(rows)}")
         print(f"Selected jobs: {len(jobs)}")
         for job in jobs[:10]:
-            print(f"{job.card_no}: {job.bird_name} -> {job.m4a_path}")
+            print(f"{job.card_no}: {job.bird_name} voice={job.voice_tag} -> {job.m4a_path}")
         return 0
 
+    voice_tags_by_card_no = {} if args.manifest_only else {job.card_no: job.voice_tag for job in jobs}
     if not args.manifest_only:
         failures: list[tuple[TtsJob, Exception]] = []
         for index, job in enumerate(jobs, start=1):
             if args.skip_existing and job.m4a_path.is_file():
-                print(f"[{index}/{len(jobs)}] skip existing {job.m4a_path}")
+                print(f"[{index}/{len(jobs)}] skip existing {job.m4a_path} voice={job.voice_tag}")
                 continue
-            print(f"[{index}/{len(jobs)}] {job.card_no} {job.bird_name}")
+            print(f"[{index}/{len(jobs)}] {job.card_no} {job.bird_name} voice={job.voice_tag}")
             try:
                 qwen3_tts_to_wav(
                     api_base=args.api_base,
@@ -428,6 +503,7 @@ def main() -> int:
         manifest_path=args.manifest,
         fingerprints_path=args.fingerprints,
         sequence_start_card_no=args.sequence_start_card_no,
+        voice_tags_by_card_no=voice_tags_by_card_no,
     )
     print(f"Wrote manifest: {args.manifest} ({card_no_count} card_no, {card_id_count} card_id)")
     if not args.manifest_only and failures:

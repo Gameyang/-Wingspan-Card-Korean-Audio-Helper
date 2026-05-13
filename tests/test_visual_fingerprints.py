@@ -56,9 +56,13 @@ def test_ocr_alias_manifest_maps_scientific_names() -> None:
     last = data["byCardId"]["atlas03_r07_c10"]
     black_woodpecker = data["byCardId"]["atlas03_r03_c07"]
 
-    assert data["matchMethod"] == "latin-ocr-normalized-fuzzy"
+    assert data["version"] == 2
+    assert data["matchMethod"] == "multi-signal-kor-eng-ocr"
     assert len(data["cards"]) == 210
     assert first["birdName"] == "Pied Billed Grebe"
+    assert first["birdNameKo"] == "\uc5bc\ub8e9\ubd80\ub9ac\ub17c\ubcd1\uc544\ub9ac"
+    assert "\uc5bc\ub8e9\ubd80\ub9ac\ub17c\ubcd1\uc544\ub9ac" in first["koreanAliases"]
+    assert first["numericSignals"] == {"pointValue": "", "wingspanCm": ""}
     assert "Podilymbus podiceps" in first["aliases"]
     assert "podilymbuspodiceps" in first["normalizedAliases"]
     assert last["birdName"] == "Abbotts Booby"
@@ -79,3 +83,19 @@ def test_card_intro_tts_manifest_maps_generated_sample() -> None:
     assert intro["birdNameEn"] == "Pied Billed Grebe"
     assert intro["src"] == "tts/card_intro/53_pied_billed_grebe.m4a"
     assert (REPO_ROOT / "site" / intro["src"]).is_file()
+
+
+def test_card_ability_tts_manifest_deduplicates_shared_power() -> None:
+    data_path = REPO_ROOT / "site" / "data" / "card_ability_tts.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+
+    grasshopper = data["byCardId"]["atlas01_r01_c04"]
+    chipping = data["byCardId"]["atlas01_r01_c05"]
+
+    assert len(data["byAbilityId"]) == 4
+    assert len(data["byCardNo"]) == 5
+    assert grasshopper["abilityId"] == chipping["abilityId"]
+    assert grasshopper["src"] == chipping["src"]
+    assert grasshopper["birdName"] == "메뚜기참새"
+    assert chipping["birdName"] == "칩핑참새"
+    assert (REPO_ROOT / "site" / grasshopper["src"]).is_file()
