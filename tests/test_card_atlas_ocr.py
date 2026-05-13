@@ -13,10 +13,18 @@ IMAGES_DIR = REPO_ROOT / "src" / "Images"
 
 
 def require_atlas_files() -> list[Path]:
+    if not IMAGES_DIR.exists():
+        pytest.skip(f"No atlas fixtures found in {IMAGES_DIR}")
     atlas_files = atlas_ocr.find_atlas_files(IMAGES_DIR)
     if not atlas_files:
         pytest.skip(f"No atlas fixtures found in {IMAGES_DIR}")
     return atlas_files
+
+
+def write_blank_atlas(path: Path) -> None:
+    image = Image.new("RGB", atlas_ocr.EXPECTED_ATLAS_SIZE, "white")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    image.save(path, quality=80)
 
 
 def test_current_atlases_match_expected_grid_size() -> None:
@@ -58,6 +66,9 @@ def test_build_review_csv_checks_ocr_before_writing(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    fixture_images = tmp_path / "images"
+    write_blank_atlas(fixture_images / "atlas.jpg")
+
     def raise_missing(language: str = "eng") -> None:
         raise RuntimeError(f"missing {language}")
 
@@ -65,7 +76,7 @@ def test_build_review_csv_checks_ocr_before_writing(
 
     with pytest.raises(RuntimeError, match="missing eng"):
         atlas_ocr.build_review_csv(
-            images_dir=IMAGES_DIR,
+            images_dir=fixture_images,
             output_csv=tmp_path / "review.csv",
             crops_dir=tmp_path / "cards",
         )

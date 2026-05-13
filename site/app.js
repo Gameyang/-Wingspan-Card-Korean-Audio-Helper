@@ -23,8 +23,16 @@ const elements = {
 
 let stream;
 let fingerprintDb;
+let audioManifest = { byCardId: {} };
 let scanTimer;
 let isScanning = false;
+let activeAudioCardId = "";
+let pendingAudioCardId = "";
+let lastAudioMessage = "";
+let missedFrameCount = 0;
+
+const audioPlayer = new Audio();
+audioPlayer.preload = "auto";
 
 const nibbleBits = Array.from({ length: 16 }, (_, value) =>
   value.toString(2).replaceAll("0", "").length,
@@ -45,6 +53,19 @@ async function loadFingerprintDb() {
   setStatus(`${fingerprintDb.cards.length} ready`, "ready");
 }
 
+async function loadAudioManifest() {
+  try {
+    const response = await fetch("./data/audio_clips.json", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error(`audio data ${response.status}`);
+    }
+    audioManifest = await response.json();
+  } catch (error) {
+    audioManifest = { byCardId: {} };
+    lastAudioMessage = "audio unavailable";
+  }
+}
+
 function hammingDistanceHex(left, right) {
   const length = Math.min(left.length, right.length);
   let distance = Math.abs(left.length - right.length) * 4;
@@ -63,6 +84,62 @@ function rankByFingerprint(hash) {
       return { ...card, distance, score };
     })
     .sort((a, b) => a.distance - b.distance || a.id.localeCompare(b.id));
+}
+
+function audioClipsForCard(cardId) {
+  return audioManifest?.byCardId?.[cardId] ?? [];
+}
+
+function formatMatchMeta(best, second, audioMessage = "") {
+  if (!best) {
+    return "-";
+  }
+
+  const parts = [best.id];
+  if (second) {
+    parts.push(`next ${second.id} (${second.score}%)`);
+  }
+  if (audioMessage) {
+    parts.push(audioMessage);
+  }
+  return parts.join(" / ");
+}
+
+async function playRandomClipForCard(card, force = false) {
+  if (!force && activeAudioCardId === card.id) {
+    return lastAudioMessage;
+  }
+
+  activeAudioCardId = card.id;
+  const clips = audioClipsForCard(card.id);
+  if (!clips.length) {
+    lastAudioMessage = "no audio";
+    return lastAudioMessage;
+  }
+
+  const clip = clips[Math.floor(Math.random() * clips.length)];
+  audioPlayer.pause();
+  audioPlayer.src = clip.src;
+
+  try {
+    await audioPlayer.play();
+    pendingAudioCardId = "";
+    lastAudioMessage = clip.isMain ? "main audio" : "audio";
+  } catch (error) {
+    pendingAudioCardId = card.id;
+    lastAudioMessage = "tap button for sound";
+  }
+
+  return lastAudioMessage;
+}
+
+function resetAudioAfterMiss() {
+  missedFrameCount += 1;
+  if (missedFrameCount >= 3) {
+    activeAudioCardId = "";
+    pendingAudioCardId = "";
+    lastAudioMessage = "";
+  }
 }
 
 function drawPreviewFromSource(source, sx, sy, sw, sh) {
@@ -154,12 +231,19 @@ async function identifyCurrentFrame() {
     const hash = computeDHash();
     const [best, second] = rankByFingerprint(hash);
     const matched = best && best.score >= MATCH_THRESHOLD;
+    let audioMessage = "";
+
+    if (matched) {
+      missedFrameCount = 0;
+      audioMessage = await playRandomClipForCard(best);
+    } else {
+      resetAudioAfterMiss();
+      audioMessage = lastAudioMessage;
+    }
 
     elements.matchName.textContent = matched ? best.displayName : "Check";
     elements.matchScore.textContent = best ? `${best.score}% / d${best.distance}` : "-";
-    elements.matchMeta.textContent = best
-      ? `${best.id}${second ? ` · next ${second.id} (${second.score}%)` : ""}`
-      : "-";
+    elements.matchMeta.textContent = formatMatchMeta(best, second, audioMessage);
     setStatus(matched ? "Matched" : "Check", matched ? "ready" : "error");
   } catch (error) {
     elements.matchName.textContent = "Error";
@@ -200,6 +284,12 @@ async function startCamera() {
     });
     elements.video.srcObject = stream;
     await elements.video.play();
+    if (pendingAudioCardId && fingerprintDb) {
+      const pendingCard = fingerprintDb.cards.find((card) => card.id === pendingAudioCardId);
+      if (pendingCard) {
+        await playRandomClipForCard(pendingCard, true);
+      }
+    }
     elements.startCamera.textContent = "Restart camera";
     setStatus("Scanning", "ready");
     startScanLoop();
@@ -209,11 +299,21 @@ async function startCamera() {
   }
 }
 
-elements.startCamera.addEventListener("click", startCamera);
+async function handleStartCameraClick() {
+  if (pendingAudioCardId && fingerprintDb) {
+    const pendingCard = fingerprintDb.cards.find((card) => card.id === pendingAudioCardId);
+    if (pendingCard) {
+      await playRandomClipForCard(pendingCard, true);
+    }
+  }
+  await startCamera();
+}
+
+elements.startCamera.addEventListener("click", handleStartCameraClick);
 
 async function boot() {
   try {
-    await loadFingerprintDb();
+    await Promise.all([loadFingerprintDb(), loadAudioManifest()]);
     await startCamera();
   } catch (error) {
     elements.matchMeta.textContent = error.message;

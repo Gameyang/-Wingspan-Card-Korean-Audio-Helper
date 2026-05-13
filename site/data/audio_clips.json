@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "source": "src/Data/bird_audio_clips.csv",
+  "byCardId": {
+    "atlas01_r01_c01": [
+      {
+        "birdName": "Pied Billed Grebe",
+        "cardNo": "53",
+        "src": "audio/53_Pied_billed_Grebe_106717_1_call.m4a",
+        "clipType": "call",
+        "isMain": false,
+        "sourceId": "106717"
+      },
+      {
+        "birdName": "Pied Billed Grebe",
+        "cardNo": "53",
+        "src": "audio/53_Pied_billed_Grebe_106717_2_call.m4a",
+        "clipType": "call",
+        "isMain": false,
+        "sourceId": "106717"
+      },
+      {
+        "birdName": "Pied Billed Grebe",
+        "cardNo": "53",
+        "src": "audio/53_Pied_billed_Grebe_106717_3_call_main.m4a",
+        "clipType": "call",
+        "isMain": true,
+        "sourceId": "106717"
+      }
+    ]
+  }
+}

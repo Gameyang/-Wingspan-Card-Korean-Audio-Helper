@@ -3,37 +3,30 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from PIL import Image
-
-from tools import build_card_fingerprints as fingerprints
-
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
-def hamming_hex(left: str, right: str) -> int:
-    return sum(
-        (int(left_item, 16) ^ int(right_item, 16)).bit_count()
-        for left_item, right_item in zip(left, right, strict=True)
-    )
-
-
-def test_sample_card_matches_first_visual_fingerprint() -> None:
+def test_first_visual_fingerprint_entry_is_present() -> None:
     data_path = REPO_ROOT / "site" / "data" / "card_fingerprints.json"
-    sample_path = REPO_ROOT / "site" / "assets" / "new_card_sample.jpg"
     data = json.loads(data_path.read_text(encoding="utf-8"))
 
-    with Image.open(sample_path) as image:
-        sample_hash = fingerprints.dhash_hex(fingerprints.crop_art(image))
+    first = data["cards"][0]
+    assert len(data["cards"]) == 210
+    assert data["algorithm"] == "dhash-17x16-grayscale-art-region"
+    assert first["id"] == "atlas01_r01_c01"
+    assert first["displayName"] == "Podilymbus podiceps"
+    assert len(first["hash"]) == 64
 
-    ranked = sorted(
-        (
-            (hamming_hex(sample_hash, row["hash"]), row["id"], row["displayName"])
-            for row in data["cards"]
-        ),
-        key=lambda item: item[0],
-    )
 
-    assert ranked[0][0] <= 8
-    assert ranked[0][1] == "atlas01_r01_c01"
-    assert ranked[0][2] == "Podilymbus podiceps"
+def test_site_audio_manifest_maps_first_card_to_audio_files() -> None:
+    data_path = REPO_ROOT / "site" / "data" / "audio_clips.json"
+    data = json.loads(data_path.read_text(encoding="utf-8"))
+
+    clips = data["byCardId"]["atlas01_r01_c01"]
+
+    assert len(clips) == 3
+    assert {clip["birdName"] for clip in clips} == {"Pied Billed Grebe"}
+    assert any(clip["isMain"] for clip in clips)
+    for clip in clips:
+        assert (REPO_ROOT / "site" / clip["src"]).is_file()

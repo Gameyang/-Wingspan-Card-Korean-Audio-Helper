@@ -31,6 +31,9 @@ jobs:
           test -f site/styles.css
           test -f site/app.js
           test -f site/data/card_fingerprints.json
+          test -f site/data/audio_clips.json
+          test -d site/audio
+          test -n "$(find site/audio -type f -name '*.m4a' -print -quit)"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
