@@ -52,17 +52,20 @@ def site_audio_name(source: Path) -> str:
 def copy_clip_rows(
     rows: list[dict[str, str]],
     site_audio_dir: Path,
-    copied_files: set[Path],
+    available_files: set[Path],
 ) -> list[dict[str, object]]:
     clips: list[dict[str, object]] = []
     for row in rows:
         source = Path(row["audio_path"])
-        if not source.exists():
-            continue
         destination = site_audio_dir / site_audio_name(source)
-        if destination not in copied_files:
-            shutil.copy2(source, destination)
-            copied_files.add(destination)
+        if source.exists():
+            if destination not in available_files:
+                shutil.copy2(source, destination)
+                available_files.add(destination)
+        elif destination.exists():
+            available_files.add(destination)
+        else:
+            continue
 
         clips.append(clip_payload(row, destination))
 
@@ -81,7 +84,7 @@ def build_manifest(
     site_audio_dir.mkdir(parents=True, exist_ok=True)
 
     by_card_id: dict[str, list[dict[str, object]]] = {}
-    copied_files: set[Path] = set()
+    available_files: set[Path] = set()
 
     for index, card in enumerate(fingerprints["cards"]):
         display_name = str(card.get("displayName", "")).strip()
@@ -95,7 +98,7 @@ def build_manifest(
         if not rows:
             continue
 
-        clips = copy_clip_rows(rows, site_audio_dir, copied_files)
+        clips = copy_clip_rows(rows, site_audio_dir, available_files)
 
         if clips:
             for clip in clips:
@@ -110,7 +113,7 @@ def build_manifest(
     }
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    return len(by_card_id), len(copied_files), output_path
+    return len(by_card_id), len(available_files), output_path
 
 
 def main() -> int:
@@ -122,14 +125,14 @@ def main() -> int:
     parser.add_argument("--sequence-start-card-no", type=int, default=DEFAULT_SEQUENCE_START_CARD_NO)
     args = parser.parse_args()
 
-    mapped, copied, output = build_manifest(
+    mapped, available, output = build_manifest(
         fingerprints_path=args.fingerprints,
         audio_csv_path=args.audio_csv,
         site_audio_dir=args.site_audio_dir,
         output_path=args.output,
         sequence_start_card_no=args.sequence_start_card_no,
     )
-    print(f"Wrote {mapped} card audio mappings and copied {copied} files: {output}")
+    print(f"Wrote {mapped} card audio mappings and prepared {available} files: {output}")
     return 0
 
 
