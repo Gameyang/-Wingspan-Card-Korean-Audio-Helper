@@ -90,6 +90,14 @@ function audioClipsForCard(cardId) {
   return audioManifest?.byCardId?.[cardId] ?? [];
 }
 
+function displayNameForCard(card) {
+  const clips = audioClipsForCard(card.id);
+  if (clips.length && /^Atlas \d+ R\d+ C\d+$/.test(card.displayName)) {
+    return clips[0].birdName;
+  }
+  return card.displayName;
+}
+
 function formatMatchMeta(best, second, audioMessage = "") {
   if (!best) {
     return "-";
@@ -241,7 +249,7 @@ async function identifyCurrentFrame() {
       audioMessage = lastAudioMessage;
     }
 
-    elements.matchName.textContent = matched ? best.displayName : "Check";
+    elements.matchName.textContent = matched ? displayNameForCard(best) : "Check";
     elements.matchScore.textContent = best ? `${best.score}% / d${best.distance}` : "-";
     elements.matchMeta.textContent = formatMatchMeta(best, second, audioMessage);
     setStatus(matched ? "Matched" : "Check", matched ? "ready" : "error");
