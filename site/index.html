@@ -2,55 +2,55 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Wingspan Visual Card Matcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Wingspan Visual Matcher</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <main class="shell">
-      <header class="summary">
+    <main class="app">
+      <header class="topbar">
         <div>
           <p class="eyebrow">Visual fingerprint</p>
-          <h1>새 그림 식별 테스트</h1>
+          <h1>Card matcher</h1>
         </div>
-        <div class="status" id="status" role="status">대기 중</div>
+        <div class="status" id="status" role="status">Idle</div>
       </header>
 
-      <section class="workspace" aria-label="Camera identification workspace">
-        <div class="camera-panel">
+      <section class="workspace" aria-label="Card matching workspace">
+        <section class="camera-panel" aria-label="Camera view">
           <div class="camera-box" id="cameraBox">
             <video id="camera" autoplay muted playsinline></video>
             <div class="card-guide" id="cardGuide" aria-hidden="true">
               <div class="art-guide"></div>
             </div>
           </div>
+        </section>
+
+        <aside class="side-panel" aria-label="Controls and result">
           <div class="actions">
-            <button id="startCamera" type="button">카메라 시작</button>
-            <button id="captureIdentify" type="button" disabled>촬영 식별</button>
-            <label class="file-button" for="photoInput">사진 식별</label>
-            <button id="sampleIdentify" type="button">샘플 식별</button>
+            <button id="startCamera" type="button">Camera</button>
+            <button id="captureIdentify" type="button" disabled>Scan</button>
+            <label class="file-button" for="photoInput">Photo</label>
+            <button id="sampleIdentify" type="button">Sample</button>
             <input id="photoInput" type="file" accept="image/*" capture="environment" hidden />
           </div>
-        </div>
 
-        <aside class="result-panel" aria-label="Identification result">
-          <div class="result-card">
-            <dt>판정</dt>
-            <dd id="matchName">-</dd>
+          <div class="result-grid">
+            <div class="result-card">
+              <dt>Match</dt>
+              <dd id="matchName">-</dd>
+            </div>
+            <div class="result-card">
+              <dt>Score</dt>
+              <dd id="matchScore">-</dd>
+            </div>
+            <div class="result-card full">
+              <dt>Details</dt>
+              <dd id="matchMeta">-</dd>
+            </div>
           </div>
-          <div class="result-card">
-            <dt>점수</dt>
-            <dd id="matchScore">-</dd>
-          </div>
-          <div class="result-card full">
-            <dt>매칭 정보</dt>
-            <dd id="matchMeta">-</dd>
-          </div>
-          <div class="result-card full">
-            <dt>식별 기준</dt>
-            <dd>atlas 새 그림 fingerprint</dd>
-          </div>
+
           <canvas id="artPreview" width="565" height="515" aria-label="Visual fingerprint preview"></canvas>
         </aside>
       </section>

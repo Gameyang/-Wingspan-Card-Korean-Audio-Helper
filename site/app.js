@@ -38,13 +38,13 @@ function setStatus(message, type = "") {
 }
 
 async function loadFingerprintDb() {
-  setStatus("데이터 로드", "ready");
+  setStatus("Loading", "ready");
   const response = await fetch("./data/card_fingerprints.json", { cache: "no-store" });
   if (!response.ok) {
     throw new Error(`fingerprint data ${response.status}`);
   }
   fingerprintDb = await response.json();
-  setStatus(`${fingerprintDb.cards.length}장 준비`, "ready");
+  setStatus(`${fingerprintDb.cards.length} ready`, "ready");
 }
 
 function hammingDistanceHex(left, right) {
@@ -98,7 +98,7 @@ function getVideoSourceRect(targetElement) {
 
 function drawVideoArtPreview() {
   if (!elements.video.videoWidth || !elements.video.videoHeight) {
-    throw new Error("카메라 영상이 아직 준비되지 않았습니다.");
+    throw new Error("Camera is not ready.");
   }
 
   const rect = getVideoSourceRect(elements.artGuide);
@@ -187,12 +187,12 @@ async function identify(drawSource) {
     elements.matchMeta.textContent = best
       ? `${best.id}${second ? ` · 다음 후보 ${second.id} (${second.score}점)` : ""}`
       : "-";
-    setStatus(matched ? "식별 완료" : "확인 필요", matched ? "ready" : "error");
+    setStatus(matched ? "Matched" : "Check", matched ? "ready" : "error");
   } catch (error) {
     elements.matchName.textContent = "오류";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
-    setStatus("오류", "error");
+    setStatus("Error", "error");
   } finally {
     elements.captureIdentify.disabled = !stream;
   }
@@ -224,10 +224,10 @@ async function startCamera() {
       throw new Error("HTTPS에서만 카메라를 사용할 수 있습니다.");
     }
     if (!navigator.mediaDevices?.getUserMedia) {
-      throw new Error("이 브라우저는 카메라 API를 지원하지 않습니다.");
+      throw new Error("Camera API is not supported.");
     }
 
-    setStatus("권한 요청", "ready");
+    setStatus("Permission", "ready");
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
@@ -239,10 +239,10 @@ async function startCamera() {
     elements.video.srcObject = stream;
     await elements.video.play();
     elements.captureIdentify.disabled = false;
-    setStatus("카메라 준비", "ready");
+    setStatus("Camera ready", "ready");
   } catch (error) {
     elements.matchMeta.textContent = error.message;
-    setStatus("카메라 오류", "error");
+    setStatus("Camera error", "error");
   }
 }
 
@@ -254,5 +254,5 @@ elements.sampleImage.addEventListener("load", drawSampleArtPreview);
 
 loadFingerprintDb().catch((error) => {
   elements.matchMeta.textContent = error.message;
-  setStatus("데이터 오류", "error");
+  setStatus("Data error", "error");
 });
