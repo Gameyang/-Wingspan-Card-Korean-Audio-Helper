@@ -46,6 +46,24 @@ body {
   object-fit: cover;
 }
 
+.success-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at center, rgb(107 214 154 / 34%), transparent 52%),
+    linear-gradient(180deg, rgb(107 214 154 / 14%), transparent 34%, rgb(107 214 154 / 18%));
+  box-shadow:
+    inset 0 0 0 2px rgb(107 214 154 / 0%),
+    inset 0 0 80px rgb(107 214 154 / 0%);
+}
+
+.success-glow.is-active {
+  animation: success-glow 820ms ease-out;
+}
+
 .scan-overlay {
   position: absolute;
   inset: 0;
@@ -63,6 +81,10 @@ body {
   border: 1px solid rgb(255 255 255 / 26%);
   border-radius: 14px;
   box-shadow: 0 0 0 999px rgb(0 0 0 / 34%);
+}
+
+.scan-frame.is-success {
+  animation: card-success-frame 820ms ease-out;
 }
 
 .ocr-guide {
@@ -100,18 +122,18 @@ body {
 
 .score-guide {
   left: 0;
-  top: 22.7%;
-  width: 15.1%;
-  height: 16.5%;
+  top: 20.1%;
+  width: 19.8%;
+  height: 22.2%;
   border: 2px solid rgb(255 211 106 / 92%);
   background: rgb(255 211 106 / 8%);
 }
 
 .wing-guide {
-  left: 76.2%;
-  top: 55.7%;
-  width: 23.8%;
-  height: 11.9%;
+  left: 69.8%;
+  top: 51.5%;
+  width: 30.2%;
+  height: 17%;
   border: 2px solid rgb(107 214 154 / 92%);
   background: rgb(107 214 154 / 8%);
 }
@@ -211,6 +233,52 @@ h1 {
 
 .status.error {
   color: var(--danger);
+}
+
+@keyframes success-glow {
+  0% {
+    opacity: 0;
+    transform: scale(0.98);
+    box-shadow:
+      inset 0 0 0 2px rgb(107 214 154 / 0%),
+      inset 0 0 80px rgb(107 214 154 / 0%);
+  }
+
+  18% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow:
+      inset 0 0 0 5px rgb(107 214 154 / 62%),
+      inset 0 0 92px rgb(107 214 154 / 78%);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.015);
+    box-shadow:
+      inset 0 0 0 2px rgb(107 214 154 / 0%),
+      inset 0 0 90px rgb(107 214 154 / 0%);
+  }
+}
+
+@keyframes card-success-frame {
+  0% {
+    border-color: rgb(255 255 255 / 26%);
+    box-shadow: 0 0 0 999px rgb(0 0 0 / 34%);
+  }
+
+  18% {
+    border-color: rgb(107 214 154 / 100%);
+    box-shadow:
+      0 0 0 999px rgb(0 0 0 / 22%),
+      0 0 38px rgb(107 214 154 / 95%),
+      inset 0 0 22px rgb(107 214 154 / 55%);
+  }
+
+  100% {
+    border-color: rgb(255 255 255 / 26%);
+    box-shadow: 0 0 0 999px rgb(0 0 0 / 34%);
+  }
 }
 
 .bottom-sheet {

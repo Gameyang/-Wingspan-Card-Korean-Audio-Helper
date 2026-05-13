@@ -4,14 +4,17 @@ const CARD_SIZE = {
 };
 const OCR_SIGNAL_REGIONS = [
   { key: "title", x: 205, y: 0, width: 420, height: 155, targetWidth: 1000, minHeight: 300 },
-  { key: "score", x: 0, y: 220, width: 95, height: 160, targetWidth: 250, minHeight: 360 },
-  { key: "wing", x: 480, y: 540, width: 150, height: 115, targetWidth: 360, minHeight: 260 },
+  { key: "score", x: 0, y: 195, width: 125, height: 215, targetWidth: 340, minHeight: 430 },
+  { key: "wing", x: 440, y: 500, width: 190, height: 165, targetWidth: 470, minHeight: 360 },
   { key: "ability", x: 0, y: 650, width: 630, height: 190, targetWidth: 1060, minHeight: 300 },
 ];
 const OCR_CANVAS_WIDTH = 1100;
 const OCR_CANVAS_PADDING = 18;
 const OCR_SECTION_GAP = 18;
-const OCR_REGION_MARGIN = 0.08;
+const OCR_REGION_MARGIN = 0.14;
+const OCR_ROTATED_REGION_MARGIN = 0.22;
+const OCR_ROTATION_DEGREES = [-8, 0, 8];
+const OCR_ROTATION_REGION_KEYS = new Set(["title", "score", "wing"]);
 const OCR_INTERVAL_MS = 1350;
 const OCR_STRONG_NAME_SCORE = 85;
 const OCR_MEDIUM_NAME_SCORE = 70;
@@ -24,6 +27,7 @@ const OCR_NUMERIC_SINGLE_BOOST = 10;
 const OCR_NUMERIC_PAIR_BOOST = 30;
 const STABLE_MATCH_FRAMES = 2;
 const MISS_FRAMES_TO_RESET = 4;
+const SUCCESS_FEEDBACK_COOLDOWN_MS = 4000;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
 const BIRD_BG_VOLUME = 0.24;
 
@@ -32,6 +36,7 @@ const elements = {
   video: document.querySelector("#camera"),
   cameraBox: document.querySelector("#cameraBox"),
   cardGuide: document.querySelector("#cardGuide"),
+  successGlow: document.querySelector("#successGlow"),
   debugSheet: document.querySelector("#debugSheet"),
   debugToggle: document.querySelector("#debugToggle"),
   abilityToggle: document.querySelector("#abilityToggle"),
@@ -55,6 +60,8 @@ let playbackToken = 0;
 let missedFrameCount = 0;
 let candidateCardId = "";
 let candidateFrameCount = 0;
+let lastSuccessFeedbackCardId = "";
+let lastSuccessFeedbackAt = 0;
 
 const speechElement = new Audio();
 speechElement.preload = "auto";
@@ -215,10 +222,10 @@ function clampSourceRect(rect) {
   };
 }
 
-function cardRegionSourceRect(region) {
+function cardRegionSourceRect(region, marginRatio = OCR_REGION_MARGIN) {
   const cardRect = getVideoSourceRect(elements.cardGuide);
-  const marginX = region.width * OCR_REGION_MARGIN;
-  const marginY = region.height * OCR_REGION_MARGIN;
+  const marginX = region.width * marginRatio;
+  const marginY = region.height * marginRatio;
   const x = Math.max(0, region.x - marginX);
   const y = Math.max(0, region.y - marginY);
   const width = Math.min(CARD_SIZE.width - x, region.width + marginX * 2);
@@ -229,6 +236,46 @@ function cardRegionSourceRect(region) {
     sw: (cardRect.sw * width) / CARD_SIZE.width,
     sh: (cardRect.sh * height) / CARD_SIZE.height,
   });
+}
+
+function rotationAnglesForRegion(region) {
+  return OCR_ROTATION_REGION_KEYS.has(region.key) ? OCR_ROTATION_DEGREES : [0];
+}
+
+function rotatedBounds(width, height, degrees) {
+  const radians = (Math.abs(degrees) * Math.PI) / 180;
+  return {
+    width: Math.ceil(width * Math.cos(radians) + height * Math.sin(radians)),
+    height: Math.ceil(width * Math.sin(radians) + height * Math.cos(radians)),
+  };
+}
+
+function createOcrLayout(region, degrees) {
+  const marginRatio = degrees === 0 ? OCR_REGION_MARGIN : OCR_ROTATED_REGION_MARGIN;
+  const rect = cardRegionSourceRect(region, marginRatio);
+  const maxWidth = OCR_CANVAS_WIDTH - OCR_CANVAS_PADDING * 2;
+  let targetWidth = Math.min(maxWidth, region.targetWidth);
+  let scale = targetWidth / rect.sw;
+  let targetHeight = Math.max(region.minHeight, Math.round(rect.sh * scale));
+  let bounds = rotatedBounds(targetWidth, targetHeight, degrees);
+
+  if (bounds.width > maxWidth) {
+    const shrink = maxWidth / bounds.width;
+    targetWidth = Math.floor(targetWidth * shrink);
+    targetHeight = Math.floor(targetHeight * shrink);
+    bounds = rotatedBounds(targetWidth, targetHeight, degrees);
+  }
+
+  return {
+    region,
+    rect,
+    degrees,
+    targetWidth,
+    targetHeight,
+    layoutWidth: bounds.width,
+    layoutHeight: bounds.height,
+    targetX: Math.round((OCR_CANVAS_WIDTH - bounds.width) / 2),
+  };
 }
 
 function preprocessOcrCanvas() {
@@ -262,24 +309,14 @@ function drawCardSignalsForOcr() {
     throw new Error("카메라가 아직 준비되지 않았습니다.");
   }
 
-  const layouts = OCR_SIGNAL_REGIONS.map((region) => {
-    const rect = cardRegionSourceRect(region);
-    const targetWidth = Math.min(OCR_CANVAS_WIDTH - OCR_CANVAS_PADDING * 2, region.targetWidth);
-    const scale = targetWidth / rect.sw;
-    const targetHeight = Math.max(region.minHeight, Math.round(rect.sh * scale));
-    return {
-      region,
-      rect,
-      targetWidth,
-      targetHeight,
-      targetX: Math.round((OCR_CANVAS_WIDTH - targetWidth) / 2),
-    };
-  });
+  const layouts = OCR_SIGNAL_REGIONS.flatMap((region) =>
+    rotationAnglesForRegion(region).map((degrees) => createOcrLayout(region, degrees)),
+  );
 
   let y = OCR_CANVAS_PADDING;
   for (const layout of layouts) {
     layout.targetY = y;
-    y += layout.targetHeight + OCR_SECTION_GAP;
+    y += layout.layoutHeight + OCR_SECTION_GAP;
   }
 
   ocrCanvas.width = OCR_CANVAS_WIDTH;
@@ -290,26 +327,40 @@ function drawCardSignalsForOcr() {
 
   ocrSections = [];
   for (const layout of layouts) {
-    const { region, rect, targetX, targetY, targetWidth, targetHeight } = layout;
+    const {
+      region,
+      rect,
+      degrees,
+      targetX,
+      targetY,
+      targetWidth,
+      targetHeight,
+      layoutWidth,
+      layoutHeight,
+    } = layout;
     ocrContext.filter =
       region.key === "ability"
         ? "grayscale(1) contrast(2.05) brightness(1.12)"
         : "grayscale(1) contrast(1.85) brightness(1.1)";
+    ocrContext.save();
+    ocrContext.translate(targetX + layoutWidth / 2, targetY + layoutHeight / 2);
+    ocrContext.rotate((degrees * Math.PI) / 180);
     ocrContext.drawImage(
       elements.video,
       rect.sx,
       rect.sy,
       rect.sw,
       rect.sh,
-      targetX,
-      targetY,
+      -targetWidth / 2,
+      -targetHeight / 2,
       targetWidth,
       targetHeight,
     );
+    ocrContext.restore();
     ocrSections.push({
       key: region.key,
       top: targetY,
-      bottom: targetY + targetHeight,
+      bottom: targetY + layoutHeight,
     });
   }
   ocrContext.filter = "none";
@@ -743,7 +794,37 @@ function resetAudioAfterMiss() {
     activeAudioCardId = "";
     pendingAudioCard = null;
     lastAudioMessage = "";
+    lastSuccessFeedbackCardId = "";
     stopAudioPlayback();
+  }
+}
+
+function restartAnimation(element, className) {
+  if (!element) {
+    return;
+  }
+  element.classList.remove(className);
+  void element.offsetWidth;
+  element.classList.add(className);
+}
+
+function triggerSuccessFeedback(card) {
+  if (!card) {
+    return;
+  }
+  const now = performance.now();
+  if (
+    lastSuccessFeedbackCardId === card.id &&
+    now - lastSuccessFeedbackAt < SUCCESS_FEEDBACK_COOLDOWN_MS
+  ) {
+    return;
+  }
+  lastSuccessFeedbackCardId = card.id;
+  lastSuccessFeedbackAt = now;
+  restartAnimation(elements.successGlow, "is-active");
+  restartAnimation(elements.cardGuide, "is-success");
+  if (navigator.vibrate) {
+    navigator.vibrate(35);
   }
 }
 
@@ -792,6 +873,7 @@ async function identifyCurrentFrame() {
 
     if (matched) {
       missedFrameCount = 0;
+      triggerSuccessFeedback(best);
       audioMessage = await playAudioForCard(best);
     } else {
       resetAudioAfterMiss();
