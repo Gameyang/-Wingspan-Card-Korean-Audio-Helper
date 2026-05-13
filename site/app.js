@@ -15,11 +15,7 @@ const elements = {
   cameraBox: document.querySelector("#cameraBox"),
   artGuide: document.querySelector(".art-guide"),
   startCamera: document.querySelector("#startCamera"),
-  captureIdentify: document.querySelector("#captureIdentify"),
-  photoInput: document.querySelector("#photoInput"),
-  sampleIdentify: document.querySelector("#sampleIdentify"),
   artPreview: document.querySelector("#artPreview"),
-  sampleImage: document.querySelector("#sampleImage"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
   matchMeta: document.querySelector("#matchMeta"),
@@ -27,6 +23,8 @@ const elements = {
 
 let stream;
 let fingerprintDb;
+let scanTimer;
+let isScanning = false;
 
 const nibbleBits = Array.from({ length: 16 }, (_, value) =>
   value.toString(2).replaceAll("0", "").length,
@@ -105,35 +103,6 @@ function drawVideoArtPreview() {
   drawPreviewFromSource(elements.video, rect.sx, rect.sy, rect.sw, rect.sh);
 }
 
-function drawSampleArtPreview() {
-  drawPreviewFromSource(
-    elements.sampleImage,
-    ART_REGION.x,
-    ART_REGION.y,
-    ART_REGION.width,
-    ART_REGION.height,
-  );
-}
-
-function drawUploadedPhotoPreview(image) {
-  const sourceAspect = image.naturalWidth / image.naturalHeight;
-  const targetAspect = ART_REGION.width / ART_REGION.height;
-  let sx = 0;
-  let sy = 0;
-  let sw = image.naturalWidth;
-  let sh = image.naturalHeight;
-
-  if (sourceAspect > targetAspect) {
-    sw = image.naturalHeight * targetAspect;
-    sx = (image.naturalWidth - sw) / 2;
-  } else {
-    sh = image.naturalWidth / targetAspect;
-    sy = (image.naturalHeight - sh) / 2;
-  }
-
-  drawPreviewFromSource(image, sx, sy, sw, sh);
-}
-
 function computeDHash() {
   const canvas = document.createElement("canvas");
   canvas.width = HASH_WIDTH;
@@ -171,13 +140,17 @@ function computeDHash() {
   return hash;
 }
 
-async function identify(drawSource) {
+async function identifyCurrentFrame() {
+  if (isScanning || !stream) {
+    return;
+  }
+
+  isScanning = true;
   try {
     if (!fingerprintDb) {
       await loadFingerprintDb();
     }
-    elements.captureIdentify.disabled = true;
-    drawSource();
+    drawVideoArtPreview();
     const hash = computeDHash();
     const [best, second] = rankByFingerprint(hash);
     const matched = best && best.score >= MATCH_THRESHOLD;
@@ -194,28 +167,14 @@ async function identify(drawSource) {
     elements.matchMeta.textContent = error.message;
     setStatus("Error", "error");
   } finally {
-    elements.captureIdentify.disabled = !stream;
+    isScanning = false;
   }
 }
 
-async function identifyPhoto(file) {
-  if (!file) {
-    return;
-  }
-
-  const image = new Image();
-  const objectUrl = URL.createObjectURL(file);
-  try {
-    await new Promise((resolve, reject) => {
-      image.onload = resolve;
-      image.onerror = reject;
-      image.src = objectUrl;
-    });
-    await identify(() => drawUploadedPhotoPreview(image));
-  } finally {
-    URL.revokeObjectURL(objectUrl);
-    elements.photoInput.value = "";
-  }
+function startScanLoop() {
+  window.clearInterval(scanTimer);
+  scanTimer = window.setInterval(identifyCurrentFrame, 850);
+  identifyCurrentFrame();
 }
 
 async function startCamera() {
@@ -228,6 +187,9 @@ async function startCamera() {
     }
 
     setStatus("Permission", "ready");
+    if (stream) {
+      stream.getTracks().forEach((track) => track.stop());
+    }
     stream = await navigator.mediaDevices.getUserMedia({
       audio: false,
       video: {
@@ -238,8 +200,9 @@ async function startCamera() {
     });
     elements.video.srcObject = stream;
     await elements.video.play();
-    elements.captureIdentify.disabled = false;
-    setStatus("Camera ready", "ready");
+    elements.startCamera.textContent = "Restart camera";
+    setStatus("Scanning", "ready");
+    startScanLoop();
   } catch (error) {
     elements.matchMeta.textContent = error.message;
     setStatus("Camera error", "error");
@@ -247,12 +210,15 @@ async function startCamera() {
 }
 
 elements.startCamera.addEventListener("click", startCamera);
-elements.captureIdentify.addEventListener("click", () => identify(drawVideoArtPreview));
-elements.photoInput.addEventListener("change", (event) => identifyPhoto(event.target.files?.[0]));
-elements.sampleIdentify.addEventListener("click", () => identify(drawSampleArtPreview));
-elements.sampleImage.addEventListener("load", drawSampleArtPreview);
 
-loadFingerprintDb().catch((error) => {
-  elements.matchMeta.textContent = error.message;
-  setStatus("Data error", "error");
-});
+async function boot() {
+  try {
+    await loadFingerprintDb();
+    await startCamera();
+  } catch (error) {
+    elements.matchMeta.textContent = error.message;
+    setStatus("Tap camera", "error");
+  }
+}
+
+boot();

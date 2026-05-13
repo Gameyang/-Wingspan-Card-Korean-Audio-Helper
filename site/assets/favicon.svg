@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Wingspan Scanner icon">
+  <rect width="64" height="64" rx="14" fill="#10231f"/>
+  <path d="M16 42c8-1 14-5 18-12 4 7 10 11 18 12-4 5-10 8-18 8s-14-3-18-8Z" fill="#f4c95d"/>
+  <path d="M18 31c7-8 16-13 28-14-4 8-11 14-22 18l-6-4Z" fill="#68b0ab"/>
+  <path d="M33 18c5 4 8 9 9 15-5-1-10-4-15-10l6-5Z" fill="#e85d5a"/>
+  <circle cx="41" cy="21" r="2.2" fill="#fff8e7"/>
+  <path d="M47 22l7-3-5 6-2-3Z" fill="#fff8e7"/>
+  <path d="M10 16h10v4h-6v6h-4V16Zm34 0h10v10h-4v-6h-6v-4ZM10 38h4v6h6v4H10V38Zm40 0h4v10H44v-4h6v-6Z" fill="#fff8e7"/>
+</svg>
