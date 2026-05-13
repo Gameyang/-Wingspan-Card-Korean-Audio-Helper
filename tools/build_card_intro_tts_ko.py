@@ -717,9 +717,198 @@ def category_sentence(bird_name: str) -> str:
     return "서식지에 맞게 독특한 먹이 활동과 행동을 보여 주는 새입니다."
 
 
-def tts_text_for_bird(bird_name: str, bird_name_ko: str) -> str:
+def source_detail(text: str, bird_name: str) -> str:
+    detail = normalize_space(text)
+    if not detail:
+        return ""
+    names = {
+        bird_name,
+        bird_name.replace(" ", "-"),
+        bird_name.replace(" ", ""),
+        bird_name.title(),
+        bird_name.lower(),
+    }
+    for name in sorted(names, key=len, reverse=True):
+        if not name:
+            continue
+        detail = re.sub(rf"^{re.escape(name)}(?:'s|s)?\s*[\.\-:]\s*", "", detail, flags=re.IGNORECASE)
+    return normalize_space(detail)
+
+
+def creative_detail_from_source(detail: str, bird_name: str) -> str:
+    lower = detail.casefold()
+
+    specific_rules: list[tuple[tuple[str, ...], str]] = [
+        (
+            ("floating platform nest", "plant material"),
+            "물풀을 엮어 물 위에 작은 뗏목 둥지를 띄웁니다. 알들은 그 위에서 흔들리는 비밀 기지처럼 자랍니다.",
+        ),
+        (
+            ("old nests", "bugs", "feeding"),
+            "낡은 둥지는 이웃 새들의 빈집이 되고, 먹이를 찾던 자리는 곤충 뷔페가 됩니다.",
+        ),
+        (
+            ("beautiful", "flute-like song"),
+            "노래가 플루트처럼 맑아서, 초원 한복판에 작은 연주회가 열린 듯합니다.",
+        ),
+        (
+            ("grasshopper-like song", "overlooked"),
+            "울음소리가 메뚜기 소리처럼 숨어 있어, 귀를 기울여야 초원의 작은 연주자를 찾을 수 있습니다.",
+        ),
+        (
+            ("open ground", "near trees"),
+            "트인 땅에서 먹이를 찾다가도 나무 곁을 떠나지 않습니다. 식탁과 피난처를 한눈에 보는 영리한 자리 선정입니다.",
+        ),
+        (
+            ("domesticated", "before european contact"),
+            "유럽인이 오기 전부터 사람 곁에 길들여졌습니다. 오래된 식탁의 역사 속에서 이미 주연이던 새입니다.",
+        ),
+        (
+            ("understory", "few feet of the ground"),
+            "숲의 낮은 층을 무대 삼아 땅 가까이에 둥지를 짓습니다. 키 작은 관객만 볼 수 있는 숲속 비밀 공연입니다.",
+        ),
+        (
+            ("catholic scribes", "yellow hoods"),
+            "이름은 노란 두건을 쓴 옛 필경사들에게서 왔습니다. 새 한 마리 안에 작은 수도원 이야기가 숨어 있습니다.",
+        ),
+        (
+            ("heaviest bird in north america",),
+            "북아메리카에서 가장 묵직한 새 중 하나입니다. 물 위를 미끄러질 때도 존재감은 작은 배 한 척 같습니다.",
+        ),
+        (
+            ("edges between forest and fields",),
+            "숲과 들판이 만나는 가장자리를 좋아합니다. 두 세계 사이를 오가는 작은 경계의 가수입니다.",
+        ),
+        (
+            ("mating display", "dives from 300 feet"),
+            "구애 비행 때는 하늘 높이 올랐다가 수직으로 떨어집니다. 사랑 고백을 롤러코스터처럼 하는 새입니다.",
+        ),
+        (
+            ("impale", "thorns", "barbed wire"),
+            "먹이를 가시에 꽂아 두었다가 나중에 먹습니다. 작은 몸집에 사냥꾼의 식료품 저장고를 갖춘 셈입니다.",
+        ),
+        (
+            ("parasitize", "nests"),
+            "자기 둥지도 짓지만 남의 둥지에 알을 맡기기도 합니다. 육아 전략이 꽤 대담한 편입니다.",
+        ),
+        (
+            ("do not make nests", "lay their eggs"),
+            "둥지를 짓지 않고 다른 새의 둥지에 알을 맡깁니다. 자연의 탁아소를 아주 적극적으로 이용합니다.",
+        ),
+        (
+            ("break or push out", "host bird"),
+            "남의 둥지에 알을 놓고, 때로는 주인 새의 알까지 밀어냅니다. 조용하지만 꽤 거친 둥지 정치입니다.",
+        ),
+        (
+            ("cavity nesting duck",),
+            "나무 구멍에 둥지 트는 오리라면 누구의 집이든 알을 맡길 수 있습니다. 둥지 공유가 꽤 자유분방합니다.",
+        ),
+        (
+            ("orange crown", "defending"),
+            "영역을 지킬 때 주황색 왕관을 드러냅니다. 작은 몸으로도 왕처럼 선을 긋는 새입니다.",
+        ),
+        (
+            ("burrow", "riverbank", "six feet"),
+            "강둑 속으로 긴 굴을 파고, 물이 빠지도록 비스듬히 설계합니다. 물총새의 집은 꽤 영리한 지하 건축입니다.",
+        ),
+        (
+            ("projectile vomit", "defend"),
+            "위험하면 토사물을 발사해 자신을 지킵니다. 품위는 잠시 접어 두고, 효과는 확실한 방어술입니다.",
+        ),
+        (
+            ("steal eggs", "carrion"),
+            "알도 훔치고 사체도 먹는 잡식가입니다. 숲속의 해결사이자 약간 뻔뻔한 청소부입니다.",
+        ),
+        (
+            ("better sense of smell", "follow"),
+            "냄새를 잘 맡는 이웃을 따라가 먹이를 찾습니다. 사냥보다 정보력이 앞서는 순간입니다.",
+        ),
+        (
+            ("large nomadic flocks",),
+            "큰 유랑 무리를 이루어 다른 새들과 섞입니다. 하늘 위를 떠도는 이동 축제 같습니다.",
+        ),
+        (
+            ("conifer forests",),
+            "침엽수 숲을 주 무대로 삼습니다. 바늘잎 사이를 오가며 산의 작은 소식을 전합니다.",
+        ),
+        (
+            ("hide seeds", "remember thousands"),
+            "씨앗을 수천 곳에 숨기고 기억합니다. 작은 머릿속에 겨울용 지도가 빼곡히 들어 있습니다.",
+        ),
+        (
+            ("resin around their nest",),
+            "둥지 입구에 끈적한 수지를 발라 침입자를 막습니다. 새가 만든 천연 보안문입니다.",
+        ),
+        (
+            ("storing seeds", "winter"),
+            "겨울을 나려고 씨앗을 부지런히 저장합니다. 작은 창고지기처럼 계절을 준비합니다.",
+        ),
+        (
+            ("five acorns", "hundreds"),
+            "도토리를 한 번에 여러 개 물고, 겨울을 위해 수백 개를 숨깁니다. 푸른 깃털의 저축왕입니다.",
+        ),
+        (
+            ("50,000 holes", "acorns"),
+            "죽은 나무 하나에 도토리 창고를 수만 칸이나 뚫을 수 있습니다. 숲속의 거대한 식량 금고입니다.",
+        ),
+        (
+            ("large bill", "strains"),
+            "넓은 부리로 물을 체처럼 걸러 작은 먹이를 찾아냅니다. 부리가 곧 휴대용 여과기입니다.",
+        ),
+        (
+            ("bob their tails",),
+            "꼬리를 끊임없이 까딱입니다. 물가의 작은 시계추처럼 존재감을 알립니다.",
+        ),
+        (
+            ("long toes", "lily pads"),
+            "긴 발가락 덕분에 수련잎 위도 가라앉지 않고 걸어갑니다. 연못 위를 걷는 줄타기 선수입니다.",
+        ),
+        (
+            ("fake a broken wing",),
+            "다친 척 날개를 끌며 포식자를 둥지에서 멀리 유인합니다. 연기력까지 갖춘 부모 새입니다.",
+        ),
+    ]
+    for needles, sentence in specific_rules:
+        if all(needle in lower for needle in needles):
+            return sentence
+
+    if "nest" in lower or "nests" in lower:
+        if "ground" in lower:
+            return "둥지를 낮은 곳에 숨겨 새끼를 키웁니다. 땅 가까운 곳에 작은 비밀방을 마련하는 셈입니다."
+        if "tree" in lower or "cavity" in lower:
+            return "나무 구멍과 틈을 살려 둥지를 마련합니다. 숲의 빈방을 알뜰하게 고르는 건축가입니다."
+        return "둥지를 짓는 방식에 이 새만의 꾀가 숨어 있습니다. 작은 집 하나에도 생존 전략이 들어갑니다."
+    if "egg" in lower or "eggs" in lower:
+        return "알을 둘러싼 전략이 꽤 대담합니다. 조용한 둥지 안에서도 치열한 이야기가 벌어집니다."
+    if "song" in lower or "call" in lower:
+        return "울음소리에는 이 새만의 서명이 담겨 있습니다. 숲이나 들판에서 먼저 들리는 작은 소개장입니다."
+    if "display" in lower or "courtship" in lower or "mate" in lower:
+        return "구애 행동은 작은 무대 공연 같습니다. 날개와 깃털로 마음을 전하는 방식이 인상적입니다."
+    if "store" in lower or "cache" in lower or "storing" in lower:
+        return "먹이를 숨겨 두는 솜씨가 뛰어납니다. 계절이 바뀌기 전, 숲속 곳간을 차근차근 채웁니다."
+    if "dive" in lower or "diving" in lower:
+        return "먹이를 노릴 때는 물이나 공기 속으로 과감히 뛰어듭니다. 망설임보다 속도가 먼저입니다."
+    if "fish" in lower:
+        return "물가에서 물고기를 노리는 솜씨가 좋습니다. 잔잔한 수면 아래를 놓치지 않는 사냥꾼입니다."
+    if "insect" in lower or "insects" in lower or "bugs" in lower:
+        return "작은 곤충을 놓치지 않는 눈썰미가 있습니다. 숲속의 미세한 움직임도 먹잇감이 됩니다."
+    if "defend" in lower or "territory" in lower:
+        return "자기 영역을 지킬 때는 몸집보다 큰 배짱을 보여 줍니다. 작은 깃털 속에 경비대장이 숨어 있습니다."
+    if "flock" in lower or "flocks" in lower:
+        return "무리를 이루면 풍경이 달라집니다. 한 마리가 아니라 하늘을 움직이는 작은 행렬이 됩니다."
+    if "name" in lower or "called" in lower:
+        return "이름 속에 생김새나 오래된 이야기가 숨어 있습니다. 카드를 볼 때 이름부터 한 번 더 들여다볼 만합니다."
+    if "weigh" in lower or "pounds" in lower:
+        return "몸집과 무게만으로도 존재감이 큽니다. 카드 위 작은 그림보다 훨씬 묵직한 새입니다."
+    if "camouflage" in lower:
+        return "깃털과 자세가 훌륭한 위장복이 됩니다. 눈앞에 있어도 풍경인 척 숨어 버립니다."
+    return category_sentence(bird_name)
+
+
+def tts_text_for_bird(bird_name: str, bird_name_ko: str, source_transcript: str) -> str:
     bird_name = NAME_FIXES.get(bird_name, bird_name)
-    sentence = category_sentence(bird_name)
+    detail = source_detail(source_transcript, bird_name)
+    sentence = creative_detail_from_source(detail, bird_name)
     return f"{bird_name_ko}입니다. {sentence}"
 
 
@@ -737,17 +926,18 @@ def build_rows(input_path: Path, voice_tag: str) -> list[dict[str, str]]:
         bird_name = normalize_space(source.get("bird_audio_bird_name") or source.get("bird_name", ""))
         bird_name = NAME_FIXES.get(bird_name, bird_name)
         bird_name_ko = korean_bird_name(bird_name)
+        source_transcript = normalize_space(source.get("transcript", ""))
         output_rows.append(
             {
                 "card_no": card_no,
                 "bird_name": bird_name,
                 "bird_name_ko": bird_name_ko,
-                "tts_text": tts_text_for_bird(bird_name, bird_name_ko),
+                "tts_text": tts_text_for_bird(bird_name, bird_name_ko, source_transcript),
                 "voice_tag": voice_tag,
                 "review_status": "draft",
                 "source_file_name": source.get("file_name", ""),
                 "source_vo_id": source.get("vo_id", ""),
-                "source_transcript": normalize_space(source.get("transcript", "")),
+                "source_transcript": source_transcript,
                 "source_score": str(score),
             }
         )
