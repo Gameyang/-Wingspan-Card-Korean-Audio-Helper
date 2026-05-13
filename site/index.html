@@ -3,56 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Wingspan Visual Matcher</title>
+    <title>Wingspan Scanner</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <main class="app">
-      <header class="topbar">
+    <main class="scanner">
+      <video id="camera" autoplay muted playsinline></video>
+
+      <div class="scan-overlay" id="cameraBox" aria-label="Camera scanner">
+        <div class="scan-frame" id="cardGuide" aria-hidden="true">
+          <div class="art-guide"></div>
+          <span class="corner top-left"></span>
+          <span class="corner top-right"></span>
+          <span class="corner bottom-left"></span>
+          <span class="corner bottom-right"></span>
+        </div>
+      </div>
+
+      <header class="scanner-top">
         <div>
           <p class="eyebrow">Visual fingerprint</p>
-          <h1>Card matcher</h1>
+          <h1>Wingspan Scanner</h1>
         </div>
         <div class="status" id="status" role="status">Idle</div>
       </header>
 
-      <section class="workspace" aria-label="Card matching workspace">
-        <section class="camera-panel" aria-label="Camera view">
-          <div class="camera-box" id="cameraBox">
-            <video id="camera" autoplay muted playsinline></video>
-            <div class="card-guide" id="cardGuide" aria-hidden="true">
-              <div class="art-guide"></div>
-            </div>
-          </div>
-        </section>
+      <section class="bottom-sheet" aria-label="Scanner controls and result">
+        <div class="actions">
+          <button id="startCamera" type="button">Camera</button>
+          <button id="captureIdentify" type="button" disabled>Scan</button>
+          <label class="file-button" for="photoInput">Photo</label>
+          <button id="sampleIdentify" type="button">Sample</button>
+          <input id="photoInput" type="file" accept="image/*" capture="environment" hidden />
+        </div>
 
-        <aside class="side-panel" aria-label="Controls and result">
-          <div class="actions">
-            <button id="startCamera" type="button">Camera</button>
-            <button id="captureIdentify" type="button" disabled>Scan</button>
-            <label class="file-button" for="photoInput">Photo</label>
-            <button id="sampleIdentify" type="button">Sample</button>
-            <input id="photoInput" type="file" accept="image/*" capture="environment" hidden />
+        <div class="result-row">
+          <div class="result-card main-result">
+            <dt>Match</dt>
+            <dd id="matchName">-</dd>
           </div>
-
-          <div class="result-grid">
-            <div class="result-card">
-              <dt>Match</dt>
-              <dd id="matchName">-</dd>
-            </div>
-            <div class="result-card">
-              <dt>Score</dt>
-              <dd id="matchScore">-</dd>
-            </div>
-            <div class="result-card full">
-              <dt>Details</dt>
-              <dd id="matchMeta">-</dd>
-            </div>
+          <div class="result-card score-result">
+            <dt>Score</dt>
+            <dd id="matchScore">-</dd>
           </div>
+          <div class="result-card detail-result">
+            <dt>Details</dt>
+            <dd id="matchMeta">-</dd>
+          </div>
+        </div>
 
-          <canvas id="artPreview" width="565" height="515" aria-label="Visual fingerprint preview"></canvas>
-        </aside>
+        <canvas id="artPreview" width="565" height="515" aria-label="Visual fingerprint preview"></canvas>
       </section>
     </main>
 

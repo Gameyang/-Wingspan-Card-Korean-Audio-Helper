@@ -182,14 +182,14 @@ async function identify(drawSource) {
     const [best, second] = rankByFingerprint(hash);
     const matched = best && best.score >= MATCH_THRESHOLD;
 
-    elements.matchName.textContent = matched ? best.displayName : "확인 필요";
-    elements.matchScore.textContent = best ? `${best.score}점 / 거리 ${best.distance}` : "-";
+    elements.matchName.textContent = matched ? best.displayName : "Check";
+    elements.matchScore.textContent = best ? `${best.score}% / d${best.distance}` : "-";
     elements.matchMeta.textContent = best
-      ? `${best.id}${second ? ` · 다음 후보 ${second.id} (${second.score}점)` : ""}`
+      ? `${best.id}${second ? ` · next ${second.id} (${second.score}%)` : ""}`
       : "-";
     setStatus(matched ? "Matched" : "Check", matched ? "ready" : "error");
   } catch (error) {
-    elements.matchName.textContent = "오류";
+    elements.matchName.textContent = "Error";
     elements.matchScore.textContent = "-";
     elements.matchMeta.textContent = error.message;
     setStatus("Error", "error");
@@ -221,7 +221,7 @@ async function identifyPhoto(file) {
 async function startCamera() {
   try {
     if (!window.isSecureContext) {
-      throw new Error("HTTPS에서만 카메라를 사용할 수 있습니다.");
+      throw new Error("HTTPS is required.");
     }
     if (!navigator.mediaDevices?.getUserMedia) {
       throw new Error("Camera API is not supported.");
