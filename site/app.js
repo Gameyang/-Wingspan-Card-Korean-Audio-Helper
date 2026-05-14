@@ -2,6 +2,12 @@ const CARD_SIZE = {
   width: 630,
   height: 970,
 };
+const ART_REGION = {
+  x: 45,
+  y: 145,
+  width: 565,
+  height: 515,
+};
 const OCR_SIGNAL_REGIONS = [
   { key: "title", x: 205, y: 0, width: 420, height: 155, targetWidth: 1000, minHeight: 300 },
   { key: "score", x: 0, y: 195, width: 125, height: 215, targetWidth: 340, minHeight: 430 },
@@ -15,7 +21,6 @@ const OCR_REGION_MARGIN = 0.14;
 const OCR_ROTATED_REGION_MARGIN = 0.22;
 const OCR_ROTATION_DEGREES = [-8, 0, 8];
 const OCR_ROTATION_REGION_KEYS = new Set(["title", "score", "wing"]);
-const OCR_INTERVAL_MS = 1350;
 const OCR_STRONG_NAME_SCORE = 85;
 const OCR_MEDIUM_NAME_SCORE = 70;
 const OCR_MIN_NAME_SCORE = 60;
@@ -25,21 +30,26 @@ const OCR_SCORE_SIGNAL_LABEL = "점수";
 const OCR_WING_SIGNAL_LABEL = "날개길이";
 const OCR_NUMERIC_SINGLE_BOOST = 10;
 const OCR_NUMERIC_PAIR_BOOST = 30;
-const STABLE_MATCH_FRAMES = 2;
-const MISS_FRAMES_TO_RESET = 4;
-const SUCCESS_FEEDBACK_COOLDOWN_MS = 4000;
-const MAX_CANDIDATE_SUGGESTIONS = 16;
+const MAX_CANDIDATE_SUGGESTIONS = 8;
 const MIN_CANDIDATE_NAME_SCORE = 20;
 const MIN_CANDIDATE_RANK_SCORE = 18;
-const CANDIDATE_MEMORY_WINDOW_FRAMES = 8;
-const CANDIDATE_REPEAT_BOOST = 9;
-const CANDIDATE_MEMORY_SCAN_LIMIT = 32;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
 const BIRD_BG_VOLUME = 0.24;
 
+const DHASH_WIDTH = 17;
+const DHASH_HEIGHT = 16;
+const DHASH_BITS = (DHASH_WIDTH - 1) * DHASH_HEIGHT; // 256
+const VISUAL_SCORE_DIVISOR = 96; // hamming distance that maps to score 0
+const VISUAL_RANK_WEIGHT = 0.5;
+const VISUAL_STRONG_SCORE = 75;
+const VISUAL_MEDIUM_SCORE = 55;
+const AUTO_SELECT_DELAY_MS = 220;
+
 const elements = {
   status: document.querySelector("#status"),
+  scanner: document.querySelector(".scanner"),
   video: document.querySelector("#camera"),
+  snapshot: document.querySelector("#snapshot"),
   cameraBox: document.querySelector("#cameraBox"),
   cardGuide: document.querySelector("#cardGuide"),
   successGlow: document.querySelector("#successGlow"),
@@ -48,6 +58,8 @@ const elements = {
   candidatePanel: document.querySelector("#candidatePanel"),
   candidateList: document.querySelector("#candidateList"),
   abilityToggle: document.querySelector("#abilityToggle"),
+  shutterButton: document.querySelector("#shutterButton"),
+  retakeButton: document.querySelector("#retakeButton"),
   matchName: document.querySelector("#matchName"),
   matchScore: document.querySelector("#matchScore"),
   matchMeta: document.querySelector("#matchMeta"),
@@ -58,20 +70,14 @@ let ocrDb = { cards: [], byCardId: {} };
 let audioManifest = { byCardId: {} };
 let introTtsManifest = { byCardId: {}, byCardNo: {} };
 let abilityTtsManifest = { byCardId: {}, byCardNo: {} };
+let fingerprintDb = { cards: [], byCardId: {} };
 let tesseractWorker;
-let scanTimer;
-let isScanning = false;
+let mode = "loading";
+let frozenGuideRect = null;
 let activeAudioCardId = "";
 let pendingAudioCard = null;
 let lastAudioMessage = "";
 let playbackToken = 0;
-let missedFrameCount = 0;
-let candidateCardId = "";
-let candidateFrameCount = 0;
-let lastSuccessFeedbackCardId = "";
-let lastSuccessFeedbackAt = 0;
-let candidateMemory = new Map();
-let candidateSuggestionFrame = 0;
 
 const speechElement = new Audio();
 speechElement.preload = "auto";
@@ -86,9 +92,32 @@ const ocrCanvas = document.createElement("canvas");
 const ocrContext = ocrCanvas.getContext("2d", { willReadFrequently: true });
 let ocrSections = [];
 
+const captureCanvas = document.createElement("canvas");
+const captureContext = captureCanvas.getContext("2d", { willReadFrequently: true });
+const dhashCanvas = document.createElement("canvas");
+const dhashContext = dhashCanvas.getContext("2d", { willReadFrequently: true });
+dhashCanvas.width = DHASH_WIDTH;
+dhashCanvas.height = DHASH_HEIGHT;
+const dhashWorkCanvas = document.createElement("canvas");
+const dhashWorkContext = dhashWorkCanvas.getContext("2d", { willReadFrequently: true });
+const snapshotContext = elements.snapshot?.getContext("2d") ?? null;
+
 function setStatus(message, type = "") {
   elements.status.textContent = message;
   elements.status.className = `status ${type}`.trim();
+}
+
+function setMode(next) {
+  mode = next;
+  if (elements.scanner) {
+    elements.scanner.dataset.mode = next;
+  }
+  if (elements.shutterButton) {
+    elements.shutterButton.disabled = next !== "live";
+  }
+  if (elements.retakeButton) {
+    elements.retakeButton.hidden = next !== "review";
+  }
 }
 
 function clamp(value, min, max) {
@@ -116,7 +145,7 @@ function normalizeOcrTextForMatch(value) {
     .normalize("NFKC")
     .toLocaleLowerCase("ko-KR")
     .replace(/&/g, "and")
-    .replace(/[^0-9a-z\u3131-\u318e\uac00-\ud7a3]+/g, "");
+    .replace(/[^0-9a-zㄱ-ㆎ가-힣]+/g, "");
 }
 
 function extractLatinText(value) {
@@ -128,7 +157,7 @@ function extractLatinText(value) {
 }
 
 function extractKoreanText(value) {
-  const matches = String(value).match(/[\u3131-\u318e\uac00-\ud7a3]{2,}/g) ?? [];
+  const matches = String(value).match(/[ㄱ-ㆎ가-힣]{2,}/g) ?? [];
   return matches.join(" ");
 }
 
@@ -171,14 +200,32 @@ async function fetchJson(path, fallback) {
   }
 }
 
+function indexFingerprints(cards) {
+  const byCardId = {};
+  for (const card of cards) {
+    byCardId[card.id] = card;
+  }
+  return byCardId;
+}
+
 async function loadData() {
   setStatus("불러오는 중", "ready");
-  [ocrDb, audioManifest, introTtsManifest, abilityTtsManifest] = await Promise.all([
-    fetchJson("./data/card_ocr_aliases.json", { cards: [], byCardId: {} }),
-    fetchJson("./data/audio_clips.json", { byCardId: {} }),
-    fetchJson("./data/card_intro_tts.json", { byCardId: {}, byCardNo: {} }),
-    fetchJson("./data/card_ability_tts.json", { byCardId: {}, byCardNo: {} }),
-  ]);
+  const [ocrDbData, audioManifestData, introData, abilityData, fingerprintData] =
+    await Promise.all([
+      fetchJson("./data/card_ocr_aliases.json", { cards: [], byCardId: {} }),
+      fetchJson("./data/audio_clips.json", { byCardId: {} }),
+      fetchJson("./data/card_intro_tts.json", { byCardId: {}, byCardNo: {} }),
+      fetchJson("./data/card_ability_tts.json", { byCardId: {}, byCardNo: {} }),
+      fetchJson("./data/card_fingerprints.json", { cards: [] }),
+    ]);
+  ocrDb = ocrDbData;
+  audioManifest = audioManifestData;
+  introTtsManifest = introData;
+  abilityTtsManifest = abilityData;
+  fingerprintDb = {
+    cards: fingerprintData.cards ?? [],
+    byCardId: indexFingerprints(fingerprintData.cards ?? []),
+  };
   if (!ocrDb.cards.length) {
     throw new Error("OCR 데이터를 불러오지 못했습니다.");
   }
@@ -198,7 +245,7 @@ async function initOcrWorker() {
   });
 }
 
-function getVideoSourceRect(targetElement) {
+function videoSourceRectFromElement(targetElement) {
   const frameRect = elements.cameraBox.getBoundingClientRect();
   const targetRect = targetElement.getBoundingClientRect();
   const videoWidth = elements.video.videoWidth;
@@ -219,33 +266,34 @@ function getVideoSourceRect(targetElement) {
   };
 }
 
-function clampSourceRect(rect) {
-  const videoWidth = elements.video.videoWidth;
-  const videoHeight = elements.video.videoHeight;
-  const width = clamp(rect.sw, 1, videoWidth);
-  const height = clamp(rect.sh, 1, videoHeight);
+function clampSourceRect(rect, sourceWidth, sourceHeight) {
+  const width = clamp(rect.sw, 1, sourceWidth);
+  const height = clamp(rect.sh, 1, sourceHeight);
   return {
-    sx: clamp(rect.sx, 0, Math.max(0, videoWidth - width)),
-    sy: clamp(rect.sy, 0, Math.max(0, videoHeight - height)),
+    sx: clamp(rect.sx, 0, Math.max(0, sourceWidth - width)),
+    sy: clamp(rect.sy, 0, Math.max(0, sourceHeight - height)),
     sw: width,
     sh: height,
   };
 }
 
-function cardRegionSourceRect(region, marginRatio = OCR_REGION_MARGIN) {
-  const cardRect = getVideoSourceRect(elements.cardGuide);
+function cardRegionSourceRect(region, marginRatio, cardRect, sourceWidth, sourceHeight) {
   const marginX = region.width * marginRatio;
   const marginY = region.height * marginRatio;
   const x = Math.max(0, region.x - marginX);
   const y = Math.max(0, region.y - marginY);
   const width = Math.min(CARD_SIZE.width - x, region.width + marginX * 2);
   const height = Math.min(CARD_SIZE.height - y, region.height + marginY * 2);
-  return clampSourceRect({
-    sx: cardRect.sx + (cardRect.sw * x) / CARD_SIZE.width,
-    sy: cardRect.sy + (cardRect.sh * y) / CARD_SIZE.height,
-    sw: (cardRect.sw * width) / CARD_SIZE.width,
-    sh: (cardRect.sh * height) / CARD_SIZE.height,
-  });
+  return clampSourceRect(
+    {
+      sx: cardRect.sx + (cardRect.sw * x) / CARD_SIZE.width,
+      sy: cardRect.sy + (cardRect.sh * y) / CARD_SIZE.height,
+      sw: (cardRect.sw * width) / CARD_SIZE.width,
+      sh: (cardRect.sh * height) / CARD_SIZE.height,
+    },
+    sourceWidth,
+    sourceHeight,
+  );
 }
 
 function rotationAnglesForRegion(region) {
@@ -260,9 +308,9 @@ function rotatedBounds(width, height, degrees) {
   };
 }
 
-function createOcrLayout(region, degrees) {
+function createOcrLayout(region, degrees, cardRect, sourceWidth, sourceHeight) {
   const marginRatio = degrees === 0 ? OCR_REGION_MARGIN : OCR_ROTATED_REGION_MARGIN;
-  const rect = cardRegionSourceRect(region, marginRatio);
+  const rect = cardRegionSourceRect(region, marginRatio, cardRect, sourceWidth, sourceHeight);
   const maxWidth = OCR_CANVAS_WIDTH - OCR_CANVAS_PADDING * 2;
   let targetWidth = Math.min(maxWidth, region.targetWidth);
   let scale = targetWidth / rect.sw;
@@ -314,13 +362,17 @@ function preprocessOcrCanvas() {
   ocrContext.putImageData(imageData, 0, 0);
 }
 
-function drawCardSignalsForOcr() {
-  if (!elements.video.videoWidth || !elements.video.videoHeight) {
-    throw new Error("카메라가 아직 준비되지 않았습니다.");
+function drawCardSignalsForOcr(sourceCanvas, cardRect) {
+  const sourceWidth = sourceCanvas.width;
+  const sourceHeight = sourceCanvas.height;
+  if (!sourceWidth || !sourceHeight) {
+    throw new Error("캡처 이미지가 비어 있습니다.");
   }
 
   const layouts = OCR_SIGNAL_REGIONS.flatMap((region) =>
-    rotationAnglesForRegion(region).map((degrees) => createOcrLayout(region, degrees)),
+    rotationAnglesForRegion(region).map((degrees) =>
+      createOcrLayout(region, degrees, cardRect, sourceWidth, sourceHeight),
+    ),
   );
 
   let y = OCR_CANVAS_PADDING;
@@ -356,7 +408,7 @@ function drawCardSignalsForOcr() {
     ocrContext.translate(targetX + layoutWidth / 2, targetY + layoutHeight / 2);
     ocrContext.rotate((degrees * Math.PI) / 180);
     ocrContext.drawImage(
-      elements.video,
+      sourceCanvas,
       rect.sx,
       rect.sy,
       rect.sw,
@@ -375,6 +427,147 @@ function drawCardSignalsForOcr() {
   }
   ocrContext.filter = "none";
   preprocessOcrCanvas();
+}
+
+function artSourceRect(cardRect, sourceWidth, sourceHeight) {
+  return clampSourceRect(
+    {
+      sx: cardRect.sx + (cardRect.sw * ART_REGION.x) / CARD_SIZE.width,
+      sy: cardRect.sy + (cardRect.sh * ART_REGION.y) / CARD_SIZE.height,
+      sw: (cardRect.sw * ART_REGION.width) / CARD_SIZE.width,
+      sh: (cardRect.sh * ART_REGION.height) / CARD_SIZE.height,
+    },
+    sourceWidth,
+    sourceHeight,
+  );
+}
+
+function computeArtDhashHex(sourceCanvas, cardRect) {
+  const artRect = artSourceRect(cardRect, sourceCanvas.width, sourceCanvas.height);
+  const workW = Math.max(64, Math.round(artRect.sw));
+  const workH = Math.max(64, Math.round(artRect.sh));
+  if (dhashWorkCanvas.width !== workW || dhashWorkCanvas.height !== workH) {
+    dhashWorkCanvas.width = workW;
+    dhashWorkCanvas.height = workH;
+  }
+  dhashWorkContext.imageSmoothingEnabled = true;
+  dhashWorkContext.imageSmoothingQuality = "high";
+  dhashWorkContext.drawImage(
+    sourceCanvas,
+    artRect.sx,
+    artRect.sy,
+    artRect.sw,
+    artRect.sh,
+    0,
+    0,
+    workW,
+    workH,
+  );
+
+  const work = dhashWorkContext.getImageData(0, 0, workW, workH);
+  const wd = work.data;
+  const totalPixels = workW * workH;
+  const grayBuf = new Uint8ClampedArray(totalPixels);
+  let min = 255;
+  let max = 0;
+  for (let i = 0, p = 0; i < wd.length; i += 4, p += 1) {
+    const g = Math.round(wd[i] * 0.299 + wd[i + 1] * 0.587 + wd[i + 2] * 0.114);
+    grayBuf[p] = g;
+    if (g < min) min = g;
+    if (g > max) max = g;
+  }
+  const range = Math.max(1, max - min);
+  for (let i = 0, p = 0; i < wd.length; i += 4, p += 1) {
+    const stretched = Math.round(((grayBuf[p] - min) / range) * 255);
+    wd[i] = stretched;
+    wd[i + 1] = stretched;
+    wd[i + 2] = stretched;
+    wd[i + 3] = 255;
+  }
+  dhashWorkContext.putImageData(work, 0, 0);
+
+  dhashContext.imageSmoothingEnabled = true;
+  dhashContext.imageSmoothingQuality = "high";
+  dhashContext.fillStyle = "#000000";
+  dhashContext.fillRect(0, 0, DHASH_WIDTH, DHASH_HEIGHT);
+  dhashContext.drawImage(dhashWorkCanvas, 0, 0, DHASH_WIDTH, DHASH_HEIGHT);
+
+  const { data } = dhashContext.getImageData(0, 0, DHASH_WIDTH, DHASH_HEIGHT);
+  const grays = new Uint8Array(DHASH_WIDTH * DHASH_HEIGHT);
+  for (let i = 0, p = 0; i < data.length; i += 4, p += 1) {
+    grays[p] = data[i];
+  }
+
+  let hex = "";
+  let nibble = 0;
+  let nibbleBits = 0;
+  for (let row = 0; row < DHASH_HEIGHT; row += 1) {
+    const rowOffset = row * DHASH_WIDTH;
+    for (let col = 0; col < DHASH_WIDTH - 1; col += 1) {
+      const bit = grays[rowOffset + col] > grays[rowOffset + col + 1] ? 1 : 0;
+      nibble = (nibble << 1) | bit;
+      nibbleBits += 1;
+      if (nibbleBits === 4) {
+        hex += nibble.toString(16);
+        nibble = 0;
+        nibbleBits = 0;
+      }
+    }
+  }
+  if (nibbleBits > 0) {
+    hex += (nibble << (4 - nibbleBits)).toString(16);
+  }
+  return hex;
+}
+
+const HEX_POPCOUNT = (() => {
+  const table = new Uint8Array(256);
+  for (let i = 0; i < 256; i += 1) {
+    let v = i;
+    let count = 0;
+    while (v) {
+      count += v & 1;
+      v >>= 1;
+    }
+    table[i] = count;
+  }
+  return table;
+})();
+
+function hammingDistanceHex(left, right) {
+  if (!left || !right || left.length !== right.length) {
+    return DHASH_BITS;
+  }
+  let total = 0;
+  for (let i = 0; i < left.length; i += 2) {
+    const a = parseInt(left.slice(i, i + 2), 16);
+    const b = parseInt(right.slice(i, i + 2), 16);
+    if (Number.isNaN(a) || Number.isNaN(b)) {
+      total += 8;
+      continue;
+    }
+    total += HEX_POPCOUNT[a ^ b];
+  }
+  return total;
+}
+
+function visualScoreFromHamming(hamming) {
+  return Math.max(0, Math.round(100 - (hamming * 100) / VISUAL_SCORE_DIVISOR));
+}
+
+function computeVisualScores(capturedHash) {
+  const scores = {};
+  if (!capturedHash) {
+    return scores;
+  }
+  for (const card of fingerprintDb.cards) {
+    if (!card.hash) {
+      continue;
+    }
+    const distance = hammingDistanceHex(capturedHash, card.hash);
+    scores[card.id] = { distance, score: visualScoreFromHamming(distance) };
+  }
+  return scores;
 }
 
 function levenshteinDistance(left, right) {
@@ -576,50 +769,54 @@ function abilityKeywordScore(signals, card) {
   return Math.min(12, hits.length * 4);
 }
 
-function compositeCandidateRankScore(nameScore, numericMatches, abilityScore) {
+function compositeCandidateRankScore(nameScore, numericMatches, abilityScore, visualScore) {
   const pairBoost = hasExactNumericPair(numericMatches) ? OCR_NUMERIC_PAIR_BOOST : 0;
   return Math.round(
-    nameScore + numericMatches.length * OCR_NUMERIC_SINGLE_BOOST + pairBoost + abilityScore,
+    nameScore +
+      numericMatches.length * OCR_NUMERIC_SINGLE_BOOST +
+      pairBoost +
+      abilityScore +
+      visualScore * VISUAL_RANK_WEIGHT,
   );
 }
 
-function rankOcrCandidates(signals) {
-  const hasReadableText =
-    normalizeForMatch(signals.latinText).length >= OCR_MIN_QUERY_LENGTH ||
-    normalizeOcrTextForMatch(signals.koreanText).length >= OCR_MIN_QUERY_LENGTH ||
-    signals.scoreNumbers.length > 0 ||
-    signals.wingNumbers.length > 0;
-  if (!hasReadableText) {
-    return { candidates: [] };
-  }
-
-  const candidates = ocrDb.cards
-    .map((card) => {
-      const best = bestNameScore(signals, card);
-      const numericMatches = exactNumericMatches(signals, card);
-      const abilityScore = abilityKeywordScore(signals, card);
-      const rankScore = compositeCandidateRankScore(best.score, numericMatches, abilityScore);
-      return {
-        ...card,
-        matchedAlias: best.alias,
-        matchKind: best.kind,
-        nameScore: best.score,
-        numericMatches,
-        numericPairMatched: hasExactNumericPair(numericMatches),
-        abilityScore,
-        rankScore,
-        score: Math.min(100, rankScore),
-      };
-    })
-    .sort(
-      (a, b) =>
-        b.rankScore - a.rankScore ||
-        b.nameScore - a.nameScore ||
-        b.numericMatches.length - a.numericMatches.length ||
-        a.cardNo.localeCompare(b.cardNo),
+function rankCandidates(signals, visualScores) {
+  const candidates = ocrDb.cards.map((card) => {
+    const best = bestNameScore(signals, card);
+    const numericMatches = exactNumericMatches(signals, card);
+    const abilityScore = abilityKeywordScore(signals, card);
+    const visual = visualScores[card.id] ?? null;
+    const visualScore = visual?.score ?? 0;
+    const visualDistance = visual?.distance ?? null;
+    const rankScore = compositeCandidateRankScore(
+      best.score,
+      numericMatches,
+      abilityScore,
+      visualScore,
     );
-
-  return { candidates };
+    return {
+      ...card,
+      matchedAlias: best.alias,
+      matchKind: best.kind,
+      nameScore: best.score,
+      numericMatches,
+      numericPairMatched: hasExactNumericPair(numericMatches),
+      abilityScore,
+      visualScore,
+      visualDistance,
+      rankScore,
+      score: Math.min(100, rankScore),
+    };
+  });
+  candidates.sort(
+    (a, b) =>
+      b.rankScore - a.rankScore ||
+      b.visualScore - a.visualScore ||
+      b.nameScore - a.nameScore ||
+      b.numericMatches.length - a.numericMatches.length ||
+      a.cardNo.localeCompare(b.cardNo),
+  );
+  return candidates;
 }
 
 function matchConfidence(best, second) {
@@ -628,14 +825,17 @@ function matchConfidence(best, second) {
   }
   const gap = (best.rankScore ?? best.score) - (second?.rankScore ?? second?.score ?? 0);
   const exactCount = best.numericMatches?.length ?? 0;
-  if (best.nameScore < OCR_MIN_NAME_SCORE) {
-    return { ok: false, gap, reason: `이름 ${best.nameScore}% < ${OCR_MIN_NAME_SCORE}%` };
-  }
-
   const strongName = best.nameScore >= OCR_STRONG_NAME_SCORE;
   const mediumNameWithNumber = best.nameScore >= OCR_MEDIUM_NAME_SCORE && exactCount >= 1;
   const weakNameWithNumbers = best.nameScore >= OCR_MIN_NAME_SCORE && exactCount >= 2;
-  if (!strongName && !mediumNameWithNumber && !weakNameWithNumbers) {
+  const visualStrong = best.visualScore >= VISUAL_STRONG_SCORE;
+  const nameAndVisual =
+    best.nameScore >= OCR_MIN_NAME_SCORE && best.visualScore >= VISUAL_MEDIUM_SCORE;
+
+  if (!strongName && !mediumNameWithNumber && !weakNameWithNumbers && !visualStrong && !nameAndVisual) {
+    if (best.nameScore < OCR_MIN_NAME_SCORE) {
+      return { ok: false, gap, reason: `이름 ${best.nameScore}% / 이미지 ${best.visualScore}%` };
+    }
     return {
       ok: false,
       gap,
@@ -646,21 +846,6 @@ function matchConfidence(best, second) {
     return { ok: false, gap, reason: `다음 후보와 차이 ${gap}%` };
   }
   return { ok: true, gap, reason: "" };
-}
-
-function stableFramesForCandidate(best, confident) {
-  if (!confident || !best) {
-    candidateCardId = "";
-    candidateFrameCount = 0;
-    return 0;
-  }
-  if (candidateCardId === best.id) {
-    candidateFrameCount += 1;
-  } else {
-    candidateCardId = best.id;
-    candidateFrameCount = 1;
-  }
-  return candidateFrameCount;
 }
 
 function audioClipsForCard(card) {
@@ -701,71 +886,19 @@ function cardById(cardId) {
   return ocrDb.byCardId?.[cardId] ?? ocrDb.cards.find((card) => card.id === cardId) ?? null;
 }
 
-function isUsefulCandidate(candidate) {
-  if (!candidate) {
-    return false;
-  }
-  if (candidate.numericPairMatched || candidate.abilityScore > 0) {
-    return true;
-  }
-  if ((candidate.numericMatches?.length ?? 0) >= 2) {
-    return true;
-  }
-  if (candidate.nameScore >= MIN_CANDIDATE_NAME_SCORE) {
-    return true;
-  }
-  if ((candidate.numericMatches?.length ?? 0) >= 1) {
-    return true;
-  }
-  return (candidate.rankScore ?? candidate.score ?? 0) >= MIN_CANDIDATE_RANK_SCORE;
-}
-
-function rememberCandidateSignals(candidates) {
-  candidateSuggestionFrame += 1;
-  const seenIds = new Set();
-  for (const candidate of candidates.slice(0, CANDIDATE_MEMORY_SCAN_LIMIT)) {
-    if (!isUsefulCandidate(candidate) || seenIds.has(candidate.id)) {
-      continue;
-    }
-    seenIds.add(candidate.id);
-    const previous = candidateMemory.get(candidate.id) ?? { count: 0, frame: 0 };
-    candidateMemory.set(candidate.id, {
-      count: Math.min(8, previous.count + 1),
-      frame: candidateSuggestionFrame,
-    });
-  }
-
-  for (const [cardId, memory] of candidateMemory.entries()) {
-    if (candidateSuggestionFrame - memory.frame > CANDIDATE_MEMORY_WINDOW_FRAMES) {
-      candidateMemory.delete(cardId);
-    }
-  }
-}
-
-function candidateRepeatCount(candidate) {
-  return candidateMemory.get(candidate.id)?.count ?? 0;
-}
-
-function candidateSuggestionScore(candidate) {
-  const repeatBoost = candidateRepeatCount(candidate) * CANDIDATE_REPEAT_BOOST;
-  const pairBoost = candidate.numericPairMatched ? 24 : 0;
-  return (candidate.rankScore ?? candidate.score ?? 0) + repeatBoost + pairBoost;
-}
-
 function candidateMetaText(candidate) {
   const parts = [];
-  const repeatCount = candidateRepeatCount(candidate);
   if (candidate.nameScore > 0) {
     parts.push(`이름 ${candidate.nameScore}%`);
+  }
+  if (candidate.visualScore > 0) {
+    parts.push(`이미지 ${candidate.visualScore}%`);
   }
   if (candidate.numericMatches?.length) {
     parts.push(candidate.numericMatches.join("+"));
   }
   if (candidate.abilityScore > 0) {
     parts.push("능력");
-  }
-  if (repeatCount >= 2) {
-    parts.push(`반복 ${repeatCount}`);
   }
   return parts.join(" · ") || "유사 후보";
 }
@@ -812,41 +945,49 @@ function candidateButton(candidate, index, leadingCardId) {
   return button;
 }
 
-function updateCandidateSuggestions(candidates, leadingCardId = "") {
+function isUsefulCandidate(candidate) {
+  if (!candidate) {
+    return false;
+  }
+  if (candidate.numericPairMatched || candidate.abilityScore > 0) {
+    return true;
+  }
+  if ((candidate.numericMatches?.length ?? 0) >= 2) {
+    return true;
+  }
+  if (candidate.nameScore >= MIN_CANDIDATE_NAME_SCORE) {
+    return true;
+  }
+  if (candidate.visualScore >= VISUAL_MEDIUM_SCORE) {
+    return true;
+  }
+  if ((candidate.numericMatches?.length ?? 0) >= 1) {
+    return true;
+  }
+  return (candidate.rankScore ?? candidate.score ?? 0) >= MIN_CANDIDATE_RANK_SCORE;
+}
+
+function renderCandidateSuggestions(candidates, leadingCardId = "") {
   if (!elements.candidatePanel || !elements.candidateList) {
     return;
   }
-  rememberCandidateSignals(candidates);
-  const suggestions = candidates
-    .filter(isUsefulCandidate)
-    .sort(
-      (a, b) =>
-        candidateSuggestionScore(b) - candidateSuggestionScore(a) ||
-        candidateRepeatCount(b) - candidateRepeatCount(a) ||
-        (b.rankScore ?? b.score ?? 0) - (a.rankScore ?? a.score ?? 0) ||
-        a.cardNo.localeCompare(b.cardNo),
-    )
-    .slice(0, MAX_CANDIDATE_SUGGESTIONS);
-  if (!suggestions.length) {
+  const useful = candidates.filter(isUsefulCandidate);
+  const top = (useful.length ? useful : candidates).slice(0, MAX_CANDIDATE_SUGGESTIONS);
+  if (!top.length) {
     hideCandidateSuggestions();
     return;
   }
-
-  const previousScrollTop = elements.candidateList.scrollTop;
   elements.candidateList.replaceChildren(
-    ...suggestions.map((candidate, index) => candidateButton(candidate, index, leadingCardId)),
+    ...top.map((candidate, index) => candidateButton(candidate, index, leadingCardId)),
   );
   elements.candidatePanel.hidden = false;
-  elements.candidateList.scrollTop = previousScrollTop;
+  elements.candidateList.scrollTop = 0;
 }
 
 function selectCandidateCard(card) {
   if (!card) {
     return;
   }
-  missedFrameCount = 0;
-  candidateCardId = card.id;
-  candidateFrameCount = STABLE_MATCH_FRAMES;
   triggerSuccessFeedback(card, true);
   const audioMessage = playAudioForCard(card, true);
   elements.matchName.textContent = displayNameForCard(card);
@@ -957,17 +1098,6 @@ function playAudioForCard(card, force = false) {
   return lastAudioMessage;
 }
 
-function resetAudioAfterMiss() {
-  missedFrameCount += 1;
-  if (missedFrameCount >= MISS_FRAMES_TO_RESET) {
-    activeAudioCardId = "";
-    pendingAudioCard = null;
-    lastAudioMessage = "";
-    lastSuccessFeedbackCardId = "";
-    stopAudioPlayback();
-  }
-}
-
 function restartAnimation(element, className) {
   if (!element) {
     return;
@@ -977,22 +1107,11 @@ function restartAnimation(element, className) {
   element.classList.add(className);
 }
 
-function triggerSuccessFeedback(card, force = false) {
+function triggerSuccessFeedback(card) {
   if (!card) {
     return;
   }
-  const now = performance.now();
-  if (
-    !force &&
-    lastSuccessFeedbackCardId === card.id &&
-    now - lastSuccessFeedbackAt < SUCCESS_FEEDBACK_COOLDOWN_MS
-  ) {
-    return;
-  }
-  lastSuccessFeedbackCardId = card.id;
-  lastSuccessFeedbackAt = now;
   restartAnimation(elements.successGlow, "is-active");
-  restartAnimation(elements.cardGuide, "is-success");
   if (navigator.vibrate) {
     navigator.vibrate(35);
   }
@@ -1005,10 +1124,11 @@ function formatMeta(best, second, signals, audioMessage, confidence) {
     parts.push(`읽음 "${readText.replace(/\s+/g, " ").slice(0, 44)}"`);
   }
   if (best) {
-    const exact = best.numericMatches?.length ? ` 숫자 일치 ${best.numericMatches.join("+")}` : "";
-    const numericPair = best.numericPairMatched ? " 점수+cm 우선" : "";
+    const exact = best.numericMatches?.length ? ` 숫자 ${best.numericMatches.join("+")}` : "";
+    const numericPair = best.numericPairMatched ? " 점수+cm" : "";
+    const visual = best.visualScore > 0 ? ` 이미지 ${best.visualScore}%` : "";
     parts.push(
-      `${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%${exact}${numericPair}`,
+      `${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%${visual}${exact}${numericPair}`,
     );
   }
   if (second) {
@@ -1023,39 +1143,81 @@ function formatMeta(best, second, signals, audioMessage, confidence) {
   return parts.join(" / ") || "-";
 }
 
-async function identifyCurrentFrame() {
-  if (isScanning || !stream || !tesseractWorker) {
-    return;
+function freezeCaptureFromVideo() {
+  const video = elements.video;
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  if (!width || !height) {
+    throw new Error("카메라 프레임을 읽을 수 없습니다.");
+  }
+  if (captureCanvas.width !== width || captureCanvas.height !== height) {
+    captureCanvas.width = width;
+    captureCanvas.height = height;
+  }
+  captureContext.drawImage(video, 0, 0, width, height);
+
+  if (elements.snapshot && snapshotContext) {
+    elements.snapshot.width = width;
+    elements.snapshot.height = height;
+    snapshotContext.drawImage(captureCanvas, 0, 0, width, height);
+  }
+  frozenGuideRect = videoSourceRectFromElement(elements.cardGuide);
+}
+
+async function processCapture() {
+  if (!tesseractWorker) {
+    throw new Error("OCR 엔진이 준비되지 않았습니다.");
+  }
+  if (!frozenGuideRect) {
+    throw new Error("카드 가이드 좌표를 알 수 없습니다.");
   }
 
-  isScanning = true;
+  const capturedHash = computeArtDhashHex(captureCanvas, frozenGuideRect);
+  const visualScores = computeVisualScores(capturedHash);
+
+  drawCardSignalsForOcr(captureCanvas, frozenGuideRect);
+  const result = await tesseractWorker.recognize(ocrCanvas);
+  const signals = extractOcrSignals(result);
+  const candidates = rankCandidates(signals, visualScores);
+  const [best, second] = candidates;
+  const confidence = matchConfidence(best, second);
+  let audioMessage = "";
+
+  updateRecognitionRate(best?.score);
+  renderCandidateSuggestions(candidates, best?.id);
+
+  if (confidence.ok && best) {
+    triggerSuccessFeedback(best);
+    setTimeout(() => {
+      if (mode === "review") {
+        audioMessage = playAudioForCard(best);
+        elements.matchMeta.textContent = formatMeta(best, second, signals, audioMessage, confidence);
+      }
+    }, AUTO_SELECT_DELAY_MS);
+    audioMessage = "재생 준비";
+  } else {
+    audioMessage = "후보 중 선택";
+  }
+
+  elements.matchName.textContent = best ? displayNameForCard(best) : "후보 없음";
+  elements.matchScore.textContent = best
+    ? `${best.score}% / 차이 ${confidence.gap}`
+    : "-";
+  elements.matchMeta.textContent = formatMeta(best, second, signals, audioMessage, confidence);
+  setStatus(confidence.ok ? "일치" : "선택", confidence.ok ? "ready" : "");
+}
+
+async function handleShutter() {
+  if (mode !== "live") {
+    return;
+  }
+  setMode("capturing");
+  setStatus("촬영", "ready");
   try {
-    drawCardSignalsForOcr();
-    const result = await tesseractWorker.recognize(ocrCanvas);
-    const signals = extractOcrSignals(result);
-    const { candidates } = rankOcrCandidates(signals);
-    const [best, second] = candidates;
-    const confidence = matchConfidence(best, second);
-    const stableFrames = stableFramesForCandidate(best, confidence.ok);
-    const matched = confidence.ok && stableFrames >= STABLE_MATCH_FRAMES;
-    let audioMessage = "";
-    updateRecognitionRate(best?.score);
-
-    if (matched) {
-      missedFrameCount = 0;
-      hideCandidateSuggestions();
-      triggerSuccessFeedback(best);
-      audioMessage = await playAudioForCard(best);
-    } else {
-      updateCandidateSuggestions(candidates, best?.id);
-      resetAudioAfterMiss();
-      audioMessage = confidence.ok ? `유지 ${stableFrames}/${STABLE_MATCH_FRAMES}` : lastAudioMessage;
-    }
-
-    elements.matchName.textContent = confidence.ok || matched ? displayNameForCard(best) : "스캔 중";
-    elements.matchScore.textContent = best ? `${best.score}% / 차이 ${confidence.gap}` : "-";
-    elements.matchMeta.textContent = formatMeta(best, second, signals, audioMessage, confidence);
-    setStatus(matched ? "일치" : confidence.ok ? "유지" : "읽는 중", matched ? "ready" : "");
+    freezeCaptureFromVideo();
+    setMode("review");
+    setStatus("분석 중", "ready");
+    await processCapture();
   } catch (error) {
     elements.matchName.textContent = "오류";
     elements.matchScore.textContent = "-";
@@ -1063,15 +1225,23 @@ async function identifyCurrentFrame() {
     updateRecognitionRate(null);
     hideCandidateSuggestions();
     setStatus("오류", "error");
-  } finally {
-    isScanning = false;
+    setMode("live");
   }
 }
 
-function startScanLoop() {
-  window.clearInterval(scanTimer);
-  scanTimer = window.setInterval(identifyCurrentFrame, OCR_INTERVAL_MS);
-  identifyCurrentFrame();
+function handleRetake() {
+  stopAudioPlayback();
+  activeAudioCardId = "";
+  pendingAudioCard = null;
+  lastAudioMessage = "";
+  frozenGuideRect = null;
+  hideCandidateSuggestions();
+  elements.matchName.textContent = "-";
+  elements.matchScore.textContent = "-";
+  elements.matchMeta.textContent = "-";
+  updateRecognitionRate(null);
+  setMode("live");
+  setStatus("대기", "ready");
 }
 
 async function startCamera() {
@@ -1096,8 +1266,8 @@ async function startCamera() {
   });
   elements.video.srcObject = stream;
   await elements.video.play();
-  setStatus("스캔 중", "ready");
-  startScanLoop();
+  setMode("live");
+  setStatus("대기", "ready");
 }
 
 async function handleUserActivation() {
@@ -1173,11 +1343,24 @@ function initAbilityToggle() {
   });
 }
 
+function initShutterControls() {
+  elements.shutterButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    handleShutter();
+  });
+  elements.retakeButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    handleRetake();
+  });
+}
+
 async function boot() {
   try {
+    setMode("loading");
     initDebugSheet();
     initCandidateSuggestions();
     initAbilityToggle();
+    initShutterControls();
     await loadData();
     await initOcrWorker();
     await startCamera();

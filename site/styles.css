@@ -46,6 +46,31 @@ body {
   object-fit: cover;
 }
 
+.snapshot {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+  background: #101416;
+}
+
+.scanner[data-mode="review"] #camera {
+  visibility: hidden;
+}
+
+.scanner[data-mode="review"] .snapshot {
+  display: block;
+}
+
+.scanner[data-mode="review"] .scan-overlay,
+.scanner[data-mode="review"] .ocr-guide,
+.scanner[data-mode="review"] .corner {
+  display: none;
+}
+
 .success-glow {
   position: absolute;
   inset: 0;
@@ -239,11 +264,98 @@ h1 {
 .candidate-panel {
   position: absolute;
   left: 50%;
-  top: 53%;
+  top: 50%;
   z-index: 35;
   width: min(88vw, 400px);
   transform: translate(-50%, -50%);
   pointer-events: auto;
+}
+
+.scanner[data-mode="live"] .candidate-panel {
+  display: none;
+}
+
+.shutter-bar {
+  position: absolute;
+  left: 50%;
+  bottom: calc(max(20px, env(safe-area-inset-bottom)) + 64px);
+  z-index: 60;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.shutter-button {
+  width: 78px;
+  height: 78px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 14%);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 26px rgb(0 0 0 / 50%),
+    inset 0 0 0 3px rgb(255 255 255 / 60%);
+}
+
+.shutter-button:active {
+  transform: scale(0.96);
+}
+
+.shutter-button[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.shutter-ring {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  background: var(--ink);
+  box-shadow: 0 0 0 2px rgb(255 255 255 / 25%);
+  transition: transform 120ms ease, background-color 120ms ease;
+}
+
+.shutter-button:active .shutter-ring {
+  transform: scale(0.92);
+}
+
+.scanner[data-mode="review"] .shutter-button {
+  display: none;
+}
+
+.scanner[data-mode="capturing"] .shutter-button .shutter-ring {
+  background: var(--green);
+}
+
+.retake-button {
+  min-height: 40px;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 900;
+  cursor: pointer;
+  pointer-events: auto;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 6px 18px rgb(0 0 0 / 45%);
+}
+
+.retake-button[hidden] {
+  display: none;
+}
+
+.retake-button:active {
+  transform: translateY(1px);
 }
 
 .candidate-panel[hidden] {

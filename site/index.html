@@ -10,8 +10,9 @@
     <script src="./app.js" defer></script>
   </head>
   <body>
-    <main class="scanner">
+    <main class="scanner" data-mode="live">
       <video id="camera" autoplay muted playsinline></video>
+      <canvas id="snapshot" class="snapshot" aria-hidden="true"></canvas>
       <div class="success-glow" id="successGlow" aria-hidden="true"></div>
 
       <div class="scan-overlay" id="cameraBox" aria-label="카메라 스캐너">
@@ -38,6 +39,15 @@
       <section class="candidate-panel" id="candidatePanel" aria-label="후보 카드" hidden>
         <div class="candidate-list" id="candidateList"></div>
       </section>
+
+      <div class="shutter-bar" id="shutterBar">
+        <button class="shutter-button" id="shutterButton" type="button" aria-label="카드 촬영">
+          <span class="shutter-ring" aria-hidden="true"></span>
+        </button>
+        <button class="retake-button" id="retakeButton" type="button" hidden>
+          다시 찍기
+        </button>
+      </div>
 
       <section class="bottom-sheet is-collapsed" id="debugSheet" aria-label="스캔 결과">
         <button
