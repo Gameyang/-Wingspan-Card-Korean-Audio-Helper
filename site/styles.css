@@ -271,10 +271,6 @@ h1 {
   pointer-events: auto;
 }
 
-.scanner[data-mode="live"] .candidate-panel {
-  display: none;
-}
-
 .shutter-bar {
   position: absolute;
   left: 50%;
@@ -286,6 +282,75 @@ h1 {
   align-items: center;
   gap: 10px;
   pointer-events: auto;
+}
+
+.capture-controls {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.voice-button {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 22px rgb(0 0 0 / 44%);
+}
+
+.voice-button:active {
+  transform: scale(0.96);
+}
+
+.voice-button[disabled] {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.voice-button.is-listening {
+  border-color: rgb(107 214 154 / 84%);
+  background: rgb(107 214 154 / 18%);
+  color: var(--green);
+  animation: voice-pulse 980ms ease-in-out infinite;
+}
+
+.voice-icon {
+  position: relative;
+  width: 18px;
+  height: 24px;
+  border: 3px solid currentColor;
+  border-radius: 999px;
+}
+
+.voice-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 3px;
+  height: 10px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateX(-50%);
+}
+
+.voice-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 33px;
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: translateX(-50%);
 }
 
 .shutter-button {
@@ -327,6 +392,10 @@ h1 {
 }
 
 .scanner[data-mode="review"] .shutter-button {
+  display: none;
+}
+
+.scanner[data-mode="review"] .capture-controls {
   display: none;
 }
 
@@ -503,6 +572,19 @@ h1 {
   100% {
     border-color: rgb(255 255 255 / 26%);
     box-shadow: 0 0 0 999px rgb(0 0 0 / 34%);
+  }
+}
+
+@keyframes voice-pulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 22px rgb(0 0 0 / 44%);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 22px rgb(0 0 0 / 44%),
+      0 0 0 8px rgb(107 214 154 / 16%);
   }
 }
 

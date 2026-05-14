@@ -35,6 +35,7 @@ const MIN_CANDIDATE_NAME_SCORE = 20;
 const MIN_CANDIDATE_RANK_SCORE = 18;
 const ABILITY_TOGGLE_STORAGE_KEY = "wingspan.includeAbilityTts";
 const BIRD_BG_VOLUME = 0.24;
+const VOICE_RECOGNITION_LANG = "ko-KR";
 
 const DHASH_WIDTH = 17;
 const DHASH_HEIGHT = 16;
@@ -58,6 +59,7 @@ const elements = {
   candidatePanel: document.querySelector("#candidatePanel"),
   candidateList: document.querySelector("#candidateList"),
   abilityToggle: document.querySelector("#abilityToggle"),
+  voiceButton: document.querySelector("#voiceButton"),
   shutterButton: document.querySelector("#shutterButton"),
   retakeButton: document.querySelector("#retakeButton"),
   matchName: document.querySelector("#matchName"),
@@ -66,6 +68,7 @@ const elements = {
 };
 
 let stream;
+let cameraReady = false;
 let ocrDb = { cards: [], byCardId: {} };
 let audioManifest = { byCardId: {} };
 let introTtsManifest = { byCardId: {}, byCardNo: {} };
@@ -78,6 +81,10 @@ let activeAudioCardId = "";
 let pendingAudioCard = null;
 let lastAudioMessage = "";
 let playbackToken = 0;
+let speechRecognition = null;
+let isVoiceListening = false;
+let voiceResultHandled = false;
+let voiceErrorHandled = false;
 
 const speechElement = new Audio();
 speechElement.preload = "auto";
@@ -113,11 +120,12 @@ function setMode(next) {
     elements.scanner.dataset.mode = next;
   }
   if (elements.shutterButton) {
-    elements.shutterButton.disabled = next !== "live";
+    elements.shutterButton.disabled = next !== "live" || isVoiceListening || !cameraReady;
   }
   if (elements.retakeButton) {
     elements.retakeButton.hidden = next !== "review";
   }
+  updateVoiceButtonState();
 }
 
 function clamp(value, min, max) {
@@ -997,6 +1005,231 @@ function selectCandidateCard(card) {
   hideCandidateSuggestions();
 }
 
+function updateVoiceButtonState() {
+  if (!elements.voiceButton) {
+    return;
+  }
+  const supported = Boolean(speechRecognition);
+  const canUseNow = mode === "live" || isVoiceListening;
+  elements.voiceButton.disabled = !supported || !canUseNow;
+  elements.voiceButton.classList.toggle("is-listening", isVoiceListening);
+  elements.voiceButton.setAttribute("aria-pressed", String(isVoiceListening));
+  elements.voiceButton.title = supported
+    ? isVoiceListening
+      ? "듣기 중지"
+      : "새 이름 말하기"
+    : "이 브라우저에서는 음성 인식을 지원하지 않습니다.";
+}
+
+function setVoiceListening(next) {
+  isVoiceListening = next;
+  if (elements.shutterButton) {
+    elements.shutterButton.disabled = mode !== "live" || isVoiceListening || !cameraReady;
+  }
+  updateVoiceButtonState();
+}
+
+function voiceSignalsFromTranscript(transcript) {
+  const text = String(transcript).replace(/\s+/g, " ").trim();
+  return {
+    allText: text,
+    titleText: text,
+    latinText: extractLatinText(text),
+    koreanText: extractKoreanText(text),
+    scoreNumbers: [],
+    wingNumbers: [],
+    abilityText: "",
+  };
+}
+
+function transcriptsFromSpeechEvent(event) {
+  const transcripts = [];
+  for (let resultIndex = event.resultIndex; resultIndex < event.results.length; resultIndex += 1) {
+    const result = event.results[resultIndex];
+    for (let altIndex = 0; altIndex < result.length; altIndex += 1) {
+      const transcript = String(result[altIndex]?.transcript ?? "").replace(/\s+/g, " ").trim();
+      if (transcript) {
+        transcripts.push(transcript);
+      }
+    }
+  }
+  return uniqueValues(transcripts);
+}
+
+function rankVoiceCandidates(transcripts) {
+  const byCardId = new Map();
+  for (const transcript of transcripts) {
+    const candidates = rankCandidates(voiceSignalsFromTranscript(transcript), {});
+    for (const candidate of candidates) {
+      if (!candidate.nameScore) {
+        continue;
+      }
+      const current = byCardId.get(candidate.id);
+      if (
+        !current ||
+        candidate.nameScore > current.nameScore ||
+        (candidate.nameScore === current.nameScore && candidate.rankScore > current.rankScore)
+      ) {
+        byCardId.set(candidate.id, {
+          ...candidate,
+          voiceTranscript: transcript,
+          visualScore: 0,
+          visualDistance: null,
+          abilityScore: 0,
+          numericMatches: [],
+          numericPairMatched: false,
+          rankScore: candidate.nameScore,
+          score: candidate.nameScore,
+        });
+      }
+    }
+  }
+  return [...byCardId.values()].sort(
+    (a, b) =>
+      b.rankScore - a.rankScore ||
+      b.nameScore - a.nameScore ||
+      a.cardNo.localeCompare(b.cardNo),
+  );
+}
+
+function formatVoiceMeta(best, second, transcript, audioMessage, confidence) {
+  const parts = [];
+  if (transcript) {
+    parts.push(`말함 "${transcript.replace(/\s+/g, " ").slice(0, 44)}"`);
+  }
+  if (best) {
+    parts.push(`${best.cardNo} ${best.matchedAlias || best.birdName} 이름 ${best.nameScore}%`);
+  }
+  if (second) {
+    parts.push(`다음 ${second.cardNo} ${second.score}%`);
+  }
+  if (confidence?.reason) {
+    parts.push(confidence.reason);
+  }
+  if (audioMessage) {
+    parts.push(audioMessage);
+  }
+  return parts.join(" / ") || "-";
+}
+
+function showVoiceMessage(message, type = "") {
+  hideCandidateSuggestions();
+  updateRecognitionRate(null);
+  elements.matchName.textContent = "음성 인식";
+  elements.matchScore.textContent = "-";
+  elements.matchMeta.textContent = message;
+  setStatus(type === "error" ? "오류" : "대기", type);
+}
+
+function processVoiceTranscripts(transcripts) {
+  const candidates = rankVoiceCandidates(transcripts);
+  const [best, second] = candidates;
+  const transcript = best?.voiceTranscript || transcripts[0] || "";
+  const confidence = matchConfidence(best, second);
+  let audioMessage = "";
+
+  updateRecognitionRate(best?.score);
+
+  if (!best) {
+    showVoiceMessage("일치하는 후보를 찾지 못했습니다.");
+    return;
+  }
+
+  renderCandidateSuggestions(candidates, best.id);
+
+  if (confidence.ok) {
+    triggerSuccessFeedback(best, true);
+    audioMessage = playAudioForCard(best, true);
+    elements.matchName.textContent = displayNameForCard(best);
+    elements.matchScore.textContent = `${best.score}% / 차이 ${confidence.gap}`;
+    elements.matchMeta.textContent = formatVoiceMeta(best, second, transcript, audioMessage, confidence);
+    setStatus("일치", "ready");
+    hideCandidateSuggestions();
+    return;
+  }
+
+  audioMessage = "후보 중 선택";
+  elements.matchName.textContent = displayNameForCard(best);
+  elements.matchScore.textContent = `${best.score}% / 차이 ${confidence.gap}`;
+  elements.matchMeta.textContent = formatVoiceMeta(best, second, transcript, audioMessage, confidence);
+  setStatus("선택", "");
+}
+
+function voiceErrorMessage(errorType) {
+  switch (errorType) {
+    case "not-allowed":
+    case "service-not-allowed":
+      return "마이크 권한이 필요합니다.";
+    case "no-speech":
+      return "음성이 감지되지 않았습니다.";
+    case "audio-capture":
+      return "마이크를 사용할 수 없습니다.";
+    case "network":
+      return "음성 인식 네트워크 오류입니다.";
+    default:
+      return "음성 인식에 실패했습니다.";
+  }
+}
+
+function handleVoiceRecognitionResult(event) {
+  voiceResultHandled = true;
+  const transcripts = transcriptsFromSpeechEvent(event);
+  if (!transcripts.length) {
+    showVoiceMessage("일치하는 후보를 찾지 못했습니다.");
+    return;
+  }
+  processVoiceTranscripts(transcripts);
+}
+
+function handleVoiceRecognitionError(event) {
+  if (event.error === "aborted") {
+    return;
+  }
+  voiceErrorHandled = true;
+  showVoiceMessage(voiceErrorMessage(event.error), "error");
+}
+
+function handleVoiceRecognitionEnd() {
+  const hadResultOrError = voiceResultHandled || voiceErrorHandled;
+  setVoiceListening(false);
+  if (!hadResultOrError && mode === "live") {
+    setStatus("대기", "ready");
+  }
+}
+
+function stopVoiceRecognition() {
+  if (!speechRecognition || !isVoiceListening) {
+    return;
+  }
+  try {
+    speechRecognition.abort();
+  } catch (error) {
+    setVoiceListening(false);
+  }
+}
+
+function handleVoiceButton() {
+  if (!speechRecognition) {
+    showVoiceMessage("이 브라우저에서는 음성 인식을 지원하지 않습니다.", "error");
+    return;
+  }
+  if (isVoiceListening) {
+    speechRecognition.stop();
+    return;
+  }
+  if (mode !== "live") {
+    return;
+  }
+
+  try {
+    voiceResultHandled = false;
+    voiceErrorHandled = false;
+    speechRecognition.start();
+  } catch (error) {
+    showVoiceMessage("음성 인식을 시작하지 못했습니다.", "error");
+  }
+}
+
 function speechQueueForCard(card) {
   const queue = [];
   const intro = introTtsForCard(card);
@@ -1230,6 +1463,7 @@ async function handleShutter() {
 }
 
 function handleRetake() {
+  stopVoiceRecognition();
   stopAudioPlayback();
   activeAudioCardId = "";
   pendingAudioCard = null;
@@ -1245,6 +1479,8 @@ function handleRetake() {
 }
 
 async function startCamera() {
+  cameraReady = false;
+  updateVoiceButtonState();
   if (!window.isSecureContext) {
     throw new Error("HTTPS 환경이 필요합니다.");
   }
@@ -1266,6 +1502,7 @@ async function startCamera() {
   });
   elements.video.srcObject = stream;
   await elements.video.play();
+  cameraReady = true;
   setMode("live");
   setStatus("대기", "ready");
 }
@@ -1354,6 +1591,48 @@ function initShutterControls() {
   });
 }
 
+function initVoiceRecognition() {
+  if (!elements.voiceButton) {
+    return;
+  }
+  const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!Recognition) {
+    updateVoiceButtonState();
+    return;
+  }
+
+  speechRecognition = new Recognition();
+  speechRecognition.lang = VOICE_RECOGNITION_LANG;
+  speechRecognition.continuous = false;
+  speechRecognition.interimResults = false;
+  speechRecognition.maxAlternatives = 5;
+
+  speechRecognition.addEventListener("start", () => {
+    voiceResultHandled = false;
+    voiceErrorHandled = false;
+    setVoiceListening(true);
+    hideCandidateSuggestions();
+    stopAudioPlayback();
+    activeAudioCardId = "";
+    pendingAudioCard = null;
+    lastAudioMessage = "";
+    elements.matchName.textContent = "음성 인식";
+    elements.matchScore.textContent = "-";
+    elements.matchMeta.textContent = "듣는 중";
+    updateRecognitionRate(null);
+    setStatus("듣는 중", "ready");
+  });
+  speechRecognition.addEventListener("result", handleVoiceRecognitionResult);
+  speechRecognition.addEventListener("error", handleVoiceRecognitionError);
+  speechRecognition.addEventListener("end", handleVoiceRecognitionEnd);
+
+  elements.voiceButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    handleVoiceButton();
+  });
+  updateVoiceButtonState();
+}
+
 async function boot() {
   try {
     setMode("loading");
@@ -1361,9 +1640,20 @@ async function boot() {
     initCandidateSuggestions();
     initAbilityToggle();
     initShutterControls();
+    initVoiceRecognition();
     await loadData();
-    await initOcrWorker();
-    await startCamera();
+    try {
+      await initOcrWorker();
+      await startCamera();
+    } catch (cameraError) {
+      cameraReady = false;
+      setMode("live");
+      elements.matchName.textContent = "카메라";
+      elements.matchScore.textContent = "-";
+      elements.matchMeta.textContent = `${cameraError.message} / 음성 인식은 계속 사용할 수 있습니다.`;
+      updateRecognitionRate(null);
+      setStatus(speechRecognition ? "마이크 가능" : "화면 탭", speechRecognition ? "ready" : "error");
+    }
   } catch (error) {
     elements.matchName.textContent = "카메라";
     elements.matchScore.textContent = "-";
@@ -1376,6 +1666,7 @@ async function boot() {
 document.addEventListener("pointerdown", handleUserActivation, { passive: true });
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    stopVoiceRecognition();
     stopAudioPlayback();
   }
 });
