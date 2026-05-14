@@ -34,7 +34,6 @@
         "2장을",
         "뽑습니다",
         "했다면",
-        "당신의",
         "턴이",
         "끝날",
         "1장을"
@@ -71,7 +70,7 @@
         "1개를",
         "낳습니다",
         "당신은",
-        "낳을"
+        "낳아도"
       ]
     },
     {
@@ -107,7 +106,7 @@
         "1개를",
         "낳습니다",
         "당신은",
-        "낳을"
+        "낳아도"
       ]
     },
     {
@@ -193,7 +192,12 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r01_c07",
@@ -218,7 +222,12 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r01_c08",
@@ -243,7 +252,11 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r01_c09",
@@ -268,7 +281,11 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r01_c10",
@@ -293,7 +310,11 @@
         "pointValue": "0",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r02_c01",
@@ -318,7 +339,14 @@
         "pointValue": "9",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r02_c02",
@@ -343,7 +371,14 @@
         "pointValue": "6",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r02_c03",
@@ -368,7 +403,16 @@
         "pointValue": "4",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "사발형",
+        "둥지",
+        "1마리에",
+        "1개를",
+        "낳습니다",
+        "당신은",
+        "낳아도"
+      ]
     },
     {
       "id": "atlas01_r02_c04",
@@ -393,7 +437,16 @@
         "pointValue": "4",
         "wingspanCm": "99"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     {
       "id": "atlas01_r02_c05",
@@ -418,7 +471,16 @@
         "pointValue": "6",
         "wingspanCm": "91"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     {
       "id": "atlas01_r02_c06",
@@ -443,7 +505,16 @@
         "pointValue": "9",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     {
       "id": "atlas01_r02_c07",
@@ -468,7 +539,16 @@
         "pointValue": "4",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     {
       "id": "atlas01_r02_c08",
@@ -493,7 +573,16 @@
         "pointValue": "5",
         "wingspanCm": "135"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     {
       "id": "atlas01_r02_c09",
@@ -518,7 +607,13 @@
         "pointValue": "3",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r02_c10",
@@ -543,7 +638,13 @@
         "pointValue": "3",
         "wingspanCm": "41"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r03_c01",
@@ -568,7 +669,16 @@
         "pointValue": "5",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     {
       "id": "atlas01_r03_c02",
@@ -593,7 +703,16 @@
         "pointValue": "6",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     {
       "id": "atlas01_r03_c03",
@@ -618,7 +737,13 @@
         "pointValue": "0",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r03_c04",
@@ -643,7 +768,16 @@
         "pointValue": "6",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "씨앗",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     {
       "id": "atlas01_r03_c05",
@@ -668,7 +802,16 @@
         "pointValue": "4",
         "wingspanCm": "66"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "아무",
+        "먹이",
+        "1개를",
+        "공급처에",
+        "반납하고",
+        "공급처에서",
+        "다른",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas01_r03_c06",
@@ -693,7 +836,14 @@
         "pointValue": "5",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "다른",
+        "1마리의",
+        "갈색",
+        "능력을",
+        "반복합니다"
+      ]
     },
     {
       "id": "atlas01_r03_c07",
@@ -718,7 +868,14 @@
         "pointValue": "2",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "다른",
+        "1마리의",
+        "갈색",
+        "능력을",
+        "반복합니다"
+      ]
     },
     {
       "id": "atlas01_r03_c08",
@@ -743,7 +900,12 @@
         "pointValue": "5",
         "wingspanCm": "61"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "포식자",
+        "1개를",
+        "반복합니다"
+      ]
     },
     {
       "id": "atlas01_r03_c09",
@@ -768,7 +930,16 @@
         "pointValue": "4",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r03_c10",
@@ -793,7 +964,16 @@
         "pointValue": "5",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c01",
@@ -818,7 +998,16 @@
         "pointValue": "3",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c02",
@@ -843,7 +1032,16 @@
         "pointValue": "0",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c03",
@@ -868,7 +1066,16 @@
         "pointValue": "2",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c04",
@@ -893,7 +1100,16 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c05",
@@ -918,7 +1134,16 @@
         "pointValue": "4",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c06",
@@ -943,7 +1168,16 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     {
       "id": "atlas01_r04_c07",
@@ -968,7 +1202,16 @@
         "pointValue": "7",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "50센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r04_c08",
@@ -993,7 +1236,16 @@
         "pointValue": "5",
         "wingspanCm": "124"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r04_c09",
@@ -1020,7 +1272,16 @@
         "pointValue": "3",
         "wingspanCm": "109"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r04_c10",
@@ -1045,7 +1306,16 @@
         "pointValue": "3",
         "wingspanCm": "79"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c01",
@@ -1070,7 +1340,16 @@
         "pointValue": "3",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c02",
@@ -1095,7 +1374,16 @@
         "pointValue": "3",
         "wingspanCm": "107"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c03",
@@ -1120,7 +1408,16 @@
         "pointValue": "5",
         "wingspanCm": "130"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c04",
@@ -1145,7 +1442,16 @@
         "pointValue": "5",
         "wingspanCm": "104"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c05",
@@ -1170,7 +1476,16 @@
         "pointValue": "8",
         "wingspanCm": "201"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c06",
@@ -1195,7 +1510,16 @@
         "pointValue": "8",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     {
       "id": "atlas01_r05_c07",
@@ -1220,7 +1544,16 @@
         "pointValue": "5",
         "wingspanCm": "86"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r05_c08",
@@ -1245,7 +1578,16 @@
         "pointValue": "4",
         "wingspanCm": "66"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r05_c09",
@@ -1270,7 +1612,16 @@
         "pointValue": "6",
         "wingspanCm": "114"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r05_c10",
@@ -1295,7 +1646,16 @@
         "pointValue": "4",
         "wingspanCm": "104"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c01",
@@ -1320,7 +1680,16 @@
         "pointValue": "8",
         "wingspanCm": "91"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c02",
@@ -1345,7 +1714,16 @@
         "pointValue": "6",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c03",
@@ -1370,7 +1748,16 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c04",
@@ -1395,7 +1782,16 @@
         "pointValue": "4",
         "wingspanCm": "79"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c05",
@@ -1420,7 +1816,16 @@
         "pointValue": "6",
         "wingspanCm": "142"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c06",
@@ -1445,7 +1850,16 @@
         "pointValue": "5",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c07",
@@ -1472,7 +1886,16 @@
         "pointValue": "5",
         "wingspanCm": "107"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c08",
@@ -1497,7 +1920,16 @@
         "pointValue": "5",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas01_r06_c09",
@@ -1522,7 +1954,16 @@
         "pointValue": "5",
         "wingspanCm": "196"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     {
       "id": "atlas01_r06_c10",
@@ -1547,7 +1988,16 @@
         "pointValue": "3",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c01",
@@ -1572,7 +2022,16 @@
         "pointValue": "2",
         "wingspanCm": "76"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c02",
@@ -1597,7 +2056,16 @@
         "pointValue": "3",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "물고기",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c03",
@@ -1622,7 +2090,16 @@
         "pointValue": "5",
         "wingspanCm": "274"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "물고기",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c04",
@@ -1647,7 +2124,15 @@
         "pointValue": "2",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c05",
@@ -1672,7 +2157,15 @@
         "pointValue": "3",
         "wingspanCm": "43"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c06",
@@ -1697,7 +2190,15 @@
         "pointValue": "3",
         "wingspanCm": "41"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c07",
@@ -1722,7 +2223,15 @@
         "pointValue": "4",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c08",
@@ -1747,7 +2256,15 @@
         "pointValue": "2",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c09",
@@ -1772,7 +2289,15 @@
         "pointValue": "4",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas01_r07_c10",
@@ -1797,7 +2322,13 @@
         "pointValue": "4",
         "wingspanCm": "122"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c01",
@@ -1822,7 +2353,13 @@
         "pointValue": "3",
         "wingspanCm": "61"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c02",
@@ -1847,7 +2384,13 @@
         "pointValue": "1",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c03",
@@ -1872,7 +2415,13 @@
         "pointValue": "1",
         "wingspanCm": "43"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c04",
@@ -1897,7 +2446,13 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c05",
@@ -1922,7 +2477,13 @@
         "pointValue": "1",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c06",
@@ -1947,7 +2508,13 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c07",
@@ -1972,7 +2539,13 @@
         "pointValue": "2",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c08",
@@ -1997,7 +2570,13 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r01_c09",
@@ -2022,7 +2601,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를"
+      ]
     },
     {
       "id": "atlas02_r01_c10",
@@ -2047,7 +2635,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개나"
+      ]
     },
     {
       "id": "atlas02_r02_c01",
@@ -2072,7 +2669,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를"
+      ]
     },
     {
       "id": "atlas02_r02_c02",
@@ -2097,7 +2703,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를"
+      ]
     },
     {
       "id": "atlas02_r02_c03",
@@ -2122,7 +2737,16 @@
         "pointValue": "5",
         "wingspanCm": "81"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어",
+        "수보다",
+        "1장",
+        "많은",
+        "카드를",
+        "뽑습니다",
+        "당신부터",
+        "시계"
+      ]
     },
     {
       "id": "atlas02_r02_c04",
@@ -2147,7 +2771,10 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c05",
@@ -2172,7 +2799,10 @@
         "pointValue": "4",
         "wingspanCm": "74"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c06",
@@ -2197,7 +2827,14 @@
         "pointValue": "2",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "접시형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c07",
@@ -2222,7 +2859,14 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "사발형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c08",
@@ -2247,7 +2891,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "구멍형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c09",
@@ -2272,7 +2923,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "바닥형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r02_c10",
@@ -2297,7 +2955,13 @@
         "pointValue": "4",
         "wingspanCm": "201"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "물고기",
+        "먹이",
+        "3개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r03_c01",
@@ -2322,7 +2986,13 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "3개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r03_c02",
@@ -2347,7 +3017,13 @@
         "pointValue": "2",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r03_c03",
@@ -2372,7 +3048,13 @@
         "pointValue": "9",
         "wingspanCm": "203"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "물고기",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r03_c04",
@@ -2397,7 +3079,14 @@
         "pointValue": "6",
         "wingspanCm": "155"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c05",
@@ -2422,7 +3111,14 @@
         "pointValue": "6",
         "wingspanCm": "127"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c06",
@@ -2447,7 +3143,14 @@
         "pointValue": "4",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c07",
@@ -2472,7 +3175,14 @@
         "pointValue": "5",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c08",
@@ -2497,7 +3207,14 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c09",
@@ -2522,7 +3239,14 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r03_c10",
@@ -2547,7 +3271,14 @@
         "pointValue": "6",
         "wingspanCm": "221"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c01",
@@ -2572,7 +3303,14 @@
         "pointValue": "5",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c02",
@@ -2597,7 +3335,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c03",
@@ -2622,7 +3367,14 @@
         "pointValue": "4",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c04",
@@ -2647,7 +3399,14 @@
         "pointValue": "5",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c05",
@@ -2672,7 +3431,14 @@
         "pointValue": "5",
         "wingspanCm": "71"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c06",
@@ -2697,7 +3463,14 @@
         "pointValue": "8",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c07",
@@ -2722,7 +3495,14 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c08",
@@ -2747,7 +3527,14 @@
         "pointValue": "1",
         "wingspanCm": "277"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas02_r04_c09",
@@ -2772,7 +3559,16 @@
         "pointValue": "3",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     {
       "id": "atlas02_r04_c10",
@@ -2797,7 +3593,16 @@
         "pointValue": "2",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     {
       "id": "atlas02_r05_c01",
@@ -2822,7 +3627,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     {
       "id": "atlas02_r05_c02",
@@ -2847,7 +3661,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     {
       "id": "atlas02_r05_c03",
@@ -2874,7 +3697,16 @@
         "pointValue": "1",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원이나",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c04",
@@ -2899,7 +3731,16 @@
         "pointValue": "2",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c05",
@@ -2924,7 +3765,16 @@
         "pointValue": "4",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c06",
@@ -2949,7 +3799,16 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c07",
@@ -2974,7 +3833,16 @@
         "pointValue": "5",
         "wingspanCm": "183"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c08",
@@ -2999,7 +3867,16 @@
         "pointValue": "7",
         "wingspanCm": "130"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     {
       "id": "atlas02_r05_c09",
@@ -3024,7 +3901,16 @@
         "pointValue": "4",
         "wingspanCm": "85"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas02_r05_c10",
@@ -3049,7 +3935,13 @@
         "pointValue": "4",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r06_c01",
@@ -3074,7 +3966,12 @@
         "pointValue": "4",
         "wingspanCm": "82"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "덱에서",
+        "1장을",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r06_c02",
@@ -3099,7 +3996,16 @@
         "pointValue": "2",
         "wingspanCm": "31"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를"
+      ]
     },
     {
       "id": "atlas02_r06_c03",
@@ -3124,7 +4030,13 @@
         "pointValue": "3",
         "wingspanCm": "114"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "트레이에",
+        "공개된",
+        "3장을",
+        "모두",
+        "뽑습니다"
+      ]
     },
     {
       "id": "atlas02_r06_c04",
@@ -3149,7 +4061,16 @@
         "pointValue": "2",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r06_c05",
@@ -3174,7 +4095,11 @@
         "pointValue": "0",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas02_r06_c06",
@@ -3199,7 +4124,14 @@
         "pointValue": "4",
         "wingspanCm": "8"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r06_c07",
@@ -3224,7 +4156,14 @@
         "pointValue": "3",
         "wingspanCm": "78"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다",
+        "했다면",
+        "턴이",
+        "끝날",
+        "1장을"
+      ]
     },
     {
       "id": "atlas02_r06_c08",
@@ -3251,7 +4190,13 @@
         "pointValue": "1",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas02_r06_c09",
@@ -3276,7 +4221,16 @@
         "pointValue": "1",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     {
       "id": "atlas02_r06_c10",
@@ -3301,7 +4255,16 @@
         "pointValue": "3",
         "wingspanCm": "92"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신을",
+        "포함해",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어가",
+        "가진",
+        "포식자"
+      ]
     },
     {
       "id": "atlas02_r07_c01",
@@ -3328,7 +4291,16 @@
         "pointValue": "1",
         "wingspanCm": "252"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신을",
+        "포함해",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어가",
+        "가진",
+        "포식자"
+      ]
     },
     {
       "id": "atlas02_r07_c02",
@@ -3353,7 +4325,16 @@
         "pointValue": "2",
         "wingspanCm": "16"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에",
+        "저장합니다",
+        "언제든지"
+      ]
     },
     {
       "id": "atlas02_r07_c03",
@@ -3378,7 +4359,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에",
+        "저장합니다",
+        "언제든지"
+      ]
     },
     {
       "id": "atlas02_r07_c04",
@@ -3405,7 +4395,16 @@
         "pointValue": "5",
         "wingspanCm": "55"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "공급처에서"
+      ]
     },
     {
       "id": "atlas02_r07_c05",
@@ -3430,7 +4429,16 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     {
       "id": "atlas02_r07_c06",
@@ -3455,7 +4463,16 @@
         "pointValue": "4",
         "wingspanCm": "26"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "물고기",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     {
       "id": "atlas02_r07_c07",
@@ -3480,7 +4497,16 @@
         "pointValue": "4",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "설치류",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     {
       "id": "atlas02_r07_c08",
@@ -3505,7 +4531,16 @@
         "pointValue": "4",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     {
       "id": "atlas02_r07_c09",
@@ -3530,7 +4565,16 @@
         "pointValue": "8",
         "wingspanCm": "160"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     {
       "id": "atlas02_r07_c10",
@@ -3555,7 +4599,16 @@
         "pointValue": "3",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     {
       "id": "atlas03_r01_c01",
@@ -3582,7 +4635,16 @@
         "pointValue": "5",
         "wingspanCm": "120"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     {
       "id": "atlas03_r01_c02",
@@ -3607,7 +4669,16 @@
         "pointValue": "6",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지의",
+        "1칸마다",
+        "1장을",
+        "뽑습니다",
+        "턴이",
+        "끝날",
+        "그중",
+        "가지고"
+      ]
     },
     {
       "id": "atlas03_r01_c03",
@@ -3632,7 +4703,16 @@
         "pointValue": "3",
         "wingspanCm": "65"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지의",
+        "1칸마다",
+        "1장을",
+        "뽑습니다",
+        "턴이",
+        "끝날",
+        "그중",
+        "가지고"
+      ]
     },
     {
       "id": "atlas03_r01_c04",
@@ -3661,7 +4741,13 @@
         "pointValue": "2",
         "wingspanCm": "49"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "초원",
+        "서식지에",
+        "공개",
+        "1장을",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r01_c05",
@@ -3686,7 +4772,13 @@
         "pointValue": "3",
         "wingspanCm": "86"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "습지",
+        "서식지에",
+        "공개",
+        "1장을",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r01_c06",
@@ -3711,7 +4803,14 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다",
+        "다른",
+        "플레이어는",
+        "덱에서",
+        "1장을"
+      ]
     },
     {
       "id": "atlas03_r01_c07",
@@ -3736,7 +4835,16 @@
         "pointValue": "4",
         "wingspanCm": "220"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "1마리에서",
+        "3마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다"
+      ]
     },
     {
       "id": "atlas03_r01_c08",
@@ -3763,7 +4871,16 @@
         "pointValue": "3",
         "wingspanCm": "185"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "습지",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은"
+      ]
     },
     {
       "id": "atlas03_r01_c09",
@@ -3790,7 +4907,16 @@
         "pointValue": "4",
         "wingspanCm": "57"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "낳기",
+        "행동을",
+        "새는",
+        "사발형",
+        "또는",
+        "바닥형"
+      ]
     },
     {
       "id": "atlas03_r01_c10",
@@ -3815,7 +4941,16 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     {
       "id": "atlas03_r02_c01",
@@ -3840,7 +4975,16 @@
         "pointValue": "0",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "알이",
+        "없는",
+        "서식지",
+        "1곳을",
+        "선택합니다",
+        "서식지의",
+        "새마다",
+        "1개씩"
+      ]
     },
     {
       "id": "atlas03_r02_c02",
@@ -3865,7 +5009,16 @@
         "pointValue": "0",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "알이",
+        "없는",
+        "서식지",
+        "1곳을",
+        "선택합니다",
+        "서식지의",
+        "새마다",
+        "1개씩"
+      ]
     },
     {
       "id": "atlas03_r02_c03",
@@ -3890,7 +5043,16 @@
         "pointValue": "2",
         "wingspanCm": "73"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신이",
+        "가진",
+        "다른",
+        "구멍형",
+        "둥지",
+        "1마리마다",
+        "새에",
+        "1개씩"
+      ]
     },
     {
       "id": "atlas03_r02_c04",
@@ -3915,7 +5077,14 @@
         "pointValue": "1",
         "wingspanCm": "48"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "포함해",
+        "열에",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     {
       "id": "atlas03_r02_c05",
@@ -3940,7 +5109,16 @@
         "pointValue": "4",
         "wingspanCm": "34"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "했다면",
+        "새에",
+        "2개를"
+      ]
     },
     {
       "id": "atlas03_r02_c06",
@@ -3965,7 +5143,16 @@
         "pointValue": "3",
         "wingspanCm": "70"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "초원",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은"
+      ]
     },
     {
       "id": "atlas03_r02_c07",
@@ -3990,7 +5177,16 @@
         "pointValue": "4",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "먹이",
+        "얻기",
+        "행동을",
+        "플레이어의",
+        "턴이",
+        "끝날"
+      ]
     },
     {
       "id": "atlas03_r02_c08",
@@ -4015,7 +5211,16 @@
         "pointValue": "3",
         "wingspanCm": "21"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "먹이",
+        "얻기",
+        "행동을",
+        "플레이어의",
+        "턴이",
+        "끝날"
+      ]
     },
     {
       "id": "atlas03_r02_c09",
@@ -4040,7 +5245,16 @@
         "pointValue": "4",
         "wingspanCm": "134"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에",
+        "무척추동물",
+        "먹이를"
+      ]
     },
     {
       "id": "atlas03_r02_c10",
@@ -4065,7 +5279,16 @@
         "pointValue": "4",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "먹이",
+        "주사위"
+      ]
     },
     {
       "id": "atlas03_r03_c01",
@@ -4090,7 +5313,16 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "씨앗",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r03_c02",
@@ -4117,7 +5349,16 @@
         "pointValue": "3",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "씨앗",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r03_c03",
@@ -4142,7 +5383,16 @@
         "pointValue": "7",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "먹이",
+        "종류",
+        "1가지를",
+        "선택합니다",
+        "플레이어는",
+        "공급처에서",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r03_c04",
@@ -4167,7 +5417,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "먹이",
+        "종류",
+        "1가지를",
+        "선택합니다",
+        "플레이어는",
+        "공급처에서",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r03_c05",
@@ -4192,7 +5451,16 @@
         "pointValue": "4",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "턴에",
+        "이미",
+        "얻은",
+        "먹이",
+        "종류",
+        "1개를",
+        "공급처에서"
+      ]
     },
     {
       "id": "atlas03_r03_c06",
@@ -4217,7 +5485,13 @@
         "pointValue": "2",
         "wingspanCm": "39"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r03_c07",
@@ -4244,7 +5518,13 @@
         "pointValue": "4",
         "wingspanCm": "70"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r03_c08",
@@ -4269,7 +5549,16 @@
         "pointValue": "6",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "원하는",
+        "먹이",
+        "주사위",
+        "1개를",
+        "제거한",
+        "씨앗",
+        "가져옵니다"
+      ]
     },
     {
       "id": "atlas03_r03_c09",
@@ -4294,7 +5583,16 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "무척추동물",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r03_c10",
@@ -4319,7 +5617,16 @@
         "pointValue": "3",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "가져와",
+        "당신의"
+      ]
     },
     {
       "id": "atlas03_r04_c01",
@@ -4344,7 +5651,16 @@
         "pointValue": "0",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은",
+        "비용을"
+      ]
     },
     {
       "id": "atlas03_r04_c02",
@@ -4371,7 +5687,16 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은",
+        "비용을"
+      ]
     },
     {
       "id": "atlas03_r04_c03",
@@ -4396,7 +5721,16 @@
         "pointValue": "4",
         "wingspanCm": "138"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "가져오거나",
+        "원하는",
+        "1마리에",
+        "1개를"
+      ]
     },
     {
       "id": "atlas03_r04_c04",
@@ -4421,7 +5755,16 @@
         "pointValue": "7",
         "wingspanCm": "50"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "3장을",
+        "뽑고",
+        "그중",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas03_r04_c05",
@@ -4446,7 +5789,16 @@
         "pointValue": "6",
         "wingspanCm": "76"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "3장을",
+        "뽑고",
+        "그중",
+        "가집니다"
+      ]
     },
     {
       "id": "atlas03_r04_c06",
@@ -4473,7 +5825,16 @@
         "pointValue": "4",
         "wingspanCm": "21"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를"
+      ]
     },
     {
       "id": "atlas03_r04_c07",
@@ -4498,7 +5859,16 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를"
+      ]
     },
     {
       "id": "atlas03_r04_c08",
@@ -4523,7 +5893,16 @@
         "pointValue": "4",
         "wingspanCm": "110"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "가져오거나",
+        "원하는",
+        "1마리에",
+        "1개를"
+      ]
     },
     {
       "id": "atlas03_r04_c09",
@@ -4548,7 +5927,16 @@
         "pointValue": "2",
         "wingspanCm": "26"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     {
       "id": "atlas03_r04_c10",
@@ -4573,7 +5961,16 @@
         "pointValue": "2",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     {
       "id": "atlas03_r05_c01",
@@ -4598,7 +5995,16 @@
         "pointValue": "3",
         "wingspanCm": "17"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     {
       "id": "atlas03_r05_c02",
@@ -4623,7 +6029,16 @@
         "pointValue": "1",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "했다면",
+        "당신의",
+        "서식지에",
+        "1마리를",
+        "냅니다",
+        "원래",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r05_c03",
@@ -4652,7 +6067,16 @@
         "pointValue": "3",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "했다면",
+        "습지",
+        "서식지에"
+      ]
     },
     {
       "id": "atlas03_r05_c04",
@@ -4677,7 +6101,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "새에서",
+        "1개를",
+        "했다면",
+        "당신의",
+        "서식지에",
+        "1마리를",
+        "냅니다"
+      ]
     },
     {
       "id": "atlas03_r05_c05",
@@ -4702,7 +6135,16 @@
         "pointValue": "6",
         "wingspanCm": "95"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas03_r05_c06",
@@ -4727,7 +6169,16 @@
         "pointValue": "5",
         "wingspanCm": "173"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     {
       "id": "atlas03_r05_c07",
@@ -4752,7 +6203,16 @@
         "pointValue": "4",
         "wingspanCm": "65"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     {
       "id": "atlas03_r05_c08",
@@ -4781,7 +6241,16 @@
         "pointValue": "5",
         "wingspanCm": "106"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     {
       "id": "atlas03_r05_c09",
@@ -4808,7 +6277,16 @@
         "pointValue": "7",
         "wingspanCm": "200"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     {
       "id": "atlas03_r05_c10",
@@ -4833,7 +6311,16 @@
         "pointValue": "8",
         "wingspanCm": "160"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     {
       "id": "atlas03_r06_c01",
@@ -4858,7 +6345,16 @@
         "pointValue": "4",
         "wingspanCm": "113"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     {
       "id": "atlas03_r06_c02",
@@ -4885,7 +6381,16 @@
         "pointValue": "4",
         "wingspanCm": "123"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     {
       "id": "atlas03_r06_c03",
@@ -4910,7 +6415,16 @@
         "pointValue": "4",
         "wingspanCm": "157"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     {
       "id": "atlas03_r06_c04",
@@ -4935,7 +6449,16 @@
         "pointValue": "4",
         "wingspanCm": "75"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     {
       "id": "atlas03_r06_c05",
@@ -4960,7 +6483,16 @@
         "pointValue": "6",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "어떤",
+        "이유로든",
+        "카드를",
+        "끼워넣을",
+        "덱에서",
+        "1장을"
+      ]
     },
     {
       "id": "atlas03_r06_c06",
@@ -4985,7 +6517,16 @@
         "pointValue": "5",
         "wingspanCm": "35"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "어떤",
+        "이유로든",
+        "카드를",
+        "끼워넣을",
+        "1장을",
+        "아래에"
+      ]
     },
     {
       "id": "atlas03_r06_c07",
@@ -5010,7 +6551,16 @@
         "pointValue": "3",
         "wingspanCm": "99"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     {
       "id": "atlas03_r06_c08",
@@ -5035,7 +6585,16 @@
         "pointValue": "5",
         "wingspanCm": "52"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r06_c09",
@@ -5062,7 +6621,16 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r06_c10",
@@ -5089,7 +6657,16 @@
         "pointValue": "5",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "무척추동물",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r07_c01",
@@ -5114,7 +6691,16 @@
         "pointValue": "6",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "씨앗",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     {
       "id": "atlas03_r07_c02",
@@ -5139,7 +6725,16 @@
         "pointValue": "2",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "카드를",
+        "최대",
+        "3장까지",
+        "아래에",
+        "끼워넣습니다",
+        "끼워넣은",
+        "1장마다",
+        "1장을"
+      ]
     },
     {
       "id": "atlas03_r07_c03",
@@ -5164,7 +6759,16 @@
         "pointValue": "3",
         "wingspanCm": "152"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "습지",
+        "서식지에",
+        "행동"
+      ]
     },
     {
       "id": "atlas03_r07_c04",
@@ -5189,7 +6793,16 @@
         "pointValue": "1",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "2장을",
+        "뽑습니다",
+        "그중",
+        "1장은",
+        "아래에",
+        "끼워넣고",
+        "다른"
+      ]
     },
     {
       "id": "atlas03_r07_c05",
@@ -5214,7 +6827,16 @@
         "pointValue": "4",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "1장을",
+        "아래에"
+      ]
     },
     {
       "id": "atlas03_r07_c06",
@@ -5239,7 +6861,16 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "1장을",
+        "아래에"
+      ]
     },
     {
       "id": "atlas03_r07_c07",
@@ -5266,7 +6897,16 @@
         "pointValue": "7",
         "wingspanCm": "164"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     {
       "id": "atlas03_r07_c08",
@@ -5291,7 +6931,16 @@
         "pointValue": "4",
         "wingspanCm": "17"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     {
       "id": "atlas03_r07_c09",
@@ -5316,7 +6965,16 @@
         "pointValue": "4",
         "wingspanCm": "48"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     {
       "id": "atlas03_r07_c10",
@@ -5341,7 +6999,16 @@
         "pointValue": "5",
         "wingspanCm": "190"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "3장을",
+        "뽑은",
+        "2장을",
+        "이번",
+        "턴에",
+        "뽑지",
+        "않은"
+      ]
     }
   ],
   "byCardId": {
@@ -5372,7 +7039,6 @@
         "2장을",
         "뽑습니다",
         "했다면",
-        "당신의",
         "턴이",
         "끝날",
         "1장을"
@@ -5409,7 +7075,7 @@
         "1개를",
         "낳습니다",
         "당신은",
-        "낳을"
+        "낳아도"
       ]
     },
     "atlas01_r01_c03": {
@@ -5445,7 +7111,7 @@
         "1개를",
         "낳습니다",
         "당신은",
-        "낳을"
+        "낳아도"
       ]
     },
     "atlas01_r01_c04": {
@@ -5531,7 +7197,12 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas01_r01_c07": {
       "id": "atlas01_r01_c07",
@@ -5556,7 +7227,12 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas01_r01_c08": {
       "id": "atlas01_r01_c08",
@@ -5581,7 +7257,11 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas01_r01_c09": {
       "id": "atlas01_r01_c09",
@@ -5606,7 +7286,11 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas01_r01_c10": {
       "id": "atlas01_r01_c10",
@@ -5631,7 +7315,11 @@
         "pointValue": "0",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas01_r02_c01": {
       "id": "atlas01_r02_c01",
@@ -5656,7 +7344,14 @@
         "pointValue": "9",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas01_r02_c02": {
       "id": "atlas01_r02_c02",
@@ -5681,7 +7376,14 @@
         "pointValue": "6",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas01_r02_c03": {
       "id": "atlas01_r02_c03",
@@ -5706,7 +7408,16 @@
         "pointValue": "4",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "사발형",
+        "둥지",
+        "1마리에",
+        "1개를",
+        "낳습니다",
+        "당신은",
+        "낳아도"
+      ]
     },
     "atlas01_r02_c04": {
       "id": "atlas01_r02_c04",
@@ -5731,7 +7442,16 @@
         "pointValue": "4",
         "wingspanCm": "99"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     "atlas01_r02_c05": {
       "id": "atlas01_r02_c05",
@@ -5756,7 +7476,16 @@
         "pointValue": "6",
         "wingspanCm": "91"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     "atlas01_r02_c06": {
       "id": "atlas01_r02_c06",
@@ -5781,7 +7510,16 @@
         "pointValue": "9",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     "atlas01_r02_c07": {
       "id": "atlas01_r02_c07",
@@ -5806,7 +7544,16 @@
         "pointValue": "4",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     "atlas01_r02_c08": {
       "id": "atlas01_r02_c08",
@@ -5831,7 +7578,16 @@
         "pointValue": "5",
         "wingspanCm": "135"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "다른",
+        "원하는",
+        "새에서",
+        "1개를",
+        "버리고",
+        "공급처에서",
+        "아무"
+      ]
     },
     "atlas01_r02_c09": {
       "id": "atlas01_r02_c09",
@@ -5856,7 +7612,13 @@
         "pointValue": "3",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas01_r02_c10": {
       "id": "atlas01_r02_c10",
@@ -5881,7 +7643,13 @@
         "pointValue": "3",
         "wingspanCm": "41"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas01_r03_c01": {
       "id": "atlas01_r03_c01",
@@ -5906,7 +7674,16 @@
         "pointValue": "5",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     "atlas01_r03_c02": {
       "id": "atlas01_r03_c02",
@@ -5931,7 +7708,16 @@
         "pointValue": "6",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     "atlas01_r03_c03": {
       "id": "atlas01_r03_c03",
@@ -5956,7 +7742,13 @@
         "pointValue": "0",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas01_r03_c04": {
       "id": "atlas01_r03_c04",
@@ -5981,7 +7773,16 @@
         "pointValue": "6",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "씨앗",
+        "먹이나",
+        "과일",
+        "먹이가",
+        "있다면",
+        "그중",
+        "1개를"
+      ]
     },
     "atlas01_r03_c05": {
       "id": "atlas01_r03_c05",
@@ -6006,7 +7807,16 @@
         "pointValue": "4",
         "wingspanCm": "66"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "아무",
+        "먹이",
+        "1개를",
+        "공급처에",
+        "반납하고",
+        "공급처에서",
+        "다른",
+        "가져옵니다"
+      ]
     },
     "atlas01_r03_c06": {
       "id": "atlas01_r03_c06",
@@ -6031,7 +7841,14 @@
         "pointValue": "5",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "다른",
+        "1마리의",
+        "갈색",
+        "능력을",
+        "반복합니다"
+      ]
     },
     "atlas01_r03_c07": {
       "id": "atlas01_r03_c07",
@@ -6056,7 +7873,14 @@
         "pointValue": "2",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "다른",
+        "1마리의",
+        "갈색",
+        "능력을",
+        "반복합니다"
+      ]
     },
     "atlas01_r03_c08": {
       "id": "atlas01_r03_c08",
@@ -6081,7 +7905,12 @@
         "pointValue": "5",
         "wingspanCm": "61"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "포식자",
+        "1개를",
+        "반복합니다"
+      ]
     },
     "atlas01_r03_c09": {
       "id": "atlas01_r03_c09",
@@ -6106,7 +7935,16 @@
         "pointValue": "4",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r03_c10": {
       "id": "atlas01_r03_c10",
@@ -6131,7 +7969,16 @@
         "pointValue": "5",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c01": {
       "id": "atlas01_r04_c01",
@@ -6156,7 +8003,16 @@
         "pointValue": "3",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c02": {
       "id": "atlas01_r04_c02",
@@ -6181,7 +8037,16 @@
         "pointValue": "0",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c03": {
       "id": "atlas01_r04_c03",
@@ -6206,7 +8071,16 @@
         "pointValue": "2",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c04": {
       "id": "atlas01_r04_c04",
@@ -6231,7 +8105,16 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c05": {
       "id": "atlas01_r04_c05",
@@ -6256,7 +8139,16 @@
         "pointValue": "4",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c06": {
       "id": "atlas01_r04_c06",
@@ -6281,7 +8173,16 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "자기",
+        "서식지의",
+        "다른",
+        "새보다",
+        "오른쪽에",
+        "있다면",
+        "새를"
+      ]
     },
     "atlas01_r04_c07": {
       "id": "atlas01_r04_c07",
@@ -6306,7 +8207,16 @@
         "pointValue": "7",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "50센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r04_c08": {
       "id": "atlas01_r04_c08",
@@ -6331,7 +8241,16 @@
         "pointValue": "5",
         "wingspanCm": "124"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r04_c09": {
       "id": "atlas01_r04_c09",
@@ -6358,7 +8277,16 @@
         "pointValue": "3",
         "wingspanCm": "109"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r04_c10": {
       "id": "atlas01_r04_c10",
@@ -6383,7 +8311,16 @@
         "pointValue": "3",
         "wingspanCm": "79"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c01": {
       "id": "atlas01_r05_c01",
@@ -6408,7 +8345,16 @@
         "pointValue": "3",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c02": {
       "id": "atlas01_r05_c02",
@@ -6433,7 +8379,16 @@
         "pointValue": "3",
         "wingspanCm": "107"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c03": {
       "id": "atlas01_r05_c03",
@@ -6458,7 +8413,16 @@
         "pointValue": "5",
         "wingspanCm": "130"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "75센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c04": {
       "id": "atlas01_r05_c04",
@@ -6483,7 +8447,16 @@
         "pointValue": "5",
         "wingspanCm": "104"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c05": {
       "id": "atlas01_r05_c05",
@@ -6508,7 +8481,16 @@
         "pointValue": "8",
         "wingspanCm": "201"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c06": {
       "id": "atlas01_r05_c06",
@@ -6533,7 +8515,16 @@
         "pointValue": "8",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "1장을",
+        "확인합니다",
+        "날개",
+        "길이가",
+        "100센티미터",
+        "미만이면",
+        "아래에"
+      ]
     },
     "atlas01_r05_c07": {
       "id": "atlas01_r05_c07",
@@ -6558,7 +8549,16 @@
         "pointValue": "5",
         "wingspanCm": "86"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r05_c08": {
       "id": "atlas01_r05_c08",
@@ -6583,7 +8583,16 @@
         "pointValue": "4",
         "wingspanCm": "66"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r05_c09": {
       "id": "atlas01_r05_c09",
@@ -6608,7 +8617,16 @@
         "pointValue": "6",
         "wingspanCm": "114"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r05_c10": {
       "id": "atlas01_r05_c10",
@@ -6633,7 +8651,16 @@
         "pointValue": "4",
         "wingspanCm": "104"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c01": {
       "id": "atlas01_r06_c01",
@@ -6658,7 +8685,16 @@
         "pointValue": "8",
         "wingspanCm": "91"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c02": {
       "id": "atlas01_r06_c02",
@@ -6683,7 +8719,16 @@
         "pointValue": "6",
         "wingspanCm": "112"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c03": {
       "id": "atlas01_r06_c03",
@@ -6708,7 +8753,16 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c04": {
       "id": "atlas01_r06_c04",
@@ -6733,7 +8787,16 @@
         "pointValue": "4",
         "wingspanCm": "79"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c05": {
       "id": "atlas01_r06_c05",
@@ -6758,7 +8821,16 @@
         "pointValue": "6",
         "wingspanCm": "142"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c06": {
       "id": "atlas01_r06_c06",
@@ -6783,7 +8855,16 @@
         "pointValue": "5",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c07": {
       "id": "atlas01_r06_c07",
@@ -6810,7 +8891,16 @@
         "pointValue": "5",
         "wingspanCm": "107"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c08": {
       "id": "atlas01_r06_c08",
@@ -6835,7 +8925,16 @@
         "pointValue": "5",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas01_r06_c09": {
       "id": "atlas01_r06_c09",
@@ -6860,7 +8959,16 @@
         "pointValue": "5",
         "wingspanCm": "196"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     "atlas01_r06_c10": {
       "id": "atlas01_r06_c10",
@@ -6885,7 +8993,16 @@
         "pointValue": "3",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     "atlas01_r07_c01": {
       "id": "atlas01_r07_c01",
@@ -6910,7 +9027,16 @@
         "pointValue": "2",
         "wingspanCm": "76"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "씨앗",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     "atlas01_r07_c02": {
       "id": "atlas01_r07_c02",
@@ -6935,7 +9061,16 @@
         "pointValue": "3",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "물고기",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     "atlas01_r07_c03": {
       "id": "atlas01_r07_c03",
@@ -6960,7 +9095,16 @@
         "pointValue": "5",
         "wingspanCm": "274"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "물고기",
+        "먹이",
+        "1개를",
+        "버리고",
+        "덱에서",
+        "2장을",
+        "아래에",
+        "끼워넣습니다"
+      ]
     },
     "atlas01_r07_c04": {
       "id": "atlas01_r07_c04",
@@ -6985,7 +9129,15 @@
         "pointValue": "2",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c05": {
       "id": "atlas01_r07_c05",
@@ -7010,7 +9162,15 @@
         "pointValue": "3",
         "wingspanCm": "43"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c06": {
       "id": "atlas01_r07_c06",
@@ -7035,7 +9195,15 @@
         "pointValue": "3",
         "wingspanCm": "41"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c07": {
       "id": "atlas01_r07_c07",
@@ -7060,7 +9228,15 @@
         "pointValue": "4",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c08": {
       "id": "atlas01_r07_c08",
@@ -7085,7 +9261,15 @@
         "pointValue": "2",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c09": {
       "id": "atlas01_r07_c09",
@@ -7110,7 +9294,15 @@
         "pointValue": "4",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "새에",
+        "1개도",
+        "낳습니다"
+      ]
     },
     "atlas01_r07_c10": {
       "id": "atlas01_r07_c10",
@@ -7135,7 +9327,13 @@
         "pointValue": "4",
         "wingspanCm": "122"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c01": {
       "id": "atlas02_r01_c01",
@@ -7160,7 +9358,13 @@
         "pointValue": "3",
         "wingspanCm": "61"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c02": {
       "id": "atlas02_r01_c02",
@@ -7185,7 +9389,13 @@
         "pointValue": "1",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c03": {
       "id": "atlas02_r01_c03",
@@ -7210,7 +9420,13 @@
         "pointValue": "1",
         "wingspanCm": "43"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c04": {
       "id": "atlas02_r01_c04",
@@ -7235,7 +9451,13 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c05": {
       "id": "atlas02_r01_c05",
@@ -7260,7 +9482,13 @@
         "pointValue": "1",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c06": {
       "id": "atlas02_r01_c06",
@@ -7285,7 +9513,13 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c07": {
       "id": "atlas02_r01_c07",
@@ -7310,7 +9544,13 @@
         "pointValue": "2",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c08": {
       "id": "atlas02_r01_c08",
@@ -7335,7 +9575,13 @@
         "pointValue": "3",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "뽑습니다"
+      ]
     },
     "atlas02_r01_c09": {
       "id": "atlas02_r01_c09",
@@ -7360,7 +9606,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를"
+      ]
     },
     "atlas02_r01_c10": {
       "id": "atlas02_r01_c10",
@@ -7385,7 +9640,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개나"
+      ]
     },
     "atlas02_r02_c01": {
       "id": "atlas02_r02_c01",
@@ -7410,7 +9674,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를"
+      ]
     },
     "atlas02_r02_c02": {
       "id": "atlas02_r02_c02",
@@ -7435,7 +9708,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를"
+      ]
     },
     "atlas02_r02_c03": {
       "id": "atlas02_r02_c03",
@@ -7460,7 +9742,16 @@
         "pointValue": "5",
         "wingspanCm": "81"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어",
+        "수보다",
+        "1장",
+        "많은",
+        "카드를",
+        "뽑습니다",
+        "당신부터",
+        "시계"
+      ]
     },
     "atlas02_r02_c04": {
       "id": "atlas02_r02_c04",
@@ -7485,7 +9776,10 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다"
+      ]
     },
     "atlas02_r02_c05": {
       "id": "atlas02_r02_c05",
@@ -7510,7 +9804,10 @@
         "pointValue": "4",
         "wingspanCm": "74"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다"
+      ]
     },
     "atlas02_r02_c06": {
       "id": "atlas02_r02_c06",
@@ -7535,7 +9832,14 @@
         "pointValue": "2",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "접시형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     "atlas02_r02_c07": {
       "id": "atlas02_r02_c07",
@@ -7560,7 +9864,14 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "사발형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     "atlas02_r02_c08": {
       "id": "atlas02_r02_c08",
@@ -7585,7 +9896,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "구멍형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     "atlas02_r02_c09": {
       "id": "atlas02_r02_c09",
@@ -7610,7 +9928,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "바닥형",
+        "둥지",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     "atlas02_r02_c10": {
       "id": "atlas02_r02_c10",
@@ -7635,7 +9960,13 @@
         "pointValue": "4",
         "wingspanCm": "201"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "물고기",
+        "먹이",
+        "3개를",
+        "가져옵니다"
+      ]
     },
     "atlas02_r03_c01": {
       "id": "atlas02_r03_c01",
@@ -7660,7 +9991,13 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "3개를",
+        "가져옵니다"
+      ]
     },
     "atlas02_r03_c02": {
       "id": "atlas02_r03_c02",
@@ -7685,7 +10022,13 @@
         "pointValue": "2",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     "atlas02_r03_c03": {
       "id": "atlas02_r03_c03",
@@ -7710,7 +10053,13 @@
         "pointValue": "9",
         "wingspanCm": "203"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "물고기",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     "atlas02_r03_c04": {
       "id": "atlas02_r03_c04",
@@ -7735,7 +10084,14 @@
         "pointValue": "6",
         "wingspanCm": "155"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c05": {
       "id": "atlas02_r03_c05",
@@ -7760,7 +10116,14 @@
         "pointValue": "6",
         "wingspanCm": "127"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c06": {
       "id": "atlas02_r03_c06",
@@ -7785,7 +10148,14 @@
         "pointValue": "4",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c07": {
       "id": "atlas02_r03_c07",
@@ -7810,7 +10180,14 @@
         "pointValue": "5",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c08": {
       "id": "atlas02_r03_c08",
@@ -7835,7 +10212,14 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c09": {
       "id": "atlas02_r03_c09",
@@ -7860,7 +10244,14 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r03_c10": {
       "id": "atlas02_r03_c10",
@@ -7885,7 +10276,14 @@
         "pointValue": "6",
         "wingspanCm": "221"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c01": {
       "id": "atlas02_r04_c01",
@@ -7910,7 +10308,14 @@
         "pointValue": "5",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c02": {
       "id": "atlas02_r04_c02",
@@ -7935,7 +10340,14 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c03": {
       "id": "atlas02_r04_c03",
@@ -7960,7 +10372,14 @@
         "pointValue": "4",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c04": {
       "id": "atlas02_r04_c04",
@@ -7985,7 +10404,14 @@
         "pointValue": "5",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c05": {
       "id": "atlas02_r04_c05",
@@ -8010,7 +10436,14 @@
         "pointValue": "5",
         "wingspanCm": "71"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c06": {
       "id": "atlas02_r04_c06",
@@ -8035,7 +10468,14 @@
         "pointValue": "8",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c07": {
       "id": "atlas02_r04_c07",
@@ -8060,7 +10500,14 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c08": {
       "id": "atlas02_r04_c08",
@@ -8085,7 +10532,14 @@
         "pointValue": "1",
         "wingspanCm": "277"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "2장을",
+        "뽑고",
+        "그중",
+        "1장을",
+        "가집니다"
+      ]
     },
     "atlas02_r04_c09": {
       "id": "atlas02_r04_c09",
@@ -8110,7 +10564,16 @@
         "pointValue": "3",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     "atlas02_r04_c10": {
       "id": "atlas02_r04_c10",
@@ -8135,7 +10598,16 @@
         "pointValue": "2",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     "atlas02_r05_c01": {
       "id": "atlas02_r05_c01",
@@ -8160,7 +10632,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     "atlas02_r05_c02": {
       "id": "atlas02_r05_c02",
@@ -8185,7 +10666,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을",
+        "지불합니다"
+      ]
     },
     "atlas02_r05_c03": {
       "id": "atlas02_r05_c03",
@@ -8212,7 +10702,16 @@
         "pointValue": "1",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원이나",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c04": {
       "id": "atlas02_r05_c04",
@@ -8237,7 +10736,16 @@
         "pointValue": "2",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c05": {
       "id": "atlas02_r05_c05",
@@ -8262,7 +10770,16 @@
         "pointValue": "4",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c06": {
       "id": "atlas02_r05_c06",
@@ -8287,7 +10804,16 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "초원",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c07": {
       "id": "atlas02_r05_c07",
@@ -8312,7 +10838,16 @@
         "pointValue": "5",
         "wingspanCm": "183"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c08": {
       "id": "atlas02_r05_c08",
@@ -8337,7 +10872,16 @@
         "pointValue": "7",
         "wingspanCm": "130"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "번째",
+        "새를",
+        "냅니다",
+        "원래",
+        "비용을"
+      ]
     },
     "atlas02_r05_c09": {
       "id": "atlas02_r05_c09",
@@ -8362,7 +10906,16 @@
         "pointValue": "4",
         "wingspanCm": "85"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas02_r05_c10": {
       "id": "atlas02_r05_c10",
@@ -8387,7 +10940,13 @@
         "pointValue": "4",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas02_r06_c01": {
       "id": "atlas02_r06_c01",
@@ -8412,7 +10971,12 @@
         "pointValue": "4",
         "wingspanCm": "82"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "덱에서",
+        "1장을",
+        "뽑습니다"
+      ]
     },
     "atlas02_r06_c02": {
       "id": "atlas02_r06_c02",
@@ -8437,7 +11001,16 @@
         "pointValue": "2",
         "wingspanCm": "31"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를"
+      ]
     },
     "atlas02_r06_c03": {
       "id": "atlas02_r06_c03",
@@ -8462,7 +11035,13 @@
         "pointValue": "3",
         "wingspanCm": "114"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "트레이에",
+        "공개된",
+        "3장을",
+        "모두",
+        "뽑습니다"
+      ]
     },
     "atlas02_r06_c04": {
       "id": "atlas02_r06_c04",
@@ -8487,7 +11066,16 @@
         "pointValue": "2",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "아래에",
+        "끼워넣습니다",
+        "했다면",
+        "원하는",
+        "1마리에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas02_r06_c05": {
       "id": "atlas02_r06_c05",
@@ -8512,7 +11100,11 @@
         "pointValue": "0",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새에",
+        "1개를",
+        "낳습니다"
+      ]
     },
     "atlas02_r06_c06": {
       "id": "atlas02_r06_c06",
@@ -8537,7 +11129,14 @@
         "pointValue": "4",
         "wingspanCm": "8"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "플레이어는",
+        "공급처에서",
+        "과일",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas02_r06_c07": {
       "id": "atlas02_r06_c07",
@@ -8562,7 +11161,14 @@
         "pointValue": "3",
         "wingspanCm": "78"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다",
+        "했다면",
+        "턴이",
+        "끝날",
+        "1장을"
+      ]
     },
     "atlas02_r06_c08": {
       "id": "atlas02_r06_c08",
@@ -8589,7 +11195,13 @@
         "pointValue": "1",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas02_r06_c09": {
       "id": "atlas02_r06_c09",
@@ -8614,7 +11226,16 @@
         "pointValue": "1",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     "atlas02_r06_c10": {
       "id": "atlas02_r06_c10",
@@ -8639,7 +11260,16 @@
         "pointValue": "3",
         "wingspanCm": "92"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신을",
+        "포함해",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어가",
+        "가진",
+        "포식자"
+      ]
     },
     "atlas02_r07_c01": {
       "id": "atlas02_r07_c01",
@@ -8666,7 +11296,16 @@
         "pointValue": "1",
         "wingspanCm": "252"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신을",
+        "포함해",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어가",
+        "가진",
+        "포식자"
+      ]
     },
     "atlas02_r07_c02": {
       "id": "atlas02_r07_c02",
@@ -8691,7 +11330,16 @@
         "pointValue": "2",
         "wingspanCm": "16"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에",
+        "저장합니다",
+        "언제든지"
+      ]
     },
     "atlas02_r07_c03": {
       "id": "atlas02_r07_c03",
@@ -8716,7 +11364,16 @@
         "pointValue": "3",
         "wingspanCm": "25"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에",
+        "저장합니다",
+        "언제든지"
+      ]
     },
     "atlas02_r07_c04": {
       "id": "atlas02_r07_c04",
@@ -8743,7 +11400,16 @@
         "pointValue": "5",
         "wingspanCm": "55"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "공급처에서"
+      ]
     },
     "atlas02_r07_c05": {
       "id": "atlas02_r07_c05",
@@ -8768,7 +11434,16 @@
         "pointValue": "5",
         "wingspanCm": "33"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "무척추동물",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     "atlas02_r07_c06": {
       "id": "atlas02_r07_c06",
@@ -8793,7 +11468,16 @@
         "pointValue": "4",
         "wingspanCm": "26"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "물고기",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     "atlas02_r07_c07": {
       "id": "atlas02_r07_c07",
@@ -8818,7 +11502,16 @@
         "pointValue": "4",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "설치류",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     "atlas02_r07_c08": {
       "id": "atlas02_r07_c08",
@@ -8843,7 +11536,16 @@
         "pointValue": "4",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "가져와",
+        "위에"
+      ]
     },
     "atlas02_r07_c09": {
       "id": "atlas02_r07_c09",
@@ -8868,7 +11570,16 @@
         "pointValue": "8",
         "wingspanCm": "160"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     "atlas02_r07_c10": {
       "id": "atlas02_r07_c10",
@@ -8893,7 +11604,16 @@
         "pointValue": "3",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     "atlas03_r01_c01": {
       "id": "atlas03_r01_c01",
@@ -8920,7 +11640,16 @@
         "pointValue": "5",
         "wingspanCm": "120"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "남아",
+        "공개",
+        "카드들을",
+        "모두",
+        "버리고",
+        "트레이를",
+        "다시",
+        "채웁니다"
+      ]
     },
     "atlas03_r01_c02": {
       "id": "atlas03_r01_c02",
@@ -8945,7 +11674,16 @@
         "pointValue": "6",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지의",
+        "1칸마다",
+        "1장을",
+        "뽑습니다",
+        "턴이",
+        "끝날",
+        "그중",
+        "가지고"
+      ]
     },
     "atlas03_r01_c03": {
       "id": "atlas03_r01_c03",
@@ -8970,7 +11708,16 @@
         "pointValue": "3",
         "wingspanCm": "65"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지의",
+        "1칸마다",
+        "1장을",
+        "뽑습니다",
+        "턴이",
+        "끝날",
+        "그중",
+        "가지고"
+      ]
     },
     "atlas03_r01_c04": {
       "id": "atlas03_r01_c04",
@@ -8999,7 +11746,13 @@
         "pointValue": "2",
         "wingspanCm": "49"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "초원",
+        "서식지에",
+        "공개",
+        "1장을",
+        "가져옵니다"
+      ]
     },
     "atlas03_r01_c05": {
       "id": "atlas03_r01_c05",
@@ -9024,7 +11777,13 @@
         "pointValue": "3",
         "wingspanCm": "86"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "습지",
+        "서식지에",
+        "공개",
+        "1장을",
+        "가져옵니다"
+      ]
     },
     "atlas03_r01_c06": {
       "id": "atlas03_r01_c06",
@@ -9049,7 +11808,14 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "2장을",
+        "뽑습니다",
+        "다른",
+        "플레이어는",
+        "덱에서",
+        "1장을"
+      ]
     },
     "atlas03_r01_c07": {
       "id": "atlas03_r01_c07",
@@ -9074,7 +11840,16 @@
         "pointValue": "4",
         "wingspanCm": "220"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "습지",
+        "서식지에",
+        "1마리에서",
+        "3마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다"
+      ]
     },
     "atlas03_r01_c08": {
       "id": "atlas03_r01_c08",
@@ -9101,7 +11876,16 @@
         "pointValue": "3",
         "wingspanCm": "185"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "습지",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은"
+      ]
     },
     "atlas03_r01_c09": {
       "id": "atlas03_r01_c09",
@@ -9128,7 +11912,16 @@
         "pointValue": "4",
         "wingspanCm": "57"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "낳기",
+        "행동을",
+        "새는",
+        "사발형",
+        "또는",
+        "바닥형"
+      ]
     },
     "atlas03_r01_c10": {
       "id": "atlas03_r01_c10",
@@ -9153,7 +11946,16 @@
         "pointValue": "1",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     "atlas03_r02_c01": {
       "id": "atlas03_r02_c01",
@@ -9178,7 +11980,16 @@
         "pointValue": "0",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "알이",
+        "없는",
+        "서식지",
+        "1곳을",
+        "선택합니다",
+        "서식지의",
+        "새마다",
+        "1개씩"
+      ]
     },
     "atlas03_r02_c02": {
       "id": "atlas03_r02_c02",
@@ -9203,7 +12014,16 @@
         "pointValue": "0",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "알이",
+        "없는",
+        "서식지",
+        "1곳을",
+        "선택합니다",
+        "서식지의",
+        "새마다",
+        "1개씩"
+      ]
     },
     "atlas03_r02_c03": {
       "id": "atlas03_r02_c03",
@@ -9228,7 +12048,16 @@
         "pointValue": "2",
         "wingspanCm": "73"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신이",
+        "가진",
+        "다른",
+        "구멍형",
+        "둥지",
+        "1마리마다",
+        "새에",
+        "1개씩"
+      ]
     },
     "atlas03_r02_c04": {
       "id": "atlas03_r02_c04",
@@ -9253,7 +12082,14 @@
         "pointValue": "1",
         "wingspanCm": "48"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "포함해",
+        "열에",
+        "새마다",
+        "1개씩",
+        "낳습니다"
+      ]
     },
     "atlas03_r02_c05": {
       "id": "atlas03_r02_c05",
@@ -9278,7 +12114,16 @@
         "pointValue": "4",
         "wingspanCm": "34"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "씨앗",
+        "먹이",
+        "1개를",
+        "했다면",
+        "새에",
+        "2개를"
+      ]
     },
     "atlas03_r02_c06": {
       "id": "atlas03_r02_c06",
@@ -9303,7 +12148,16 @@
         "pointValue": "3",
         "wingspanCm": "70"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "초원",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은"
+      ]
     },
     "atlas03_r02_c07": {
       "id": "atlas03_r02_c07",
@@ -9328,7 +12182,16 @@
         "pointValue": "4",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "먹이",
+        "얻기",
+        "행동을",
+        "플레이어의",
+        "턴이",
+        "끝날"
+      ]
     },
     "atlas03_r02_c08": {
       "id": "atlas03_r02_c08",
@@ -9353,7 +12216,16 @@
         "pointValue": "3",
         "wingspanCm": "21"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "먹이",
+        "얻기",
+        "행동을",
+        "플레이어의",
+        "턴이",
+        "끝날"
+      ]
     },
     "atlas03_r02_c09": {
       "id": "atlas03_r02_c09",
@@ -9378,7 +12250,16 @@
         "pointValue": "4",
         "wingspanCm": "134"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에",
+        "무척추동물",
+        "먹이를"
+      ]
     },
     "atlas03_r02_c10": {
       "id": "atlas03_r02_c10",
@@ -9403,7 +12284,16 @@
         "pointValue": "4",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "먹이",
+        "주사위"
+      ]
     },
     "atlas03_r03_c01": {
       "id": "atlas03_r03_c01",
@@ -9428,7 +12318,16 @@
         "pointValue": "4",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "씨앗",
+        "먹이"
+      ]
     },
     "atlas03_r03_c02": {
       "id": "atlas03_r03_c02",
@@ -9455,7 +12354,16 @@
         "pointValue": "3",
         "wingspanCm": "24"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "씨앗",
+        "먹이"
+      ]
     },
     "atlas03_r03_c03": {
       "id": "atlas03_r03_c03",
@@ -9480,7 +12388,16 @@
         "pointValue": "7",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "먹이",
+        "종류",
+        "1가지를",
+        "선택합니다",
+        "플레이어는",
+        "공급처에서",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas03_r03_c04": {
       "id": "atlas03_r03_c04",
@@ -9505,7 +12422,16 @@
         "pointValue": "3",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "먹이",
+        "종류",
+        "1가지를",
+        "선택합니다",
+        "플레이어는",
+        "공급처에서",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas03_r03_c05": {
       "id": "atlas03_r03_c05",
@@ -9530,7 +12456,16 @@
         "pointValue": "4",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "턴에",
+        "이미",
+        "얻은",
+        "먹이",
+        "종류",
+        "1개를",
+        "공급처에서"
+      ]
     },
     "atlas03_r03_c06": {
       "id": "atlas03_r03_c06",
@@ -9555,7 +12490,13 @@
         "pointValue": "2",
         "wingspanCm": "39"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를",
+        "가져옵니다"
+      ]
     },
     "atlas03_r03_c07": {
       "id": "atlas03_r03_c07",
@@ -9582,7 +12523,13 @@
         "pointValue": "4",
         "wingspanCm": "70"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에",
+        "무척추동물",
+        "먹이를",
+        "모두",
+        "가져옵니다"
+      ]
     },
     "atlas03_r03_c08": {
       "id": "atlas03_r03_c08",
@@ -9607,7 +12554,16 @@
         "pointValue": "6",
         "wingspanCm": "30"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처에서",
+        "원하는",
+        "먹이",
+        "주사위",
+        "1개를",
+        "제거한",
+        "씨앗",
+        "가져옵니다"
+      ]
     },
     "atlas03_r03_c09": {
       "id": "atlas03_r03_c09",
@@ -9632,7 +12588,16 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처를",
+        "다시",
+        "굴립니다",
+        "했다면",
+        "굴린",
+        "공급처에서",
+        "무척추동물",
+        "먹이"
+      ]
     },
     "atlas03_r03_c10": {
       "id": "atlas03_r03_c10",
@@ -9657,7 +12622,16 @@
         "pointValue": "3",
         "wingspanCm": "102"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어의",
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "가져와",
+        "당신의"
+      ]
     },
     "atlas03_r04_c01": {
       "id": "atlas03_r04_c01",
@@ -9682,7 +12656,16 @@
         "pointValue": "0",
         "wingspanCm": "18"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은",
+        "비용을"
+      ]
     },
     "atlas03_r04_c02": {
       "id": "atlas03_r04_c02",
@@ -9709,7 +12692,16 @@
         "pointValue": "4",
         "wingspanCm": "36"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새를",
+        "가로로",
+        "놓아",
+        "서식지",
+        "2개를",
+        "덮게",
+        "낮은",
+        "비용을"
+      ]
     },
     "atlas03_r04_c03": {
       "id": "atlas03_r04_c03",
@@ -9734,7 +12726,16 @@
         "pointValue": "4",
         "wingspanCm": "138"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "가져오거나",
+        "원하는",
+        "1마리에",
+        "1개를"
+      ]
     },
     "atlas03_r04_c04": {
       "id": "atlas03_r04_c04",
@@ -9759,7 +12760,16 @@
         "pointValue": "7",
         "wingspanCm": "50"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "3장을",
+        "뽑고",
+        "그중",
+        "가집니다"
+      ]
     },
     "atlas03_r04_c05": {
       "id": "atlas03_r04_c05",
@@ -9784,7 +12794,16 @@
         "pointValue": "6",
         "wingspanCm": "76"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "3장을",
+        "뽑고",
+        "그중",
+        "가집니다"
+      ]
     },
     "atlas03_r04_c06": {
       "id": "atlas03_r04_c06",
@@ -9811,7 +12830,16 @@
         "pointValue": "4",
         "wingspanCm": "21"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를"
+      ]
     },
     "atlas03_r04_c07": {
       "id": "atlas03_r04_c07",
@@ -9836,7 +12864,16 @@
         "pointValue": "4",
         "wingspanCm": "51"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "공급처에서",
+        "먹이",
+        "주사위",
+        "1개를"
+      ]
     },
     "atlas03_r04_c08": {
       "id": "atlas03_r04_c08",
@@ -9861,7 +12898,16 @@
         "pointValue": "4",
         "wingspanCm": "110"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "1장을",
+        "뽑습니다",
+        "그다음",
+        "가져오거나",
+        "원하는",
+        "1마리에",
+        "1개를"
+      ]
     },
     "atlas03_r04_c09": {
       "id": "atlas03_r04_c09",
@@ -9886,7 +12932,16 @@
         "pointValue": "2",
         "wingspanCm": "26"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     "atlas03_r04_c10": {
       "id": "atlas03_r04_c10",
@@ -9911,7 +12966,16 @@
         "pointValue": "2",
         "wingspanCm": "28"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     "atlas03_r05_c01": {
       "id": "atlas03_r05_c01",
@@ -9936,7 +13000,16 @@
         "pointValue": "3",
         "wingspanCm": "17"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "이번",
+        "라운드에",
+        "행동",
+        "4종류를",
+        "모두",
+        "사용했다면",
+        "1마리를",
+        "냅니다"
+      ]
     },
     "atlas03_r05_c02": {
       "id": "atlas03_r05_c02",
@@ -9961,7 +13034,16 @@
         "pointValue": "1",
         "wingspanCm": "15"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "1장을",
+        "했다면",
+        "당신의",
+        "서식지에",
+        "1마리를",
+        "냅니다",
+        "원래",
+        "먹이"
+      ]
     },
     "atlas03_r05_c03": {
       "id": "atlas03_r05_c03",
@@ -9990,7 +13072,16 @@
         "pointValue": "3",
         "wingspanCm": "53"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이",
+        "1개를",
+        "했다면",
+        "습지",
+        "서식지에"
+      ]
     },
     "atlas03_r05_c04": {
       "id": "atlas03_r05_c04",
@@ -10015,7 +13106,16 @@
         "pointValue": "2",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "원하는",
+        "새에서",
+        "1개를",
+        "했다면",
+        "당신의",
+        "서식지에",
+        "1마리를",
+        "냅니다"
+      ]
     },
     "atlas03_r05_c05": {
       "id": "atlas03_r05_c05",
@@ -10040,7 +13140,16 @@
         "pointValue": "6",
         "wingspanCm": "95"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "설치류",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas03_r05_c06": {
       "id": "atlas03_r05_c06",
@@ -10065,7 +13174,16 @@
         "pointValue": "5",
         "wingspanCm": "173"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "공급처",
+        "밖에",
+        "주사위를",
+        "굴립니다",
+        "물고기",
+        "먹이가",
+        "하나라도",
+        "나오면"
+      ]
     },
     "atlas03_r05_c07": {
       "id": "atlas03_r05_c07",
@@ -10090,7 +13208,16 @@
         "pointValue": "4",
         "wingspanCm": "65"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     "atlas03_r05_c08": {
       "id": "atlas03_r05_c08",
@@ -10119,7 +13246,16 @@
         "pointValue": "5",
         "wingspanCm": "106"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     "atlas03_r05_c09": {
       "id": "atlas03_r05_c09",
@@ -10146,7 +13282,16 @@
         "pointValue": "7",
         "wingspanCm": "200"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     "atlas03_r05_c10": {
       "id": "atlas03_r05_c10",
@@ -10171,7 +13316,16 @@
         "pointValue": "8",
         "wingspanCm": "160"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새의",
+        "비용에",
+        "설치류",
+        "먹이",
+        "1개마다",
+        "대신",
+        "1장을",
+        "지불해도"
+      ]
     },
     "atlas03_r06_c01": {
       "id": "atlas03_r06_c01",
@@ -10196,7 +13350,16 @@
         "pointValue": "4",
         "wingspanCm": "113"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     "atlas03_r06_c02": {
       "id": "atlas03_r06_c02",
@@ -10223,7 +13386,16 @@
         "pointValue": "4",
         "wingspanCm": "123"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     "atlas03_r06_c03": {
       "id": "atlas03_r06_c03",
@@ -10248,7 +13420,16 @@
         "pointValue": "4",
         "wingspanCm": "157"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     "atlas03_r06_c04": {
       "id": "atlas03_r06_c04",
@@ -10273,7 +13454,16 @@
         "pointValue": "4",
         "wingspanCm": "75"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "비용을",
+        "지불하는",
+        "대신",
+        "당신의",
+        "개인판에",
+        "다른",
+        "위에",
+        "새를"
+      ]
     },
     "atlas03_r06_c05": {
       "id": "atlas03_r06_c05",
@@ -10298,7 +13488,16 @@
         "pointValue": "6",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "어떤",
+        "이유로든",
+        "카드를",
+        "끼워넣을",
+        "덱에서",
+        "1장을"
+      ]
     },
     "atlas03_r06_c06": {
       "id": "atlas03_r06_c06",
@@ -10323,7 +13522,16 @@
         "pointValue": "5",
         "wingspanCm": "35"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어가",
+        "어떤",
+        "이유로든",
+        "카드를",
+        "끼워넣을",
+        "1장을",
+        "아래에"
+      ]
     },
     "atlas03_r06_c07": {
       "id": "atlas03_r06_c07",
@@ -10348,7 +13556,16 @@
         "pointValue": "3",
         "wingspanCm": "99"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "초원",
+        "서식지에",
+        "행동"
+      ]
     },
     "atlas03_r06_c08": {
       "id": "atlas03_r06_c08",
@@ -10373,7 +13590,16 @@
         "pointValue": "5",
         "wingspanCm": "52"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     "atlas03_r06_c09": {
       "id": "atlas03_r06_c09",
@@ -10400,7 +13626,16 @@
         "pointValue": "3",
         "wingspanCm": "38"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "아무",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     "atlas03_r06_c10": {
       "id": "atlas03_r06_c10",
@@ -10427,7 +13662,16 @@
         "pointValue": "5",
         "wingspanCm": "46"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "무척추동물",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     "atlas03_r07_c01": {
       "id": "atlas03_r07_c01",
@@ -10452,7 +13696,16 @@
         "pointValue": "6",
         "wingspanCm": "22"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "당신의",
+        "공급처에서",
+        "씨앗",
+        "먹이를",
+        "최대",
+        "5개까지",
+        "버린",
+        "먹이"
+      ]
     },
     "atlas03_r07_c02": {
       "id": "atlas03_r07_c02",
@@ -10477,7 +13730,16 @@
         "pointValue": "2",
         "wingspanCm": "56"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "카드를",
+        "최대",
+        "3장까지",
+        "아래에",
+        "끼워넣습니다",
+        "끼워넣은",
+        "1장마다",
+        "1장을"
+      ]
     },
     "atlas03_r07_c03": {
       "id": "atlas03_r07_c03",
@@ -10502,7 +13764,16 @@
         "pointValue": "3",
         "wingspanCm": "152"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "다른",
+        "플레이어",
+        "1명을",
+        "선택합니다",
+        "플레이어의",
+        "습지",
+        "서식지에",
+        "행동"
+      ]
     },
     "atlas03_r07_c04": {
       "id": "atlas03_r07_c04",
@@ -10527,7 +13798,16 @@
         "pointValue": "1",
         "wingspanCm": "132"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "덱에서",
+        "2장을",
+        "뽑습니다",
+        "그중",
+        "1장은",
+        "아래에",
+        "끼워넣고",
+        "다른"
+      ]
     },
     "atlas03_r07_c05": {
       "id": "atlas03_r07_c05",
@@ -10552,7 +13832,16 @@
         "pointValue": "4",
         "wingspanCm": "23"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "1장을",
+        "아래에"
+      ]
     },
     "atlas03_r07_c06": {
       "id": "atlas03_r07_c06",
@@ -10577,7 +13866,16 @@
         "pointValue": "3",
         "wingspanCm": "20"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "서식지에",
+        "1마리에서",
+        "5마리까지",
+        "선택합니다",
+        "선택한",
+        "새마다",
+        "1장을",
+        "아래에"
+      ]
     },
     "atlas03_r07_c07": {
       "id": "atlas03_r07_c07",
@@ -10604,7 +13902,16 @@
         "pointValue": "7",
         "wingspanCm": "164"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     "atlas03_r07_c08": {
       "id": "atlas03_r07_c08",
@@ -10629,7 +13936,16 @@
         "pointValue": "4",
         "wingspanCm": "17"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     "atlas03_r07_c09": {
       "id": "atlas03_r07_c09",
@@ -10654,7 +13970,16 @@
         "pointValue": "4",
         "wingspanCm": "48"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "새가",
+        "라운드",
+        "종료",
+        "목표",
+        "조건에",
+        "해당한다면",
+        "목표를",
+        "계산할"
+      ]
     },
     "atlas03_r07_c10": {
       "id": "atlas03_r07_c10",
@@ -10679,14 +14004,23 @@
         "pointValue": "5",
         "wingspanCm": "190"
       },
-      "abilityKeywords": []
+      "abilityKeywords": [
+        "보너스",
+        "3장을",
+        "뽑은",
+        "2장을",
+        "이번",
+        "턴에",
+        "뽑지",
+        "않은"
+      ]
     }
   },
   "diagnostics": {
     "cardCount": 210,
     "koreanAliasCount": 210,
     "numericSignalCount": 210,
-    "abilityKeywordCardCount": 5,
+    "abilityKeywordCardCount": 210,
     "weakTaxonomyMatches": []
   }
 }

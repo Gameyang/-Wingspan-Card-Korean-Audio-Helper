@@ -139,7 +139,7 @@ def clean_ability_text(value: str) -> str:
     text = text.replace("卜", " ")
     text = text.replace("鬱", " ")
     text = normalize_spaces(text)
-    return text.strip(" .,:;·")
+    return text.strip(" ,:;·")
 
 
 def tts_text_for_ability(ability_text_ko: str) -> str:
@@ -426,6 +426,46 @@ def unique_nonempty(values: object) -> list[str]:
     return result
 
 
+def preserved_ability_rows_by_card_no(path: Path) -> dict[str, dict[str, str]]:
+    preserved: dict[str, dict[str, str]] = {}
+    for row in read_csv(path):
+        card_no = normalize_spaces(row.get("card_no", ""))
+        review_status = normalize_spaces(row.get("review_status", "")).casefold()
+        ability_text = normalize_spaces(row.get("ability_text_ko", ""))
+        if card_no and ability_text and review_status and review_status != "ocr_draft":
+            preserved[card_no] = row
+    return preserved
+
+
+def apply_preserved_ability_rows(
+    ocr_rows: list[dict[str, str]],
+    preserved_rows: dict[str, dict[str, str]],
+) -> list[dict[str, str]]:
+    if not preserved_rows:
+        return ocr_rows
+
+    ability_fields = [
+        "ability_ocr_text",
+        "ability_text_ko",
+        "ability_tts_text",
+        "ability_id",
+        "ocr_engine",
+        "ocr_confidence",
+        "review_status",
+    ]
+    merged: list[dict[str, str]] = []
+    for row in ocr_rows:
+        preserved = preserved_rows.get(normalize_spaces(row.get("card_no", "")))
+        if not preserved:
+            merged.append(row)
+            continue
+        updated = dict(row)
+        for field in ability_fields:
+            updated[field] = preserved.get(field, "")
+        merged.append(updated)
+    return merged
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="OCR Korean Wingspan card powers and build a deduplicated ability TTS list.")
     parser.add_argument("--images-dir", type=Path, default=DEFAULT_IMAGES_DIR)
@@ -450,6 +490,7 @@ def main() -> int:
     if args.skip_ocr:
         ocr_rows = read_csv(args.ocr_output)
     else:
+        preserved_rows = preserved_ability_rows_by_card_no(args.ocr_output)
         language = args.windows_ocr_language if ocr_engine_name(args.ocr_engine) == "windows" else args.ocr_language
         ocr_rows = build_ocr_rows(
             images_dir=args.images_dir,
@@ -462,6 +503,7 @@ def main() -> int:
             crops_dir=args.crops_dir,
             windows_ocr_script=args.windows_ocr_script,
         )
+        ocr_rows = apply_preserved_ability_rows(ocr_rows, preserved_rows)
 
     if card_numbers and args.skip_ocr:
         ocr_rows = [row for row in ocr_rows if normalize_spaces(row.get("card_no", "")) in card_numbers]

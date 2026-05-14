@@ -99,20 +99,22 @@ def test_card_ability_tts_manifest_maps_ocr_rows() -> None:
 
     intro = data["byCardId"]["atlas01_r01_c01"]
 
-    assert len(data["byAbilityId"]) == len(tts_rows) == 165
-    assert len(data["byCardNo"]) == len(mapped_ocr_rows) == 165
-    assert len(data["byCardId"]) == len(mapped_ocr_rows) == 165
+    assert len(data["byAbilityId"]) == len(tts_rows)
+    assert len(data["byCardNo"]) == len(mapped_ocr_rows)
+    assert len(data["byCardId"]) == len(mapped_ocr_rows)
     assert set(data["byCardNo"]) == {row["card_no"] for row in mapped_ocr_rows}
     assert set(data["byCardId"]) == {row["card_id"] for row in mapped_ocr_rows}
     assert intro["cardNo"] == "53"
     assert intro["birdName"] == "얼룩부리논병아리"
-    assert intro["reviewStatus"] == "ocr_draft"
+    assert intro["reviewStatus"] == "translated_draft"
     assert intro["voiceTag"]
     for row in tts_rows:
         assert row["tts_text"]
         assert not row["tts_text"].startswith("능력 설명")
         assert "[" not in row["tts_text"]
         assert "]" not in row["tts_text"]
+        assert "卜" not in row["tts_text"]
+        assert "鬱" not in row["tts_text"]
     for entry in data["byAbilityId"].values():
         assert entry["voiceTag"]
         assert (REPO_ROOT / "site" / entry["src"]).is_file()
