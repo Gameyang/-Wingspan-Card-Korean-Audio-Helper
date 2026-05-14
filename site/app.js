@@ -1569,7 +1569,8 @@ function initAbilityToggle() {
   if (!elements.abilityToggle) {
     return;
   }
-  elements.abilityToggle.checked = localStorage.getItem(ABILITY_TOGGLE_STORAGE_KEY) === "true";
+  const savedValue = localStorage.getItem(ABILITY_TOGGLE_STORAGE_KEY);
+  elements.abilityToggle.checked = savedValue === null ? true : savedValue === "true";
   elements.abilityToggle.addEventListener("change", () => {
     localStorage.setItem(ABILITY_TOGGLE_STORAGE_KEY, String(elements.abilityToggle.checked));
     stopAudioPlayback();
