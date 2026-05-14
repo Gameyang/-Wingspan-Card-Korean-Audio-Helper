@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import csv
 import json
 from pathlib import Path
 
@@ -87,17 +88,31 @@ def test_card_intro_tts_manifest_maps_generated_sample() -> None:
     assert (REPO_ROOT / "site" / intro["src"]).is_file()
 
 
-def test_card_ability_tts_manifest_deduplicates_shared_power() -> None:
+def test_card_ability_tts_manifest_maps_ocr_rows() -> None:
     data_path = REPO_ROOT / "site" / "data" / "card_ability_tts.json"
+    tts_path = REPO_ROOT / "src" / "Data" / "card_ability_tts_ko.csv"
+    ocr_path = REPO_ROOT / "src" / "Data" / "card_ability_ocr.csv"
     data = json.loads(data_path.read_text(encoding="utf-8"))
+    tts_rows = list(csv.DictReader(tts_path.open(encoding="utf-8-sig")))
+    ocr_rows = list(csv.DictReader(ocr_path.open(encoding="utf-8-sig")))
+    mapped_ocr_rows = [row for row in ocr_rows if row["ability_text_ko"].strip()]
 
-    grasshopper = data["byCardId"]["atlas01_r01_c04"]
-    chipping = data["byCardId"]["atlas01_r01_c05"]
+    intro = data["byCardId"]["atlas01_r01_c01"]
 
-    assert len(data["byAbilityId"]) == 4
-    assert len(data["byCardNo"]) == 5
-    assert grasshopper["abilityId"] == chipping["abilityId"]
-    assert grasshopper["src"] == chipping["src"]
-    assert grasshopper["birdName"] == "메뚜기참새"
-    assert chipping["birdName"] == "칩핑참새"
-    assert (REPO_ROOT / "site" / grasshopper["src"]).is_file()
+    assert len(data["byAbilityId"]) == len(tts_rows) == 165
+    assert len(data["byCardNo"]) == len(mapped_ocr_rows) == 165
+    assert len(data["byCardId"]) == len(mapped_ocr_rows) == 165
+    assert set(data["byCardNo"]) == {row["card_no"] for row in mapped_ocr_rows}
+    assert set(data["byCardId"]) == {row["card_id"] for row in mapped_ocr_rows}
+    assert intro["cardNo"] == "53"
+    assert intro["birdName"] == "얼룩부리논병아리"
+    assert intro["reviewStatus"] == "ocr_draft"
+    assert intro["voiceTag"]
+    for row in tts_rows:
+        assert row["tts_text"]
+        assert not row["tts_text"].startswith("능력 설명")
+        assert "[" not in row["tts_text"]
+        assert "]" not in row["tts_text"]
+    for entry in data["byAbilityId"].values():
+        assert entry["voiceTag"]
+        assert (REPO_ROOT / "site" / entry["src"]).is_file()
