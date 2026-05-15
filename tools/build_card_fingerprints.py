@@ -40,8 +40,12 @@ REFERENCE_CAMERA_VARIANTS = [
     ("offset_right_7", {"offset_x_ratio": 0.07}),
     ("offset_up", {"offset_y_ratio": -0.05}),
     ("offset_down", {"offset_y_ratio": 0.05}),
+    ("offset_up_8", {"scale": 1.03, "offset_y_ratio": -0.075}),
+    ("offset_down_8", {"scale": 1.03, "offset_y_ratio": 0.075}),
     ("tilt_left", {"shear_x": -0.08}),
     ("tilt_right", {"shear_x": 0.08}),
+    ("tilt_left_strong", {"rotate_degrees": -6, "shear_x": -0.12}),
+    ("tilt_right_strong", {"rotate_degrees": 6, "shear_x": 0.12}),
 ]
 
 DEFAULT_IMAGES_DIR = Path("src/AtlasImage")
