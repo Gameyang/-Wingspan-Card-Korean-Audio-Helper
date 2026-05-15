@@ -9,7 +9,7 @@ from tools import card_atlas_ocr as atlas_ocr
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-IMAGES_DIR = REPO_ROOT / "src" / "Images"
+IMAGES_DIR = REPO_ROOT / "src" / "AtlasImage"
 
 
 def require_atlas_files() -> list[Path]:

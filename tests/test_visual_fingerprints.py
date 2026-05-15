@@ -14,10 +14,15 @@ def test_first_visual_fingerprint_entry_is_present() -> None:
 
     first = data["cards"][0]
     assert len(data["cards"]) == 210
-    assert data["algorithm"] == "dhash-17x16-grayscale-art-region"
+    assert data["version"] == 2
+    assert data["algorithm"] == "dhash-17x16-grayscale-art-region-camera-variants"
+    assert data["diagnostics"]["validVisualReferenceCount"] == 170
+    assert data["diagnostics"]["invalidVisualReferenceCount"] == 40
     assert first["id"] == "atlas01_r01_c01"
     assert first["displayName"] == "Podilymbus podiceps"
     assert len(first["hash"]) == 64
+    assert len(first["hashes"]) >= 10
+    assert first["visualReferenceValid"] is True
 
 
 def test_site_audio_manifest_maps_first_card_to_audio_files() -> None:

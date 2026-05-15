@@ -563,17 +563,39 @@ function visualScoreFromHamming(hamming) {
   return Math.max(0, Math.round(100 - (hamming * 100) / VISUAL_SCORE_DIVISOR));
 }
 
+function cardFingerprintHashes(card) {
+  if (!card) {
+    return [];
+  }
+  if (Array.isArray(card.hashes) && card.hashes.length) {
+    return card.hashes.filter(Boolean);
+  }
+  return card.hash ? [card.hash] : [];
+}
+
+function isVisualReferenceUsable(card) {
+  return card?.visualReferenceValid !== false && cardFingerprintHashes(card).length > 0;
+}
+
 function computeVisualScores(capturedHash) {
   const scores = {};
   if (!capturedHash) {
     return scores;
   }
   for (const card of fingerprintDb.cards) {
-    if (!card.hash) {
+    if (!isVisualReferenceUsable(card)) {
       continue;
     }
-    const distance = hammingDistanceHex(capturedHash, card.hash);
-    scores[card.id] = { distance, score: visualScoreFromHamming(distance) };
+    const hashes = cardFingerprintHashes(card);
+    const distance = hashes.reduce(
+      (best, hash) => Math.min(best, hammingDistanceHex(capturedHash, hash)),
+      DHASH_BITS,
+    );
+    scores[card.id] = {
+      distance,
+      score: visualScoreFromHamming(distance),
+      variantCount: hashes.length,
+    };
   }
   return scores;
 }
@@ -793,9 +815,11 @@ function rankCandidates(signals, visualScores) {
     const best = bestNameScore(signals, card);
     const numericMatches = exactNumericMatches(signals, card);
     const abilityScore = abilityKeywordScore(signals, card);
+    const fingerprint = fingerprintDb.byCardId?.[card.id] ?? null;
+    const visualReferenceValid = isVisualReferenceUsable(fingerprint);
     const visual = visualScores[card.id] ?? null;
-    const visualScore = visual?.score ?? 0;
-    const visualDistance = visual?.distance ?? null;
+    const visualScore = visualReferenceValid ? (visual?.score ?? 0) : 0;
+    const visualDistance = visualReferenceValid ? (visual?.distance ?? null) : null;
     const rankScore = compositeCandidateRankScore(
       best.score,
       numericMatches,
@@ -810,8 +834,10 @@ function rankCandidates(signals, visualScores) {
       numericMatches,
       numericPairMatched: hasExactNumericPair(numericMatches),
       abilityScore,
+      visualReferenceValid,
       visualScore,
       visualDistance,
+      visualVariantCount: visual?.variantCount ?? 0,
       rankScore,
       score: Math.min(100, rankScore),
     };
@@ -836,9 +862,11 @@ function matchConfidence(best, second) {
   const strongName = best.nameScore >= OCR_STRONG_NAME_SCORE;
   const mediumNameWithNumber = best.nameScore >= OCR_MEDIUM_NAME_SCORE && exactCount >= 1;
   const weakNameWithNumbers = best.nameScore >= OCR_MIN_NAME_SCORE && exactCount >= 2;
-  const visualStrong = best.visualScore >= VISUAL_STRONG_SCORE;
+  const visualStrong = best.visualReferenceValid && best.visualScore >= VISUAL_STRONG_SCORE;
   const nameAndVisual =
-    best.nameScore >= OCR_MIN_NAME_SCORE && best.visualScore >= VISUAL_MEDIUM_SCORE;
+    best.visualReferenceValid &&
+    best.nameScore >= OCR_MIN_NAME_SCORE &&
+    best.visualScore >= VISUAL_MEDIUM_SCORE;
 
   if (!strongName && !mediumNameWithNumber && !weakNameWithNumbers && !visualStrong && !nameAndVisual) {
     if (best.nameScore < OCR_MIN_NAME_SCORE) {

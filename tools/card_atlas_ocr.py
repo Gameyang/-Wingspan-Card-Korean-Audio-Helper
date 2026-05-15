@@ -21,7 +21,7 @@ CARD_SIZE = (
     EXPECTED_ATLAS_SIZE[1] // GRID_ROWS,
 )
 
-DEFAULT_IMAGES_DIR = Path("src/Images")
+DEFAULT_IMAGES_DIR = Path("src/AtlasImage")
 DEFAULT_OUTPUT_DIR = Path("src/TestImages")
 DEFAULT_SAMPLE_PATH = DEFAULT_OUTPUT_DIR / "new_card_sample.jpg"
 DEFAULT_CROPS_DIR = DEFAULT_OUTPUT_DIR / "cards"
